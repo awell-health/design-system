@@ -1,5 +1,6 @@
 import { join, dirname, resolve } from "path";
 import { StorybookConfig } from '@storybook/react-vite';
+import { loadConfigFromFile, mergeConfig } from "vite";
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -30,22 +31,16 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   staticDirs: ['../styles'],
-  viteFinal(config) {
-    return {
-      ...config,
-      resolve: {
-        alias: [
-          {
-            find: "@/components",
-            replacement: resolve(__dirname, "../components"),
-          },
-          {
-            find: "@/lib",
-            replacement: resolve(__dirname, "../lib"),
-          },
-        ],
-      },
-    };
+  async viteFinal(config, { configType }) {
+    const viteConfig = await loadConfigFromFile({ command: 'build', mode: 'storybook' }, 
+      resolve(__dirname, "../vite.config.ts")
+    );
+
+    return mergeConfig(config, {
+      ...(viteConfig?.config ?? {}),
+      // manually specify plugins to avoid conflict
+      plugins: [],
+    });
   },
 };
 

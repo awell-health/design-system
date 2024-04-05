@@ -1,11 +1,22 @@
 {
   "name": "design-system",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/design-system.umd.cjs",
+  "module": "./dist/design-system.js",
+  "exports": {
+    ".": {
+      "import": "./dist/design-system.js",
+      "require": "./dist/design-system.umd.cjs"
+    }
+  },
   "packageManager": "yarn@4.1.1",
   "scripts": {
     "add-component": "npx shadcn-ui@latest add",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "tailwind": "tailwindcss -i ./styles/globals.css -o ./tailwind.css"
+    "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css",
+    "build": "vite build"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
