@@ -6,7 +6,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./accordion"
+} from "@/components/ui/accordion"
 
 const meta = {
   component: Accordion,
