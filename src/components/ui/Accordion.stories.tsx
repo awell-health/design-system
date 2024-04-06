@@ -6,7 +6,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "./accordion"
 
 const meta = {
   component: Accordion,
@@ -14,7 +14,7 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Accordion>;
 
 function AccordionDemo() {
   return (
@@ -44,9 +44,6 @@ function AccordionDemo() {
 }
 
 export const Example = {
-  args: {
-    primary: true,
-    label: 'Accordion',
-  },
+  args: {},
   render: () => <AccordionDemo />
 } satisfies Story;

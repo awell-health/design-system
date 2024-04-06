@@ -12,8 +12,8 @@ function getAbsolutePath(value) {
 
 const config: StorybookConfig = {
   stories: [
-    "../stories/**/*.mdx",
-    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),
@@ -33,7 +33,7 @@ const config: StorybookConfig = {
   staticDirs: ['../styles'],
   async viteFinal(config, { configType }) {
     const viteConfig = await loadConfigFromFile({ command: 'build', mode: 'storybook' }, 
-      resolve(__dirname, "../vite.config.ts")
+      resolve(__dirname, "../vite.config.js")
     );
 
     return mergeConfig(config, {

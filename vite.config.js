@@ -24,17 +24,17 @@ export default defineConfig({
     emptyOutDir: true,
   },
   plugins: [react(), dts({
-    exclude: ['stories/**']
+    exclude: ['**/*.stories.*']
   })],
   resolve: {
     alias: [
       {
         find: "@/components",
-        replacement: resolve(__dirname, "./components"),
+        replacement: resolve(__dirname, "./src/components"),
       },
       {
         find: "@/lib",
-        replacement: resolve(__dirname, "./lib"),
+        replacement: resolve(__dirname, "./src/lib"),
       },
     ],
   },
