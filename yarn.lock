@@ -55,8 +55,11 @@ __metadata:
     "@storybook/react": "npm:^8.0.5"
     "@storybook/react-vite": "npm:^8.0.5"
     "@storybook/test": "npm:^8.0.5"
+    "@types/node": "npm:^20.12.5"
     "@types/prop-types": "npm:^15"
-    "@types/react": "npm:^18"
+    "@types/react": "npm:^17.0.2"
+    "@types/react-dom": "npm:^17.0.2"
+    "@vitejs/plugin-react": "npm:^4.2.1"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
     prop-types: "npm:^15.8.1"
@@ -93,6 +96,29 @@ __metadata:
 "@babel/core@npm:^7.12.3, @babel/core@npm:^7.18.9, @babel/core@npm:^7.23.0, @babel/core@npm:^7.23.2, @babel/core@npm:^7.23.9":
   version: 7.24.4
   resolution: "@babel/core@npm:7.24.4"
+  dependencies:
+    "@ampproject/remapping": "npm:^2.2.0"
+    "@babel/code-frame": "npm:^7.24.2"
+    "@babel/generator": "npm:^7.24.4"
+    "@babel/helper-compilation-targets": "npm:^7.23.6"
+    "@babel/helper-module-transforms": "npm:^7.23.3"
+    "@babel/helpers": "npm:^7.24.4"
+    "@babel/parser": "npm:^7.24.4"
+    "@babel/template": "npm:^7.24.0"
+    "@babel/traverse": "npm:^7.24.1"
+    "@babel/types": "npm:^7.24.0"
+    convert-source-map: "npm:^2.0.0"
+    debug: "npm:^4.1.0"
+    gensync: "npm:^1.0.0-beta.2"
+    json5: "npm:^2.2.3"
+    semver: "npm:^6.3.1"
+  checksum: 10c0/fc136966583e64d6f84f4a676368de6ab4583aa87f867186068655b30ef67f21f8e65a88c6d446a7efd219ad7ffb9185c82e8a90183ee033f6f47b5026641e16
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:^7.23.5":
+  version: 7.24.4
+  resolution: "@babel/core@npm:7.24.4::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40babel%2Fcore%2F-%2Fcore-7.24.4.tgz"
   dependencies:
     "@ampproject/remapping": "npm:^2.2.0"
     "@babel/code-frame": "npm:^7.24.2"
@@ -1155,6 +1181,28 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 10c0/3bf3e01f7bb8215a8b6d0081b6f86fea23e3a4543b619e059a264ede028bc58cdfb0acb2c43271271915a74917effa547bc280ac636a9901fa9f2fb45623f87e
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-react-jsx-self@npm:^7.23.3":
+  version: 7.24.1
+  resolution: "@babel/plugin-transform-react-jsx-self@npm:7.24.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40babel%2Fplugin-transform-react-jsx-self%2F-%2Fplugin-transform-react-jsx-self-7.24.1.tgz"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.24.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 10c0/ea362ff94b535c753f560eb1f5e063dc72bbbca17ed58837a949a7b289d5eacc7b0a28296d1932c94429b168d6040cdee5484a59b9e3c021f169e0ee137e6a27
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-react-jsx-source@npm:^7.23.3":
+  version: 7.24.1
+  resolution: "@babel/plugin-transform-react-jsx-source@npm:7.24.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40babel%2Fplugin-transform-react-jsx-source%2F-%2Fplugin-transform-react-jsx-source-7.24.1.tgz"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.24.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 10c0/ea8e3263c0dc51fbc97c156cc647150a757cc56de10781287353d0ce9b2dcd6b6d93d573c0142d7daf5d6fb554c74fa1971ae60764924ea711161d8458739b63
   languageName: node
   linkType: hard
 
@@ -3248,6 +3296,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/babel__core@npm:^7.20.5":
+  version: 7.20.5
+  resolution: "@types/babel__core@npm:7.20.5::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Fbabel__core%2F-%2Fbabel__core-7.20.5.tgz"
+  dependencies:
+    "@babel/parser": "npm:^7.20.7"
+    "@babel/types": "npm:^7.20.7"
+    "@types/babel__generator": "npm:*"
+    "@types/babel__template": "npm:*"
+    "@types/babel__traverse": "npm:*"
+  checksum: 10c0/bdee3bb69951e833a4b811b8ee9356b69a61ed5b7a23e1a081ec9249769117fa83aaaf023bb06562a038eb5845155ff663e2d5c75dd95c1d5ccc91db012868ff
+  languageName: node
+  linkType: hard
+
 "@types/babel__generator@npm:*":
   version: 7.6.8
   resolution: "@types/babel__generator@npm:7.6.8"
@@ -3463,6 +3524,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^20.12.5":
+  version: 20.12.5
+  resolution: "@types/node@npm:20.12.5::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Fnode%2F-%2Fnode-20.12.5.tgz"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/2da65516fba98f0417620e42bddbe53e144d4782d69cd37f99df2537c6850b9cfbdb8a017f02c61e9a074bcac84f9f3f221b250474ac8c6b95d507a47e8d53f9
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
@@ -3498,7 +3568,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^16.8.0 || ^17.0.0 || ^18.0.0, @types/react@npm:^18":
+"@types/react-dom@npm:^17.0.2":
+  version: 17.0.25
+  resolution: "@types/react-dom@npm:17.0.25::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Freact-dom%2F-%2Freact-dom-17.0.25.tgz"
+  dependencies:
+    "@types/react": "npm:^17"
+  checksum: 10c0/18a95d4d684cacc697d97ae66e3c8402da2f866c053fa6a5982694aa8eb6229afcefd3bfaaab4175c1b0ef3494c881e4d25e2167aa669bcbbb84114fd02ae5ba
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^16.8.0 || ^17.0.0 || ^18.0.0":
   version: 18.2.74
   resolution: "@types/react@npm:18.2.74"
   dependencies:
@@ -3508,10 +3587,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^17, @types/react@npm:^17.0.2":
+  version: 17.0.80
+  resolution: "@types/react@npm:17.0.80::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Freact%2F-%2Freact-17.0.80.tgz"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:^0.16"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/c5d2862564212a41a327ea9c7e70b9d3996d9b0f67971d39519d42d1f3ae6ddf76b183457b7b0be9d7b5d6ff0aaeed5711448423406d20018f082077c984eec4
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:^1.20.2":
   version: 1.20.6
   resolution: "@types/resolve@npm:1.20.6"
   checksum: 10c0/a9b0549d816ff2c353077365d865a33655a141d066d0f5a3ba6fd4b28bc2f4188a510079f7c1f715b3e7af505a27374adce2a5140a3ece2a059aab3d6e1a4244
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:^0.16":
+  version: 0.16.8
+  resolution: "@types/scheduler@npm:0.16.8::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Fscheduler%2F-%2Fscheduler-0.16.8.tgz"
+  checksum: 10c0/f86de504945b8fc41b1f391f847444d542e2e4067cf7e5d9bfeb5d2d2393d3203b1161bc0ef3b1e104d828dabfb60baf06e8d2c27e27ff7e8258e6e618d8c4ec
   languageName: node
   linkType: hard
 
@@ -3561,6 +3658,21 @@ __metadata:
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
   checksum: 10c0/8209c937cb39119f44eb63cf90c0b73e7c754209a6411c707be08e50e29ee81356dca1a848a405c8bdeebfe2f5e4f831ad310ae1689eeef65e7445c090c6657d
+  languageName: node
+  linkType: hard
+
+"@vitejs/plugin-react@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "@vitejs/plugin-react@npm:4.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40vitejs%2Fplugin-react%2F-%2Fplugin-react-4.2.1.tgz"
+  dependencies:
+    "@babel/core": "npm:^7.23.5"
+    "@babel/plugin-transform-react-jsx-self": "npm:^7.23.3"
+    "@babel/plugin-transform-react-jsx-source": "npm:^7.23.3"
+    "@types/babel__core": "npm:^7.20.5"
+    react-refresh: "npm:^0.14.0"
+  peerDependencies:
+    vite: ^4.2.0 || ^5.0.0
+  checksum: 10c0/de1eec44d703f32e5b58e776328ca20793657fe991835d15b290230b19a2a08be5d31501d424279ae13ecfed28044c117b69d746891c8d9b92c69e8a8907e989
   languageName: node
   linkType: hard
 
@@ -8069,6 +8181,13 @@ __metadata:
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: 10c0/6eb5e4b28028c23e2bfcf73371e72cd4162e4ac7ab445ddae2afe24e347a37d6dc22fae6e1748632cd43c6d4f9b8f86dcf26bf9275e1874f436d129952528ae0
+  languageName: node
+  linkType: hard
+
+"react-refresh@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "react-refresh@npm:0.14.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-refresh%2F-%2Freact-refresh-0.14.0.tgz"
+  checksum: 10c0/b8ae07ad153357d77830928a7f1fc2df837aabefee907fa273ba04c7643f3b860e986f1d4b7ada9b721c8d79b8c24b5b911a314a1a2398b105f1b13d19ea2b8d
   languageName: node
   linkType: hard
 

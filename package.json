@@ -5,12 +5,14 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/design-system.umd.cjs",
-  "module": "./dist/design-system.js",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/design-system.js",
-      "require": "./dist/design-system.umd.cjs"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/index.d.ts"
     },
     "./style.css": "./dist/style.css"
   },
@@ -20,7 +22,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css",
-    "build": "vite build"
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -43,8 +45,11 @@
     "@storybook/react": "^8.0.5",
     "@storybook/react-vite": "^8.0.5",
     "@storybook/test": "^8.0.5",
+    "@types/node": "^20.12.5",
     "@types/prop-types": "^15",
-    "@types/react": "^18",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "storybook": "^8.0.5",
