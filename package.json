@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "files": [
     "dist"
@@ -22,7 +22,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -50,6 +50,8 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "storybook": "^8.0.5",
