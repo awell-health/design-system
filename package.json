@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "files": [
     "dist"
@@ -21,7 +21,7 @@
     "add-component": "npx shadcn-ui@latest add",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css",
+    "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
     "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css"
   },
   "dependencies": {
