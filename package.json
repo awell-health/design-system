@@ -25,7 +25,6 @@
     "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css"
   },
   "dependencies": {
-    "@radix-ui/react-alert-dialog": "^1.0.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.2.2",
