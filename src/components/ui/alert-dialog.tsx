@@ -57,4 +57,4 @@ const AlertDialog = (props: Props): React.JSX.Element => {
   );
 };
 
-export default AlertDialog;
+export { AlertDialog }
