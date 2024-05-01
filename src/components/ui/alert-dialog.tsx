@@ -43,7 +43,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
               <div className="bg-gray-50 px-4 py-3 sm:px-6">
                 <button
                   type="button"
-                  className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3"
+                  className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3"
                   onClick={button?.buttonAction}
                 >
                   {button?.label}
