@@ -1,7 +1,7 @@
 // Replace your-framework with the name of your framework
 import type { Meta, StoryObj } from "@storybook/react";
 
-import AlertDialog from "@/components/ui/alert-dialog";
+import { AlertDialog } from "@/components/ui/alert-dialog";
 
 const meta = {
   component: AlertDialog,
