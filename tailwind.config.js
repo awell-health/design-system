@@ -8,6 +8,7 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   prefix: "",
+  safelist: [],
   theme: {
     container: {
       center: true,
@@ -16,7 +17,6 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    safelist: [],
     extend: {
       colors: {
         border: "hsl(var(--border))",
