@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "type": "module",
   "files": [
     "dist"
@@ -22,9 +22,11 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
-    "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css"
+    "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
+    "dev": "yarn tailwind & yarn storybook"
   },
   "dependencies": {
+    "@remixicon/react": "^4.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.2.2",
