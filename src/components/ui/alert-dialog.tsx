@@ -10,11 +10,10 @@ interface Props {
     label: string;
     buttonAction?: () => void;
   };
-  onClose?: () => void;
 }
 
 const AlertDialog = (props: Props): React.JSX.Element => {
-  const { title, text, button, children = null, onClose } = props;
+  const { title, text, button, children = null } = props;
 
   return (
     <div
@@ -27,23 +26,22 @@ const AlertDialog = (props: Props): React.JSX.Element => {
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
           <div className="relative transform overflow-hidden rounded-lg bg-white shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-            <div className="bg-white p-6 pb-8 relative">
-              {onClose && 
-                <div className="absolute top-0 right-0 p-4 cursor-pointer text-slate-950" onClick={onClose}>
-                  <Icon icon="RiCloseLine" />
+            <div className="bg-white p-6 pb-8">
+              <div>
+                <div>
+                  <h3
+                    className="text-base font-semibold leading-6 text-gray-900"
+                    id="modal-title"
+                  >
+                    {title}
+                  </h3>
+                  {text && (
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500">{text}</p>
+                    </div>
+                  )}
                 </div>
-              }
-              <h3
-                className="text-base font-semibold leading-6 text-gray-900"
-                id="modal-title"
-              >
-                {title}
-              </h3>
-              {text && (
-                <div className="mt-2">
-                  <p className="text-sm text-gray-500">{text}</p>
-                </div>
-              )}
+              </div>
             </div>
             {children && <div className="pb-8 px-6">{children}</div>}
             {button && (
@@ -64,4 +62,4 @@ const AlertDialog = (props: Props): React.JSX.Element => {
   );
 };
 
-export { AlertDialog };
+export { AlertDialog }
