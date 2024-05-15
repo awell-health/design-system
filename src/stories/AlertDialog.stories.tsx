@@ -2,6 +2,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { AlertDialog } from "@/components/ui/alert-dialog";
+import { Button  } from '@/components/ui/button'
 
 const meta = {
   component: AlertDialog,
@@ -20,7 +21,8 @@ function AlertDialogDemo() {
         label: "Redirect",
         buttonAction: () => console.log('button click')
       }}
-    />
+    > 
+      </AlertDialog>
   );
 }
 
