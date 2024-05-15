@@ -20,7 +20,8 @@ function AlertDialogDemo() {
         label: "Redirect",
         buttonAction: () => console.log('button click')
       }}
-    /> 
+    > 
+      </AlertDialog>
   );
 }
 
