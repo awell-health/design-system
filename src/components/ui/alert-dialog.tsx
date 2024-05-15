@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Icon } from '@/components/ui/Icon'
+import { Icon } from './icon'
 
 interface Props {
   title: string;
