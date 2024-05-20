@@ -38,6 +38,9 @@ module.exports = {
           'error': colors.red[600],
           'error-content': colors.white,
 
+          'neutral': colors.slate[800],
+          'neutral-content': colors.white,
+
           'base-100' : colors.white,
           'base-200' : colors.slate[100],
           'base-300' : colors.slate[300],
@@ -52,7 +55,7 @@ module.exports = {
 
          '--btn-text-case': 'uppercase',   
          '--navbar-padding': '.5rem',      
-         '--border-btn': '1px',            
+         '--border-btn': '1px',        
         },
       },
     ],
