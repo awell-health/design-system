@@ -1,68 +1,60 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
-  prefix: "",
+  prefix: '',
   safelist: [],
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+  theme: {},
+  plugins: [require('daisyui'), require('tailwindcss-animate')],
+  daisyui: {
+    themes: [
+      {
+        awell: {                
+          'primary': colors.blue[600],
+          'primary-content' : colors.white,
+
+          'secondary' : colors.slate[600],
+          'secondary-content' : colors.white,
+
+          'accent' : '#37cdbe',
+          'accent-content' : colors.white,
+
+          'success': colors.green[600],
+          'success-content': colors.white,
+
+          'info' : colors.blue[400],
+          'info-content': colors.white,
+
+          'warning': colors.orange[600],
+          'warning-content': colors.white,
+
+          'error': colors.red[600],
+          'error-content': colors.white,
+
+          'base-100' : colors.white,
+          'base-200' : colors.slate[100],
+          'base-300' : colors.slate[300],
+          'base-content' : colors.slate[600],
+
+         '--rounded-box': '1rem',          
+         '--rounded-btn': '.5rem',        
+         '--rounded-badge': '1.9rem',      
+
+         '--animation-btn': '.25s',       
+         '--animation-input': '.2s',       
+
+         '--btn-text-case': 'uppercase',   
+         '--navbar-padding': '.5rem',      
+         '--border-btn': '1px',            
+        },
       },
-    },
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
+    ],
   },
-  plugins: [require("tailwindcss-animate")],
 }
