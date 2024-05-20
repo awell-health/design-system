@@ -22,8 +22,6 @@ function ButtonDemo() {
       <Button variant="success">success</Button>
       <Button variant="warning">warning</Button>
       <Button variant="error">error</Button>
-      <Button variant="info">info</Button>
-      <Button variant="lightBlue">light blue</Button>
     </div>
     <div className="flex gap-4 py-4">
       <Button size="lg">large</Button>
