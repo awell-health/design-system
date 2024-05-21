@@ -18,18 +18,25 @@ module.exports = {
       {
         awell: {                
           'primary': colors.blue[600],
+          'primary-focus' : colors.blue[700],  
           'primary-content' : colors.white,
 
-          'secondary' : colors.slate[600],
-          'secondary-content' : colors.white,
+          'secondary' : colors.white,
+          'secondary-focus': colors.slate[100],
+          'secondary-content' : colors.slate[600],
 
-          'accent' : '#37cdbe',
-          'accent-content' : colors.white,
+          'accent' : colors.blue[50],
+          'accent-focus' : colors.blue[100],
+          'accent-content' : colors.blue[600],
+
+          'neutral': colors.slate[700],
+          'neutral-focus': colors.slate[800],
+          'neutral-content': colors.white,
 
           'success': colors.green[600],
           'success-content': colors.white,
 
-          'info' : colors.blue[400],
+          'info' : colors.blue[600],
           'info-content': colors.white,
 
           'warning': colors.orange[600],
@@ -37,9 +44,6 @@ module.exports = {
 
           'error': colors.red[600],
           'error-content': colors.white,
-
-          'neutral': colors.slate[800],
-          'neutral-content': colors.white,
 
           'base-100' : colors.white,
           'base-200' : colors.slate[100],
