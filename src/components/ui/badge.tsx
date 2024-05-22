@@ -12,7 +12,7 @@ const badgeVariants = cva(
         primary: "bg-blue-100 text-blue-800",
         error: "bg-red-100 text-red-800",
         warning: "bg-orange-100 text-orange-800",
-        success: "bg-success-100 text-success-800",
+        success: "bg-green-100 text-green-800",
         yellow: "bg-yellow-100 text-yellow-800",
         lime: "bg-lime-100 text-lime-800",
         cyan: "bg-cyan-100 text-cyan-800",

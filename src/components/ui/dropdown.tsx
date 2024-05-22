@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 export type DropdownItem = {
-  label: string
+  label: string | JSX.Element
   onClick: () => void
 };
 

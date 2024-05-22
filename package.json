@@ -18,7 +18,6 @@
   },
   "packageManager": "yarn@4.1.1",
   "scripts": {
-    "add-component": "npx shadcn-ui@latest add",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
