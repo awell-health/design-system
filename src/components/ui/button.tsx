@@ -8,21 +8,15 @@ const buttonVariants = cva(
   "btn",
   {
     variants: {
-      // keep for backward capabilites
       variant: {
-       destructive:
-         "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-       outline:
-         "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
-       ghost: "hover:bg-accent hover:text-accent-foreground",
-       link: "text-primary underline-offset-4 hover:underline",
-       // --- end
         default: "",
-        primary: "btn-primary text-green asd asdad",
+        primary: "btn-primary text-green",
         secondary: "btn-secondary",
         success: "btn-success",
         warning: "btn-warning",
-        error: "btn-error"
+        error: "btn-error",
+        ghost: "btn-ghost",
+        link: "btn-link",
       },
       size: {
         default: "",

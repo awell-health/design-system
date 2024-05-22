@@ -15,13 +15,15 @@ type Story = StoryObj<typeof Button>;
 function ButtonDemo() {
   return (
   <>
-        <div className="flex gap-4 py-4">
+    <div className="flex gap-4 py-4">
       <Button>default</Button>
       <Button variant="primary">primary</Button>
       <Button variant="secondary">secondary</Button>
       <Button variant="success">success</Button>
       <Button variant="warning">warning</Button>
       <Button variant="error">error</Button>
+      <Button variant="ghost">ghost</Button>
+      <Button variant="link">link</Button>
     </div>
     <div className="flex gap-4 py-4">
       <Button size="lg">large</Button>
