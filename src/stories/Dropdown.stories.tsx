@@ -16,7 +16,7 @@ function DropdownDemo() {
 
   const items: DropdownItem[] = [
     { label: "Test 1", onClick }, 
-    { label: "Test 2", onClick }
+    { label: <><Icon icon="RiAccountPinBoxFill"/>JSX item</>, onClick }
   ]
 
   return (
