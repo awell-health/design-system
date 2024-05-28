@@ -1,3 +1,4 @@
+import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils";
 
 export type DropdownItem = {
@@ -5,15 +6,35 @@ export type DropdownItem = {
   onClick: () => void
 };
 
-export interface DropdownProps {
-  buttonLabel: string | JSX.Element
-  items: Array<DropdownItem>
-  buttonClassNames?: string
-  itemClassNames?: string
+const dropdownVariants = cva(
+  "dropdown",
+  {
+    variants: {
+      placement: {
+        default: "",
+        top: "dropdown-top",
+        left: "dropdown-left",
+        right: "dropdown-right",
+        bottom: "dropdown-bottom",
+      },
+    },
+    defaultVariants: {
+      placement: "default",
+    },
+  }
+)
+
+export interface DropdownProps
+  extends React.ButtonHTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof dropdownVariants> {
+      buttonLabel: string | JSX.Element
+      items: Array<DropdownItem>
+      buttonClassNames?: string
+      itemClassNames?: string
 }
 
 function Dropdown(props: DropdownProps) {
-  const { items, buttonLabel, buttonClassNames, itemClassNames } = props;
+  const { items, buttonLabel, buttonClassNames, itemClassNames, placement, className } = props;
 
   const renderItem = ({ label, onClick }: DropdownItem): JSX.Element => (
     <li className={cn(itemClassNames)}>
@@ -22,7 +43,7 @@ function Dropdown(props: DropdownProps) {
   );
 
   return (
-    <div className="dropdown">
+    <div className={cn(dropdownVariants({ placement, className }))}>
       <div tabIndex={0} role="button" className={cn("btn m-1", buttonClassNames)}>
         {buttonLabel}
       </div>

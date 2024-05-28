@@ -27,6 +27,11 @@ function DropdownDemo() {
         items={items} 
         buttonClassNames="bg-white border-none shadow-none"
       />
+      <div className="divider" />
+      <Dropdown buttonLabel={"Open"} items={items} placement="top" />
+      <Dropdown buttonLabel={"Open"} items={items} placement="left" />
+      <Dropdown buttonLabel={"Open"} items={items} placement="bottom" />
+      <Dropdown buttonLabel={"Open"} items={items} placement="right" />
     </div>
   );
 }
