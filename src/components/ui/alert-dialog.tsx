@@ -3,7 +3,7 @@ import * as React from "react";
 import { Icon } from "./icon";
 
 interface Props {
-  title: string;
+  title?: string;
   text?: string;
   children?: JSX.Element | string;
   onClose?: () => void;
@@ -36,12 +36,14 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                   <Icon icon="RiCloseLine" />
                 </div>
               )}
-              <h3
-                className="text-base font-semibold leading-6 text-gray-900"
-                id="modal-title"
-              >
-                {title}
-              </h3>
+              {title && (
+                <h3
+                  className="text-base font-semibold leading-6 text-gray-900"
+                  id="modal-title"
+                >
+                  {title}
+                </h3>
+              )}
               {text && (
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">{text}</p>
