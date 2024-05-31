@@ -2535,6 +2535,14 @@ input.tab:checked + .tab-content,
   width: 100vw;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
 .caption-bottom {
   caption-side: bottom;
 }
