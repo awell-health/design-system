@@ -26,9 +26,7 @@ function TabDemo() {
 
   return (
     <div className="flex flex-col gap-4">
-      <Tab items={items} selected={selected} size="lg" />
       <Tab items={items} selected={selected} />
-      <Tab items={items} selected={selected} size="xs" />
     </div>
     
   );
