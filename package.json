@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
+    "@storybook/addon-designs": "^8.0.2",
     "@storybook/addon-essentials": "^8.1.5",
     "@storybook/addon-measure": "^8.1.5",
     "@storybook/blocks": "^8.1.5",

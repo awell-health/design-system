@@ -16,7 +16,7 @@ const config: StorybookConfig = {
     // Add your configuration here
     return config;
   },
-  addons: ['@storybook/addon-essentials', '@storybook/addon-measure'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-designs'],
 };
 
 export default config;
