@@ -15,4 +15,5 @@
 *storybook.log
 node_modules
 dist
+storybook-static
 vite.config.ts.timestamp*
