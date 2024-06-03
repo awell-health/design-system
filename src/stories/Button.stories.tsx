@@ -1,7 +1,6 @@
 // Replace your-framework with the name of your framework
 import { Button } from "@/components/ui/button";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Icon } from "..";
 
 const meta = {
   component: Button,
