@@ -1,40 +1,17 @@
-import { join, dirname, resolve } from "path";
-import { StorybookConfig } from '@storybook/react-vite';
-import { loadConfigFromFile, mergeConfig } from "vite";
-
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
-function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")))
-}
+// Replace your-framework with the framework you are using (e.g., react-vite, vue3-vite)
+import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  stories: [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-  ],
-  addons: [],
-  framework: {
-    // @ts-expect-error TODO: figure out how to get the framework name type
-    name: getAbsolutePath("@storybook/react-vite"),
-    options: {},
+  framework: '@storybook/react-vite',
+  typescript: {
+    // Enables the `react-docgen-typescript` parser.
+    // See https://storybook.js.org/docs/api/main-config-typescript for more information about this option.
+    reactDocgen: 'react-docgen-typescript',
   },
-  docs: {
-    autodocs: "tag",
-  },
-  staticDirs: ['../styles'],
-  async viteFinal(config, { configType }) {
-    const viteConfig = await loadConfigFromFile({ command: 'build', mode: 'storybook' }, 
-      resolve(__dirname, "../vite.config.js")
-    );
-
-    return mergeConfig(config, {
-      ...(viteConfig?.config ?? {}),
-      // manually specify plugins to avoid conflict
-      plugins: [],
-    });
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  async viteFinal(config, options) {
+    // Add your configuration here
+    return config;
   },
 };
 

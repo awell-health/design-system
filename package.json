@@ -19,7 +19,7 @@
   "packageManager": "yarn@4.1.1",
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o dist/storybook",
+    "build-storybook": "storybook build -o storybook-static",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
     "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
     "dev": "yarn tailwind & yarn storybook"
