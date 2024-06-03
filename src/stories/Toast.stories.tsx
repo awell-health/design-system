@@ -3,111 +3,54 @@ import { Icon } from "@/components/ui/icon";
 import { Toast } from "@/components/ui/toast";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
+const meta: Meta<typeof Toast> = {
   component: Toast,
-} satisfies Meta<typeof Toast>;
+  argTypes: {
+    horizontal: {
+      options: ["center", "start", "end"],
+      controls: {
+        type: "select",
+      }
+    },
+    vertical: {
+      options: ["bottom", "top", "middle"],
+      controls: {
+        type: "select",
+      }
+    },
+    title: { control: 'text'},
+    text: { control: 'text'},
+    icon: {
+      options: [null, <Icon icon="RiDeleteBinFill" className="fill-red-600"/>],
+    } 
+  },
+};
 
 export default meta;
 
 type Story = StoryObj<typeof Toast>;
 
-
-  
-
-function ToastDemo() {
-  const handleClose = () => { console.log('closed!') }
-  const title = "“Patient Intake” has just been deleted."
-  const description = "Check out the all new dashboard view. Pages and exports now load faster."
-
-  return (
-    <>
-      <h3 className="py-4 text-lg">Botton One: Default</h3>
-      <h3 className="py-4 text-lg">Middle: Vertical middle variant with description</h3>
-      <div>
-        <Toast title={title} handleClose={handleClose} vertical='middle'/>
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} text={description}/>
-      </div>
-    </>
-  );
+const handleClose = () => {
+  console.log("close")
 }
 
-function ToastDemoTwo() {
-  const handleClose = () => { console.log('closed!') }
-  const title = "“Patient Intake” has just been deleted."
-  const titleTwo = "Title with a very long and convoluted name to show how the test wraps around"
-  const icon = <Icon icon="RiDeleteBinFill" className="fill-red-600"/>
-  const description = "Check out the all new dashboard view. Pages and exports now load faster. Adding this at the end to show the wrapping"
-
-  return (
-    <>
-      <h3 className="py-4 text-lg">Variants with icons </h3>
-      <div>
-        <Toast title={titleTwo} handleClose={handleClose} icon={icon} vertical='top'/>
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} vertical='middle'/>
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} text={description} />
-      </div>
-      
-    </>
-  );
-}
-
-function ToastDemoThree() {
-  const handleClose = () => { console.log('closed!') }
-  const title = "“Patient Intake” has just been deleted."
-  const icon = <Icon icon="RiDeleteBinFill" className="fill-slate-600"/>
-
-  return (
-    <>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} horizontal='start'/>
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} horizontal='end' />
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} />
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} horizontal='start' vertical='middle'/>
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} horizontal='end' vertical='middle' />
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} vertical='middle' />
-      </div>
-
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} horizontal='start' vertical='top'/>
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} horizontal='end' vertical='top' />
-      </div>
-      <div>
-        <Toast title={title} handleClose={handleClose} icon={icon} vertical='top' />
-      </div>
-    </>
-  );
-}
-
-export const Example = {
-  args: {},
-  render: () => <ToastDemo />,
-} satisfies Story;
-
-export const ExampleTwo = {
-  args: {},
-  render: () => <ToastDemoTwo />,
-} satisfies Story;
-
-export const ExampleThree = {
-  args: {},
-  render: () => <ToastDemoThree />,
-} satisfies Story;
-
+export const Example: Story = {
+  render: (args) => {
+    const { horizontal, vertical, title, text, icon } = args;
+    return (
+      <>
+        <h3 className="p-4"></h3>
+        <div  className="p-4">
+          <Toast horizontal={horizontal} vertical={vertical} title={title} text={text} icon={icon} handleClose={handleClose}/>
+        </div>
+      </>
+    )
+  }, 
+  args: {
+    horizontal: "center",
+    vertical: "bottom",
+    title: "“Patient Intake” has just been deleted.",
+    text: "Check out the all new dashboard view. Pages and exports now load faster.",
+    icon: <Icon icon="RiDeleteBinFill" className="fill-red-600"/>
+  },
+};

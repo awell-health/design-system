@@ -38,14 +38,14 @@ export interface ToastProps
 function Toast({ className, horizontal, vertical, handleClose, ...props }: ToastProps) {
   return (
     <div className={cn(toastVariants({ horizontal, vertical }), className)}>
-      <div className="w-[400px] p-4 bg-white rounded-lg shadow border border-slate-200 justify-start items-start gap-4 inline-flex">
+      <div className="p-4 bg-white rounded-lg shadow border border-slate-200 justify-start items-start gap-4 inline-flex max-w-[400px]">
 
         {props.icon && 
           <div className="relative"> 
             {props.icon}
           </div>
         }
-        <div className="flex-col justify-start items-start">
+        <div className="w-[400px] flex-col justify-start items-start">
           <div className="text-slate-900 text-sm font-medium leading-tight whitespace-normal overflow-auto max-w-[326px]">
             {props.title}
           </div>
