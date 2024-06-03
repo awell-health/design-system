@@ -43,17 +43,17 @@ function Dropdown(props: DropdownProps) {
   );
 
   return (
-    <div className={cn(dropdownVariants({ placement, className }))}>
-      <div tabIndex={0} role="button" className={cn("btn m-1", buttonClassNames)}>
+    <details className={cn(dropdownVariants({ placement, className }))}>
+      <summary tabIndex={0} role="button" className={cn("btn m-1", buttonClassNames)}>
         {buttonLabel}
-      </div>
+      </summary>
       <ul
         tabIndex={0}
         className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
       >
         {items.map(renderItem)}
       </ul>
-    </div>
+    </details>
   );
 }
 
