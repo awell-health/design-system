@@ -45,7 +45,6 @@ __metadata:
   resolution: "@awell-health/design-system@workspace:."
   dependencies:
     "@chromatic-com/storybook": "npm:^1.5.0"
-    "@fairdataihub/storybook-tailwind-foundations": "npm:^3.0.1"
     "@remixicon/react": "npm:^4.2.0"
     "@storybook/addon-essentials": "npm:^8.1.5"
     "@storybook/addon-measure": "npm:^8.1.5"
@@ -2137,17 +2136,6 @@ __metadata:
   version: 0.20.2
   resolution: "@esbuild/win32-x64@npm:0.20.2"
   conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@fairdataihub/storybook-tailwind-foundations@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@fairdataihub/storybook-tailwind-foundations@npm:3.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40fairdataihub%2Fstorybook-tailwind-foundations%2F-%2Fstorybook-tailwind-foundations-3.0.1.tgz"
-  peerDependencies:
-    "@storybook/builder-vite": ^0.2.2
-    vite: ^3.0.4
-    vue: ^3.2.25
-  checksum: 10c0/d47644dae046fdae4399c5764e2878587866f93f02d32b79019e64fad3ad275bdca2e9b9b5d6d727dcd42d006fc6219a1fce8950ca67dd1288d9a0a3851a52af
   languageName: node
   linkType: hard
 
