@@ -40,7 +40,10 @@ import {
   RiCursorFill,
   RiNodeTree,
   RiSearchLine,
-  RiContractRightLine
+  RiContractRightLine,
+  RiErrorWarningFill,
+  RiInformation2Fill,
+  RiCheckboxFill
 } from "@remixicon/react";
 
 const ICONS = {
@@ -84,7 +87,10 @@ const ICONS = {
   RiCursorFill,
   RiNodeTree,
   RiSearchLine,
-  RiContractRightLine
+  RiContractRightLine,
+  RiErrorWarningFill,
+  RiInformation2Fill,
+  RiCheckboxFill
 };
 
 export enum IconSize {
