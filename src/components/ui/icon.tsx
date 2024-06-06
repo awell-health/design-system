@@ -36,7 +36,10 @@ import {
   RiAccountPinBoxFill,
   RiDeleteBinFill,
   RiCloseLine,
-  RiCloseFill
+  RiCloseFill,
+  RiCursorFill,
+  RiNodeTree,
+  RiSearchLine
 } from "@remixicon/react";
 
 const ICONS = {
@@ -76,7 +79,10 @@ const ICONS = {
   RiAccountPinBoxFill,
   RiDeleteBinFill,
   RiCloseLine,
-  RiCloseFill
+  RiCloseFill,
+  RiCursorFill,
+  RiNodeTree,
+  RiSearchLine
 };
 
 export enum IconSize {
