@@ -1,5 +1,83 @@
 import * as React from "react";
-import * as RemixIcon from "@remixicon/react";
+import {
+  RiArrowUpSLine,
+  RiThumbUpFill,
+  RiThumbUpLine,
+  RiThumbDownFill,
+  RiThumbDownLine,
+  RiLineChartLine,
+  RiStickyNote2Fill,
+  RiDeleteBinLine,
+  RiDraggable,
+  RiPuzzleFill,
+  RiPriceTag3Fill,
+  RiEdit2Fill,
+  RiFileCopyFill,
+  RiBookmarkLine,
+  RiDeleteBin6Fill,
+  RiMore2Line,
+  RiCloseLargeLine,
+  RiLayout3Line,
+  RiTerminalBoxFill,
+  RiTerminalWindowFill,
+  RiCalculatorFill,
+  RiCheckboxMultipleFill,
+  RiHealthBookFill,
+  RiSurveyFill,
+  RiMessage3Fill,
+  RiQuestionFill,
+  RiAlertFill,
+  RiArrowDropRightLine,
+  RiArrowLeftRightFill,
+  RiArrowDownSLine,
+  RiArrowUpLine,
+  RiAddFill,
+  RiErrorWarningLine,
+  RiAccountPinBoxFill,
+  RiDeleteBinFill,
+  RiCloseLine,
+  RiCloseFill
+} from "@remixicon/react";
+
+const ICONS = {
+  RiArrowUpSLine,
+  RiThumbUpFill,
+  RiThumbUpLine,
+  RiThumbDownFill,
+  RiThumbDownLine,
+  RiLineChartLine,
+  RiStickyNote2Fill,
+  RiDeleteBinLine,
+  RiDraggable,
+  RiPuzzleFill,
+  RiPriceTag3Fill,
+  RiEdit2Fill,
+  RiFileCopyFill,
+  RiBookmarkLine,
+  RiDeleteBin6Fill,
+  RiMore2Line,
+  RiCloseLargeLine,
+  RiLayout3Line,
+  RiTerminalBoxFill,
+  RiTerminalWindowFill,
+  RiCalculatorFill,
+  RiCheckboxMultipleFill,
+  RiHealthBookFill,
+  RiSurveyFill,
+  RiMessage3Fill,
+  RiQuestionFill,
+  RiAlertFill,
+  RiArrowDropRightLine,
+  RiArrowLeftRightFill,
+  RiArrowDownSLine,
+  RiArrowUpLine,
+  RiAddFill,
+  RiErrorWarningLine,
+  RiAccountPinBoxFill,
+  RiDeleteBinFill,
+  RiCloseLine,
+  RiCloseFill
+};
 
 export enum IconSize {
   xs = 16,
@@ -9,7 +87,7 @@ export enum IconSize {
   xl = 32,
 }
 
-export type IconType = keyof typeof RemixIcon;
+export type IconType = keyof typeof ICONS;
 
 interface Props {
   icon: IconType;
@@ -19,9 +97,14 @@ interface Props {
 }
 
 const Icon = (props: Props): React.JSX.Element => {
-  const { icon, color = "default", className = "inline", size = IconSize.m } = props
+  const {
+    icon,
+    color = "default",
+    className = "inline",
+    size = IconSize.m,
+  } = props;
 
-  const IconComponent = RemixIcon[icon]
+  const IconComponent = ICONS[icon];
 
   return <IconComponent size={size} color={color} className={className} />;
 };
