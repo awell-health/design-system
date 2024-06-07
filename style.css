@@ -2557,6 +2557,18 @@ input.tab:checked + .tab-content,
   margin-top: 1rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .inline {
   display: inline;
 }
@@ -2583,6 +2595,14 @@ input.tab:checked + .tab-content,
 
 .h-\[46px\] {
   height: 46px;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .min-h-\[60px\] {
@@ -2625,6 +2645,26 @@ input.tab:checked + .tab-content,
   width: 100vw;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[326px\] {
+  width: 326px;
+}
+
+.w-\[280px\] {
+  width: 280px;
+}
+
+.w-\[290px\] {
+  width: 290px;
+}
+
 .max-w-\[326px\] {
   max-width: 326px;
 }
@@ -2633,8 +2673,28 @@ input.tab:checked + .tab-content,
   max-width: 400px;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
 .shrink {
   flex-shrink: 1;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .grow {
@@ -2679,6 +2739,10 @@ input.tab:checked + .tab-content,
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-2 {
@@ -2962,8 +3026,16 @@ input.tab:checked + .tab-content,
   padding-top: 1rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
 .text-left {
   text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-right {
