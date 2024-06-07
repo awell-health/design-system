@@ -37,26 +37,31 @@ export interface ToastProps
 
 function Toast({ className, horizontal, vertical, handleClose, ...props }: ToastProps) {
   const { title, text, icon } = props
+  const textStyling = icon ?'pl-4 flex items-start justify-center' : ''
   return (
     <div className={cn(toastVariants({ horizontal, vertical }), className)}>
-      <div className="p-4 bg-white rounded-lg shadow border border-slate-200 justify-start items-start gap-4 inline-flex max-w-[400px]">
+      <div className='flex flex-col p-4 bg-white rounded-lg shadow border border-slate-200 max-w-[400px]'>
+        <div className="justify-start items-center gap-4 inline-flex">
 
-        {icon && 
-          <div className="relative"> 
-            {icon}
+          {icon && 
+            <div className="relative"> 
+              {icon}
+            </div>
+          }
+          <div className="w-[400px] flex-col justify-start items-start">
+            <div className="text-slate-900 text-sm font-medium whitespace-normal overflow-auto max-w-[300px]">
+              {title}
+            </div>
           </div>
-        }
-        <div className="w-[400px] flex-col justify-start items-start">
-          <div className="text-slate-900 text-sm font-medium leading-tight whitespace-normal overflow-auto max-w-[326px]">
-            {title}
-          </div>
-          <div className="text-slate-500 text-sm leading-tight whitespace-normal overflow-aut">
-            {text}
+
+          <div role="button" onClick={handleClose}>
+            <Icon icon="RiCloseFill" className="fill-slate-400 w-4 h-4"/>
           </div>
         </div>
-
-        <div role="button" onClick={handleClose}>
-          <Icon icon="RiCloseFill" className="fill-slate-400"/>
+        <div className={textStyling}>
+          <div className="text-slate-500 text-sm whitespace-normal overflow-auto w-[300px]">
+            {text}
+          </div>
         </div>
       </div>
     </div>

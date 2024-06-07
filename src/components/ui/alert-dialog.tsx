@@ -25,7 +25,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
     >
       <div className="fixed inset-0 bg-black bg-opacity-80 transition-opacity"></div>
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div className="flex min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
+        <div className="flex min-h-full items-center justify-center p-4 sm:items-center sm:p-0">
           <div className="relative transform overflow-hidden rounded-lg bg-white shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div className="bg-white p-6 pb-8 relative">
               {onClose && (
