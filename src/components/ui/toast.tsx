@@ -49,7 +49,7 @@ function Toast({ className, horizontal, vertical, handleClose, ...props }: Toast
             </div>
           }
           <div className="w-[400px] flex-col justify-start items-start">
-            <div className="text-slate-900 text-sm font-medium leading-tight whitespace-normal overflow-auto max-w-[300px]">
+            <div className="text-slate-900 text-sm font-medium whitespace-normal overflow-auto max-w-[300px]">
               {title}
             </div>
           </div>
@@ -59,7 +59,7 @@ function Toast({ className, horizontal, vertical, handleClose, ...props }: Toast
           </div>
         </div>
         <div className={textStyling}>
-          <div className="text-slate-500 text-sm leading-tight whitespace-normal overflow-auto w-[300px]">
+          <div className="text-slate-500 text-sm whitespace-normal overflow-auto w-[300px]">
             {text}
           </div>
         </div>
