@@ -2605,12 +2605,36 @@ input.tab:checked + .tab-content,
   height: 100%;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-\[24px\] {
+  height: 24px;
+}
+
+.h-\[36px\] {
+  height: 36px;
+}
+
 .min-h-\[60px\] {
   min-height: 60px;
 }
 
 .min-h-full {
   min-height: 100%;
+}
+
+.min-h-9 {
+  min-height: 2.25rem;
+}
+
+.min-h-6 {
+  min-height: 1.5rem;
 }
 
 .w-52 {
@@ -2663,6 +2687,22 @@ input.tab:checked + .tab-content,
 
 .w-\[290px\] {
   width: 290px;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-\[24px\] {
+  width: 24px;
+}
+
+.w-\[36px\] {
+  width: 36px;
 }
 
 .max-w-\[326px\] {
