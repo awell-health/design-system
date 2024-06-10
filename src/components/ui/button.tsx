@@ -24,8 +24,8 @@ const buttonVariants = cva("btn", {
       lg: "btn-lg rounded-lg px-[18px] py-2.5 h-[46px]",
     },
     shape: {
-      squareLg: "btn-square h-9 w-9 min-h-9 min-w-h-9 rounded-lg p-2",
-      squareSm: "btn-square h-6 w-6 min-h-6 min-w-h-6 rounded-md p-1",
+      squareLg: "btn-square h-9 w-9 min-h-9 min-w-h-9 rounded-lg",
+      squareSm: "btn-square h-6 w-6 min-h-6 min-w-h-6 rounded-md",
     },
   },
   defaultVariants: {
