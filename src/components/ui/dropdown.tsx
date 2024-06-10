@@ -1,40 +1,44 @@
-import { cva, type VariantProps } from "class-variance-authority"
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 export type DropdownItem = {
-  label: string | JSX.Element
-  onClick: () => void
+  label: string | JSX.Element;
+  onClick: () => void;
 };
 
-const dropdownVariants = cva(
-  "dropdown",
-  {
-    variants: {
-      placement: {
-        default: "",
-        top: "dropdown-top",
-        left: "dropdown-left",
-        right: "dropdown-right",
-        bottom: "dropdown-bottom",
-      },
+const dropdownVariants = cva("dropdown", {
+  variants: {
+    placement: {
+      default: "",
+      top: "dropdown-top",
+      left: "dropdown-left",
+      right: "dropdown-right",
+      bottom: "dropdown-bottom",
     },
-    defaultVariants: {
-      placement: "default",
-    },
-  }
-)
+  },
+  defaultVariants: {
+    placement: "default",
+  },
+});
 
 export interface DropdownProps
   extends React.ButtonHTMLAttributes<HTMLDivElement>,
     VariantProps<typeof dropdownVariants> {
-      buttonLabel: string | JSX.Element
-      items: Array<DropdownItem>
-      buttonClassNames?: string
-      itemClassNames?: string
+  buttonLabel: string | JSX.Element;
+  items: Array<DropdownItem>;
+  buttonClassNames?: string;
+  itemClassNames?: string;
 }
 
 function Dropdown(props: DropdownProps) {
-  const { items, buttonLabel, buttonClassNames, itemClassNames, placement, className } = props;
+  const {
+    items,
+    buttonLabel,
+    buttonClassNames,
+    itemClassNames,
+    placement,
+    className,
+  } = props;
 
   const renderItem = ({ label, onClick }: DropdownItem): JSX.Element => (
     <li className={cn(itemClassNames)}>
@@ -43,17 +47,21 @@ function Dropdown(props: DropdownProps) {
   );
 
   return (
-    <details className={cn(dropdownVariants({ placement, className }))}>
-      <summary tabIndex={0} role="button" className={cn("btn m-1", buttonClassNames)}>
+    <div className={cn(dropdownVariants({ placement, className }))}>
+      <div
+        tabIndex={0}
+        role="button"
+        className={cn("btn m-1", buttonClassNames)}
+      >
         {buttonLabel}
-      </summary>
+      </div>
       <ul
         tabIndex={0}
         className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
       >
         {items.map(renderItem)}
       </ul>
-    </details>
+    </div>
   );
 }
 
