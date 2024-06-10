@@ -1,5 +1,6 @@
 // Replace your-framework with the name of your framework
 import { Button } from "@/components/ui/button";
+import { Icon } from "@/components/ui/icon";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
@@ -24,6 +25,6 @@ export const Example = {
     },
   },
   render: (args) => (
-    <Button {...args}>{args.shape ? "x" : `Button ${args.variant}`}</Button>
+    <Button {...args}>{args.shape ? <Icon size={args.shape === 'squareLg' ? 20 : 16} icon="RiDeleteBinFill"/> : `Button ${args.variant}`}</Button>
   ),
 } satisfies Story;

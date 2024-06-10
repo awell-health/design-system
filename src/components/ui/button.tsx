@@ -14,7 +14,7 @@ const buttonVariants = cva("btn", {
         "btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white",
       link: "text-blue-600 text-sm bg-transparent border-none shadow-none hover:bg-transparent active:bg-transparent disabled:text-blue-200 disabled:bg-transparent",
       ghost:
-        "btn-ghost text-slate-600 hover:bg-transparent active:bg-transparent disabled:text-slate-200 disabled:bg-transparent",
+        "btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent",
       error: "btn-error",
       success: "btn-success",
       warning: "btn-warning",
@@ -24,8 +24,8 @@ const buttonVariants = cva("btn", {
       lg: "btn-lg rounded-lg px-[18px] py-2.5 h-[46px]",
     },
     shape: {
-      squareLg: "btn-square w-[46px] h-[46px]",
-      squareSm: "btn-square w-8 h-8",
+      squareLg: "btn-square h-9 w-9 min-h-9 min-w-h-9 rounded-lg p-2",
+      squareSm: "btn-square h-6 w-6 min-h-6 min-w-h-6 rounded-md p-1",
     },
   },
   defaultVariants: {
