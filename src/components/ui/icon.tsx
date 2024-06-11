@@ -43,7 +43,8 @@ import {
   RiContractRightLine,
   RiErrorWarningFill,
   RiInformation2Fill,
-  RiCheckboxFill
+  RiCheckboxFill,
+  RiUploadCloudFill
 } from "@remixicon/react";
 
 const ICONS = {
@@ -90,7 +91,8 @@ const ICONS = {
   RiContractRightLine,
   RiErrorWarningFill,
   RiInformation2Fill,
-  RiCheckboxFill
+  RiCheckboxFill,
+  RiUploadCloudFill
 };
 
 export enum IconSize {
