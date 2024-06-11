@@ -1,8 +1,6 @@
-import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
-
-import { cn } from "@/lib/utils";
-import { Icon, IconType } from "./icon";
+import * as React from "react"
+import { cn } from "@/lib/utils"
+import { Icon, IconType } from "./icon"
 
 
 export enum ActionType {
@@ -19,68 +17,70 @@ export enum ActionType {
 
 export interface ActionIconProps {
     actionType: ActionType
+    icon_url?: string
 }
 
 const ActionIcon = React.forwardRef<HTMLDivElement, ActionIconProps>(
-  ({ ...props }, ref) => {
+  ({ ...props }, _ref) => {
     const TYPES_ICONS_MAP: Record<
       ActionType,
-      { icon: IconType; className: string }
+      { icon: IconType }
     > = {
       [ActionType.ApiCall]: {
-        icon: "RiTerminalBoxFill",
-        className: "fill-slate-800",
+        icon: "RiTerminalBoxFill"
       },
       [ActionType.ApiCallGraphql]: {
-        icon: "RiTerminalWindowFill",
-        className: "fill-slate-800",
+        icon: "RiTerminalWindowFill"
       },
       [ActionType.Calculation]: {
-        icon: "RiCalculatorFill",
-        className: "fill-slate-800",
+        icon: "RiCalculatorFill"
       },
       [ActionType.Checklist]: {
-        icon: "RiCheckboxMultipleFill",
-        className: "fill-slate-800",
+        icon: "RiCheckboxMultipleFill"
       },
       [ActionType.ClinicalNote]: {
-        icon: "RiHealthBookFill",
-        className: "fill-slate-800",
+        icon: "RiHealthBookFill"
       },
       [ActionType.Form]: {
-        icon: "RiSurveyFill",
-        className: "fill-slate-800",
+        icon: "RiSurveyFill"
       },
       [ActionType.Message]: {
-        icon: "RiMessage3Fill",
-        className: "fill-slate-800",
+        icon: "RiMessage3Fill"
       },
       [ActionType.Plugin]: {
-        icon: "RiQuestionFill",
-        className: "fill-slate-400",
+        icon: "RiUploadCloudFill"
       },
       [ActionType.PushToEmr]: {
-        icon: "RiQuestionFill",
-        className: "fill-slate-400",
+        icon: "RiUploadCloudFill"
       },
-    };
+    }
 
     const defaultIconProps = {
-      icon: "RiQuestionFill",
-      className: "fill-slate-400",
-    };
+      icon: "RiQuestionFill"
+    }
 
     const iconProps =
-      TYPES_ICONS_MAP[actionType as keyof typeof TYPES_ICONS_MAP] ??
-      defaultIconProps;
+      TYPES_ICONS_MAP[props.actionType as keyof typeof TYPES_ICONS_MAP] ??
+      defaultIconProps
+
+    const color = iconProps.icon === "RiQuestionFill" ? "fill-slate-400" : "fill-slate-800";
+
+    if (props.actionType === ActionType.Plugin && props.icon_url) {
+      return (
+        <img
+          className='w-6 h-6 rounded-md border border-slate-200'
+          src={props.icon_url}
+        />
+      )
+    }
 
     return (
       <div className="w-6 h-6 flex bg-slate-100 rounded-md border border-slate-200 items-center justify-center">
-        <Icon {...iconProps} className={cn("w-4 h-4", iconProps.className)} />
+        <Icon {...iconProps} className={cn("w-4 h-4", color)} />
       </div>
-    );
+    )
   },
-);
-ActionIcon.displayName = "ActionIcon";
+)
+ActionIcon.displayName = "ActionIcon"
 
-export { ActionIcon };
+export { ActionIcon }
