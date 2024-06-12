@@ -11,19 +11,17 @@ export default meta;
 
 type Story = StoryObj<typeof Icon>;
 
-function IconDemo() {
-  const key: IconType = "RiLineChartLine";
-
+function IconDemo(args) {
   return (
     <>
-      <div>
-        <Icon icon={key as unknown as IconType} />
+      <div className="flex items-center">
+        <Icon {...args} />
         &nbsp;
-        <span>{key}</span>
+        <span>{args.icon}</span>
       </div>
       <div className="pt-4">
         <a className="text-blue-600" href="https://remixicon.com/" target="_blank">
-          Full Icon list here
+          You can add icons from the list here
         </a>
       </div>
     </>
@@ -31,6 +29,9 @@ function IconDemo() {
 }
 
 export const Example = {
-  args: {},
-  render: () => <IconDemo />,
+  args: {
+    icon: "RiLineChartLine",
+    size: 20,
+  },
+  render: (args) => <IconDemo  {...args}/>,
 } satisfies Story;
