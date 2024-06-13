@@ -18,6 +18,7 @@ export enum ActionType {
 export interface ActionIconProps {
     actionType?: ActionType
     icon_url?: string
+    size?: "sm" | "lg"
 }
 
 const ActionIcon = React.forwardRef<HTMLDivElement, ActionIconProps>(
@@ -36,27 +37,29 @@ const ActionIcon = React.forwardRef<HTMLDivElement, ActionIconProps>(
       [ActionType.Plugin]: "RiUploadCloudFill",
       [ActionType.PushToEmr]: "RiUploadCloudFill"
     }
-    
-    const { icon_url, actionType } = props
+
+    const { icon_url, actionType, size='sm' } = props
 
     const icon =
       TYPES_ICONS_MAP[actionType as keyof typeof TYPES_ICONS_MAP] ??
       "RiQuestionFill"
 
     const color = icon === "RiQuestionFill" ? "fill-slate-400" : "fill-slate-800";
+    const iconSize = size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'
+    const containersize = size === 'sm' ? 'w-6 h-6' : 'w-9 h-9'
 
     if (actionType === ActionType.Plugin && icon_url) {
       return (
         <img
-          className='w-6 h-6 rounded-md border border-slate-200'
+          className={`${containersize} rounded-md border border-slate-200`}
           src={icon_url}
         />
       )
     }
 
     return (
-      <div className="w-6 h-6 flex bg-slate-100 rounded-md border border-slate-200 items-center justify-center">
-        <Icon icon={icon} className={cn("w-4 h-4", color)} />
+      <div className={`${containersize} flex bg-slate-100 rounded-md border border-slate-200 items-center justify-center`}>
+        <Icon icon={icon} className={cn(`${iconSize}`, color)} />
       </div>
     )
   },
