@@ -1,4 +1,4 @@
-import { ActionIcon, ActionType } from "@/components/ui/action-icon";
+import { ActionIcon } from "@/components/ui/action-icon";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ActionIcon> = {
