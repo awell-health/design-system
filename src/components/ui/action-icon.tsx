@@ -16,7 +16,7 @@ export enum ActionType {
 }
 
 export interface ActionIconProps {
-    actionType: ActionType
+    actionType?: ActionType
     icon_url?: string
 }
 
@@ -36,16 +36,12 @@ const ActionIcon = React.forwardRef<HTMLDivElement, ActionIconProps>(
       [ActionType.Plugin]: "RiUploadCloudFill",
       [ActionType.PushToEmr]: "RiUploadCloudFill"
     }
-
-    const defaultIconProps = {
-      icon: "RiQuestionFill"
-    }
     
     const { icon_url, actionType } = props
 
     const icon =
       TYPES_ICONS_MAP[actionType as keyof typeof TYPES_ICONS_MAP] ??
-      defaultIconProps
+      "RiQuestionFill"
 
     const color = icon === "RiQuestionFill" ? "fill-slate-400" : "fill-slate-800";
 
