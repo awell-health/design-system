@@ -49,7 +49,8 @@ import {
   RiStopCircleFill,
   RiArrowLeftSLine,
   RiArrowRightSLine,
-  RiSparklingFill
+  RiSparklingFill,
+  RiExternalLinkLine
 
 } from "@remixicon/react";
 
@@ -103,7 +104,8 @@ const ICONS = {
   RiStopCircleFill,
   RiArrowLeftSLine,
   RiArrowRightSLine,
-  RiSparklingFill
+  RiSparklingFill,
+  RiExternalLinkLine
 };
 
 export enum IconSize {
