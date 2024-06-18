@@ -1,18 +1,15 @@
-// Replace your-framework with the name of your framework
 import type { Meta, StoryObj } from "@storybook/react";
 
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
 } from "@/components/ui/card";
+import { Button } from "..";
 
-const meta = {
+const meta: Meta<typeof Card> = {
   component: Card,
-} satisfies Meta<typeof Card>;
+  argTypes: {
+  },
+};
 
 export default meta;
 
@@ -20,24 +17,17 @@ type Story = StoryObj<typeof Card>;
 
 function CardDemo() {
   return (
-    <div className="w-64">
-      <Card>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
+      <Card className="w-64">
+        <h3>Title</h3>
+        <p className="text-xs">Description</p>
+        <div className="flex justify-end"> 
+        <Button>Click me</Button>
+        </div>
       </Card>
-    </div>
   );
 }
 
-export const Example = {
-  args: {},
-  render: () => <CardDemo />,
-} satisfies Story;
+export const Example: Story = {
+  render: () => <CardDemo/>,
+    args: {},
+};
