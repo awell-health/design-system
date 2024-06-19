@@ -20,6 +20,7 @@ function AlertDialogDemo() {
         label: "Redirect",
         buttonAction: () => console.log('button click')
       }}
+      children={<div className="py-4">SOME CHILD CONTENT</div>}
     > 
       </AlertDialog>
   );

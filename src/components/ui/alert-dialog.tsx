@@ -51,7 +51,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                 </div>
               )}
             </div>
-            {children && <div className="pb-8 px-6">{children}</div>}
+            {children && <div>{children}</div>}
             {button && (
               <div className="flex justify-end pt-[32px]">
                 <Button variant="primary" onClick={button?.buttonAction}>
