@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Icon } from "./icon";
+import { Button } from "./button";
 
 interface Props {
   title?: string;
@@ -23,11 +24,11 @@ const AlertDialog = (props: Props): React.JSX.Element => {
       role="dialog"
       aria-modal="true"
     >
-      <div className="fixed inset-0 bg-black bg-opacity-80 transition-opacity"></div>
-      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div className="fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]"></div>
+      <div className="fixed inset-0 z-[9999] w-screen overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4 sm:items-center sm:p-0">
-          <div className="relative transform overflow-hidden rounded-lg bg-white shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-            <div className="bg-white p-6 pb-8 relative">
+          <div className="relative transform overflow-hiddentransition-all sm:my-8 sm:w-full sm:max-w-lg p-6 bg-white rounded-lg shadow">
+            <div className="">
               {onClose && (
                 <div
                   className="absolute top-0 right-0 p-4 cursor-pointer text-slate-950"
@@ -38,7 +39,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
               )}
               {title && (
                 <h3
-                  className="text-base font-semibold leading-6 text-gray-900"
+                  className="text-gray-900 text-lg text-gray-900 leading-7"
                   id="modal-title"
                 >
                   {title}
@@ -46,20 +47,16 @@ const AlertDialog = (props: Props): React.JSX.Element => {
               )}
               {text && (
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500">{text}</p>
+                  <p className="text-gray-500 text-sm">{text}</p>
                 </div>
               )}
             </div>
             {children && <div className="pb-8 px-6">{children}</div>}
             {button && (
-              <div className="px-6 pb-6 flex justify-end">
-                <button
-                  type="button"
-                  className="inline-flex justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3"
-                  onClick={button?.buttonAction}
-                >
-                  {button?.label}
-                </button>
+              <div className="flex justify-end pt-[32px]">
+                <Button variant="primary" onClick={button?.buttonAction}>
+                {button?.label}
+                </Button>
               </div>
             )}
           </div>
