@@ -19,7 +19,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
 
   return (
     <div
-      className="relative z-10"
+      className="relative z-[9999]"
       aria-labelledby="modal-title"
       role="dialog"
       aria-modal="true"
@@ -55,7 +55,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
             {button && (
               <div className="flex justify-end pt-[32px]">
                 <Button variant="primary" onClick={button?.buttonAction}>
-                {button?.label}
+                  {button?.label}
                 </Button>
               </div>
             )}
