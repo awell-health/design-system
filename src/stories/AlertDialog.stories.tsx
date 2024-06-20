@@ -5,32 +5,35 @@ import { AlertDialog } from "@/components/ui/alert-dialog";
 
 const meta = {
   component: AlertDialog,
+  args: {
+    variant: "success",
+    title: "Modal title",
+    text: "Some text to display when modal is open",
+    button: undefined,
+    children: <div className="py-4">SOME CHILD CONTENT</div>,
+    onClose: undefined,
+    secondaryButton: undefined,
+  },
 } satisfies Meta<typeof AlertDialog>;
 
 export default meta;
 
 type Story = StoryObj<typeof AlertDialog>;
-
-function AlertDialogDemo() {
-  return (
-    <AlertDialog
-      title="Modal title"
-      text="Some text to display when modal is open"
-      button={{
-        label: "Redirect",
-        buttonAction: () => console.log("button click"),
-      }}
-      children={<div className="py-4">SOME CHILD CONTENT</div>}
-      onClose={() => console.log("closed")}
-      secondaryButton={{
-        label: "Cancel",
-        buttonAction: () => console.log("secondary click"),
-      }}
-    ></AlertDialog>
-  );
+// type AlertDialogProps = Parameters<typeof AlertDialog>[0]
+function AlertDialogDemo(args: any) {
+  return <AlertDialog {...args} />;
 }
-
 export const Example = {
-  args: {},
-  render: () => <AlertDialogDemo />,
+  args: {
+    secondaryButton: {
+      label: "Cancel",
+      buttonAction: () => alert("secondary click"),
+    },
+    button: {
+      label: "Redirect",
+      buttonAction: () => alert("button click"),
+    },
+    onClose: () => alert("closed"),
+  },
+  render: (args) => <AlertDialogDemo {...args} />,
 } satisfies Story;
