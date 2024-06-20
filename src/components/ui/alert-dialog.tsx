@@ -1,11 +1,11 @@
 import * as React from "react";
 
-import { Icon, IconSize } from "./icon";
+import { Icon } from "./icon";
 import { Button } from "./button";
 
 interface Props {
   title?: string;
-  variant?: "success" | "error" | null;
+  icon?: JSX.Element;
   text?: string;
   children?: JSX.Element | string;
   onClose?: () => void;
@@ -22,68 +22,13 @@ interface Props {
 const AlertDialog = (props: Props): React.JSX.Element => {
   const {
     title,
-    variant,
+    icon,
     text,
     button,
     children = null,
     onClose,
     secondaryButton,
   } = props;
-
-  function renderVariantIcon(variant: "success" | "error") {
-    switch (variant) {
-      case "success":
-        return (
-          <div
-            className="flex h-11 w-11 rounded-full bg-green-100 items-center justify-center"
-            style={{
-              borderRadius: "50%",
-              height: "44px",
-              width: "44px",
-              backgroundColor: "#DCFCE7",
-            }}
-          >
-            <div
-              className="flex h-9 w-9 rounded-full bg-green-200 items-center justify-center"
-              style={{
-                borderRadius: "50%",
-                height: "36px",
-                width: "36px",
-                backgroundColor: "#BBF7D0",
-              }}
-            >
-              <Icon icon="RiCheckLine" color="#16A34A" size={IconSize.l} />
-            </div>
-          </div>
-        );
-      case "error":
-        return (
-          <div
-            className="h-11 w-11 rounded-full bg-red-100 items-center justify-center flex"
-            style={{
-              borderRadius: "50%",
-              height: "44px",
-              width: "44px",
-              backgroundColor: "#FEE2E2",
-            }}
-          >
-            <div
-              className="h-9 w-9 rounded-full bg-red-300 items-center justify-center flex"
-              style={{
-                borderRadius: "50%",
-                height: "36px",
-                width: "36px",
-                backgroundColor: "#FECACA",
-              }}
-            >
-              <Icon icon="RiAlertFill" color="#DC2626" size={IconSize.l} />
-            </div>
-          </div>
-        );
-      default:
-        return <></>;
-    }
-  }
 
   return (
     <div
@@ -105,21 +50,25 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                   <Icon icon="RiCloseLine" />
                 </div>
               )}
-              {variant && renderVariantIcon(variant)}
-              <div className="flex flex-col">
-                {title && (
-                  <h3
-                    className="text-gray-900 text-lg text-gray-900 leading-7"
-                    id="modal-title"
-                  >
-                    {title}
-                  </h3>
-                )}
-                {text && (
-                  <div className="mt-2">
-                    <p className="text-gray-500 text-sm">{text}</p>
+              <div className="flex gap-5">
+                {icon && <div>{icon}</div>}
+                <div>
+                  <div className="flex flex-col">
+                    {title && (
+                      <h3
+                        className="text-gray-900 text-lg text-gray-900 leading-7"
+                        id="modal-title"
+                      >
+                        {title}
+                      </h3>
+                    )}
+                    {text && (
+                      <div className="mt-2">
+                        <p className="text-gray-500 text-sm">{text}</p>
+                      </div>
+                    )}
                   </div>
-                )}
+                </div>
               </div>
             </div>
             {children && <div>{children}</div>}
