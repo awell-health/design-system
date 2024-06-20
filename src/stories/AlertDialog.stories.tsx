@@ -18,11 +18,15 @@ function AlertDialogDemo() {
       text="Some text to display when modal is open"
       button={{
         label: "Redirect",
-        buttonAction: () => console.log('button click')
+        buttonAction: () => console.log("button click"),
       }}
       children={<div className="py-4">SOME CHILD CONTENT</div>}
-    > 
-      </AlertDialog>
+      onClose={() => console.log("closed")}
+      secondaryButton={{
+        label: "Cancel",
+        buttonAction: () => console.log("secondary click"),
+      }}
+    ></AlertDialog>
   );
 }
 

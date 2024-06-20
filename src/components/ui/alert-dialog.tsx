@@ -12,10 +12,21 @@ interface Props {
     label: string;
     buttonAction?: () => void;
   };
+  secondaryButton?: {
+    label: string;
+    buttonAction?: () => void;
+  };
 }
 
 const AlertDialog = (props: Props): React.JSX.Element => {
-  const { title, text, button, children = null, onClose } = props;
+  const {
+    title,
+    text,
+    button,
+    children = null,
+    onClose,
+    secondaryButton,
+  } = props;
 
   return (
     <div
@@ -53,7 +64,19 @@ const AlertDialog = (props: Props): React.JSX.Element => {
             </div>
             {children && <div>{children}</div>}
             {button && (
-              <div className="flex justify-end pt-[32px]">
+              <div
+                className="flex justify-end pt-[32px] gap-3 items-center"
+                // FIXME: Using inline style because gap-3 is not working
+                style={{ gap: "12px" }}
+              >
+                {secondaryButton && (
+                  <Button
+                    variant="secondary"
+                    onClick={secondaryButton?.buttonAction}
+                  >
+                    {secondaryButton.label}
+                  </Button>
+                )}
                 <Button variant="primary" onClick={button?.buttonAction}>
                   {button?.label}
                 </Button>
