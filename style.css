@@ -3282,8 +3282,16 @@ input.tab:checked + .tab-content,
   --tab-bg: yellow;
 }
 
+.\[--tab-border-bottom-color\:blue-600\] {
+  --tab-border-bottom-color: blue-600;
+}
+
 .\[--tab-border-bottom-color\:red\] {
   --tab-border-bottom-color: red;
+}
+
+.\[--tab-border-bottom-color\:slate-400\] {
+  --tab-border-bottom-color: slate-400;
 }
 
 .\[--tab-border-color\:blue-600\] {
