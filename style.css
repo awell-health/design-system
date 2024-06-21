@@ -1615,6 +1615,12 @@ input.tab:checked + .tab-content,
   }
 }
 
+.card.bordered {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+
 .checkbox:focus {
   box-shadow: none;
 }
@@ -2891,6 +2897,11 @@ input.tab:checked + .tab-content,
 .border-yellow-100 {
   --tw-border-opacity: 1;
   border-color: rgb(254 249 195 / var(--tw-border-opacity));
+}
+
+.border-slate-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
 .bg-base-100 {
