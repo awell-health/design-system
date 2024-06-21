@@ -1615,12 +1615,6 @@ input.tab:checked + .tab-content,
   }
 }
 
-.card.bordered {
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
-}
-
 .checkbox:focus {
   box-shadow: none;
 }
@@ -2899,11 +2893,6 @@ input.tab:checked + .tab-content,
   border-color: rgb(254 249 195 / var(--tw-border-opacity));
 }
 
-.border-slate-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(51 65 85 / var(--tw-border-opacity));
-}
-
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
@@ -3271,6 +3260,22 @@ input.tab:checked + .tab-content,
     opacity: var(--tw-exit-opacity, 1);
     transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
   }
+}
+
+.\[--tab-border-bottom-color\:blue-600\] {
+  --tab-border-bottom-color: blue-600;
+}
+
+.\[--tab-border-bottom-color\:blue-700\] {
+  --tab-border-bottom-color: blue-700;
+}
+
+.\[--tab-border-bottom-color\:slate-200\] {
+  --tab-border-bottom-color: slate-200;
+}
+
+.\[--tab-border-bottom-color\:slate-400\] {
+  --tab-border-bottom-color: slate-400;
 }
 
 .file\:border-0::file-selector-button {

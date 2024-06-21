@@ -41,9 +41,8 @@ function BorderedTab({
           role="tab" 
           key={item.id} 
           className={cn(
-            "tab",
-            selected === item.id && "tab-active",
-            fullWidth && 'grow shrink'
+            "tab [--tab-border-bottom-color:slate-400]",
+            selected === item.id && "tab-active [--tab-border-bottom-color:blue-600]",
           )}
           onClick={() => item.onClick(item)}
         >
