@@ -2619,6 +2619,10 @@ input.tab:checked + .tab-content,
   height: 46px;
 }
 
+.h-\[3rem\] {
+  height: 3rem;
+}
+
 .min-h-8 {
   min-height: 2rem;
 }
@@ -3262,20 +3266,48 @@ input.tab:checked + .tab-content,
   }
 }
 
-.\[--tab-border-bottom-color\:blue-600\] {
-  --tab-border-bottom-color: blue-600;
+.\[--tab-bg\:green\] {
+  --tab-bg: green;
 }
 
-.\[--tab-border-bottom-color\:blue-700\] {
-  --tab-border-bottom-color: blue-700;
+.\[--tab-bg\:none\] {
+  --tab-bg: none;
 }
 
-.\[--tab-border-bottom-color\:slate-200\] {
-  --tab-border-bottom-color: slate-200;
+.\[--tab-bg\:orange\] {
+  --tab-bg: orange;
 }
 
-.\[--tab-border-bottom-color\:slate-400\] {
-  --tab-border-bottom-color: slate-400;
+.\[--tab-bg\:yellow\] {
+  --tab-bg: yellow;
+}
+
+.\[--tab-border-bottom-color\:red\] {
+  --tab-border-bottom-color: red;
+}
+
+.\[--tab-border-color\:blue-600\] {
+  --tab-border-color: blue-600;
+}
+
+.\[--tab-border-color\:orange\] {
+  --tab-border-color: orange;
+}
+
+.\[--tab-border-color\:red\] {
+  --tab-border-color: red;
+}
+
+.\[--tab-border-top-color\:blue-600\] {
+  --tab-border-top-color: blue-600;
+}
+
+.\[--tab-border-top-color\:orange\] {
+  --tab-border-top-color: orange;
+}
+
+.\[--tab-border-top-color\:red\] {
+  --tab-border-top-color: red;
 }
 
 .file\:border-0::file-selector-button {

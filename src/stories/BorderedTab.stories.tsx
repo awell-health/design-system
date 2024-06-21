@@ -1,17 +1,19 @@
+// Replace your-framework with the name of your framework
 import { BorderedTab, BorderedTabItem } from "@/components/ui/bordered-tab";
 import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 
-const meta: Meta<typeof BorderedTab> = {
+const meta = {
   component: BorderedTab,
-  argTypes: {},
-};
+} satisfies Meta<typeof BorderedTab>;
 
 export default meta;
 
 type Story = StoryObj<typeof BorderedTab>;
 
+function BorderedTabDemo() {
   const onClick = (item: BorderedTabItem) => {
-    console.log(item.id)
+    setSelected(item.id)
   };
 
   const items: BorderedTabItem[] = [
@@ -20,7 +22,17 @@ type Story = StoryObj<typeof BorderedTab>;
     { id: '3', label: 'Third', onClick },
   ];
 
-export const Example: Story = {
-  render: (args) => <div className="flex flex-col gap-4"><BorderedTab {...args} items={items} selected={items[0].id} /></div>,
+  const [selected, setSelected] = useState<string>(items[0].id)
+
+  return (
+    <div className="flex flex-col gap-4">
+      <BorderedTab items={items} selected={selected} />
+    </div>
+    
+  );
+}
+
+export const Example = {
   args: {},
-} 
+  render: () => <BorderedTabDemo />,
+} satisfies Story;

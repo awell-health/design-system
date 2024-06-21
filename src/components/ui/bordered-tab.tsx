@@ -18,6 +18,7 @@ export interface BorderedTabItem {
   id: string;
   label: string | JSX.Element;
   onClick: (item: BorderedTabItem) => void;
+  className?: string;
 }
 
 export interface BorderedTabProps
@@ -36,17 +37,19 @@ function BorderedTab({
   ...props
 }: BorderedTabProps) {
   const renderItem = (item: BorderedTabItem): JSX.Element => {
+    const { id, label, onClick, className: tabClassName } = item;
       return (
         <a 
           role="tab" 
-          key={item.id} 
+          key={id} 
           className={cn(
-            "tab [--tab-border-bottom-color:slate-400]",
-            selected === item.id && "tab-active [--tab-border-bottom-color:blue-600]",
+            "tab h-[3rem]",
+            selected === id && "tab-active",
+            tabClassName
           )}
-          onClick={() => item.onClick(item)}
+          onClick={() => onClick(item)}
         >
-          {item.label}
+          {label}
         </a>
       )
   };
