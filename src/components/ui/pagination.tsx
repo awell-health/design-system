@@ -74,7 +74,6 @@ function Pagination(props: PaginationProps) {
             variant="secondary"
             onClick={() => handleClick(currentPage - 1)}
             disabled={prevButtonDisabled}
-            className=""
           >
             <Icon
               icon="RiArrowLeftLine"
