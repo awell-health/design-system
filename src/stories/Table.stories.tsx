@@ -1,4 +1,3 @@
-// Replace your-framework with the name of your framework
 import type { Meta, StoryObj } from "@storybook/react";
 
 import {
@@ -10,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Badge, Dropdown, DropdownItem, Icon, Pagination } from "..";
 
 const meta = {
   component: Table,
@@ -20,27 +20,59 @@ export default meta;
 type Story = StoryObj<typeof Table>;
 
 function TableDemo() {
+  const totalCount = 12;
+  const onClick = () => {
+    console.log("click");
+  };
+
+  const items: DropdownItem[] = [
+    { label: "Test 1", onClick },
+    {
+      label: (
+        <>
+          <Icon icon="RiAccountPinBoxFill" />
+          JSX item
+        </>
+      ),
+      onClick,
+    },
+  ];
+
   return (
     <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead className="w-[100px]">Invoice</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Method</TableHead>
-          <TableHead className="text-right">Amount</TableHead>
+          <TableHead>Carflow name</TableHead>
+          <TableHead>Created</TableHead>
+          <TableHead>Version</TableHead>
+          <TableHead>&nbsp;</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {[...Array(10).keys()].map((i) => (
           <TableRow key={i}>
-            <TableCell className="font-medium">INV00{i}</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell className="text-right">$250.00</TableCell>
+            <TableCell>Care Flow Name-{i}</TableCell>
+            <TableCell className="flex flex-col items-start">
+              25/06/2024 04:32 PM
+              <span>by virginia@turtlecare.com</span>
+            </TableCell>
+            <TableCell>
+              <Badge variant={"success"}>Label</Badge>
+            </TableCell>
+            <TableCell>
+              <Dropdown
+                buttonLabel={<Icon icon="RiMore2Line" size={16} />}
+                items={items}
+                buttonClassNames="bg-white border-none shadow-none btn-xs btn-square"
+                placement='left'
+              />
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
+      <TableCaption className="py-0">
+        <Pagination totalCount={totalCount} onPageChange={(n) => console.log(n)}/>
+      </TableCaption>
     </Table>
   );
 }
