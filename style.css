@@ -3090,6 +3090,10 @@ input.tab:checked + .tab-content,
   font-weight: 500;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .leading-7 {
   line-height: 1.75rem;
 }
