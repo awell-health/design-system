@@ -8,7 +8,8 @@ const TableCell = React.forwardRef<
   <td
     ref={ref}
     className={cn(
-      "px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left",
+      "px-6 py-4 justify-start items-center flex-inline",
+      "text-slate-800 text-sm font-medium leading-tight text-left",
       className,
     )}
     {...props}
