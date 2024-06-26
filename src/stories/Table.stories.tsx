@@ -53,7 +53,7 @@ function TableDemo() {
           <TableRow key={i}>
             <TableCell>Care Flow Name-{i}</TableCell>
             <TableCell className="flex flex-col items-start">
-              <span>25/06/2024 04:32 PM</span>
+              25/06/2024 04:32 PM
               <span>by virginia@turtlecare.com</span>
             </TableCell>
             <TableCell>

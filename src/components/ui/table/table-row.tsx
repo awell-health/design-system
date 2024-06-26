@@ -9,6 +9,7 @@ const TableRow = React.forwardRef<
     ref={ref}
     className={cn(
       "border-b border-slate-100 hover:bg-slate-50",
+      "[&_td:last-child]:text-right",
       className
     )}
     {...props}

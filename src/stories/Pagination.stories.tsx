@@ -14,7 +14,7 @@ type Story = StoryObj<typeof Pagination>;
 export const Example = {
   args: {
     totalCount: 78,
-    onClick: (page) => { console.log('page', page) }
+    onPageChange: (page) => { console.log('page', page) }
   },
   render: (args) => <Pagination {...args} />,
 } satisfies Story;
