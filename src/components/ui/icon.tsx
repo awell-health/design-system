@@ -30,7 +30,6 @@ import {
   RiArrowDropRightLine,
   RiArrowLeftRightFill,
   RiArrowDownSLine,
-  RiArrowUpLine,
   RiAddFill,
   RiErrorWarningLine,
   RiAccountPinBoxFill,
@@ -54,7 +53,11 @@ import {
   RiCheckFill,
   RiCheckLine,
   RiArrowLeftLine,
-  RiArrowRightLine
+  RiArrowRightLine,
+  RiArrowDownLine,
+  RiArrowUpLine,
+  RiQuestionLine,
+
 } from "@remixicon/react";
 
 const ICONS = {
@@ -88,7 +91,6 @@ const ICONS = {
   RiArrowDropRightLine,
   RiArrowLeftRightFill,
   RiArrowDownSLine,
-  RiArrowUpLine,
   RiAddFill,
   RiErrorWarningLine,
   RiAccountPinBoxFill,
@@ -112,7 +114,10 @@ const ICONS = {
   RiCheckFill,
   RiCheckLine,
   RiArrowLeftLine,
-  RiArrowRightLine
+  RiArrowRightLine,
+  RiArrowDownLine,
+  RiArrowUpLine,
+  RiQuestionLine,
 };
 
 export enum IconSize {

@@ -42,8 +42,8 @@ function TableDemo() {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Carflow name</TableHead>
-          <TableHead>Created</TableHead>
+          <TableHead info={<span>Info</span>}>Carflow name</TableHead>
+          <TableHead info={<span>Info</span>} sort='asc'>Created</TableHead>
           <TableHead>Version</TableHead>
           <TableHead>&nbsp;</TableHead>
         </TableRow>
@@ -52,9 +52,8 @@ function TableDemo() {
         {[...Array(10).keys()].map((i) => (
           <TableRow key={i}>
             <TableCell>Care Flow Name-{i}</TableCell>
-            <TableCell className="flex flex-col items-start">
+            <TableCell supportingText='by virginia@turtlecare.com'>
               25/06/2024 04:32 PM
-              <span>by virginia@turtlecare.com</span>
             </TableCell>
             <TableCell>
               <Badge variant={"success"}>Label</Badge>
