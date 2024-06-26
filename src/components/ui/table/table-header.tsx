@@ -21,17 +21,18 @@ const TableHeader = React.forwardRef<
 export interface TableHeadProps
   extends React.ThHTMLAttributes<HTMLTableCellElement> {
   info?: JSX.Element;
-  sort?: "asc" | "desc";
+  sortable?: boolean
+  order?: "asc" | "desc" | undefined;
 }
 
 const TableHead = React.forwardRef<HTMLTableCellElement, TableHeadProps>(
-  ({ className, children, info, sort, ...props }, ref) => (
+  ({ className, children, info, sortable, order, ...props }, ref) => (
     <th
       ref={ref}
       className={cn(
         "px-6 py-3 bg-gray-50 text-gray-500 text-xs font-medium leading-[18px] text-left group",
         "hover:text-slate-700",
-        sort && 'cursor-pointer',
+        sortable && 'cursor-pointer',
         className,
       )}
       {...props}
@@ -45,9 +46,9 @@ const TableHead = React.forwardRef<HTMLTableCellElement, TableHeadProps>(
           className="fill-gray-500 group-hover:fill-slate-700"
         />
       )}
-      {sort && (
+      {order && (
         <Icon
-          icon={sort === 'asc' ? 'RiArrowUpLine' : 'RiArrowUpLine'}
+          icon={order === 'asc' ? 'RiArrowUpLine' : 'RiArrowDownLine'}
           size={16}
           className="fill-gray-500 group-hover:fill-slate-700"
         />
