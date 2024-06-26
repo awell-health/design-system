@@ -2522,6 +2522,14 @@ input.tab:checked + .tab-content,
   margin-top: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .inline {
   display: inline;
 }
@@ -2544,6 +2552,10 @@ input.tab:checked + .tab-content,
 
 .table-row {
   display: table-row;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-10 {
@@ -2576,10 +2588,6 @@ input.tab:checked + .tab-content,
 
 .h-\[46px\] {
   height: 46px;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .min-h-8 {
@@ -2646,6 +2654,18 @@ input.tab:checked + .tab-content,
   width: 100vw;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
 .min-w-8 {
   min-width: 2rem;
 }
@@ -2670,14 +2690,6 @@ input.tab:checked + .tab-content,
   flex-grow: 1;
 }
 
-.border-collapse {
-  border-collapse: collapse;
-}
-
-.border-separate {
-  border-collapse: separate;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -2694,8 +2706,20 @@ input.tab:checked + .tab-content,
   flex-direction: column;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
+.content-center {
+  align-content: center;
+}
+
 .items-start {
   align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -2714,6 +2738,14 @@ input.tab:checked + .tab-content,
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -2728,6 +2760,14 @@ input.tab:checked + .tab-content,
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-\[19px\] {
+  gap: 19px;
+}
+
+.gap-\[12px\] {
+  gap: 12px;
 }
 
 .overflow-auto {
@@ -2856,11 +2896,6 @@ input.tab:checked + .tab-content,
   border-color: rgb(254 249 195 / var(--tw-border-opacity));
 }
 
-.border-slate-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(71 85 105 / var(--tw-border-opacity));
-}
-
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
@@ -2964,6 +2999,10 @@ input.tab:checked + .tab-content,
 
 .fill-slate-800 {
   fill: #1e293b;
+}
+
+.fill-slate-200 {
+  fill: #e2e8f0;
 }
 
 .p-1 {
@@ -3471,20 +3510,6 @@ input.tab:checked + .tab-content,
   line-height: 1.625;
 }
 
-.\[\&_tr\:first-child\&_td\:first-child\]\:bg-red-100 tr:first-child.\[\&_tr\:first-child\&_td\:first-child\]\:bg-red-100 td:first-child {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.\[\&_tr\:first-child\&_th\:first-child\]\:bg-red-100 tr:first-child.\[\&_tr\:first-child\&_th\:first-child\]\:bg-red-100 th:first-child {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.\[\&_tr\:first-child\>td\:first-child\]\:rounded-tl-lg tr:first-child>td:first-child {
-  border-top-left-radius: 0.5rem;
-}
-
 .\[\&_tr\:first-child\>th\:first-child\]\:rounded-tl-lg tr:first-child>th:first-child {
   border-top-left-radius: 0.5rem;
 }
@@ -3493,23 +3518,8 @@ input.tab:checked + .tab-content,
   border-top-right-radius: 0.5rem;
 }
 
-.\[\&_tr\:first-child\]\:bg-red-100 tr:first-child {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.\[\&_tr\:last-child\&\>td\:first-child\]\:bg-red-100 tr:last-child.\[\&_tr\:last-child\&\>td\:first-child\]\:bg-red-100>td:first-child {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
 .\[\&_tr\:last-child\>td\:first-child\]\:rounded-bl-lg tr:last-child>td:first-child {
   border-bottom-left-radius: 0.5rem;
-}
-
-.\[\&_tr\:last-child\>td\:first-child\]\:bg-red-100 tr:last-child>td:first-child {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .\[\&_tr\:last-child\>td\:last-child\]\:rounded-br-lg tr:last-child>td:last-child {
@@ -3518,11 +3528,6 @@ input.tab:checked + .tab-content,
 
 .\[\&_tr\:last-child\]\:border-0 tr:last-child {
   border-width: 0px;
-}
-
-.\[\&_tr\:last-child\]\:bg-red-100 tr:last-child {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .\[\&_tr\]\:border-b tr {

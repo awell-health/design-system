@@ -53,6 +53,8 @@ import {
   RiExternalLinkLine,
   RiCheckFill,
   RiCheckLine,
+  RiArrowLeftLine,
+  RiArrowRightLine
 } from "@remixicon/react";
 
 const ICONS = {
@@ -109,6 +111,8 @@ const ICONS = {
   RiExternalLinkLine,
   RiCheckFill,
   RiCheckLine,
+  RiArrowLeftLine,
+  RiArrowRightLine
 };
 
 export enum IconSize {
