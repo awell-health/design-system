@@ -2690,6 +2690,10 @@ input.tab:checked + .tab-content,
   flex-grow: 1;
 }
 
+.caption-bottom {
+  caption-side: bottom;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -3068,6 +3072,11 @@ input.tab:checked + .tab-content,
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .pb-2 {

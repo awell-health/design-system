@@ -11,7 +11,12 @@ export interface PaginationProps {
 }
 
 function Pagination(props: PaginationProps) {
-  const { totalCount, onPageChange, perPage = 10, maxButtonsToShow = 5 } = props;
+  const {
+    totalCount,
+    onPageChange,
+    perPage = 10,
+    maxButtonsToShow = 5,
+  } = props;
   const [currentPage, setCurrentPage] = useState<number>(0);
   const numberOfPages = Math.ceil(totalCount / perPage);
 
@@ -30,13 +35,13 @@ function Pagination(props: PaginationProps) {
     let items = [...Array(numberOfPages).keys()];
 
     if (showDivider) {
-      const firstItems = Math.round(maxButtonsToShow / 2)
-      const lastItems = maxButtonsToShow - firstItems
+      const firstItems = Math.round(maxButtonsToShow / 2);
+      const lastItems = maxButtonsToShow - firstItems;
 
       items = [
         ...items.slice(0, firstItems),
-        ...items.slice(Math.max(items.length - lastItems, 0))
-      ]
+        ...items.slice(Math.max(items.length - lastItems, 0)),
+      ];
     }
 
     return items.map((i) => (
@@ -49,7 +54,9 @@ function Pagination(props: PaginationProps) {
           {i + 1}
         </Button>
         {showDivider && i === dividerPosition && (
-          <span key='divider' className="flex h-8 mt-1">...</span>
+          <span key="divider" className="flex h-8 mt-1">
+            ...
+          </span>
         )}
       </>
     ));
@@ -63,31 +70,33 @@ function Pagination(props: PaginationProps) {
     >
       {numberOfPages > 1 && (
         <>
-          <div className="w-32">
-            <Button
-              variant="secondary"
-              onClick={() => handleClick(currentPage - 1)}
-              disabled={prevButtonDisabled}
-            >
-              <Icon
-                icon="RiArrowLeftLine"
-                size={16}
-                className={cn(prevButtonDisabled && "fill-slate-200")}
-              />{" "}
-              Previous
-            </Button>
-          </div>
+          <Button
+            variant="secondary"
+            onClick={() => handleClick(currentPage - 1)}
+            disabled={prevButtonDisabled}
+            className=""
+          >
+            <Icon
+              icon="RiArrowLeftLine"
+              size={16}
+              className={cn(prevButtonDisabled && "fill-slate-200")}
+            />{" "}
+            Previous
+          </Button>
           <div className="flex grow gap-2 justify-center">{renderItems()}</div>
-          <div className="w-32">
-            <Button
+          <Button
+            className=""
+            disabled={nextButtonDisabled}
+            variant="secondary"
+            onClick={() => handleClick(currentPage + 1)}
+          >
+            Next{" "}
+            <Icon
+              icon="RiArrowRightLine"
+              size={16}
               className={cn(nextButtonDisabled && "fill-slate-200")}
-              disabled={nextButtonDisabled}
-              variant="secondary"
-              onClick={() => handleClick(currentPage + 1)}
-            >
-              Next <Icon icon="RiArrowRightLine" size={16} />
-            </Button>
-          </div>
+            />
+          </Button>
         </>
       )}
     </div>

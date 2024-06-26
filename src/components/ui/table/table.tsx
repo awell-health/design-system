@@ -7,7 +7,7 @@ const Table = React.forwardRef<
   React.HTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
   <div className="relative w-full rounded-lg border border-slate-200 flex-col">
-    <table ref={ref} className={cn("w-full text-sm", className)} {...props} />
+    <table ref={ref} className={cn("w-full caption-bottom text-sm", className)} {...props} />
   </div>
 ));
 
@@ -27,4 +27,15 @@ const TableBody = React.forwardRef<
   />
 ));
 
-export { Table, TableBody };
+const TableCaption = React.forwardRef<
+  HTMLTableCaptionElement,
+  React.HTMLAttributes<HTMLTableCaptionElement>
+>(({ className, ...props }, ref) => (
+  <caption
+    ref={ref}
+    className={cn("border-t border-slate-200", className)}
+    {...props}
+  />
+))
+
+export { Table, TableBody, TableCaption };

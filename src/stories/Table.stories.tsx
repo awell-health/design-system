@@ -3,12 +3,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 import {
   Table,
   TableBody,
+  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Badge, Dropdown, DropdownItem, Icon } from "..";
+import { Badge, Dropdown, DropdownItem, Icon, Pagination } from "..";
 
 const meta = {
   component: Table,
@@ -19,6 +20,7 @@ export default meta;
 type Story = StoryObj<typeof Table>;
 
 function TableDemo() {
+  const totalCount = 12;
   const onClick = () => {
     console.log("click");
   };
@@ -68,6 +70,9 @@ function TableDemo() {
           </TableRow>
         ))}
       </TableBody>
+      <TableCaption className="py-0">
+        <Pagination totalCount={totalCount} onPageChange={(n) => console.log(n)}/>
+      </TableCaption>
     </Table>
   );
 }

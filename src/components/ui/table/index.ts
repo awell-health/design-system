@@ -1,6 +1,7 @@
 import {
   Table,
-  TableBody
+  TableBody,
+  TableCaption
 } from './table'
 
 import {
@@ -14,6 +15,7 @@ import { TableCell } from './table-cell'
 export {
   Table,
   TableHeader,
+  TableCaption,
   TableBody,
   TableHead,
   TableRow,
