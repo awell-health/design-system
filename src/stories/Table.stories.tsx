@@ -42,8 +42,8 @@ function TableDemo() {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Carflow name</TableHead>
-          <TableHead>Created</TableHead>
+          <TableHead info={<span>Info</span>}>Carflow name</TableHead>
+          <TableHead info={<span>Info</span>} sort='asc'>Created</TableHead>
           <TableHead>Version</TableHead>
           <TableHead>&nbsp;</TableHead>
         </TableRow>
