@@ -57,7 +57,8 @@ import {
   RiArrowDownLine,
   RiArrowUpLine,
   RiQuestionLine,
-
+  RiInformationLine,
+  RiAlertLine
 } from "@remixicon/react";
 
 const ICONS = {
@@ -118,6 +119,8 @@ const ICONS = {
   RiArrowDownLine,
   RiArrowUpLine,
   RiQuestionLine,
+  RiInformationLine,
+  RiAlertLine
 };
 
 export enum IconSize {
