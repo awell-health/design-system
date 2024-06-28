@@ -1,7 +1,7 @@
 // Replace your-framework with the name of your framework
 import { Tab, TabItem } from "@/components/ui/tab";
 import type { Meta, StoryObj } from "@storybook/react";
-import { useState } from "react";
+import { fn } from '@storybook/test';
 
 const meta = {
   component: Tab,
@@ -11,28 +11,18 @@ export default meta;
 
 type Story = StoryObj<typeof Tab>;
 
-function TabDemo() {
-  const onClick = (item: TabItem) => {
-    setSelected(item.id)
-  };
-
-  const items: TabItem[] = [
-    { id: '1', label: 'First', onClick },
-    { id: '2', label: 'Second', onClick },
-    { id: '3', label: 'Third', onClick },
-  ];
-
-  const [selected, setSelected] = useState<string>(items[0].id)
-
-  return (
-    <div className="flex flex-col gap-4">
-      <Tab items={items} selected={selected} />
-    </div>
-    
-  );
-}
+const items: TabItem[] = [
+  { id: "1", label: "First", onClick: fn() },
+  { id: "2", label: "Second", onClick: fn() },
+  { id: "3", label: "Third", onClick: fn() },
+];
 
 export const Example = {
-  args: {},
-  render: () => <TabDemo />,
+  args: {
+    items,
+    variant: "default",
+    selected: "1",
+    fullWidth: true,
+  },
+  render: (args) => <Tab {...args} />,
 } satisfies Story;

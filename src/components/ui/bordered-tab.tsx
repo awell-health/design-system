@@ -29,6 +29,9 @@ export interface BorderedTabProps
   selected?: string;
 }
 
+/**
+ * @deprecated use Tab component with prop variant=borderd 
+ */
 function BorderedTab({
   className,
   items,
