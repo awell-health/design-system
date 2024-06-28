@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Icon } from "./icon";
 
-const alertVariants = cva("alert p-4 rounded-lg border gap-3", {
+const alertVariants = cva("alert p-4 rounded-lg border gap-3 text-sm", {
   variants: {
     variant: {
       default: "bg-slate-50 border-slate-300 text-slate-600 [&h3]:text-slate-700",
@@ -42,12 +42,12 @@ const Alert = React.forwardRef<HTMLDivElement, Props>(
         className={cn(alertVariants({ variant }), className)}
         {...props}
       >
-        <div className="flex self-start pt-[5px]">
+        <div className="flex self-start pt-0.5">
           {showIcon && <Icon icon={icon} size={16} className={iconClassNames} />}
         </div>
-        <div>
+        <div className="flex flex-col gap-1">
           <h3 className="font-medium">{title}</h3>
-          {children && <div className="font-normal leading-tight text-xs">{children}</div>}
+          {children && <div className="font-normal">{children}</div>}
         </div>
       </div>
     )

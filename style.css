@@ -2859,6 +2859,10 @@ input.tab:checked + .tab-content,
   align-self: flex-start;
 }
 
+.self-baseline {
+  align-self: baseline;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -3236,6 +3240,18 @@ input.tab:checked + .tab-content,
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pt-\[2px\] {
+  padding-top: 2px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pt-0\.5 {
+  padding-top: 0.125rem;
 }
 
 .text-left {
