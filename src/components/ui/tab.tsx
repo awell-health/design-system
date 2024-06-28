@@ -3,12 +3,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-const tabVariants = cva("tabs", {
+const tabVariants = cva("tabs border-slate-200", {
   variants: {
     variant: {
       default:
-        "flex h-10 p-1 bg-slate-100 rounded-lg border border-slate-200  items-center gap-2",
-      bordered: "tabs-bordered",
+        [
+          "flex h-10 p-1 bg-slate-100 rounded-lg border items-center gap-2",
+          "[&_.tab]:rounded-md", 
+          "[&_.tab-active]:text-slate-700 [&_.tab-active]:bg-white [&_.tab-active]:shadow"
+        ].join(' '),
+      bordered: [
+        "flex h-8 px-1 items-center border-b",
+        "[&_.tab]:items-start",
+        "[&_.tab-active]:text-blue-600 [&_.tab-active]:!border-blue-600 [&_.tab-active]:border-b"
+      ].join(' '),
     },
   },
   defaultVariants: {
@@ -40,19 +48,14 @@ function Tab({
   ...props
 }: TabProps) {
   const renderItem = (item: TabItem): JSX.Element => {
-    const { id, label, onClick, className: tabClassName = "" } = item;
+    const { id, label, onClick, className: tabClassName } = item;
 
     return (
       <a
         key={id}
         role="tab"
         className={cn(
-          "tab",
-          variant === "default" && "text-slate-500 rounded-md",
-          variant === "default" &&
-            selected === id &&
-            "text-slate-700 bg-white shadow",
-          variant === "bordered" && "h-[3rem]",
+          "tab text-slate-500 text-xs font-medium",
           selected === id && "tab-active",
           fullWidth && "grow shrink",
           tabClassName,

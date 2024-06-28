@@ -22,7 +22,7 @@ export const Example = {
     items,
     variant: "default",
     selected: "1",
-    fullWidth: true,
+    fullWidth: true
   },
   render: (args) => <Tab {...args} />,
 } satisfies Story;
