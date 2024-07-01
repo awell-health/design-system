@@ -1,5 +1,5 @@
 // Replace your-framework with the name of your framework
-import { Input, InputProps } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import type { Meta, StoryObj } from "@storybook/react";
 
 
