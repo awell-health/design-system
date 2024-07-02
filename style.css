@@ -1617,6 +1617,12 @@ input.tab:checked + .tab-content,
   padding: 1rem;
 }
 
+.btm-nav > *:where(.active) {
+  border-top-width: 2px;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
 .btm-nav > *.disabled,
     .btm-nav > *[disabled] {
   pointer-events: none;
@@ -2389,6 +2395,13 @@ input.tab:checked + .tab-content,
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
 }
 
+.table-zebra tr.active,
+    .table-zebra tr.active:nth-child(even),
+    .table-zebra-zebra tbody tr:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
+}
+
 .table :where(thead tr, tbody tr:not(:last-child),tbody tr:first-child:last-child) {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
@@ -2507,6 +2520,22 @@ input.tab:checked + .tab-content,
   line-height: 1.5rem;
   padding-left: 0.688rem;
   padding-right: 0.688rem;
+}
+
+.btm-nav-xs > *:where(.active) {
+  border-top-width: 1px;
+}
+
+.btm-nav-sm > *:where(.active) {
+  border-top-width: 2px;
+}
+
+.btm-nav-md > *:where(.active) {
+  border-top-width: 2px;
+}
+
+.btm-nav-lg > *:where(.active) {
+  border-top-width: 4px;
 }
 
 .btn-xs {
@@ -3721,6 +3750,12 @@ input.tab:checked + .tab-content,
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-\[0px_0px_0px_2px_rgb\(219\2c 234\2c 254\)\] {
+  --tw-shadow: 0px 0px 0px 2px rgb(219,234,254);
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-none {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
@@ -3878,12 +3913,6 @@ input.tab:checked + .tab-content,
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
-.focus\:shadow-\[0px_0px_0px_2px_rgb\(219\2c 234\2c 254\)\]:focus {
-  --tw-shadow: 0px 0px 0px 2px rgb(219,234,254);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .focus\:outline-0:focus {
   outline-width: 0px;
 }
@@ -3930,12 +3959,6 @@ input.tab:checked + .tab-content,
 
 .active\:bg-transparent:active {
   background-color: transparent;
-}
-
-.active\:shadow-\[0px_0px_0px_2px_rgb\(219\2c 234\2c 254\)\]:active {
-  --tw-shadow: 0px 0px 0px 2px rgb(219,234,254);
-  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .disabled\:cursor-not-allowed:disabled {
