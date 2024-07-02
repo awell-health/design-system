@@ -22,7 +22,7 @@ export interface CheckboxProps
   disabled?: boolean;
   indeterminate?: boolean;
   helpText?: string;
-  type: 'radio' | 'checkbox'
+  type: "radio" | "checkbox";
 }
 
 const Checkbox: React.FC<CheckboxProps> = ({
@@ -56,7 +56,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
             `active:border-blue-300 active:${boxShadowClass}`,
             `focus:border-blue-300 focus:${boxShadowClass} focus:ring-transparent`,
             "disabled:!bg-slate-100 disabled:!border-slate-200",
-            type === 'radio' && 'rounded-full',
+            type === "radio" && "rounded-full",
             className,
           )}
           ref={inputRef}
