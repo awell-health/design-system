@@ -53,6 +53,7 @@ __metadata:
     "@storybook/react": "npm:^8.1.5"
     "@storybook/react-vite": "npm:^8.1.5"
     "@storybook/test": "npm:^8.1.5"
+    "@tailwindcss/forms": "npm:^0.5.7"
     "@types/node": "npm:^20.12.5"
     "@types/prop-types": "npm:^15"
     "@types/react": "npm:^17.0.2"
@@ -3259,6 +3260,17 @@ __metadata:
     "@types/express": "npm:^4.7.0"
     file-system-cache: "npm:2.3.0"
   checksum: 10c0/9c23928ce578a21bcd3294a13431a56ac502dc09752edec0b338f27cd0d50db61ee8f79386d68d324cd5a015ff48ad64cc21e1713fabfa30e705af93b0026c5d
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/forms@npm:^0.5.7":
+  version: 0.5.7
+  resolution: "@tailwindcss/forms@npm:0.5.7::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40tailwindcss%2Fforms%2F-%2Fforms-0.5.7.tgz"
+  dependencies:
+    mini-svg-data-uri: "npm:^1.2.3"
+  peerDependencies:
+    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
+  checksum: 10c0/cd29e0c978402ae87a923ae802dcff43f7b050595666cb067321cac2e37a52f61b9d73385cb0a10455548581ddd0d3886815bd6c64a1da06247c0057fa9f4601
   languageName: node
   linkType: hard
 
@@ -7183,6 +7195,15 @@ __metadata:
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fmin-indent%2F-%2Fmin-indent-1.0.1.tgz"
   checksum: 10c0/7e207bd5c20401b292de291f02913230cb1163abca162044f7db1d951fa245b174dc00869d40dd9a9f32a885ad6a5f3e767ee104cf278f399cb4e92d3f582d5c
+  languageName: node
+  linkType: hard
+
+"mini-svg-data-uri@npm:^1.2.3":
+  version: 1.4.4
+  resolution: "mini-svg-data-uri@npm:1.4.4::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fmini-svg-data-uri%2F-%2Fmini-svg-data-uri-1.4.4.tgz"
+  bin:
+    mini-svg-data-uri: cli.js
+  checksum: 10c0/24545fa30b5a45449241bf19c25b8bc37594b63ec06401b3d563bd1c2e8a6abb7c18741f8b354e0064baa63c291be214154bf3a66f201ae71dfab3cc1a5e3191
   languageName: node
   linkType: hard
 

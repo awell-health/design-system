@@ -9,7 +9,7 @@ module.exports = {
   prefix: '',
   safelist: [],
   theme: {},
-  plugins: [require('daisyui'), require('tailwindcss-animate')],
+  plugins: [require('@tailwindcss/forms'), require('daisyui'), require('tailwindcss-animate')],
   daisyui: {
     themes: [
       {

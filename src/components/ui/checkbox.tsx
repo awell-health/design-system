@@ -1,12 +1,26 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { VariantProps, cva } from "class-variance-authority";
 
-export interface Checkbox extends React.InputHTMLAttributes<HTMLInputElement> {
+const checkboxVariants = cva("", {
+  variants: {
+    inputSize: {
+      md: "w-5 h-5",
+      sm: "w-4 h-4",
+    },
+  },
+  defaultVariants: {
+    inputSize: "sm",
+  },
+});
+
+export interface Checkbox
+  extends React.InputHTMLAttributes<HTMLInputElement>,
+    VariantProps<typeof checkboxVariants> {
   label?: string;
   disabled?: boolean;
   indeterminate?: boolean;
-  inputSize?: "xs" | "sm" | "md" | "lg";
   helpText?: string;
 }
 
@@ -16,8 +30,8 @@ const Checkbox = React.forwardRef<HTMLInputElement, Checkbox>(
     label,
     disabled,
     helpText,
-    inputSize = "sm",
     indeterminate = false,
+    inputSize,
     ...props
   }) => {
     const inputRef = React.useRef<HTMLInputElement>(null);
@@ -26,44 +40,46 @@ const Checkbox = React.forwardRef<HTMLInputElement, Checkbox>(
       inputRef.current!.indeterminate = indeterminate;
     }, [indeterminate]);
 
+    const boxShadowClass: string = 'shadow-[0px_0px_0px_2px_rgb(219,234,254)]'
+
     return (
-      <div className="form-control">
-        <label className="label cursor-pointer flex justify-start items-start gap-2">
+      <div className="flex flex-col">
+        <label className="flex items-center gap-2 cursor-pointer">
           <input
-            id="test"
             type="checkbox"
-            disabled={disabled}
             className={cn(
-              "checkbox border-slate-300 mt-1",
-              !disabled && "checkbox-primary",
+              checkboxVariants({ inputSize }),
+              "relative bg-white border border-slate-300 rounded outline-none",
+              "flex items-center justify-center",
               "hover:bg-blue-50 hover:border-blue-600",
-              "focused:shadow focused:border-blue-300",
-              "active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)]",
-              inputSize === "lg" && "checkbox-lg rounded-lg",
-              inputSize === "md" && "checkbox-md rounded-md",
-              inputSize === "sm" && "checkbox-sm rounded",
-              inputSize === "xs" && "checkbox-xs rounded",
+              `active:border-blue-300 active:${boxShadowClass}`,
+              `focus:border-blue-300 focus:${boxShadowClass} focus:ring-transparent`,
+              "disabled:!bg-slate-100 disabled:!border-slate-200",
               className,
             )}
-            {...props}
             ref={inputRef}
+            disabled={disabled}
+            {...props}
           />
-          <div>
+          {label && (
             <span
               className={cn(
-                "label-text text-slate-700 text-sm font-medium",
+                "text-slate-700 text-sm font-medium leading-tight",
                 disabled && "text-slate-300",
               )}
             >
               {label}
             </span>
-            {helpText && (
-              <div className="text-slate-500 text-sm font-normal">
-                {helpText}
-              </div>
-            )}
-          </div>
+          )}
         </label>
+        {helpText && (
+          <div className="flex gap-2">
+            <div className={checkboxVariants({ inputSize })} />
+            <span className="text-slate-500 text-sm font-normal">
+              {helpText}
+            </span>
+          </div>
+        )}
       </div>
     );
   },
