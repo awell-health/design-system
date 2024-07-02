@@ -55,7 +55,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, Checkbox>(
                 disabled && "text-slate-300",
               )}
             >
-              Remember me
+              {label}
             </span>
             {helpText && (
               <div className="text-slate-500 text-sm font-normal">

@@ -12,10 +12,10 @@ type Story = StoryObj<typeof Checkbox>;
 
 export const Example = {
   args: {
-    label: 'Label',
+    label: 'Checkbox Label',
     disabled: false,
     indeterminate: false,
-    inputSize: 'md',
+    inputSize: 'sm',
     helpText: 'This is help text'
   },
   render: (args) => <Checkbox {...args} />,
