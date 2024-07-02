@@ -44,6 +44,7 @@
     "@storybook/react": "^8.1.5",
     "@storybook/react-vite": "^8.1.5",
     "@storybook/test": "^8.1.5",
+    "@tailwindcss/forms": "^0.5.7",
     "@types/node": "^20.12.5",
     "@types/prop-types": "^15",
     "@types/react": "^17.0.2",
