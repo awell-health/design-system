@@ -3853,6 +3853,16 @@ input.tab:checked + .tab-content,
   }
 }
 
+/* disable outline for components */
+
+input {
+  --tw-ring-shadow: 0 0 #000 !important;
+}
+
+input:focus {
+  --tw-ring-shadow: 0 0 #000 !important;
+}
+
 .placeholder\:text-slate-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
@@ -3969,10 +3979,6 @@ input.tab:checked + .tab-content,
 
 .focus\:outline-0:focus {
   outline-width: 0px;
-}
-
-.focus\:ring-transparent:focus {
-  --tw-ring-color: transparent;
 }
 
 .focus-visible\:outline-none:focus-visible {

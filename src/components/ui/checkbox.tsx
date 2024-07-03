@@ -54,7 +54,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
             "flex items-center justify-center",
             "hover:bg-blue-50 hover:border-blue-600",
             `active:border-blue-300 active:${boxShadowClass}`,
-            `focus:border-blue-300 focus:${boxShadowClass} focus:ring-transparent`,
+            `focus:border-blue-300 focus:${boxShadowClass}`,
             "disabled:!bg-slate-100 disabled:!border-slate-200",
             type === "radio" && "rounded-full",
             className,
