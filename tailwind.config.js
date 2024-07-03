@@ -8,7 +8,11 @@ module.exports = {
   ],
   prefix: '',
   safelist: [],
-  theme: {},
+  theme: {
+    fontFamily: {
+      inter: ["Inter", "sans-serif"],
+    }
+  },
   plugins: [require('@tailwindcss/forms'), require('daisyui'), require('tailwindcss-animate')],
   daisyui: {
     themes: [
