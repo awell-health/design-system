@@ -72,7 +72,10 @@ function Pagination(props: PaginationProps) {
         <>
           <Button
             variant="secondary"
-            onClick={() => handleClick(currentPage - 1)}
+            onClick={(e) => {
+              e.preventDefault()
+              handleClick(currentPage - 1)
+            }}
             disabled={prevButtonDisabled}
           >
             <Icon
@@ -87,7 +90,10 @@ function Pagination(props: PaginationProps) {
             className=""
             disabled={nextButtonDisabled}
             variant="secondary"
-            onClick={() => handleClick(currentPage + 1)}
+            onClick={(e) => {
+              e.preventDefault()
+              handleClick(currentPage + 1)
+            }}
           >
             Next{" "}
             <Icon
