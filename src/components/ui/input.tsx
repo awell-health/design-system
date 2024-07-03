@@ -35,13 +35,17 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className="">
-        <div className="label">
-          <span className=" label-text text-slate-600 text-sm font-medium">{label}</span>
-        </div>
+        {label && (
+          <div className="label">
+            <span className=" label-text text-slate-600 text-sm font-medium">
+              {label}
+            </span>
+          </div>
+        )}
         <label className="form-control w-full flex relative">
           {prefixIcon && renderIcon(prefixIcon, "left")}
           <input
-            type='text'
+            type="text"
             className={cn(
               "px-3.5 py-2.5 h-[38px] min-h-[38px] rounded-lg gap-2 w-full border-box",
               "text-sm font-normal",
