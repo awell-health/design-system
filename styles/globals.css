@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* disable outline for components */
+input {
+  --tw-ring-shadow: 0 0 #000 !important;
+}
+
+input:focus {
+  --tw-ring-shadow: 0 0 #000 !important;
+}
