@@ -3853,6 +3853,12 @@ input.tab:checked + .tab-content,
   }
 }
 
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 /* disable outline for components */
 
 input {
