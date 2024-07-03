@@ -13,7 +13,7 @@ const tabVariants = cva("tabs border-slate-200", {
           "[&_.tab-active]:text-slate-700 [&_.tab-active]:bg-white [&_.tab-active]:shadow"
         ].join(' '),
       bordered: [
-        "flex px-1 items-start border-b",
+        "flex px-1 items-start border-b gap-4",
         "[&_.tab-active]:text-blue-600 [&_.tab-active]:!border-blue-600 [&_.tab-active]:border-b"
       ].join(' '),
     },
