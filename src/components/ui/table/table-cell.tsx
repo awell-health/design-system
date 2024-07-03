@@ -16,7 +16,7 @@ const TableCell = React.forwardRef<HTMLTableCellElement, TableCellProps>(
       )}
       {...props}
     >
-      <span className="flex gap-1 flex-col">
+      <span className="flex gap-1 flex-col items-start">
         {children}
         {supportingText && <span className='text-slate-500 font-normal'>{supportingText}</span>}
       </span>
