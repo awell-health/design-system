@@ -20,6 +20,7 @@ const items: TabItem[] = [
 export const Example = {
   args: {
     items,
+    size: "md",
     variant: "default",
     selected: "1",
     fullWidth: true

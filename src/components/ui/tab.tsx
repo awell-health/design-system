@@ -8,19 +8,23 @@ const tabVariants = cva("tabs border-slate-200", {
     variant: {
       default:
         [
-          "flex h-10 p-1 bg-slate-100 rounded-lg border items-center gap-2",
+          "flex p-1 bg-slate-100 rounded-lg border items-center gap-2",
           "[&_.tab]:rounded-md", 
           "[&_.tab-active]:text-slate-700 [&_.tab-active]:bg-white [&_.tab-active]:shadow"
         ].join(' '),
       bordered: [
-        "flex h-8 px-1 items-center border-b",
-        "[&_.tab]:items-start",
+        "flex px-1 items-start border-b",
         "[&_.tab-active]:text-blue-600 [&_.tab-active]:!border-blue-600 [&_.tab-active]:border-b"
       ].join(' '),
     },
+    size: {
+      sm: "",
+      md: ""
+    }
   },
   defaultVariants: {
     variant: "default",
+    size: "sm"
   },
 });
 
@@ -44,6 +48,7 @@ function Tab({
   items,
   selected,
   variant,
+  size,
   fullWidth = true,
   ...props
 }: TabProps) {
@@ -55,9 +60,13 @@ function Tab({
         key={id}
         role="tab"
         className={cn(
-          "tab text-slate-500 text-xs font-medium",
+          "tab flex text-slate-500",
           selected === id && "tab-active",
           fullWidth && "grow shrink",
+          variant === 'default' && size === "md" && "h-11 px-3.5 py-2.5 text-base",
+          variant === 'default' && size === "sm" && "h-8 px-3 py-2 text-xs",
+          variant === 'bordered' && size === "md" && "px-1 pb-4 h-[42px] text-base",
+          variant === 'bordered' && size === "sm" && "px-1 pb-4 h-[34px] text-xs",
           tabClassName,
         )}
         onClick={() => onClick(item)}
