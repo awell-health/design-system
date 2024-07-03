@@ -7,19 +7,18 @@ export interface PaginationProps {
   totalCount: number;
   onPageChange: (page: number) => void;
   perPage?: number;
-  maxButtonsToShow?: number;
 }
 
 function Pagination(props: PaginationProps) {
   const {
     totalCount,
     onPageChange,
-    perPage = 10,
-    maxButtonsToShow = 5,
+    perPage = 10
   } = props;
   const [currentPage, setCurrentPage] = useState<number>(0);
+  const edgeButtonsToShow = 3;
   const numberOfPages = Math.ceil(totalCount / perPage);
-
+  
   const handleClick = (page: number) => {
     setCurrentPage(page);
     onPageChange(page + 1);
@@ -27,33 +26,47 @@ function Pagination(props: PaginationProps) {
 
   const nextButtonDisabled = currentPage === numberOfPages - 1;
   const prevButtonDisabled = currentPage === 0;
-  const showDivider = maxButtonsToShow < numberOfPages;
+  const showDivider = edgeButtonsToShow * 2 < numberOfPages;
 
   const renderItems = () => {
-    const buttonsToShow = showDivider ? maxButtonsToShow : numberOfPages;
-    const dividerPosition = Math.ceil(buttonsToShow / 2) - 1;
-    let items = [...Array(numberOfPages).keys()];
+    let items: Array<number | string> = [...Array(numberOfPages).keys()];
 
     if (showDivider) {
-      const firstItems = Math.round(maxButtonsToShow / 2);
-      const lastItems = maxButtonsToShow - firstItems;
+      const displayCurrentPage = currentPage >= edgeButtonsToShow && currentPage < numberOfPages - edgeButtonsToShow;
 
       items = [
-        ...items.slice(0, firstItems),
-        ...items.slice(Math.max(items.length - lastItems, 0)),
+        ...items.slice(0, edgeButtonsToShow),
+        ...(currentPage < edgeButtonsToShow ? ['prefix-divider'] : []),
+        ...(displayCurrentPage && currentPage > edgeButtonsToShow + 1 ? ['prefix-divider'] : []),
+        ...(displayCurrentPage && currentPage > edgeButtonsToShow ? [currentPage - 1] : []),
+        ...(displayCurrentPage ? [currentPage] : []),
+        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 1  ? [currentPage + 1] : []),
+        ...(currentPage > items.length - edgeButtonsToShow - 1  ? ['suffix-divider'] : []),
+        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 2  ? ['suffix-divider'] : []),
+        ...items.slice(Math.max(items.length - edgeButtonsToShow, 0)),
       ];
     }
 
     return items.map((i) => (
       <>
-        <Button
+        {typeof i === 'string' && i === 'prefix-divider' && (
+          <span key="divider" className="flex h-8 mt-1">
+            ...
+          </span>
+        )}
+        {typeof i === 'number' &&
+          <Button
           key={i}
           variant={currentPage === i ? "secondaryBlue" : "ghost"}
-          onClick={() => handleClick(i)}
+          onClick={(e) => {
+            e.preventDefault()
+            handleClick(i)
+          }}
         >
           {i + 1}
         </Button>
-        {showDivider && i === dividerPosition && (
+        }
+        {typeof i === 'string' && i === 'suffix-divider' && (
           <span key="divider" className="flex h-8 mt-1">
             ...
           </span>

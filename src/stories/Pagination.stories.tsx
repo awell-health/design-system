@@ -1,6 +1,7 @@
 // Replace your-framework with the name of your framework
 import { Pagination } from "@/components/ui/pagination";
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
 const meta = {
   component: Pagination,
@@ -13,8 +14,9 @@ type Story = StoryObj<typeof Pagination>;
 
 export const Example = {
   args: {
-    totalCount: 78,
-    onPageChange: (page) => { console.log('page', page) }
+    totalCount: 146,
+    onPageChange: fn(),
+    perPage: 10
   },
   render: (args) => <Pagination {...args} />,
 } satisfies Story;
