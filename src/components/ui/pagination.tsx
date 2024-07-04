@@ -1,7 +1,7 @@
-import { Icon } from "./icon";
-import { Button } from "./button";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { Icon } from './icon';
+import { Button } from './button';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 export interface PaginationProps {
   totalCount: number;
@@ -10,15 +10,11 @@ export interface PaginationProps {
 }
 
 function Pagination(props: PaginationProps) {
-  const {
-    totalCount,
-    onPageChange,
-    perPage = 10
-  } = props;
+  const { totalCount, onPageChange, perPage = 10 } = props;
   const [currentPage, setCurrentPage] = useState<number>(0);
   const edgeButtonsToShow = 3;
   const numberOfPages = Math.ceil(totalCount / perPage);
-  
+
   const handleClick = (page: number) => {
     setCurrentPage(page);
     onPageChange(page + 1);
@@ -32,7 +28,8 @@ function Pagination(props: PaginationProps) {
     let items: Array<number | string> = [...Array(numberOfPages).keys()];
 
     if (showDivider) {
-      const displayCurrentPage = currentPage >= edgeButtonsToShow && currentPage < numberOfPages - edgeButtonsToShow;
+      const displayCurrentPage =
+        currentPage >= edgeButtonsToShow && currentPage < numberOfPages - edgeButtonsToShow;
 
       items = [
         ...items.slice(0, edgeButtonsToShow),
@@ -40,34 +37,38 @@ function Pagination(props: PaginationProps) {
         ...(displayCurrentPage && currentPage > edgeButtonsToShow + 1 ? ['prefix-divider'] : []),
         ...(displayCurrentPage && currentPage > edgeButtonsToShow ? [currentPage - 1] : []),
         ...(displayCurrentPage ? [currentPage] : []),
-        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 1  ? [currentPage + 1] : []),
-        ...(currentPage > items.length - edgeButtonsToShow - 1  ? ['suffix-divider'] : []),
-        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 2  ? ['suffix-divider'] : []),
-        ...items.slice(Math.max(items.length - edgeButtonsToShow, 0)),
+        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 1
+          ? [currentPage + 1]
+          : []),
+        ...(currentPage > items.length - edgeButtonsToShow - 1 ? ['suffix-divider'] : []),
+        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 2
+          ? ['suffix-divider']
+          : []),
+        ...items.slice(Math.max(items.length - edgeButtonsToShow, 0))
       ];
     }
 
     return items.map((i) => (
       <>
         {typeof i === 'string' && i === 'prefix-divider' && (
-          <span key="divider" className="flex h-8 mt-1">
+          <span key='divider' className='flex h-8 mt-1'>
             ...
           </span>
         )}
-        {typeof i === 'number' &&
+        {typeof i === 'number' && (
           <Button
-          key={i}
-          variant={currentPage === i ? "secondaryBlue" : "ghost"}
-          onClick={(e) => {
-            e.preventDefault()
-            handleClick(i)
-          }}
-        >
-          {i + 1}
-        </Button>
-        }
+            key={i}
+            variant={currentPage === i ? 'secondaryBlue' : 'ghost'}
+            onClick={(e) => {
+              e.preventDefault();
+              handleClick(i);
+            }}
+          >
+            {i + 1}
+          </Button>
+        )}
         {typeof i === 'string' && i === 'suffix-divider' && (
-          <span key="divider" className="flex h-8 mt-1">
+          <span key='divider' className='flex h-8 mt-1'>
             ...
           </span>
         )}
@@ -76,43 +77,39 @@ function Pagination(props: PaginationProps) {
   };
 
   return (
-    <div
-      className={
-        "w-full px-6 py-4 bg-white justify-between items-start inline-flex"
-      }
-    >
+    <div className={'w-full px-6 py-4 bg-white justify-between items-start inline-flex'}>
       {numberOfPages > 1 && (
         <>
           <Button
-            variant="secondary"
+            variant='secondary'
             onClick={(e) => {
-              e.preventDefault()
-              handleClick(currentPage - 1)
+              e.preventDefault();
+              handleClick(currentPage - 1);
             }}
             disabled={prevButtonDisabled}
           >
             <Icon
-              icon="RiArrowLeftLine"
+              icon='RiArrowLeftLine'
               size={16}
-              className={cn(prevButtonDisabled && "fill-slate-200")}
-            />{" "}
+              className={cn(prevButtonDisabled && 'fill-slate-200')}
+            />{' '}
             Previous
           </Button>
-          <div className="flex grow gap-2 justify-center">{renderItems()}</div>
+          <div className='flex grow gap-2 justify-center'>{renderItems()}</div>
           <Button
-            className=""
+            className=''
             disabled={nextButtonDisabled}
-            variant="secondary"
+            variant='secondary'
             onClick={(e) => {
-              e.preventDefault()
-              handleClick(currentPage + 1)
+              e.preventDefault();
+              handleClick(currentPage + 1);
             }}
           >
-            Next{" "}
+            Next{' '}
             <Icon
-              icon="RiArrowRightLine"
+              icon='RiArrowRightLine'
               size={16}
-              className={cn(nextButtonDisabled && "fill-slate-200")}
+              className={cn(nextButtonDisabled && 'fill-slate-200')}
             />
           </Button>
         </>
