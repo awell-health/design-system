@@ -1,1 +1,1 @@
-yarn test --watch=false
+yarn test --watch=false && yarn lint-staged
