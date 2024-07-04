@@ -1,9 +1,8 @@
-// Replace your-framework with the name of your framework
-import { Badge } from "@/components/ui/badge";
-import type { Meta, StoryObj } from "@storybook/react";
+import { Badge } from '@/components/ui/badge';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  component: Badge,
+  component: Badge
 } satisfies Meta<typeof Badge>;
 
 export default meta;

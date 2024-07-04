@@ -1,9 +1,8 @@
-import { Checkbox } from "@/components/ui/checkbox";
-import type { Meta, StoryObj } from "@storybook/react";
-
+import { Checkbox } from '@/components/ui/checkbox';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  component: Checkbox,
+  component: Checkbox
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -19,5 +18,5 @@ export const Example = {
     inputSize: 'sm',
     helpText: 'This is help text'
   },
-  render: (args) => <Checkbox {...args} />,
+  render: (args) => <Checkbox {...args} />
 } satisfies Story;

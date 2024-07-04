@@ -1,24 +1,24 @@
-import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import * as React from 'react';
+import { cva, type VariantProps } from 'class-variance-authority';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
-const tooltipVariants = cva("tooltip before:shadow before:px-3 before:py-2 before:rounded-lg", {
+const tooltipVariants = cva('tooltip before:shadow before:px-3 before:py-2 before:rounded-lg', {
   variants: {
     variant: {
-      default: "",
-      light: "before:bg-white before:text-slate-700 after:"
+      default: '',
+      light: 'before:bg-white before:text-slate-700 after:'
     },
     placement: {
-        top: "tooltip-top",
-        bottom: "tooltip-bottom",
-        left: "tooltip-left",
-        right: "tooltip-right",
-      }
+      top: 'tooltip-top',
+      bottom: 'tooltip-bottom',
+      left: 'tooltip-left',
+      right: 'tooltip-right'
+    }
   },
   defaultVariants: {
-    variant: "default",
-  },
+    variant: 'default'
+  }
 });
 
 export interface TooltipProps
@@ -28,14 +28,7 @@ export interface TooltipProps
   datatip: JSX.Element | string;
 }
 
-function Tooltip({
-  datatip,
-  className,
-  children,
-  variant,
-  placement,
-  ...props
-}: TooltipProps) {
+function Tooltip({ datatip, className, children, variant, placement, ...props }: TooltipProps) {
   return (
     <div
       data-tip={datatip}

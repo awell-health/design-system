@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   RiArrowUpSLine,
   RiThumbUpFill,
@@ -59,7 +59,7 @@ import {
   RiQuestionLine,
   RiInformationLine,
   RiAlertLine
-} from "@remixicon/react";
+} from '@remixicon/react';
 
 const ICONS = {
   RiArrowUpSLine,
@@ -128,7 +128,7 @@ export enum IconSize {
   s = 20,
   m = 24,
   l = 28,
-  xl = 32,
+  xl = 32
 }
 
 export type IconType = keyof typeof ICONS;
@@ -141,12 +141,7 @@ interface Props {
 }
 
 const Icon = (props: Props): React.JSX.Element => {
-  const {
-    icon,
-    color = "default",
-    className = "inline",
-    size = IconSize.m,
-  } = props;
+  const { icon, color = 'default', className = 'inline', size = IconSize.m } = props;
 
   const IconComponent = ICONS[icon];
 

@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react'
-import { expect, it } from "vitest";
+import { render } from '@testing-library/react';
+import { expect, it } from 'vitest';
 
 import {
   Table,
@@ -8,10 +8,10 @@ import {
   TableBody,
   TableHead,
   TableRow,
-  TableCell,
-} from "./index";
+  TableCell
+} from './index';
 
-it("Table Snaphot", () => {
+it('Table Snaphot', () => {
   const result = render(
     <Table>
       <TableHeader>
@@ -24,14 +24,12 @@ it("Table Snaphot", () => {
         {[...Array(10).keys()].map((i) => (
           <TableRow key={i}>
             <TableCell>Care Flow Name-{i}</TableCell>
-            <TableCell supportingText="by example@awellhealth.com">
-              Example Cell
-            </TableCell>
+            <TableCell supportingText='by example@awellhealth.com'>Example Cell</TableCell>
           </TableRow>
         ))}
       </TableBody>
-      <TableCaption className="py-0">Table Caption</TableCaption>
-    </Table>,
+      <TableCaption className='py-0'>Table Caption</TableCaption>
+    </Table>
   );
 
   expect(result).toMatchSnapshot();

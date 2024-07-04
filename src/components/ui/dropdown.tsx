@@ -1,24 +1,24 @@
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from 'class-variance-authority';
+import { cn } from '@/lib/utils';
 
 export type DropdownItem = {
   label: string | JSX.Element;
   onClick: () => void;
 };
 
-const dropdownVariants = cva("dropdown", {
+const dropdownVariants = cva('dropdown', {
   variants: {
     placement: {
-      default: "",
-      top: "dropdown-top",
-      left: "dropdown-left",
-      right: "dropdown-right",
-      bottom: "dropdown-bottom",
-    },
+      default: '',
+      top: 'dropdown-top',
+      left: 'dropdown-left',
+      right: 'dropdown-right',
+      bottom: 'dropdown-bottom'
+    }
   },
   defaultVariants: {
-    placement: "default",
-  },
+    placement: 'default'
+  }
 });
 
 export interface DropdownProps
@@ -31,14 +31,7 @@ export interface DropdownProps
 }
 
 function Dropdown(props: DropdownProps) {
-  const {
-    items,
-    buttonLabel,
-    buttonClassNames,
-    itemClassNames,
-    placement,
-    className,
-  } = props;
+  const { items, buttonLabel, buttonClassNames, itemClassNames, placement, className } = props;
 
   const renderItem = ({ label, onClick }: DropdownItem): JSX.Element => (
     <li className={cn(itemClassNames)}>
@@ -48,16 +41,12 @@ function Dropdown(props: DropdownProps) {
 
   return (
     <div className={cn(dropdownVariants({ placement, className }))}>
-      <div
-        tabIndex={0}
-        role="button"
-        className={cn("btn m-1", buttonClassNames)}
-      >
+      <div tabIndex={0} role='button' className={cn('btn m-1', buttonClassNames)}>
         {buttonLabel}
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+        className='dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52'
       >
         {items.map(renderItem)}
       </ul>

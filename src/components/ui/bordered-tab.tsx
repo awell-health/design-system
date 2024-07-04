@@ -1,18 +1,13 @@
-import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import * as React from 'react';
+import { cva, type VariantProps } from 'class-variance-authority';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 // TODO: this should really be a variant of Tab but I could not get it to work in the short time I had
 // ideally pick it up next week and refactor both
-const borderedtabVariants = cva(
-  "tabs tabs-bordered",
-  {
-    variants: {
-    },
-    defaultVariants: {
-    },
-  }
-);
+const borderedtabVariants = cva('tabs tabs-bordered', {
+  variants: {},
+  defaultVariants: {}
+});
 
 export interface BorderedTabItem {
   id: string;
@@ -30,42 +25,25 @@ export interface BorderedTabProps
 }
 
 /**
- * @deprecated use Tab component with prop variant=borderd 
+ * @deprecated use Tab component with prop variant=borderd
  */
-function BorderedTab({
-  className,
-  items,
-  selected,
-  fullWidth = true,
-  ...props
-}: BorderedTabProps) {
+function BorderedTab({ className, items, selected, ...props }: BorderedTabProps) {
   const renderItem = (item: BorderedTabItem): JSX.Element => {
     const { id, label, onClick, className: tabClassName } = item;
-      return (
-        <a 
-          role="tab" 
-          key={id} 
-          className={cn(
-            "tab h-[3rem]",
-            selected === id && "tab-active",
-            tabClassName
-          )}
-          onClick={() => onClick(item)}
-        >
-          {label}
-        </a>
-      )
+    return (
+      <a
+        role='tab'
+        key={id}
+        className={cn('tab h-[3rem]', selected === id && 'tab-active', tabClassName)}
+        onClick={() => onClick(item)}
+      >
+        {label}
+      </a>
+    );
   };
 
   return (
-    <div
-      role="tablist"
-      className={cn(
-        borderedtabVariants(),
-        className
-      )}
-      {...props}
-    >
+    <div role='tablist' className={cn(borderedtabVariants(), className)} {...props}>
       {items.map(renderItem)}
     </div>
   );
