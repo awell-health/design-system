@@ -22,7 +22,10 @@
     "build-storybook": "storybook build -o storybook-static",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
     "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
-    "dev": "yarn tailwind & yarn storybook"
+    "dev": "yarn tailwind & yarn storybook",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky"
   },
   "dependencies": {
     "@remixicon/react": "^4.2.0",
@@ -45,13 +48,19 @@
     "@storybook/react-vite": "^8.1.5",
     "@storybook/test": "^8.1.5",
     "@tailwindcss/forms": "^0.5.7",
+    "@testing-library/dom": "^10.3.0",
+    "@testing-library/react": "^12.1.5",
     "@types/node": "^20.12.5",
     "@types/prop-types": "^15",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.6.0",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.11.1",
+    "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
+    "pinst": "^3.0.0",
     "postcss": "^8.4.38",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -60,6 +69,7 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
     "vite": "^5.2.12",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
   }
 }
