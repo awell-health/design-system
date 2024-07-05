@@ -1,0 +1,188 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Alert Dialog > match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        aria-labelledby="modal-title"
+        aria-modal="true"
+        class="relative z-[9999]"
+        role="dialog"
+      >
+        <div
+          class="fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]"
+        />
+        <div
+          class="fixed inset-0 z-[9999] w-screen overflow-y-auto"
+        >
+          <div
+            class="flex min-h-full items-center justify-center p-4 sm:items-center sm:p-0"
+          >
+            <div
+              class="relative transform overflow-hidden transition-all sm:my-8 sm:w-full sm:max-w-lg p-6 bg-white rounded-lg shadow"
+            >
+              <div
+                class="flex flex-row"
+                style="gap: 20px;"
+              >
+                <div
+                  class="flex gap-5"
+                >
+                  <div>
+                    <span>
+                      icon
+                    </span>
+                  </div>
+                  <div>
+                    <div
+                      class="flex flex-col"
+                    >
+                      <h3
+                        class="text-gray-900 text-lg text-gray-900 leading-7"
+                        id="modal-title"
+                      >
+                        title
+                      </h3>
+                      <div
+                        class="mt-2"
+                      >
+                        <p
+                          class="text-gray-500 text-sm"
+                        >
+                          text
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span>
+                  children
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      aria-labelledby="modal-title"
+      aria-modal="true"
+      class="relative z-[9999]"
+      role="dialog"
+    >
+      <div
+        class="fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]"
+      />
+      <div
+        class="fixed inset-0 z-[9999] w-screen overflow-y-auto"
+      >
+        <div
+          class="flex min-h-full items-center justify-center p-4 sm:items-center sm:p-0"
+        >
+          <div
+            class="relative transform overflow-hidden transition-all sm:my-8 sm:w-full sm:max-w-lg p-6 bg-white rounded-lg shadow"
+          >
+            <div
+              class="flex flex-row"
+              style="gap: 20px;"
+            >
+              <div
+                class="flex gap-5"
+              >
+                <div>
+                  <span>
+                    icon
+                  </span>
+                </div>
+                <div>
+                  <div
+                    class="flex flex-col"
+                  >
+                    <h3
+                      class="text-gray-900 text-lg text-gray-900 leading-7"
+                      id="modal-title"
+                    >
+                      title
+                    </h3>
+                    <div
+                      class="mt-2"
+                    >
+                      <p
+                        class="text-gray-500 text-sm"
+                      >
+                        text
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span>
+                children
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

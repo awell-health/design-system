@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
-import { Icon, IconType } from './icon';
+import { Icon, IconType } from '../icon';
 
 export enum ActionType {
   ApiCall = 'API_CALL',

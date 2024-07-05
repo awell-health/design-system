@@ -23,7 +23,8 @@
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
     "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
     "dev": "yarn tailwind & yarn storybook",
-    "test": "vitest",
+    "test": "vitest --watch=false",
+    "test-watch": "vitest --watch=true",
     "coverage": "vitest run --coverage",
     "prepare": "husky"
   },
@@ -58,7 +59,7 @@
     "@storybook/react-vite": "^8.1.11",
     "@storybook/test": "^8.1.11",
     "@tailwindcss/forms": "^0.5.7",
-    "@testing-library/dom": "^10.3.0",
+    "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^12.1.5",
     "@types/node": "^20.14.9",
     "@types/prop-types": "^15.7.12",

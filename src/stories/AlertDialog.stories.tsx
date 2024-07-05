@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AlertDialog } from '@/components/ui/alert-dialog';
+import { AlertDialog } from '@/components/ui/alert-dialog/alert-dialog';
 import { Icon } from '..';
 
 const meta = {
