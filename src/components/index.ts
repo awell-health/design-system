@@ -7,7 +7,6 @@ export * from './ui/dropdown';
 export * from './ui/icon';
 export * from './ui/input';
 export * from './ui/tab';
-export * from './ui/bordered-tab';
 export * from './ui/table';
 export * from './ui/textarea';
 export * from './ui/tooltip';

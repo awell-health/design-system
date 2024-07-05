@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Alert } from '@/components/ui/alert';
+import { Alert } from '@/components/ui/alert/alert';
 
 const meta = {
   component: Alert

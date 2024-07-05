@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Icon } from './icon';
-import { Button } from './button';
+import { Icon } from '../icon';
+import { Button } from '../button/button';
 
 interface Props {
   title?: string;
@@ -38,6 +38,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                 <div
                   className='absolute top-0 right-0 p-4 cursor-pointer text-slate-950'
                   onClick={onClose}
+                  data-testid='close-handler'
                 >
                   <Icon icon='RiCloseLine' />
                 </div>

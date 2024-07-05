@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button/button';
 import { Icon } from '@/components/ui/icon';
 import type { Meta, StoryObj } from '@storybook/react';
 

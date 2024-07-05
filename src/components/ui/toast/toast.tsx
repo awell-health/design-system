@@ -2,7 +2,7 @@ import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
-import { Icon } from './icon';
+import { Icon } from '../icon';
 
 const toastVariants = cva('toast', {
   variants: {

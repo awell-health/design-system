@@ -1,6 +1,6 @@
-import { Tab, TabItem } from '@/components/ui/tab';
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import { Tab, TabItem } from '../components';
 
 const meta = {
   component: Tab
