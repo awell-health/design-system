@@ -1,188 +1,68 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`match snapshot 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class=""
-      >
-        <div
-          class="label"
-        >
-          <span
-            class=" label-text text-slate-600 text-sm font-medium"
-          >
-            Label
-          </span>
-        </div>
-        <label
-          class="form-control w-full flex relative"
-        >
-          <span
-            class="absolute h-[40px] flex items-center left-2.5"
-          >
-            <svg
-              class="remixicon fill-slate-500"
-              fill="default"
-              height="16"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"
-              />
-            </svg>
-          </span>
-          <input
-            class="px-3.5 py-2.5 h-[38px] min-h-[38px] rounded-lg gap-2 w-full text-sm font-normal shadow border border-slate-300 text-black placeholder:text-slate-400 focus:outline-0 focus:border focus:border-blue-500 disabled:bg-slate-50 disabled:text-slate-300 pl-8 pr-8"
-            type="text"
-          />
-          <span
-            class="absolute h-[40px] flex items-center right-2.5"
-          >
-            <svg
-              class="remixicon fill-slate-500"
-              fill="default"
-              height="16"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
-              />
-            </svg>
-          </span>
-        </label>
-        <div
-          class="label"
-        >
-          <span
-            class="label-text-alt text-slate-500 text-xs font-normal"
-          >
-            Help text
-          </span>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
+<div>
+  <div
+    class=""
+  >
     <div
-      class=""
+      class="label"
     >
-      <div
-        class="label"
+      <span
+        class=" label-text text-slate-600 text-sm font-medium"
       >
-        <span
-          class=" label-text text-slate-600 text-sm font-medium"
-        >
-          Label
-        </span>
-      </div>
-      <label
-        class="form-control w-full flex relative"
-      >
-        <span
-          class="absolute h-[40px] flex items-center left-2.5"
-        >
-          <svg
-            class="remixicon fill-slate-500"
-            fill="default"
-            height="16"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"
-            />
-          </svg>
-        </span>
-        <input
-          class="px-3.5 py-2.5 h-[38px] min-h-[38px] rounded-lg gap-2 w-full text-sm font-normal shadow border border-slate-300 text-black placeholder:text-slate-400 focus:outline-0 focus:border focus:border-blue-500 disabled:bg-slate-50 disabled:text-slate-300 pl-8 pr-8"
-          type="text"
-        />
-        <span
-          class="absolute h-[40px] flex items-center right-2.5"
-        >
-          <svg
-            class="remixicon fill-slate-500"
-            fill="default"
-            height="16"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
-            />
-          </svg>
-        </span>
-      </label>
-      <div
-        class="label"
-      >
-        <span
-          class="label-text-alt text-slate-500 text-xs font-normal"
-        >
-          Help text
-        </span>
-      </div>
+        Label
+      </span>
     </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+    <label
+      class="form-control w-full flex relative"
+    >
+      <span
+        class="absolute h-[40px] flex items-center left-2.5"
+      >
+        <svg
+          class="remixicon fill-slate-500"
+          fill="default"
+          height="16"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"
+          />
+        </svg>
+      </span>
+      <input
+        class="px-3.5 py-2.5 h-[38px] min-h-[38px] rounded-lg gap-2 w-full text-sm font-normal shadow border border-slate-300 text-black placeholder:text-slate-400 focus:outline-0 focus:border focus:border-blue-500 disabled:bg-slate-50 disabled:text-slate-300 pl-8 pr-8"
+        type="text"
+      />
+      <span
+        class="absolute h-[40px] flex items-center right-2.5"
+      >
+        <svg
+          class="remixicon fill-slate-500"
+          fill="default"
+          height="16"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
+          />
+        </svg>
+      </span>
+    </label>
+    <div
+      class="label"
+    >
+      <span
+        class="label-text-alt text-slate-500 text-xs font-normal"
+      >
+        Help text
+      </span>
+    </div>
+  </div>
+</div>
 `;

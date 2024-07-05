@@ -4,12 +4,12 @@ import { Card } from './card';
 
 describe('Card', () => {
   it('match snapshot', () => {
-    const result = render(
+    const { container } = render(
       <Card>
         <div>Card Content</div>
       </Card>
     );
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

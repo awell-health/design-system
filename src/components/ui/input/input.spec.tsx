@@ -11,9 +11,9 @@ describe('', () => {
       prefixIcon: <Icon icon='RiAddFill' />,
       suffixIcon: <Icon icon='RiArrowLeftLine' />
     };
-    const result = render(<Input {...props} />);
+    const { container } = render(<Input {...props} />);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('displays error', () => {

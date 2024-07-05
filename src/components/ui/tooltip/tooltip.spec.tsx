@@ -4,11 +4,11 @@ import { Tooltip } from './tooltip';
 
 describe('Tooltip', () => {
   it('match snapshot', () => {
-    const result = render(
+    const { container } = render(
       <Tooltip datatip='Tooltip displayed text' data-testid='tooltip'>
         <span>Tooltip child</span>
       </Tooltip>
     );
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

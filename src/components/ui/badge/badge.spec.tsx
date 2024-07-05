@@ -4,8 +4,8 @@ import { Badge } from './badge';
 
 describe('Badge', () => {
   it('match snapshot', () => {
-    const result = render(<Badge />);
+    const { container } = render(<Badge />);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

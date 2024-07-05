@@ -4,8 +4,8 @@ import { Textarea } from './textarea';
 
 describe('Textarea', () => {
   it('match snapshot', () => {
-    const result = render(<Textarea />);
+    const { container } = render(<Textarea />);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,3 +1,86 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Pagination > match snapshot 1`] = `undefined`;
+exports[`Pagination > match snapshot 1`] = `
+<div>
+  <div
+    class="w-full px-6 py-4 bg-white justify-between items-start inline-flex"
+  >
+    <button
+      class="btn btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white btn-sm rounded-md px-3.5 py-2"
+      disabled=""
+    >
+      <svg
+        class="remixicon fill-slate-200"
+        fill="default"
+        height="16"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
+        />
+      </svg>
+       
+      Previous
+    </button>
+    <div
+      class="flex grow gap-2 justify-center"
+    >
+      <button
+        class="btn text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200 btn-sm rounded-md px-3.5 py-2"
+      >
+        1
+      </button>
+      <button
+        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+      >
+        2
+      </button>
+      <button
+        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+      >
+        3
+      </button>
+      <span
+        class="flex h-8 mt-1"
+      >
+        ...
+      </span>
+      <button
+        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+      >
+        7
+      </button>
+      <button
+        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+      >
+        8
+      </button>
+      <button
+        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+      >
+        9
+      </button>
+    </div>
+    <button
+      class="btn btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white btn-sm rounded-md px-3.5 py-2"
+    >
+      Next
+       
+      <svg
+        class="remixicon "
+        fill="default"
+        height="16"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

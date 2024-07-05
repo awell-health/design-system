@@ -13,7 +13,7 @@ import {
 
 describe('Table', () => {
   it('match snapshot', () => {
-    const result = render(
+    const { container } = render(
       <Table>
         <TableHeader>
           <TableRow>
@@ -33,6 +33,6 @@ describe('Table', () => {
       </Table>
     );
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

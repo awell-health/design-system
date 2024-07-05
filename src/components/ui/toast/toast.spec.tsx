@@ -15,7 +15,7 @@ describe('Toast', () => {
   };
 
   it('match snapshot', () => {
-    expect(subject()).toMatchSnapshot();
+    expect(subject().container).toMatchSnapshot();
   });
 
   it('triggers handleClose function', () => {
