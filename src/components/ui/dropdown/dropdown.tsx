@@ -1,10 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-
-export type DropdownItem = {
-  label: string | JSX.Element;
-  onClick: () => void;
-};
+import { DropdownItem } from './types';
 
 const dropdownVariants = cva('dropdown', {
   variants: {

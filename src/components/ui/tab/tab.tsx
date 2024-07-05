@@ -2,6 +2,7 @@ import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
+import { TabItem } from './types';
 
 const tabVariants = cva('tabs border-slate-200', {
   variants: {
@@ -27,16 +28,7 @@ const tabVariants = cva('tabs border-slate-200', {
   }
 });
 
-export interface TabItem {
-  id: string;
-  label: string;
-  onClick: (item: TabItem) => void;
-  className?: string;
-}
-
-export interface TabProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof tabVariants> {
+interface TabProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof tabVariants> {
   items: TabItem[];
   fullWidth?: boolean;
   selected?: string;
@@ -74,4 +66,4 @@ function Tab({ className, items, selected, variant, size, fullWidth = true, ...p
   );
 }
 
-export { Tab, tabVariants };
+export { Tab };

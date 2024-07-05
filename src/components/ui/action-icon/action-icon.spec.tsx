@@ -1,7 +1,8 @@
 import { render } from '@testing-library/react';
 import { expect, it, describe } from 'vitest';
 
-import { ActionIcon, ActionType } from './action-icon';
+import { ActionIcon } from './action-icon';
+import { ActionType } from './types';
 
 describe('ActionIcon', () => {
   it('match snapshot', () => {

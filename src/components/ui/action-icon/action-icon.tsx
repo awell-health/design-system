@@ -1,20 +1,9 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
 import { Icon, IconType } from '../icon';
+import { ActionType } from './types';
 
-export enum ActionType {
-  ApiCall = 'API_CALL',
-  ApiCallGraphql = 'API_CALL_GRAPHQL',
-  Calculation = 'CALCULATION',
-  Checklist = 'CHECKLIST',
-  ClinicalNote = 'CLINICAL_NOTE',
-  Form = 'FORM',
-  Message = 'MESSAGE',
-  Plugin = 'PLUGIN',
-  PushToEmr = 'PUSH_TO_EMR'
-}
-
-export interface ActionIconProps {
+interface ActionIconProps {
   actionType?: ActionType;
   icon_url?: string;
   size?: 'sm' | 'lg';

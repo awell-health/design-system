@@ -1,9 +1,9 @@
-import { Icon } from './icon';
-import { Button } from './button';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Button } from '../button';
+import { Icon } from '../icon';
 
-export interface PaginationProps {
+interface PaginationProps {
   totalCount: number;
   onPageChange: (page: number) => void;
   perPage?: number;
