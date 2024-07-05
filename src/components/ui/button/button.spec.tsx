@@ -4,8 +4,8 @@ import { Button } from './button';
 
 describe('Button', () => {
   it('match snapshot', () => {
-    const result = render(<Button>Label</Button>);
+    const { container } = render(<Button>Label</Button>);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

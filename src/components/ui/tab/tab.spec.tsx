@@ -11,8 +11,8 @@ describe('Tab', () => {
       { id: '3', label: 'Third', onClick: vi.fn() }
     ];
 
-    const result = render(<Tab items={items} />);
+    const { container } = render(<Tab items={items} />);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

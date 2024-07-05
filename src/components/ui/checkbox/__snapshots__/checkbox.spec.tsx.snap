@@ -1,389 +1,90 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Checkbox > match checkbox snapshot 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="flex flex-col"
-      >
-        <label
-          class="flex items-center gap-2 cursor-pointer"
-        >
-          <input
-            class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
-            type="checkbox"
-          />
-          <span
-            class="text-slate-700 text-sm font-medium leading-tight"
-          >
-            Label
-          </span>
-        </label>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="flex flex-col"
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <label
+      class="flex items-center gap-2 cursor-pointer"
     >
-      <label
-        class="flex items-center gap-2 cursor-pointer"
+      <input
+        class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
+        type="checkbox"
+      />
+      <span
+        class="text-slate-700 text-sm font-medium leading-tight"
       >
-        <input
-          class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
-          type="checkbox"
-        />
-        <span
-          class="text-slate-700 text-sm font-medium leading-tight"
-        >
-          Label
-        </span>
-      </label>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+        Label
+      </span>
+    </label>
+  </div>
+</div>
 `;
 
 exports[`Checkbox > match disabled snapshot 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="flex flex-col"
-      >
-        <label
-          class="flex items-center gap-2 cursor-pointer"
-        >
-          <input
-            class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
-            type="checkbox"
-          />
-          <span
-            class="text-slate-700 text-sm font-medium leading-tight"
-          >
-            Label
-          </span>
-        </label>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="flex flex-col"
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <label
+      class="flex items-center gap-2 cursor-pointer"
     >
-      <label
-        class="flex items-center gap-2 cursor-pointer"
+      <input
+        class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        class="text-sm font-medium leading-tight text-slate-300"
       >
-        <input
-          class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
-          type="checkbox"
-        />
-        <span
-          class="text-slate-700 text-sm font-medium leading-tight"
-        >
-          Label
-        </span>
-      </label>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+        Label
+      </span>
+    </label>
+  </div>
+</div>
 `;
 
 exports[`Checkbox > match indeterminate snapshot 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="flex flex-col"
-      >
-        <label
-          class="flex items-center gap-2 cursor-pointer"
-        >
-          <input
-            class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
-            type="checkbox"
-          />
-          <span
-            class="text-slate-700 text-sm font-medium leading-tight"
-          >
-            Label
-          </span>
-        </label>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="flex flex-col"
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <label
+      class="flex items-center gap-2 cursor-pointer"
     >
-      <label
-        class="flex items-center gap-2 cursor-pointer"
+      <input
+        class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
+        type="checkbox"
+      />
+      <span
+        class="text-slate-700 text-sm font-medium leading-tight"
       >
-        <input
-          class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
-          type="checkbox"
-        />
-        <span
-          class="text-slate-700 text-sm font-medium leading-tight"
-        >
-          Label
-        </span>
-      </label>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+        Label
+      </span>
+    </label>
+  </div>
+</div>
 `;
 
 exports[`Checkbox > match radio snapshot 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="flex flex-col"
-      >
-        <label
-          class="flex items-center gap-2 cursor-pointer"
-        >
-          <input
-            class="w-4 h-4 relative bg-white border border-slate-300 outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 rounded-full"
-            type="radio"
-          />
-          <span
-            class="text-slate-700 text-sm font-medium leading-tight"
-          >
-            Label
-          </span>
-        </label>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="flex flex-col"
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <label
+      class="flex items-center gap-2 cursor-pointer"
     >
-      <label
-        class="flex items-center gap-2 cursor-pointer"
+      <input
+        class="w-4 h-4 relative bg-white border border-slate-300 outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 rounded-full"
+        type="radio"
+      />
+      <span
+        class="text-slate-700 text-sm font-medium leading-tight"
       >
-        <input
-          class="w-4 h-4 relative bg-white border border-slate-300 outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 rounded-full"
-          type="radio"
-        />
-        <span
-          class="text-slate-700 text-sm font-medium leading-tight"
-        >
-          Label
-        </span>
-      </label>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+        Label
+      </span>
+    </label>
+  </div>
+</div>
 `;

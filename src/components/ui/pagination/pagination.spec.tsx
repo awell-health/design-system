@@ -9,10 +9,11 @@ describe('Pagination', () => {
       onPageChange: vi.fn()
     };
 
-    render(<Pagination {...defaultProps} {...props} />);
+    return render(<Pagination {...defaultProps} {...props} />);
   };
 
   it('match snapshot', () => {
-    expect(subject()).toMatchSnapshot();
+    const { container } = subject();
+    expect(container).toMatchSnapshot();
   });
 });

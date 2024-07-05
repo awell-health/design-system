@@ -16,7 +16,8 @@ describe('Alert Dialog', () => {
   };
 
   it('match snapshot', () => {
-    expect(subject()).toMatchSnapshot();
+    const { container } = subject();
+    expect(container).toMatchSnapshot();
   });
 
   it('handles onClose', () => {

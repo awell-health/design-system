@@ -15,9 +15,9 @@ describe('Dropdown', () => {
   ];
 
   it('match snapshot', () => {
-    const result = render(<Dropdown items={items} buttonLabel={'Button Label'} />);
+    const { container } = render(<Dropdown items={items} buttonLabel={'Button Label'} />);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('triggers item click event', () => {

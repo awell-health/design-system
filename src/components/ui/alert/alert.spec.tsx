@@ -5,8 +5,8 @@ import { Alert } from './alert';
 
 describe('Alert', () => {
   it('match snapshot', () => {
-    const result = render(<Alert title='Alert Title' showIcon={true} />);
+    const { container } = render(<Alert title='Alert Title' showIcon={true} />);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

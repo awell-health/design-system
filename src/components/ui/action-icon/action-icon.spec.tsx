@@ -6,9 +6,9 @@ import { ActionType } from './types';
 
 describe('ActionIcon', () => {
   it('match snapshot', () => {
-    const result = render(<ActionIcon />);
+    const { container } = render(<ActionIcon />);
 
-    expect(result).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('renders plugin icon with url', () => {

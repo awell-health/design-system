@@ -13,19 +13,23 @@ describe('Checkbox', () => {
   };
 
   it('match checkbox snapshot', () => {
-    expect(subject()).toMatchSnapshot();
+    const { container } = subject();
+    expect(container).toMatchSnapshot();
   });
 
   it('match radio snapshot', () => {
-    expect(subject({ type: 'radio' })).toMatchSnapshot();
+    const { container } = subject({ type: 'radio' });
+    expect(container).toMatchSnapshot();
   });
 
   it('match disabled snapshot', () => {
-    expect(subject()).toMatchSnapshot();
+    const { container } = subject({ disabled: true });
+    expect(container).toMatchSnapshot();
   });
 
   it('match indeterminate snapshot', () => {
-    expect(subject()).toMatchSnapshot();
+    const { container } = subject({ indeterminate: true });
+    expect(container).toMatchSnapshot();
   });
 
   it('renders help text', () => {
