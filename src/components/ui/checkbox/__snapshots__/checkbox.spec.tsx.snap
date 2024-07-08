@@ -6,10 +6,47 @@ exports[`Checkbox > match checkbox snapshot 1`] = `
     class="flex flex-col"
   >
     <label
-      class="flex items-center gap-2 cursor-pointer"
+      class="flex items-center gap-2 cursor-pointer relative"
     >
       <input
-        class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        data-testid="checkbox"
+        type="checkbox"
+      />
+      <span
+        class="text-slate-700 text-sm font-medium leading-tight"
+      >
+        Label
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox > match checked checkbox snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <label
+      class="flex items-center gap-2 cursor-pointer relative"
+    >
+      <svg
+        class="remixicon fill-white z-10 absolute left-0"
+        fill="default"
+        height="16"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"
+        />
+      </svg>
+      <input
+        checked=""
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        data-testid="checkbox"
         type="checkbox"
       />
       <span
@@ -28,10 +65,11 @@ exports[`Checkbox > match disabled snapshot 1`] = `
     class="flex flex-col"
   >
     <label
-      class="flex items-center gap-2 cursor-pointer"
+      class="flex items-center gap-2 cursor-pointer relative"
     >
       <input
-        class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        data-testid="checkbox"
         disabled=""
         type="checkbox"
       />
@@ -51,10 +89,23 @@ exports[`Checkbox > match indeterminate snapshot 1`] = `
     class="flex flex-col"
   >
     <label
-      class="flex items-center gap-2 cursor-pointer"
+      class="flex items-center gap-2 cursor-pointer relative"
     >
+      <svg
+        class="remixicon fill-white z-10 absolute left-0"
+        fill="default"
+        height="16"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 11H5V13H19V11Z"
+        />
+      </svg>
       <input
-        class="w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        data-testid="checkbox"
         type="checkbox"
       />
       <span
@@ -73,10 +124,11 @@ exports[`Checkbox > match radio snapshot 1`] = `
     class="flex flex-col"
   >
     <label
-      class="flex items-center gap-2 cursor-pointer"
+      class="flex items-center gap-2 cursor-pointer relative"
     >
       <input
-        class="w-4 h-4 relative bg-white border border-slate-300 outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 rounded-full"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 outline-none flex items-center justify-center hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 rounded-full hover:bg-blue-50 checked:bg-blue-50"
+        data-testid="checkbox"
         type="radio"
       />
       <span

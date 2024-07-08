@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
+import { Icon } from '../icon';
 
 const checkboxVariants = cva('', {
   variants: {
@@ -23,6 +24,7 @@ export interface CheckboxProps
   indeterminate?: boolean;
   helpText?: string;
   type: 'radio' | 'checkbox';
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Checkbox: React.FC<CheckboxProps> = ({
@@ -32,6 +34,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
   helpText,
   indeterminate = false,
   inputSize,
+  checked = false,
+  onChange,
   type,
   ...props
 }) => {
@@ -45,22 +49,42 @@ const Checkbox: React.FC<CheckboxProps> = ({
 
   return (
     <div className='flex flex-col'>
-      <label className='flex items-center gap-2 cursor-pointer'>
+      <label className='flex items-center gap-2 cursor-pointer relative'>
+        {type === 'checkbox' && (
+          <>
+            {checked && (
+              <Icon icon='RiCheckFill' className='fill-white z-10 absolute left-0' size={16} />
+            )}
+            {indeterminate && !checked && (
+              <Icon icon='RiSubtractFill' className='fill-white z-10 absolute left-0' size={16} />
+            )}
+          </>
+        )}
+        {type === 'radio' && checked && (
+          <div className='w-1.5 h-1.5 bg-blue-600 rounded-full absolute left-[5px] z-10' />
+        )}
         <input
           type={type}
           className={cn(
+            'appearance-none cursor-pointer',
             checkboxVariants({ inputSize }),
             'relative bg-white border border-slate-300 rounded outline-none',
             'flex items-center justify-center',
-            'hover:bg-blue-50 hover:border-blue-600',
+            !checked && 'hover:bg-blue-50 hover:border-blue-600',
+            checked && 'hover:border-blue-600',
             `active:border-blue-300 active:${boxShadowClass}`,
             `focus:border-blue-300 focus:${boxShadowClass}`,
             'disabled:!bg-slate-100 disabled:!border-slate-200',
-            type === 'radio' && 'rounded-full',
+            'checked:border-blue-600',
+            type === 'checkbox' &&
+              'checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600',
+            type === 'radio' && 'rounded-full hover:bg-blue-50 checked:bg-blue-50',
             className
           )}
+          onChange={onChange}
           ref={inputRef}
           disabled={disabled}
+          checked={checked}
           {...props}
         />
         {label && (

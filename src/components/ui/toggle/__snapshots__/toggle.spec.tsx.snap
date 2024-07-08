@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Toggle > match disabled snapshot 1`] = `
+<div>
+  <div>
+    <label
+      class="flex gap-2 cursor-pointer"
+    >
+      <input
+        class="toggle focus:bg-none [--tglbg:#F1F5F9] hover:[--tglbg:#E2E8F0] disabled:[--tglbg:#F1F5F9] border-none bg-white hover:bg-white"
+        data-testid="toggle"
+        disabled=""
+        label="Toggle Label"
+        type="checkbox"
+      />
+      <span
+        class="label-text text-slate-700 text-sm font-medium"
+      >
+        Remember me
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Toggle > match snapshot 1`] = `
+<div>
+  <div>
+    <label
+      class="flex gap-2 cursor-pointer"
+    >
+      <input
+        class="toggle focus:bg-none [--tglbg:#F1F5F9] hover:[--tglbg:#E2E8F0] disabled:[--tglbg:#F1F5F9] border-none bg-white hover:bg-white"
+        data-testid="toggle"
+        label="Toggle Label"
+        type="checkbox"
+      />
+      <span
+        class="label-text text-slate-700 text-sm font-medium"
+      >
+        Remember me
+      </span>
+    </label>
+  </div>
+</div>
+`;

@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > match snapshot 1`] = `
+<div>
+  <button
+    class="btn btn-primary hover:bg-blue-700 hover:border-blue-700 active:bg-blue-700 active:border-blue-700 disabled:bg-slate-200 disabled:border-slate-200 disabled:text-white btn-sm rounded-md px-3.5 py-2"
+  >
+    Label
+  </button>
+</div>
+`;
