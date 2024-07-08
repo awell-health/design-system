@@ -29,8 +29,8 @@ export interface DropdownProps
 function Dropdown(props: DropdownProps) {
   const { items, buttonLabel, buttonClassNames, itemClassNames, placement, className } = props;
 
-  const renderItem = ({ label, onClick }: DropdownItem): JSX.Element => (
-    <li className={cn(itemClassNames)}>
+  const renderItem = ({ label, onClick }: DropdownItem, i: number): JSX.Element => (
+    <li key={i} className={cn(itemClassNames)}>
       <a onClick={onClick}>{label}</a>
     </li>
   );

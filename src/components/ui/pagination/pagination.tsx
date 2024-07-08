@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '../button';
 import { Icon } from '../icon';
@@ -49,9 +49,9 @@ function Pagination(props: PaginationProps) {
     }
 
     return items.map((i) => (
-      <>
+      <Fragment key={i}>
         {typeof i === 'string' && i === 'prefix-divider' && (
-          <span key='divider' className='flex h-8 mt-1'>
+          <span key={i} className='flex h-8 mt-1'>
             ...
           </span>
         )}
@@ -68,11 +68,11 @@ function Pagination(props: PaginationProps) {
           </Button>
         )}
         {typeof i === 'string' && i === 'suffix-divider' && (
-          <span key='divider' className='flex h-8 mt-1'>
+          <span key={i} className='flex h-8 mt-1'>
             ...
           </span>
         )}
-      </>
+      </Fragment>
     ));
   };
 
