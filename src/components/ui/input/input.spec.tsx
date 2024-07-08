@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { expect, it, describe } from 'vitest';
+import { expect, it, describe, vi } from 'vitest';
 import { Input } from './input';
 import { Icon } from '../icon';
 
@@ -9,7 +9,8 @@ describe('', () => {
       label: 'Label',
       helpText: 'Help text',
       prefixIcon: <Icon icon='RiAddFill' />,
-      suffixIcon: <Icon icon='RiArrowLeftLine' />
+      suffixIcon: <Icon icon='RiArrowLeftLine' />,
+      onChange: vi.fn()
     };
     const { container } = render(<Input {...props} />);
 

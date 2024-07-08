@@ -14,3 +14,4 @@ export * from './ui/toast';
 export * from './ui/action-icon';
 export * from './ui/pagination';
 export * from './ui/checkbox';
+export * from './ui/toggle';

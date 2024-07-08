@@ -8,10 +8,11 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   suffixIcon?: JSX.Element;
   prefixIcon?: JSX.Element;
   hasError?: boolean;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, label, helpText, suffixIcon, prefixIcon, hasError, ...props }, ref) => {
+  ({ className, label, helpText, suffixIcon, prefixIcon, hasError, onChange, ...props }, ref) => {
     const renderIcon = (icon: JSX.Element, position: 'left' | 'right') => {
       return (
         <span
@@ -51,6 +52,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               hasError && 'border-red-500 focus:border-red-500',
               className
             )}
+            onChange={onChange}
             ref={ref}
             {...props}
           />
