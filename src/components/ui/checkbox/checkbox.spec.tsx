@@ -1,19 +1,25 @@
-import { render } from '@testing-library/react';
-import { expect, it, describe } from 'vitest';
+import { fireEvent, render } from '@testing-library/react';
+import { expect, it, describe, vi } from 'vitest';
 import { Checkbox, CheckboxProps } from './checkbox';
 
 describe('Checkbox', () => {
   const subject = (props = {}) => {
     const defaultProps: CheckboxProps = {
       type: 'checkbox',
-      label: 'Label'
+      label: 'Label',
+      onChange: () => false
     };
 
-    return render(<Checkbox {...defaultProps} {...props} />);
+    return render(<Checkbox {...defaultProps} {...props} data-testid='checkbox' />);
   };
 
   it('match checkbox snapshot', () => {
     const { container } = subject();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('match checked checkbox snapshot', () => {
+    const { container } = subject({ checked: true });
     expect(container).toMatchSnapshot();
   });
 
@@ -37,5 +43,14 @@ describe('Checkbox', () => {
     const { getByText } = subject({ helpText });
 
     expect(getByText(helpText)).toBeVisible();
+  });
+
+  it('calls click handler', () => {
+    const onChange = vi.fn();
+    const { getByTestId } = subject({ onChange });
+
+    fireEvent.click(getByTestId('checkbox'));
+
+    expect(onChange).toHaveBeenCalledOnce();
   });
 });
