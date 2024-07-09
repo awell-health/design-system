@@ -1,6 +1,5 @@
 /* eslint-disable */
 /// <reference types="vitest" />
-/// <reference types='@testing-library/jest-dom/vitest' />
 
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
@@ -30,7 +29,7 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      exclude: ['**/*.stories.*']
+      exclude: ['**/*.stories.*', 'tests']
     })
   ],
   resolve: {
@@ -47,7 +46,7 @@ export default defineConfig({
   },
   test: {
     environment: 'jsdom',
-    setupFiles: './tests/setupTests.ts',
+    setupFiles: 'src/tests/setupTests.ts',
     coverage: {
       include: ['src/components/**/*']
     }
