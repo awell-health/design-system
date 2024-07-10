@@ -18,6 +18,7 @@ const options = [
 
 export const Example = {
   args: {
+    label: 'Select Label',
     isMulti: false,
     options,
     isSearchable: false,
