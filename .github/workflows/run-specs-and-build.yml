@@ -1,0 +1,30 @@
+name: Run specs
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      # Manual Checkout
+      - uses: actions/checkout@v4
+
+      # Set up Node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+      
+      - name: Enable yarn latest using corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn
+      
+      - name: Run Specs
+        run: yarn test
+      
+      - name: Build
+        run: yarn tailwind && yarn build
