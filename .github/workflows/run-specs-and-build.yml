@@ -2,7 +2,7 @@ name: Run specs
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, synchronize, reopened]
 
 jobs:
   deploy:
