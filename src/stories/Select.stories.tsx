@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Select } from '../components/ui/select';
+import { Icon } from '../components';
 
 const meta = {
   component: Select
@@ -18,7 +19,9 @@ const options = [
 export const Example = {
   args: {
     isMulti: false,
-    options
+    options,
+    isSearchable: false,
+    icon: <Icon icon='RiSearchLine' />
   },
   render: (args) => <Select {...args} />
 } satisfies Story;
