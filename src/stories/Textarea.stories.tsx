@@ -9,11 +9,12 @@ export default meta;
 
 type Story = StoryObj<typeof Textarea>;
 
-function TextareaDemo() {
-  return <Textarea placeholder='Type your text here'></Textarea>;
-}
-
 export const Example = {
-  args: {},
-  render: () => <TextareaDemo />
+  args: {
+    helpText: 'Helper text',
+    label: 'Textarea Label',
+    placeholder: 'Type your text here',
+    hasError: false
+  },
+  render: (args) => <Textarea {...args} />
 } satisfies Story;

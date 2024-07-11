@@ -2,8 +2,24 @@
 
 exports[`Textarea > match snapshot 1`] = `
 <div>
-  <textarea
-    class="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-  />
+  <div
+    class="flex flex-col gap-1.5"
+  >
+    <span
+      class="text-slate-600 text-sm font-medium"
+    >
+      Textarea Label
+    </span>
+    <textarea
+      class="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+      data-testid="textarea"
+      placeholder="Type your text here"
+    />
+    <span
+      class="text-slate-500 text-sm font-normal"
+    >
+      Helper text
+    </span>
+  </div>
 </div>
 `;
