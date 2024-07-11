@@ -16,4 +16,10 @@ describe('Select', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('match multi snapshot', () => {
+    const { container } = render(<Select options={options} onChange={onChange} />);
+
+    expect(container).toMatchSnapshot();
+  });
 });
