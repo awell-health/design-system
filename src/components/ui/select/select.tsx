@@ -21,13 +21,13 @@ function SelectComponent(props: Props) {
     icon = null,
     label = null
   } = props;
-  const iconPadding = cn(icon && 'pl-5');
+  const iconPadding = cn(!isMulti && icon && 'pl-5');
 
   return (
     <div className='flex flex-col gap-1.5'>
       {label && <div className='text-slate-600 text-sm font-medium'>{label}</div>}
       <div className='relative'>
-        {icon && (
+        {!isMulti && icon && (
           <span className='absolute z-10 left-2 top-2.5'>
             {cloneElement(icon, { className: 'fill-slate-500', size: 16 })}
           </span>
@@ -52,6 +52,9 @@ function SelectComponent(props: Props) {
                 state.isSelected && '!text-slate-700 !bg-slate-200'
               ),
             singleValue: () => iconPadding,
+            multiValue: () => '!rounded',
+            multiValueLabel: () => 'bg-slate-200',
+            multiValueRemove: () => 'bg-slate-200 hover:bg-red-300',
             placeholder: () => iconPadding,
             input: () => iconPadding
           }}
