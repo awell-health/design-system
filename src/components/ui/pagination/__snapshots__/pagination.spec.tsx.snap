@@ -50,17 +50,17 @@ exports[`Pagination > match snapshot 1`] = `
       <button
         class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
       >
-        7
+        13
       </button>
       <button
         class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
       >
-        8
+        14
       </button>
       <button
         class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
       >
-        9
+        15
       </button>
     </div>
     <button
