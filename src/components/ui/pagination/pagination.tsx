@@ -31,19 +31,25 @@ function Pagination(props: PaginationProps) {
       const displayCurrentPage =
         currentPage >= edgeButtonsToShow && currentPage < numberOfPages - edgeButtonsToShow;
 
+      const displayPrefixDivider = currentPage > edgeButtonsToShow + 1;
+
+      const displayPrevPage =
+        (displayCurrentPage && currentPage > edgeButtonsToShow) ||
+        currentPage === items.length - edgeButtonsToShow;
+
+      const displayNextPage =
+        (displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 1) ||
+        currentPage === edgeButtonsToShow - 1;
+
+      const displaySuffixDivider = currentPage < items.length - edgeButtonsToShow - 2;
+
       items = [
         ...items.slice(0, edgeButtonsToShow),
-        ...(currentPage < edgeButtonsToShow ? ['prefix-divider'] : []),
-        ...(displayCurrentPage && currentPage > edgeButtonsToShow + 1 ? ['prefix-divider'] : []),
-        ...(displayCurrentPage && currentPage > edgeButtonsToShow ? [currentPage - 1] : []),
+        ...(displayPrefixDivider ? ['prefix-divider'] : []),
+        ...(displayPrevPage ? [currentPage - 1] : []),
         ...(displayCurrentPage ? [currentPage] : []),
-        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 1
-          ? [currentPage + 1]
-          : []),
-        ...(currentPage > items.length - edgeButtonsToShow - 1 ? ['suffix-divider'] : []),
-        ...(displayCurrentPage && currentPage < items.length - edgeButtonsToShow - 2
-          ? ['suffix-divider']
-          : []),
+        ...(displayNextPage ? [currentPage + 1] : []),
+        ...(displaySuffixDivider ? ['suffix-divider'] : []),
         ...items.slice(Math.max(items.length - edgeButtonsToShow, 0))
       ];
     }
