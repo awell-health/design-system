@@ -52,8 +52,6 @@ function Pagination(props: PaginationProps) {
         ...(displaySuffixDivider ? ['suffix-divider'] : []),
         ...items.slice(Math.max(items.length - edgeButtonsToShow, 0))
       ];
-
-      console.log(items);
     }
 
     return items.map((i) => (
