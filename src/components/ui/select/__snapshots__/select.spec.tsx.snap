@@ -26,7 +26,7 @@ exports[`Select > match multi snapshot 1`] = `
           class="!rounded-lg !shadow border !border-slate-300 text-slate-500 text-sm font-normal css-13cymwt-control"
         >
           <div
-            class=" css-1fdsijx-ValueContainer"
+            class=" css-hlgwow"
           >
             <div
               class=" css-1jqq78o-placeholder"
@@ -50,7 +50,7 @@ exports[`Select > match multi snapshot 1`] = `
             />
           </div>
           <div
-            class=" css-1hb7zxy-IndicatorsContainer"
+            class=" css-1wy0on6"
           >
             <span
               class=" css-1u9des2-indicatorSeparator"
@@ -106,7 +106,7 @@ exports[`Select > match snapshot 1`] = `
           class="!rounded-lg !shadow border !border-slate-300 text-slate-500 text-sm font-normal css-13cymwt-control"
         >
           <div
-            class=" css-1fdsijx-ValueContainer"
+            class=" css-hlgwow"
           >
             <div
               class=" css-1jqq78o-placeholder"
@@ -130,7 +130,7 @@ exports[`Select > match snapshot 1`] = `
             />
           </div>
           <div
-            class=" css-1hb7zxy-IndicatorsContainer"
+            class=" css-1wy0on6"
           >
             <span
               class=" css-1u9des2-indicatorSeparator"
