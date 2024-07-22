@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -787,12 +787,6 @@ html {
   .table tr.hover:nth-child(even):hover {
     --tw-bg-opacity: 1;
     background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
-  }
-
-  .table-zebra tr.hover:hover,
-  .table-zebra tr.hover:nth-child(even):hover {
-    --tw-bg-opacity: 1;
-    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
   }
 }
 
@@ -3087,20 +3081,12 @@ input.tab:checked + .tab-content,
   right: 0px;
 }
 
-.right-2 {
-  right: 0.5rem;
-}
-
 .right-2\.5 {
   right: 0.625rem;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.top-2 {
-  top: 0.5rem;
 }
 
 .top-2\.5 {
@@ -3153,10 +3139,6 @@ input.tab:checked + .tab-content,
 
 .table-row {
   display: table-row;
-}
-
-.h-1 {
-  height: 0.25rem;
 }
 
 .h-1\.5 {
@@ -3229,10 +3211,6 @@ input.tab:checked + .tab-content,
 
 .min-h-full {
   min-height: 100%;
-}
-
-.w-1 {
-  width: 0.25rem;
 }
 
 .w-1\.5 {
@@ -3836,10 +3814,6 @@ input.tab:checked + .tab-content,
   padding-right: 2rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
 .pt-0\.5 {
   padding-top: 0.125rem;
 }
@@ -3951,6 +3925,11 @@ input.tab:checked + .tab-content,
   color: rgb(157 23 77 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
@@ -4016,11 +3995,6 @@ input.tab:checked + .tab-content,
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
 .\!shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color) !important;
@@ -4054,10 +4028,6 @@ input.tab:checked + .tab-content,
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all {
