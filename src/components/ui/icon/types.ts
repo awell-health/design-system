@@ -61,7 +61,15 @@ import {
   RiAlertLine,
   RiSubtractFill,
   RiUserFill,
-  RiUserLine
+  RiUserLine,
+  RiHomeLine,
+  RiEditCircleLine,
+  RiPulseFill,
+  RiArrowLeftDoubleFill,
+  RiLifebuoyLine,
+  RiCodeFill,
+  RiSettings4Line,
+  RiLogoutBoxRLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -127,7 +135,15 @@ export const ICONS = {
   RiAlertLine,
   RiSubtractFill,
   RiUserFill,
-  RiUserLine
+  RiUserLine,
+  RiHomeLine,
+  RiEditCircleLine,
+  RiPulseFill,
+  RiArrowLeftDoubleFill,
+  RiLifebuoyLine,
+  RiCodeFill,
+  RiSettings4Line,
+  RiLogoutBoxRLine
 };
 
 export enum IconSize {
