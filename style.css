@@ -3117,6 +3117,26 @@ input.tab:checked + .tab-content,
   margin-top: 0.5rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .inline {
   display: inline;
 }
@@ -3233,6 +3253,10 @@ input.tab:checked + .tab-content,
   width: 13rem;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -3287,6 +3311,10 @@ input.tab:checked + .tab-content,
 
 .max-w-\[400px\] {
   max-width: 400px;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .shrink {
@@ -3563,6 +3591,11 @@ input.tab:checked + .tab-content,
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
+.bg-base-200 {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
 .bg-blue-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
@@ -3672,6 +3705,10 @@ input.tab:checked + .tab-content,
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
+.bg-white\/0 {
+  background-color: rgb(255 255 255 / 0);
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -3714,6 +3751,10 @@ input.tab:checked + .tab-content,
 
 .fill-yellow-500 {
   fill: #eab308;
+}
+
+.fill-slate-700 {
+  fill: #334155;
 }
 
 .p-1 {
@@ -3824,6 +3865,22 @@ input.tab:checked + .tab-content,
 
 .pt-\[32px\] {
   padding-top: 32px;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pl-\[12px\] {
+  padding-left: 12px;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
 }
 
 .text-left {
@@ -3995,6 +4052,11 @@ input.tab:checked + .tab-content,
   color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
 .\!shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color) !important;
@@ -4090,6 +4152,11 @@ input:focus {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
+.before\:w-0::before {
+  content: var(--tw-content);
+  width: 0px;
+}
+
 .before\:rounded-lg::before {
   content: var(--tw-content);
   border-radius: 0.5rem;
@@ -4166,6 +4233,11 @@ input:focus {
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
+.hover\:border-blue-100:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(219 234 254 / var(--tw-border-opacity));
+}
+
 .hover\:bg-blue-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
@@ -4205,9 +4277,18 @@ input:focus {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:fill-blue-700:hover {
+  fill: #1d4ed8;
+}
+
 .hover\:text-slate-700:hover {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
 .hover\:\[--tglbg\:\#2563EB\]:hover {
@@ -4266,6 +4347,21 @@ input:focus {
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
+.active\:border-blue-100:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(219 234 254 / var(--tw-border-opacity));
+}
+
+.active\:border-blue-50:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 246 255 / var(--tw-border-opacity));
+}
+
+.active\:\!border-blue-50:active {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(239 246 255 / var(--tw-border-opacity)) !important;
+}
+
 .active\:bg-blue-100:active {
   --tw-bg-opacity: 1;
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
@@ -4283,6 +4379,26 @@ input:focus {
 
 .active\:bg-transparent:active {
   background-color: transparent;
+}
+
+.active\:bg-blue-50:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity));
+}
+
+.active\:\!bg-blue-50:active {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity)) !important;
+}
+
+.active\:text-blue-700:active {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.active\:\!text-blue-700:active {
+  --tw-text-opacity: 1 !important;
+  color: rgb(29 78 216 / var(--tw-text-opacity)) !important;
 }
 
 .disabled\:cursor-not-allowed:disabled {
@@ -4363,6 +4479,14 @@ input:focus {
 
 .group:hover .group-hover\:fill-slate-700 {
   fill: #334155;
+}
+
+.group:hover .group-hover\:fill-blue-700 {
+  fill: #1d4ed8;
+}
+
+.group:active .group-active\:fill-blue-700 {
+  fill: #1d4ed8;
 }
 
 @media (min-width: 640px) {
