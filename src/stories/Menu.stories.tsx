@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Menu } from '../components/ui/menu/Menu';
+import { Menu } from '../components/ui/menu';
 import { Badge, Icon } from '../components';
 
 const meta = {
