@@ -3129,6 +3129,10 @@ input.tab:checked + .tab-content,
   margin-left: 0.75rem;
 }
 
+.box-border {
+  box-sizing: border-box;
+}
+
 .inline {
   display: inline;
 }
@@ -4321,6 +4325,11 @@ input:focus {
 .active\:border-blue-700:active {
   --tw-border-opacity: 1;
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
+}
+
+.active\:\!border-blue-100:active {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(219 234 254 / var(--tw-border-opacity)) !important;
 }
 
 .active\:\!bg-blue-50:active {
