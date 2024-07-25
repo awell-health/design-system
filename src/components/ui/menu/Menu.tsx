@@ -8,7 +8,7 @@ export interface Props extends React.HTMLAttributes<HTMLUListElement> {
 
 function Menu({ className, items, ...props }: Props) {
   const renderMenItem = (item: MenuItem) => {
-    const { icon, badge, children, className = '' } = item;
+    const { icon, badge, children, className = '', onClick = undefined } = item;
 
     const itemClassNames = cn(
       'group flex box-border',
@@ -32,10 +32,16 @@ function Menu({ className, items, ...props }: Props) {
     );
     return (
       <li>
-        {!children && <a className={itemClassNames}>{label}</a>}
+        {!children && (
+          <a className={itemClassNames} onClick={onClick}>
+            {label}
+          </a>
+        )}
         {children && (
           <details>
-            <summary className={itemClassNames}>{label}</summary>
+            <summary className={itemClassNames} onClick={onClick}>
+              {label}
+            </summary>
             <ul className='before:w-0'>{children.map(renderMenItem)}</ul>
           </details>
         )}

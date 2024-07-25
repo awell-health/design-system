@@ -3109,8 +3109,8 @@ input.tab:checked + .tab-content,
   margin: 0.25rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .mr-1 {
@@ -3123,10 +3123,6 @@ input.tab:checked + .tab-content,
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
 }
 
 .box-border {
@@ -3341,10 +3337,6 @@ input.tab:checked + .tab-content,
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .items-start {
@@ -3740,6 +3732,10 @@ input.tab:checked + .tab-content,
   fill: #eab308;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -3758,10 +3754,6 @@ input.tab:checked + .tab-content,
 
 .p-6 {
   padding: 1.5rem;
-}
-
-.p-0 {
-  padding: 0px;
 }
 
 .px-1 {
@@ -3814,11 +3806,6 @@ input.tab:checked + .tab-content,
   padding-bottom: 1rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
@@ -3831,6 +3818,10 @@ input.tab:checked + .tab-content,
   padding-bottom: 1rem;
 }
 
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -3841,6 +3832,10 @@ input.tab:checked + .tab-content,
 
 .pl-8 {
   padding-left: 2rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .pr-8 {
@@ -3857,14 +3852,6 @@ input.tab:checked + .tab-content,
 
 .pt-\[32px\] {
   padding-top: 32px;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
 }
 
 .text-left {
@@ -4312,9 +4299,9 @@ input:focus {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.active\:\!border-blue-50:active {
+.active\:\!border-blue-100:active {
   --tw-border-opacity: 1 !important;
-  border-color: rgb(239 246 255 / var(--tw-border-opacity)) !important;
+  border-color: rgb(219 234 254 / var(--tw-border-opacity)) !important;
 }
 
 .active\:border-blue-300:active {
@@ -4325,11 +4312,6 @@ input:focus {
 .active\:border-blue-700:active {
   --tw-border-opacity: 1;
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
-}
-
-.active\:\!border-blue-100:active {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(219 234 254 / var(--tw-border-opacity)) !important;
 }
 
 .active\:\!bg-blue-50:active {
