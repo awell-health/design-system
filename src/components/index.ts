@@ -18,3 +18,4 @@ export * from './ui/action-icon';
 export * from './ui/pagination';
 export * from './ui/checkbox';
 export * from './ui/toggle';
+export * from './ui/menu';
