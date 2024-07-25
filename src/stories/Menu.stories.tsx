@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Menu } from '../components/ui/menu';
-import { Badge, Icon } from '../components';
+import { Icon } from '../components';
 
 const meta = {
   component: Menu
@@ -13,25 +13,14 @@ type Story = StoryObj<typeof Menu>;
 export const Example = {
   args: {
     items: [
+      { label: 'Home', icon: <Icon icon='RiHomeLine' /> },
       {
-        label: 'Single Item',
-        icon: <Icon icon='RiHomeLine' />,
-        badge: <Badge>3</Badge>
+        label: 'Design',
+        icon: <Icon icon='RiEditCircleLine' />,
+        children: [{ label: 'Care flows' }, { label: 'Templates' }, { label: 'Form Library' }]
       },
-      {
-        label: 'Parent Item',
-        icon: <Icon icon='RiLineChartLine' />,
-        badge: <Badge>2</Badge>,
-        children: [
-          {
-            label: 'First child'
-          },
-          {
-            label: 'Second child',
-            children: [{ label: 'Second level child' }]
-          }
-        ]
-      }
+      { label: 'Operate', icon: <Icon icon='RiPulseFill' /> },
+      { label: 'Improve', icon: <Icon icon='RiLineChartLine' /> }
     ]
   },
   render: (args) => <Menu {...args} />
