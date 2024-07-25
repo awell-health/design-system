@@ -3,47 +3,67 @@
 exports[`Menu > match snapshot 1`] = `
 <div>
   <ul
-    class="menu"
+    class="menu p-0"
   >
     <li>
       <a
-        class="group h-9 px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-2"
+        class="group flex h-9 pl-2 pr-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-3"
       >
-        Single Item
+        <span
+          class="flex flex-1 items-center gap-3"
+        >
+          Single Item
+        </span>
       </a>
     </li>
     <li>
       <details>
         <summary
-          class="group h-9 px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-2"
+          class="group flex h-9 pl-2 pr-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-3"
         >
-          Parent Item
+          <span
+            class="flex flex-1 items-center gap-3"
+          >
+            Parent Item
+          </span>
         </summary>
         <ul
           class="before:w-0"
         >
           <li>
             <a
-              class="group h-9 px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-2"
+              class="group flex h-9 pl-2 pr-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-3"
             >
-              First child
+              <span
+                class="flex flex-1 items-center gap-3"
+              >
+                First child
+              </span>
             </a>
           </li>
           <li>
             <details>
               <summary
-                class="group h-9 px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-2"
+                class="group flex h-9 pl-2 pr-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-3"
               >
-                Second child
+                <span
+                  class="flex flex-1 items-center gap-3"
+                >
+                  Second child
+                </span>
               </summary>
               <ul
                 class="before:w-0"
               >
                 <li>
                   <a
-                    class="group h-9 px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-2"
+                    class="group flex h-9 pl-2 pr-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:border-blue-100 hover:bg-blue-100 hover:text-blue-700 active:!border-blue-50 active:!bg-blue-50 active:!text-blue-700 ml-3"
                   >
-                    Second level child
+                    <span
+                      class="flex flex-1 items-center gap-3"
+                    >
+                      Second level child
+                    </span>
                   </a>
                 </li>
               </ul>
