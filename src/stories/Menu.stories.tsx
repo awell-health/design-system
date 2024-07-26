@@ -13,11 +13,15 @@ type Story = StoryObj<typeof Menu>;
 export const Example = {
   args: {
     items: [
-      { label: 'Home', icon: <Icon icon='RiHomeLine' /> },
+      { label: 'Home', icon: <Icon icon='RiHomeLine' />, active: true },
       {
         label: 'Design',
         icon: <Icon icon='RiEditCircleLine' />,
-        children: [{ label: 'Care flows' }, { label: 'Templates' }, { label: 'Form Library' }]
+        children: [
+          { label: 'Care flows' },
+          { label: 'Templates' },
+          { label: 'Form Library', active: true }
+        ]
       },
       { label: 'Operate', icon: <Icon icon='RiPulseFill' /> },
       { label: 'Improve', icon: <Icon icon='RiLineChartLine' /> }

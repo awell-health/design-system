@@ -3732,6 +3732,14 @@ input.tab:checked + .tab-content,
   fill: #eab308;
 }
 
+.fill-blue-100 {
+  fill: #dbeafe;
+}
+
+.fill-blue-700 {
+  fill: #1d4ed8;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -3911,6 +3919,11 @@ input.tab:checked + .tab-content,
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
 .text-blue-800 {
