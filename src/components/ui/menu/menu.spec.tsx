@@ -7,10 +7,13 @@ describe('Menu', () => {
     const defaultProps = {
       items: [
         {
-          label: 'Single Item'
+          label: 'Single Item',
+          icon: <>Icon 1</>,
+          active: true
         },
         {
           label: 'Parent Item',
+          icon: <>Parent Icon</>,
           children: [
             {
               label: 'First child'
@@ -65,5 +68,23 @@ describe('Menu', () => {
     fireEvent.click(getByText('Second child'));
 
     expect(getByText('Second level child')).toBeVisible();
+  });
+
+  describe('when icon only is on', () => {
+    it('shows only icons', () => {
+      const { queryByText, container } = subject({ iconOnly: true });
+
+      expect(queryByText('Single Item')).not.toBeInTheDocument();
+      expect(queryByText('Icon 1')).toBeVisible();
+      expect(container.querySelector('li>a.shadow')).toBeVisible();
+    });
+
+    it('doesn\t render children menu', () => {
+      const { getByText, queryByText } = subject({ iconOnly: true });
+
+      fireEvent.click(getByText('Parent Icon'));
+
+      expect(queryByText('First child')).toBeNull();
+    });
   });
 });
