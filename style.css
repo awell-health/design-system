@@ -3125,6 +3125,10 @@ input.tab:checked + .tab-content,
   margin-top: 0.5rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -3696,6 +3700,10 @@ input.tab:checked + .tab-content,
   fill: #3b82f6;
 }
 
+.fill-blue-700 {
+  fill: #1d4ed8;
+}
+
 .fill-gray-500 {
   fill: #6b7280;
 }
@@ -3730,14 +3738,6 @@ input.tab:checked + .tab-content,
 
 .fill-yellow-500 {
   fill: #eab308;
-}
-
-.fill-blue-100 {
-  fill: #dbeafe;
-}
-
-.fill-blue-700 {
-  fill: #1d4ed8;
 }
 
 .p-0 {
