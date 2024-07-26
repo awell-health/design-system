@@ -12,6 +12,7 @@ type Story = StoryObj<typeof Menu>;
 
 export const Example = {
   args: {
+    iconOnly: false,
     items: [
       { label: 'Home', icon: <Icon icon='RiHomeLine' />, active: true },
       {

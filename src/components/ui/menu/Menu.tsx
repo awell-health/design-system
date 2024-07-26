@@ -4,9 +4,10 @@ import { MenuItem } from './types';
 
 export interface Props extends React.HTMLAttributes<HTMLUListElement> {
   items: MenuItem[];
+  iconOnly?: boolean;
 }
 
-function Menu({ className, items, ...props }: Props) {
+function Menu({ className, items, iconOnly = false, ...props }: Props) {
   const renderMenItem = (item: MenuItem) => {
     const { icon, badge, children, active = false, className = '', onClick = undefined } = item;
 
@@ -17,6 +18,8 @@ function Menu({ className, items, ...props }: Props) {
       'active:!border-blue-100 active:!bg-blue-50 active:!text-blue-700',
       active && 'border border-blue-100 bg-blue-50 text-blue-700',
       !icon && 'ml-3',
+      iconOnly && 'p-0 h-9 w-9 px-3 py-2 items-center justify-center',
+      iconOnly && active && 'shadow',
       className
     );
 
@@ -30,18 +33,18 @@ function Menu({ className, items, ...props }: Props) {
     const label = (
       <span className='flex flex-1 items-center gap-3'>
         {icon && <span>{iconComponent}</span>}
-        {item.label}
+        {!iconOnly && item.label}
         {badge && <span className={cn(children && 'mr-1')}>{badge}</span>}
       </span>
     );
     return (
       <li>
-        {!children && (
+        {(!children || iconOnly) && (
           <a className={itemClassNames} onClick={onClick}>
             {label}
           </a>
         )}
-        {children && (
+        {!iconOnly && children && (
           <details>
             <summary className={itemClassNames} onClick={onClick}>
               {label}
