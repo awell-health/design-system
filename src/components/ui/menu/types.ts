@@ -7,4 +7,5 @@ export interface MenuItem {
   onClick?: () => void;
   children?: MenuItem[];
   className?: string;
+  active?: boolean;
 }
