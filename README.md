@@ -2,7 +2,7 @@
 This is base compoennets sets used to build Awell products
 
 ## Documentation
-https://awell-health.github.io/
+https://awell-health.github.io/design-system
 
 ## Development
 To run project locally there are two options
