@@ -8,7 +8,7 @@ export interface Props extends React.HTMLAttributes<HTMLUListElement> {
 }
 
 function Menu({ className, items, iconOnly = false, ...props }: Props) {
-  const renderMenItem = (item: MenuItem) => {
+  const renderMenItem = (item: MenuItem, i: number) => {
     const { icon, badge, children, active = false, className = '', onClick = undefined } = item;
 
     const itemClassNames = cn(
@@ -38,7 +38,7 @@ function Menu({ className, items, iconOnly = false, ...props }: Props) {
       </span>
     );
     return (
-      <li>
+      <li key={i}>
         {(!children || iconOnly) && (
           <a className={itemClassNames} onClick={onClick}>
             {label}
