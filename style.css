@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.9 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -787,6 +787,12 @@ html {
   .table tr.hover:nth-child(even):hover {
     --tw-bg-opacity: 1;
     background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  }
+
+  .table-zebra tr.hover:hover,
+  .table-zebra tr.hover:nth-child(even):hover {
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
   }
 }
 
@@ -2055,6 +2061,43 @@ input.tab:checked + .tab-content,
   outline-offset: 2px;
 }
 
+.loading {
+  pointer-events: none;
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+  width: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.loading-spinner {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.loading-xs {
+  width: 1rem;
+}
+
+.loading-sm {
+  width: 1.25rem;
+}
+
+.loading-md {
+  width: 1.5rem;
+}
+
+.loading-lg {
+  width: 2.5rem;
+}
+
 :where(.menu li:empty) {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
@@ -3053,6 +3096,10 @@ input.tab:checked + .tab-content,
   position: absolute;
 }
 
+.\!absolute {
+  position: absolute !important;
+}
+
 .relative {
   position: relative;
 }
@@ -3109,6 +3156,10 @@ input.tab:checked + .tab-content,
   margin: 0.25rem;
 }
 
+.\!-m-px {
+  margin: -1px !important;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -3131,6 +3182,10 @@ input.tab:checked + .tab-content,
 
 .box-border {
   box-sizing: border-box;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -3207,6 +3262,10 @@ input.tab:checked + .tab-content,
 
 .h-\[46px\] {
   height: 46px;
+}
+
+.\!h-px {
+  height: 1px !important;
 }
 
 .min-h-8 {
@@ -3289,6 +3348,10 @@ input.tab:checked + .tab-content,
   width: 100vw;
 }
 
+.\!w-px {
+  width: 1px !important;
+}
+
 .min-w-8 {
   min-width: 2rem;
 }
@@ -3323,6 +3386,16 @@ input.tab:checked + .tab-content,
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 
 .cursor-pointer {
@@ -3403,12 +3476,20 @@ input.tab:checked + .tab-content,
   overflow: hidden;
 }
 
+.\!overflow-hidden {
+  overflow: hidden !important;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
 }
 
 .whitespace-normal {
   white-space: normal;
+}
+
+.\!whitespace-nowrap {
+  white-space: nowrap !important;
 }
 
 .\!rounded {
@@ -3451,12 +3532,24 @@ input.tab:checked + .tab-content,
   border-width: 1px;
 }
 
+.\!border-0 {
+  border-width: 0px !important;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
 }
 
 .border-none {
@@ -3566,6 +3659,14 @@ input.tab:checked + .tab-content,
 .border-yellow-300 {
   --tw-border-opacity: 1;
   border-color: rgb(253 224 71 / var(--tw-border-opacity));
+}
+
+.border-current {
+  border-color: currentColor;
+}
+
+.border-e-transparent {
+  border-inline-end-color: transparent;
 }
 
 .\!bg-slate-100 {
@@ -3764,6 +3865,10 @@ input.tab:checked + .tab-content,
   padding: 1.5rem;
 }
 
+.\!p-0 {
+  padding: 0px !important;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -3864,6 +3969,10 @@ input.tab:checked + .tab-content,
 
 .text-left {
   text-align: left;
+}
+
+.align-\[-0\.125em\] {
+  vertical-align: -0.125em;
 }
 
 .text-base {
@@ -4103,6 +4212,10 @@ input.tab:checked + .tab-content,
 
 .\[--tglbg\:\#F1F5F9\] {
   --tglbg: #F1F5F9;
+}
+
+.\!\[clip\:rect\(0\2c 0\2c 0\2c 0\)\] {
+  clip: rect(0,0,0,0) !important;
 }
 
 html {
@@ -4444,6 +4557,18 @@ input:focus {
   fill: #1d4ed8;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .motion-reduce\:animate-\[spin_1\.5s_linear_infinite\] {
+    animation: spin 1.5s linear infinite;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:my-8 {
     margin-top: 2rem;
@@ -4464,6 +4589,13 @@ input:focus {
 
   .sm\:p-0 {
     padding: 0px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
