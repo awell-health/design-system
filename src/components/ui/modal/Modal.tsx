@@ -1,15 +1,17 @@
 import React, { ReactNode, type FC, type RefObject } from 'react';
 import { useClickAway, useKey } from 'react-use';
+import { cn } from '../../../lib/utils';
 
 interface Props {
   onClose: () => void;
   clickOutside?: boolean;
   closeOnEscape?: boolean;
   children: JSX.Element | ReactNode | string;
+  className?: string;
 }
 
 const Modal: FC<Props> = (props) => {
-  const { children, onClose, clickOutside = false, closeOnEscape = false } = props;
+  const { children, onClose, clickOutside = false, closeOnEscape = false, className = '' } = props;
   const modalRef: RefObject<HTMLDivElement> = React.useRef<HTMLDivElement>(null);
 
   if (clickOutside) {
@@ -31,7 +33,7 @@ const Modal: FC<Props> = (props) => {
       <div className='fixed inset-0 z-[9999] w-screen overflow-y-auto'>
         <div className='flex h-max-[50%] min-h-[500px] mt-[100px] justify-center p-4'>
           <div className='relative transform overflow-hidden transition-all bg-white rounded-lg shadow border border-slate-200'>
-            <div className='w-[1024px] max-h-[50%]' ref={modalRef}>
+            <div className={cn('w-[1024px] max-h-[50%]', className)} ref={modalRef}>
               {children}
             </div>
           </div>
