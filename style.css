@@ -3256,20 +3256,12 @@ input.tab:checked + .tab-content,
   height: 46px;
 }
 
-.h-\[50\%\] {
-  height: 50%;
-}
-
 .h-\[500px\] {
   height: 500px;
 }
 
-.h-\[200px\] {
-  height: 200px;
-}
-
-.max-h-\[50\%\] {
-  max-height: 50%;
+.h-\[800px\] {
+  height: 800px;
 }
 
 .min-h-8 {
@@ -3282,10 +3274,6 @@ input.tab:checked + .tab-content,
 
 .min-h-\[46px\] {
   min-height: 46px;
-}
-
-.min-h-\[500px\] {
-  min-height: 500px;
 }
 
 .min-h-\[60px\] {
@@ -3358,6 +3346,10 @@ input.tab:checked + .tab-content,
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[1424px\] {
+  width: 1424px;
 }
 
 .min-w-8 {
@@ -3835,6 +3827,10 @@ input.tab:checked + .tab-content,
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -3963,6 +3959,10 @@ input.tab:checked + .tab-content,
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .leading-7 {
