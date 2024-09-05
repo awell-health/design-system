@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Modal > match snapshot 1`] = `
+<div>
+  <div
+    aria-labelledby="modal-title"
+    aria-modal="true"
+    class="relative z-[9999]"
+    role="dialog"
+  >
+    <div
+      class="fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]"
+    />
+    <div
+      class="fixed inset-0 z-[9999] w-screen overflow-y-auto"
+    >
+      <div
+        class="flex mt-[100px] justify-center p-4"
+      >
+        <div
+          class="relative transform overflow-hidden transition-all bg-white rounded-lg shadow border border-slate-200"
+        >
+          <div
+            class="w-[1024px] h-[500px]"
+          >
+            Modal Content
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

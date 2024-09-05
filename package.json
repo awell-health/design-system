@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.10.2",
+  "version": "0.10.5",
   "type": "module",
   "files": [
     "dist"
@@ -42,6 +42,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "react-select": "^5.8.0",
+    "react-use": "^17.5.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
