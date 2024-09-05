@@ -69,7 +69,16 @@ import {
   RiLifebuoyLine,
   RiCodeFill,
   RiSettings4Line,
-  RiLogoutBoxRLine
+  RiLogoutBoxRLine,
+  RiText,
+  RiHashtag,
+  RiCoinLine,
+  RiCalendarLine,
+  RiBracesLine,
+  RiPhoneLine,
+  RiListCheck,
+  RiListOrdered2,
+  RiDatabase2Line
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -143,7 +152,16 @@ export const ICONS = {
   RiLifebuoyLine,
   RiCodeFill,
   RiSettings4Line,
-  RiLogoutBoxRLine
+  RiLogoutBoxRLine,
+  RiText,
+  RiHashtag,
+  RiCoinLine,
+  RiCalendarLine,
+  RiBracesLine,
+  RiPhoneLine,
+  RiListCheck,
+  RiListOrdered2,
+  RiDatabase2Line
 };
 
 export enum IconSize {
