@@ -19,7 +19,7 @@ interface Props
 }
 
 const Toggle = React.forwardRef<HTMLInputElement, Props>(
-  ({ className, checked = false, disabled = false, onChange, helpText, ...props }, ref) => {
+  ({ className, checked = false, disabled = false, onChange, helpText, label, ...props }, ref) => {
     return (
       <div>
         <label className='flex gap-2 cursor-pointer'>
@@ -38,7 +38,7 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>(
             type='checkbox'
             onChange={onChange}
           />
-          <span className='label-text text-slate-700 text-sm font-medium'>Remember me</span>
+          <span className='label-text text-slate-700 text-sm font-medium'>{ label }</span>
         </label>
         {helpText && (
           <div className='flex gap-2'>
