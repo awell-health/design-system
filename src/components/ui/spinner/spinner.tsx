@@ -4,6 +4,10 @@ import { cn } from '@/lib/utils';
 
 const spinnerVariants = cva('loading loading-spinner text-blue-600', {
   variants: {
+    variant: {
+      circle: 'loading-spinner',
+      dots: 'loading-dots'
+    },
     size: {
       xs: 'loading-xs',
       sm: 'loading-sm',
@@ -12,6 +16,7 @@ const spinnerVariants = cva('loading loading-spinner text-blue-600', {
     }
   },
   defaultVariants: {
+    variant: 'circle',
     size: 'lg'
   }
 });
@@ -20,8 +25,8 @@ export interface Props
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof spinnerVariants> {}
 
-function Spinner({ size, className, ...props }: Props) {
-  return <span className={cn(spinnerVariants({ size }), className)} {...props} />;
+function Spinner({ size, variant, className, ...props }: Props) {
+  return <span className={cn(spinnerVariants({ size, variant }), className)} {...props} />;
 }
 
 export { Spinner };

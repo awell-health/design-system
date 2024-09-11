@@ -1,5 +1,21 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Spinner > match circle snapshot 1`] = `
+<div>
+  <span
+    class="loading loading-spinner text-blue-600 loading-spinner loading-lg"
+  />
+</div>
+`;
+
+exports[`Spinner > match dots snapshot 1`] = `
+<div>
+  <span
+    class="loading loading-spinner text-blue-600 loading-dots loading-lg"
+  />
+</div>
+`;
+
 exports[`Spinner > match snapshot 1`] = `
 <div>
   <span
