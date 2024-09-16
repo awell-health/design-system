@@ -19,3 +19,4 @@ export * from './ui/toggle';
 export * from './ui/menu';
 export * from './ui/spinner';
 export * from './ui/modal';
+export * from './ui/radial-progress';

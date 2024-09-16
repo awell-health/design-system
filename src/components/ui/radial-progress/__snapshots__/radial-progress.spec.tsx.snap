@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RadialProgres > match snapshot 1`] = `
+<div>
+  <div
+    class="radial-progress"
+    style="--value: 30;"
+  >
+    <div>
+      RadialProgress Content
+    </div>
+  </div>
+</div>
+`;
