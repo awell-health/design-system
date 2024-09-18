@@ -6,7 +6,8 @@ const spinnerVariants = cva('loading loading-spinner text-blue-600', {
   variants: {
     variant: {
       circle: 'loading-spinner',
-      dots: 'loading-dots'
+      dots: 'loading-dots',
+      infinity: 'loading-infinity'
     },
     size: {
       xs: 'loading-xs',
