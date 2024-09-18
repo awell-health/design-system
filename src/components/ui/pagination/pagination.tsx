@@ -7,11 +7,12 @@ interface PaginationProps {
   totalCount: number;
   onPageChange: (page: number) => void;
   perPage?: number;
+  page?: number;
 }
 
 function Pagination(props: PaginationProps) {
-  const { totalCount, onPageChange, perPage = 10 } = props;
-  const [currentPage, setCurrentPage] = useState<number>(0);
+  const { totalCount, onPageChange, perPage = 10, page } = props;
+  const [currentPage, setCurrentPage] = useState<number>(page ? page - 1 : 0);
   const edgeButtonsToShow = 3;
   const numberOfPages = Math.ceil(totalCount / perPage);
 

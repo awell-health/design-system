@@ -10,6 +10,7 @@ export interface Props {
   onChange: (option: SingleValue<SelectItem> | MultiValue<SelectItem>) => void;
   icon?: JSX.Element;
   label?: string | JSX.Element | ReactElement;
+  value?: SelectItem | undefined;
 }
 
 function SelectComponent(props: Props) {
@@ -19,7 +20,8 @@ function SelectComponent(props: Props) {
     isSearchable = false,
     isMulti = false,
     icon = null,
-    label = null
+    label = null,
+    value = undefined
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -37,6 +39,7 @@ function SelectComponent(props: Props) {
           onChange={onChange}
           isSearchable={isSearchable}
           isMulti={isMulti}
+          value={value}
           classNames={{
             control: (state) =>
               cn(

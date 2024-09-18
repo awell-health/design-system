@@ -14,7 +14,8 @@ export const Example = {
   args: {
     totalCount: 146,
     onPageChange: fn(),
-    perPage: 10
+    perPage: 10,
+    page: 3
   },
   render: (args) => <Pagination {...args} />
 } satisfies Story;

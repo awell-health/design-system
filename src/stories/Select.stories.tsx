@@ -22,7 +22,8 @@ export const Example = {
     isMulti: false,
     options,
     isSearchable: false,
-    icon: <Icon icon='RiSearchLine' />
+    icon: <Icon icon='RiSearchLine' />,
+    value: { value: 'vanilla', label: 'Vanilla' }
   },
   render: (args) => <Select {...args} />
 } satisfies Story;
