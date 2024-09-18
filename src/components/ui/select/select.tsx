@@ -7,6 +7,7 @@ export interface Props {
   options: SelectItem[];
   isMulti?: boolean;
   isSearchable?: boolean;
+  isClearable?: boolean;
   onChange: (option: SingleValue<SelectItem> | MultiValue<SelectItem>) => void;
   icon?: JSX.Element;
   label?: string | JSX.Element | ReactElement;
@@ -21,7 +22,8 @@ function SelectComponent(props: Props) {
     isMulti = false,
     icon = null,
     label = null,
-    value = undefined
+    value = undefined,
+    isClearable = false
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -38,6 +40,7 @@ function SelectComponent(props: Props) {
           options={options}
           onChange={onChange}
           isSearchable={isSearchable}
+          isClearable={isClearable}
           isMulti={isMulti}
           value={value}
           classNames={{
