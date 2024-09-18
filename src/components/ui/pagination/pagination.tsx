@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '../button';
 import { Icon } from '../icon';
@@ -20,6 +20,12 @@ function Pagination(props: PaginationProps) {
     setCurrentPage(page);
     onPageChange(page + 1);
   };
+
+  useEffect(() => {
+    if (page && page !== currentPage) {
+      setCurrentPage(page - 1);
+    }
+  }, [page]);
 
   const nextButtonDisabled = currentPage === numberOfPages - 1;
   const prevButtonDisabled = currentPage === 0;
