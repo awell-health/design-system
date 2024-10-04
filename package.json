@@ -38,6 +38,7 @@
     ]
   },
   "dependencies": {
+    "@gorules/jdm-editor": "^1.18.1",
     "@remixicon/react": "^4.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
