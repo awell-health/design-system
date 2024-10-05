@@ -78,7 +78,13 @@ import {
   RiPhoneLine,
   RiListCheck,
   RiListOrdered2,
-  RiDatabase2Line
+  RiDatabase2Line,
+  RiListCheck3,
+  RiStethoscopeLine,
+  RiTestTubeLine,
+  RiTestTubeFill,
+  RiHeartPulseLine,
+  RiDossierLine,
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -160,8 +166,14 @@ export const ICONS = {
   RiBracesLine,
   RiPhoneLine,
   RiListCheck,
+  RiListCheck3,
   RiListOrdered2,
-  RiDatabase2Line
+  RiDatabase2Line,
+  RiStethoscopeLine,
+  RiTestTubeLine,
+  RiTestTubeFill,
+  RiHeartPulseLine,
+  RiDossierLine,
 };
 
 export enum IconSize {
