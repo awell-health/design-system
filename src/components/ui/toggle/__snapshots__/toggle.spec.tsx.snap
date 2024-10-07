@@ -10,13 +10,12 @@ exports[`Toggle > match disabled snapshot 1`] = `
         class="toggle focus:bg-none [--tglbg:#F1F5F9] hover:[--tglbg:#E2E8F0] disabled:[--tglbg:#F1F5F9] border-none bg-white hover:bg-white"
         data-testid="toggle"
         disabled=""
-        label="Toggle Label"
         type="checkbox"
       />
       <span
         class="label-text text-slate-700 text-sm font-medium"
       >
-        Remember me
+        Toggle Label
       </span>
     </label>
   </div>
@@ -32,13 +31,12 @@ exports[`Toggle > match snapshot 1`] = `
       <input
         class="toggle focus:bg-none [--tglbg:#F1F5F9] hover:[--tglbg:#E2E8F0] disabled:[--tglbg:#F1F5F9] border-none bg-white hover:bg-white"
         data-testid="toggle"
-        label="Toggle Label"
         type="checkbox"
       />
       <span
         class="label-text text-slate-700 text-sm font-medium"
       >
-        Remember me
+        Toggle Label
       </span>
     </label>
   </div>
