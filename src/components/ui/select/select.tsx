@@ -9,9 +9,10 @@ export interface Props {
   isSearchable?: boolean;
   isClearable?: boolean;
   onChange: (option: SingleValue<SelectItem> | MultiValue<SelectItem>) => void;
-  icon?: JSX.Element;
+  icon?: JSX.Element | ReactElement;
   label?: string | JSX.Element | ReactElement;
   value?: SelectItem | undefined;
+  disabled?: boolean;
 }
 
 function SelectComponent(props: Props) {
@@ -23,7 +24,8 @@ function SelectComponent(props: Props) {
     icon = null,
     label = null,
     value = undefined,
-    isClearable = false
+    isClearable = false,
+    disabled = false
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -43,6 +45,7 @@ function SelectComponent(props: Props) {
           isClearable={isClearable}
           isMulti={isMulti}
           value={value}
+          isDisabled={disabled}
           classNames={{
             control: (state) =>
               cn(
