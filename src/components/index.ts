@@ -3,6 +3,7 @@ export * from './ui/alert-dialog';
 export * from './ui/badge';
 export * from './ui/button';
 export * from './ui/card';
+export * from './ui/decision-editor';
 export * from './ui/dropdown';
 export * from './ui/icon';
 export * from './ui/input';
