@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.10.15",
+  "version": "0.10.16",
   "type": "module",
   "files": [
     "dist"
@@ -38,7 +38,6 @@
     ]
   },
   "dependencies": {
-    "@gorules/jdm-editor": "^1.18.1",
     "@remixicon/react": "^4.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
