@@ -21,6 +21,7 @@ export const Example = {
     label: 'Select Label',
     isMulti: false,
     options,
+    disabled: false,
     isSearchable: false,
     icon: <Icon icon='RiSearchLine' />,
     value: { value: 'vanilla', label: 'Vanilla' }
