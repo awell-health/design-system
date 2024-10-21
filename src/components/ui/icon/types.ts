@@ -85,6 +85,11 @@ import {
   RiTestTubeFill,
   RiHeartPulseLine,
   RiDossierLine,
+  RiZoomInLine,
+  RiZoomOutLine,
+  RiRefreshLine,
+  RiCollapseHorizontalLine,
+  RiExpandHorizontalLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -174,6 +179,11 @@ export const ICONS = {
   RiTestTubeFill,
   RiHeartPulseLine,
   RiDossierLine,
+  RiZoomInLine,
+  RiZoomOutLine,
+  RiRefreshLine,
+  RiCollapseHorizontalLine,
+  RiExpandHorizontalLine
 };
 
 export enum IconSize {
