@@ -35,7 +35,7 @@ __metadata:
   dependencies:
     "@eslint/compat": "npm:^1.1.1"
     "@eslint/js": "npm:^9.9.0"
-    "@remixicon/react": "npm:^4.2.0"
+    "@remixicon/react": "npm:^4.3.0"
     "@storybook/addon-designs": "npm:^8.0.3"
     "@storybook/addon-essentials": "npm:^8.2.9"
     "@storybook/addon-measure": "npm:^8.2.9"
@@ -2198,12 +2198,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remixicon/react@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "@remixicon/react@npm:4.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40remixicon%2Freact%2F-%2Freact-4.2.0.tgz"
+"@remixicon/react@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "@remixicon/react@npm:4.3.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40remixicon%2Freact%2F-%2Freact-4.3.0.tgz"
   peerDependencies:
     react: ">=18.2.0"
-  checksum: 10c0/bbc26d5f3e579755533f966b7a764943de9c05f44f9c15fd026afb55035c4626203acf7f9f86d6665dda79162e6d2e08426f4f070b81d1d41844e1243ee6edfb
+  checksum: 10c0/e5df79a6546cdd2edf70539ced0ee13fa27de40881717a9e9b888ce9fdc6a2fe8da4b220545751048de7d215265bf77c3e151a899cf6dcd9694e36415ed96707
   languageName: node
   linkType: hard
 
