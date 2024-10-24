@@ -89,7 +89,9 @@ import {
   RiZoomOutLine,
   RiRefreshLine,
   RiCollapseHorizontalLine,
-  RiExpandHorizontalLine
+  RiExpandHorizontalLine,
+  RiCollapseVerticalLine,
+  RiExpandVerticalLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -183,7 +185,9 @@ export const ICONS = {
   RiZoomOutLine,
   RiRefreshLine,
   RiCollapseHorizontalLine,
-  RiExpandHorizontalLine
+  RiExpandHorizontalLine,
+  RiCollapseVerticalLine,
+  RiExpandVerticalLine
 };
 
 export enum IconSize {
