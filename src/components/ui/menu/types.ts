@@ -6,6 +6,7 @@ export interface MenuItem {
   badge?: JSX.Element;
   onClick?: () => void;
   children?: MenuItem[];
+  isExpanded?: boolean;
   className?: string;
   active?: boolean;
 }
