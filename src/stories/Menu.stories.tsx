@@ -18,6 +18,7 @@ export const Example = {
       {
         label: 'Design',
         icon: <Icon icon='RiEditCircleLine' />,
+        isExpanded: true,
         children: [
           { label: 'Care flows' },
           { label: 'Templates' },
