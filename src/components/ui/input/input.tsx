@@ -12,7 +12,21 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, label, helpText, suffixIcon, prefixIcon, hasError, onChange, ...props }, ref) => {
+  // eslint-disable-next-line react/prop-types
+  (
+    {
+      className,
+      label,
+      helpText,
+      suffixIcon,
+      prefixIcon,
+      hasError,
+      onChange,
+      type = 'text',
+      ...props
+    },
+    ref
+  ) => {
     const renderIcon = (icon: JSX.Element, position: 'left' | 'right') => {
       return (
         <span
@@ -40,9 +54,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <label className='form-control w-full flex relative'>
           {prefixIcon && renderIcon(prefixIcon, 'left')}
           <input
-            type='text'
+            type={type}
             className={cn(
-              'px-3.5 py-2.5 h-[38px] min-h-[38px] rounded-lg gap-2 w-full border-box',
+              type !== 'file' && 'px-3.5 py-2.5',
+              'h-[38px] min-h-[38px] rounded-lg gap-2 w-full border-box',
               'text-sm font-normal',
               'shadow border border-slate-300 text-black placeholder:text-slate-400',
               'focus:outline-0 focus:border focus:border-blue-500',
@@ -50,6 +65,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               prefixIcon && 'pl-8',
               suffixIcon && 'pr-8',
               hasError && 'border-red-500 focus:border-red-500',
+              type === 'file' && 'file-input file-input-bordered file-input-primary',
               className
             )}
             onChange={onChange}
