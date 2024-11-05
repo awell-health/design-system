@@ -95,6 +95,10 @@ import {
   RiSparklingLine,
   RiGlobeLine,
   RiGlobalLine,
+  RiUploadLine,
+  RiDownloadLine,
+  RiToolsLine,
+  RiFileLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -194,6 +198,10 @@ export const ICONS = {
   RiSparklingLine,
   RiGlobeLine,
   RiGlobalLine,
+  RiUploadLine,
+  RiDownloadLine,
+  RiToolsLine,
+  RiFileLine
 };
 
 export enum IconSize {
