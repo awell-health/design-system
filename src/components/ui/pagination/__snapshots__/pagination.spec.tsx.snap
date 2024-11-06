@@ -28,7 +28,7 @@ exports[`Pagination > match snapshot 1`] = `
       class="flex grow gap-2 justify-center"
     >
       <button
-        class="btn text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200 btn-sm rounded-md px-3.5 py-2"
+        class="btn text-blue-700 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200 btn-sm rounded-md px-3.5 py-2"
       >
         1
       </button>
