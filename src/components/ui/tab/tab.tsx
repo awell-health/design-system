@@ -14,7 +14,7 @@ const tabVariants = cva('tabs border-slate-200', {
       ].join(' '),
       bordered: [
         'flex px-1 items-start border-b gap-4',
-        '[&_.tab-active]:text-blue-600 [&_.tab-active]:!border-blue-600 [&_.tab-active]:border-b'
+        '[&_.tab-active]:text-blue-700 [&_.tab-active]:!border-blue-700 [&_.tab-active]:border-b'
       ].join(' ')
     },
     size: {

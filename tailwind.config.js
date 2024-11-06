@@ -17,8 +17,8 @@ module.exports = {
     themes: [
       {
         awell: {
-          primary: colors.blue[600],
-          'primary-focus': colors.blue[700],
+          primary: colors.blue[700],
+          'primary-focus': colors.blue[800],
           'primary-content': colors.white,
 
           secondary: colors.white,

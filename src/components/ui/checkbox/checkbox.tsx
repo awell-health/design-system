@@ -61,7 +61,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
           </>
         )}
         {type === 'radio' && checked && (
-          <div className='w-1.5 h-1.5 bg-blue-600 rounded-full absolute left-[5px] z-10' />
+          <div className='w-1.5 h-1.5 bg-blue-700 rounded-full absolute left-[5px] z-10' />
         )}
         <input
           type={type}
@@ -70,14 +70,14 @@ const Checkbox: React.FC<CheckboxProps> = ({
             checkboxVariants({ inputSize }),
             'relative bg-white border border-slate-300 rounded outline-none',
             'flex items-center justify-center',
-            !checked && 'hover:bg-blue-50 hover:border-blue-600',
-            checked && 'hover:border-blue-600',
+            !checked && 'hover:bg-blue-50 hover:border-blue-800',
+            checked && 'hover:border-blue-800',
             `active:border-blue-300 active:${boxShadowClass}`,
             `focus:border-blue-300 focus:${boxShadowClass}`,
             'disabled:!bg-slate-100 disabled:!border-slate-200',
-            'checked:border-blue-600',
+            'checked:border-blue-700',
             type === 'checkbox' &&
-              'checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600',
+              'checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700',
             type === 'radio' && 'rounded-full hover:bg-blue-50 checked:bg-blue-50',
             className
           )}

@@ -3,6 +3,7 @@ import { expect, it, describe, vi } from 'vitest';
 import { Pagination } from './pagination';
 
 describe('Pagination', () => {
+  const activePageClass = 'text-blue-700';
   const subject = (props = {}) => {
     const defaultProps = {
       totalCount: 146,
@@ -22,12 +23,12 @@ describe('Pagination', () => {
       const onPageChangeMock = vi.fn();
       const { getByText } = subject({ onPageChange: onPageChangeMock });
 
-      expect(getByText('1')).toHaveClass('text-blue-600');
+      expect(getByText('1')).toHaveClass(activePageClass);
 
       fireEvent.click(getByText('Next'));
 
-      expect(getByText('1')).not.toHaveClass('text-blue-600');
-      expect(getByText('2')).toHaveClass('text-blue-600');
+      expect(getByText('1')).not.toHaveClass(activePageClass);
+      expect(getByText('2')).toHaveClass(activePageClass);
       expect(onPageChangeMock).toHaveBeenCalledOnce();
     });
 
@@ -35,13 +36,13 @@ describe('Pagination', () => {
       const onPageChangeMock = vi.fn();
       const { getByText } = subject({ onPageChange: onPageChangeMock });
 
-      expect(getByText('13')).not.toHaveClass('text-blue-600');
+      expect(getByText('13')).not.toHaveClass(activePageClass);
 
       fireEvent.click(getByText('13'));
       fireEvent.click(getByText('Previous'));
 
-      expect(getByText('13')).not.toHaveClass('text-blue-600');
-      expect(getByText('12')).toHaveClass('text-blue-600');
+      expect(getByText('13')).not.toHaveClass(activePageClass);
+      expect(getByText('12')).toHaveClass(activePageClass);
       expect(onPageChangeMock).toHaveBeenCalledTimes(2);
     });
   });
@@ -54,7 +55,7 @@ describe('Pagination', () => {
       fireEvent.click(getByText('2'));
 
       expect(getByText('Previous')).not.toHaveAttribute('disbled');
-      expect(getByText('2')).toHaveClass('text-blue-600');
+      expect(getByText('2')).toHaveClass(activePageClass);
     });
 
     it('shows next page & start pages', () => {
