@@ -9,7 +9,7 @@ exports[`Checkbox > match checkbox snapshot 1`] = `
       class="flex items-center gap-2 cursor-pointer relative"
     >
       <input
-        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-800 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-700 checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700"
         data-testid="checkbox"
         type="checkbox"
       />
@@ -45,7 +45,7 @@ exports[`Checkbox > match checked checkbox snapshot 1`] = `
       </svg>
       <input
         checked=""
-        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:border-blue-800 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-700 checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700"
         data-testid="checkbox"
         type="checkbox"
       />
@@ -68,7 +68,7 @@ exports[`Checkbox > match disabled snapshot 1`] = `
       class="flex items-center gap-2 cursor-pointer relative"
     >
       <input
-        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-800 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-700 checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700"
         data-testid="checkbox"
         disabled=""
         type="checkbox"
@@ -104,7 +104,7 @@ exports[`Checkbox > match indeterminate snapshot 1`] = `
         />
       </svg>
       <input
-        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 checked:bg-blue-600 indeterminate:bg-blue-600 indeterminate:border-blue-600"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 rounded outline-none flex items-center justify-center hover:bg-blue-50 hover:border-blue-800 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-700 checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700"
         data-testid="checkbox"
         type="checkbox"
       />
@@ -127,7 +127,7 @@ exports[`Checkbox > match radio snapshot 1`] = `
       class="flex items-center gap-2 cursor-pointer relative"
     >
       <input
-        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 outline-none flex items-center justify-center hover:border-blue-600 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-600 rounded-full hover:bg-blue-50 checked:bg-blue-50"
+        class="appearance-none cursor-pointer w-4 h-4 relative bg-white border border-slate-300 outline-none flex items-center justify-center hover:border-blue-800 active:border-blue-300 active:shadow-[0px_0px_0px_2px_rgb(219,234,254)] focus:border-blue-300 focus:shadow-[0px_0px_0px_2px_rgb(219,234,254)] disabled:!bg-slate-100 disabled:!border-slate-200 checked:border-blue-700 rounded-full hover:bg-blue-50 checked:bg-blue-50"
         data-testid="checkbox"
         type="radio"
       />

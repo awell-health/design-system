@@ -517,11 +517,11 @@ html {
 }
 
 :root {
-  --p: 54.615% 0.215208 262.880917;
+  --p: 48.8198% 0.217165 264.376304;
   --btn-focus-scale: 0.95;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  primary-focus: #1d4ed8;
+  primary-focus: #1e40af;
   --pc: 100% 0 0;
   --s: 100% 0 0;
   secondary-focus: #f1f5f9;
@@ -3915,9 +3915,9 @@ input.tab:checked + .tab-content,
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
-.bg-blue-600 {
+.bg-blue-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .bg-cyan-100 {
@@ -4253,11 +4253,6 @@ input.tab:checked + .tab-content,
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
@@ -4514,9 +4509,9 @@ input:focus {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.checked\:border-blue-600:checked {
+.checked\:border-blue-700:checked {
   --tw-border-opacity: 1;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity));
+  border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
 .checked\:bg-blue-50:checked {
@@ -4524,19 +4519,19 @@ input:focus {
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
-.checked\:bg-blue-600:checked {
+.checked\:bg-blue-700:checked {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
-.indeterminate\:border-blue-600:indeterminate {
+.indeterminate\:border-blue-700:indeterminate {
   --tw-border-opacity: 1;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity));
+  border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
-.indeterminate\:bg-blue-600:indeterminate {
+.indeterminate\:bg-blue-700:indeterminate {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .hover\:border-blue-100:hover {
@@ -4549,14 +4544,9 @@ input:focus {
   border-color: rgb(147 197 253 / var(--tw-border-opacity));
 }
 
-.hover\:border-blue-600:hover {
+.hover\:border-blue-800:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity));
-}
-
-.hover\:border-blue-700:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+  border-color: rgb(30 64 175 / var(--tw-border-opacity));
 }
 
 .hover\:bg-blue-100:hover {
@@ -4569,9 +4559,9 @@ input:focus {
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-700:hover {
+.hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-red-300:hover {
@@ -4664,9 +4654,9 @@ input:focus {
   border-color: rgb(147 197 253 / var(--tw-border-opacity));
 }
 
-.active\:border-blue-700:active {
+.active\:border-blue-800:active {
   --tw-border-opacity: 1;
-  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+  border-color: rgb(30 64 175 / var(--tw-border-opacity));
 }
 
 .active\:\!bg-blue-50:active {
@@ -4679,9 +4669,9 @@ input:focus {
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
-.active\:bg-blue-700:active {
+.active\:bg-blue-800:active {
   --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 
 .active\:bg-slate-100:active {
@@ -4813,9 +4803,9 @@ input:focus {
   border-bottom-width: 1px;
 }
 
-.\[\&_\.tab-active\]\:\!border-blue-600 .tab-active {
+.\[\&_\.tab-active\]\:\!border-blue-700 .tab-active {
   --tw-border-opacity: 1 !important;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity)) !important;
+  border-color: rgb(29 78 216 / var(--tw-border-opacity)) !important;
 }
 
 .\[\&_\.tab-active\]\:bg-white .tab-active {
@@ -4823,9 +4813,9 @@ input:focus {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.\[\&_\.tab-active\]\:text-blue-600 .tab-active {
+.\[\&_\.tab-active\]\:text-blue-700 .tab-active {
   --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
+  color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
 .\[\&_\.tab-active\]\:text-slate-700 .tab-active {
@@ -4871,9 +4861,9 @@ input:focus {
   border-bottom-width: 1px;
 }
 
-.\[\&h3\]\:text-blue-700h3 {
+.\[\&h3\]\:text-blue-800h3 {
   --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
+  color: rgb(30 64 175 / var(--tw-text-opacity));
 }
 
 .\[\&h3\]\:text-red-700h3 {

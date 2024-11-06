@@ -7,12 +7,12 @@ const buttonVariants = cva('btn', {
   variants: {
     variant: {
       primary:
-        'btn-primary hover:bg-blue-700 hover:border-blue-700 active:bg-blue-700 active:border-blue-700 disabled:bg-slate-200 disabled:border-slate-200 disabled:text-white',
+        'btn-primary hover:bg-blue-800 hover:border-blue-800 active:bg-blue-800 active:border-blue-800 disabled:bg-slate-200 disabled:border-slate-200 disabled:text-white',
       secondaryBlue:
-        'text-blue-600 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200',
+        'text-blue-700 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200',
       secondary:
         'btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white',
-      link: 'text-blue-600 text-sm bg-transparent border-none shadow-none hover:bg-transparent active:bg-transparent disabled:text-blue-200 disabled:bg-transparent',
+      link: 'text-blue-700 text-sm bg-transparent border-none shadow-none hover:bg-transparent active:bg-transparent disabled:text-blue-200 disabled:bg-transparent',
       ghost:
         'btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent',
       error: 'btn-error',
@@ -41,6 +41,7 @@ interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  // eslint-disable-next-line
   ({ className, variant, size, shape, disabled = false, ...props }, ref) => {
     return (
       <button

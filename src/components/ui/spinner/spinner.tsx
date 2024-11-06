@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
 
-const spinnerVariants = cva('loading loading-spinner text-blue-600', {
+const spinnerVariants = cva('loading loading-spinner text-blue-700', {
   variants: {
     variant: {
       circle: 'loading-spinner',

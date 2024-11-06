@@ -8,7 +8,7 @@ const alertVariants = cva('alert p-4 rounded-lg border gap-3 text-sm', {
   variants: {
     variant: {
       default: 'bg-slate-50 border-slate-300 text-slate-600 [&h3]:text-slate-700',
-      primary: 'bg-blue-50 border-blue-300 text-blue-600 [&h3]:text-blue-700',
+      primary: 'bg-blue-50 border-blue-300 text-blue-700 [&h3]:text-blue-800',
       warning: 'bg-yellow-50 border-yellow-300 text-yellow-600 [&h3]:text-yellow-700',
       error: 'bg-red-50 border-red-300 text-red-600 [&h3]:text-red-700'
     }
@@ -21,9 +21,11 @@ const alertVariants = cva('alert p-4 rounded-lg border gap-3 text-sm', {
 interface Props extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof alertVariants> {
   title: string;
   showIcon?: boolean;
+  children?: React.ReactNode;
 }
 
 const Alert = React.forwardRef<HTMLDivElement, Props>(
+  // eslint-disable-next-line
   ({ className, variant, title, children, showIcon = false, ...props }, ref) => {
     const icon = variant === 'error' || variant === 'warning' ? 'RiAlertLine' : 'RiInformationLine';
     const iconClassNames = cn({

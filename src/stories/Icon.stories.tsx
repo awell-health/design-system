@@ -23,7 +23,7 @@ export const Example = {
         <span>{args.icon}</span>
       </div>
       <div className='pt-4'>
-        <a className='text-blue-600' href='https://remixicon.com/' target='_blank' rel='noreferrer'>
+        <a className='text-blue-700' href='https://remixicon.com/' target='_blank' rel='noreferrer'>
           You can add icons from the list here
         </a>
       </div>
