@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Avatar > match image snapshot 1`] = `
+<div>
+  <div
+    class="avatar"
+  >
+    <div
+      class="rounded-full w-16"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Avatar > match placeholder snapshot 1`] = `
+<div>
+  <div
+    class="avatar placeholder"
+  >
+    <div
+      class="bg-neutral text-neutral-content rounded-full w-16"
+    >
+      <span
+        class=""
+      >
+        SV
+      </span>
+    </div>
+  </div>
+</div>
+`;
