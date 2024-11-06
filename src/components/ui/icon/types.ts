@@ -98,7 +98,10 @@ import {
   RiUploadLine,
   RiDownloadLine,
   RiToolsLine,
-  RiFileLine
+  RiFileLine,
+  RiArrowGoBackLine,
+  RiCollapseDiagonal2Line,
+  RiExpandDiagonal2Line
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -201,7 +204,10 @@ export const ICONS = {
   RiUploadLine,
   RiDownloadLine,
   RiToolsLine,
-  RiFileLine
+  RiFileLine,
+  RiArrowGoBackLine,
+  RiCollapseDiagonal2Line,
+  RiExpandDiagonal2Line
 };
 
 export enum IconSize {
