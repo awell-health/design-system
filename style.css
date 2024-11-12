@@ -972,6 +972,13 @@ html {
   background-color: var(--fallback-bc,oklch(var(--bc)/0.1));
 }
 
+.drawer {
+  position: relative;
+  display: grid;
+  grid-auto-columns: max-content auto;
+  width: 100%;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -3427,6 +3434,14 @@ input.tab:checked + .tab-content,
   margin-top: 100px;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -3513,6 +3528,14 @@ input.tab:checked + .tab-content,
 
 .h-\[500px\] {
   height: 500px;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .min-h-8 {
@@ -3609,6 +3632,10 @@ input.tab:checked + .tab-content,
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .min-w-8 {
@@ -4024,6 +4051,21 @@ input.tab:checked + .tab-content,
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -4201,6 +4243,10 @@ input.tab:checked + .tab-content,
 
 .text-left {
   text-align: left;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-3xl {
@@ -4434,6 +4480,14 @@ input.tab:checked + .tab-content,
   transition-duration: 150ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @keyframes enter {
   from {
     opacity: var(--tw-enter-opacity, 1);
@@ -4446,6 +4500,14 @@ input.tab:checked + .tab-content,
     opacity: var(--tw-exit-opacity, 1);
     transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
   }
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+
+.ease-in-out {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .\[--tglbg\:\#2563EB\] {
