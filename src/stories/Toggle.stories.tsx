@@ -13,6 +13,7 @@ export const Example = {
   args: {
     checked: false,
     label: 'Label',
+    helpText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
     disabled: false
   },
   render: (args) => <Toggle {...args} />
