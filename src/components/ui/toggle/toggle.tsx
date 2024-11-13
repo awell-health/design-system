@@ -7,11 +7,13 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   helpText?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  labelClassName?: string;
 }
 
 const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   // eslint-disable-next-line
-  const { className, checked, disabled, helpText, label, onChange, ...rest } = props;
+  const { className, checked, disabled, helpText, label, onChange, labelClassName, ...rest } =
+    props;
 
   return (
     <div>
@@ -32,9 +34,14 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
           type='checkbox'
           onChange={onChange}
         />
-        <span className='label-text text-slate-700 text-sm font-medium flex flex-col gap-2'>
+        <span
+          className={cn(
+            'label-text text-slate-700 text-sm font-medium flex flex-col gap-2',
+            labelClassName
+          )}
+        >
           {label}
-          {helpText && <span className='text-slate-500 text-sm font-normal'>{helpText}</span>}
+          {helpText && <span className='text-slate-500'>{helpText}</span>}
         </span>
       </label>
     </div>
