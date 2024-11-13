@@ -11,7 +11,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   // eslint-disable-next-line
-  const { checked, disabled, helpText, label, onChange, ...rest } = props;
+  const { className, checked, disabled, helpText, label, onChange, ...rest } = props;
 
   return (
     <div>
@@ -22,7 +22,8 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
             // @TODO: get tailwind colors from config
             '[--tglbg:#F1F5F9] hover:[--tglbg:#E2E8F0] disabled:[--tglbg:#F1F5F9]',
             checked && '[--tglbg:#2563EB] hover:[--tglbg:#2563EB]',
-            'border-none bg-white hover:bg-white'
+            'border-none bg-white hover:bg-white',
+            className
           )}
           checked={checked}
           ref={ref}
