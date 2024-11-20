@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '../components/ui/select';
-import { Icon } from '../components';
+import { Select } from '@/components/ui/form/select';
+import { Icon } from '../../components';
 
 const meta = {
   component: Select

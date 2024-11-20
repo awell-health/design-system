@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Toggle } from '../components/ui/toggle/toggle';
+import { Toggle } from '../../components/ui/form/toggle/toggle';
 
 const meta = {
   component: Toggle

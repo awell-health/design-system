@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Divider > match snapshot 1`] = `
+<div>
+  <div
+    class="h-[1.5px] bg-gray-200 w-full"
+  />
+</div>
+`;

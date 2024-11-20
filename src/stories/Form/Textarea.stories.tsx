@@ -1,4 +1,4 @@
-import { Textarea } from '@/components/ui/textarea';
+import { Textarea } from '@/components/ui/form/textarea';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {

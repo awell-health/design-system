@@ -14,7 +14,8 @@ export default [
     files: ['src/**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
+      'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
+      'react/prop-types': 'off'
     },
     settings: {
       react: {

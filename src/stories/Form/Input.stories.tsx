@@ -1,6 +1,6 @@
-import { Input } from '@/components/ui/input';
+import { Input } from '@/components/ui/form/input';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Icon } from '../components';
+import { Icon } from '../../components';
 
 const meta = {
   component: Input

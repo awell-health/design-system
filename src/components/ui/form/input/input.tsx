@@ -9,10 +9,10 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   prefixIcon?: JSX.Element;
   hasError?: boolean;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  className?: string;
+  type?: string;
 }
-
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  // eslint-disable-next-line react/prop-types
   (
     {
       className,
