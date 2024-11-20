@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
-import { Icon } from '../icon';
+import { Icon } from '../../icon';
 
 const checkboxVariants = cva('', {
   variants: {

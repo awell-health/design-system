@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FormSection > match snapshot 1`] = `
+<div>
+  <div
+    class="py-6 flex flex-col gap-2"
+  >
+    <h5
+      class="text-lg font-medium leading-5 text-neutral-dark-800"
+    >
+      Test Title
+    </h5>
+    <div
+      class="mt-2"
+    >
+      <div>
+        Test Content
+      </div>
+    </div>
+  </div>
+</div>
+`;

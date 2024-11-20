@@ -3483,6 +3483,10 @@ input.tab:checked + .tab-content,
   height: 2.25rem;
 }
 
+.h-\[1\.5px\] {
+  height: 1.5px;
+}
+
 .h-\[34px\] {
   height: 34px;
 }
@@ -3597,10 +3601,6 @@ input.tab:checked + .tab-content,
 
 .w-\[46px\] {
   width: 46px;
-}
-
-.w-\[48px\] {
-  width: 48px;
 }
 
 .w-full {
@@ -3925,6 +3925,11 @@ input.tab:checked + .tab-content,
   background-color: rgb(207 250 254 / var(--tw-bg-opacity));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -4141,6 +4146,11 @@ input.tab:checked + .tab-content,
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
@@ -4229,6 +4239,10 @@ input.tab:checked + .tab-content,
 
 .font-normal {
   font-weight: 400;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
 }
 
 .leading-7 {

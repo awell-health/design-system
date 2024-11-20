@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { expect, it, describe, vi } from 'vitest';
 import { Input } from './input';
-import { Icon } from '../icon';
+import { Icon } from '@/components/ui/icon';
 
 describe('Input', () => {
   const subject = (props = {}) => {

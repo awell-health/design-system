@@ -2,17 +2,17 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps {
   label?: string;
   helpText?: string;
   suffixIcon?: JSX.Element;
   prefixIcon?: JSX.Element;
   hasError?: boolean;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  className?: string;
+  type?: string;
 }
-
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  // eslint-disable-next-line react/prop-types
   (
     {
       className,
