@@ -101,7 +101,14 @@ import {
   RiFileLine,
   RiArrowGoBackLine,
   RiCollapseDiagonal2Line,
-  RiExpandDiagonal2Line
+  RiExpandDiagonal2Line,
+  RiQuoteText,
+  RiTextSnippet,
+  RiRadioButtonLine,
+  RiCheckboxLine,
+  RiEqualizer2Line,
+  RiArticleLine,
+  RiBillLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -207,7 +214,14 @@ export const ICONS = {
   RiFileLine,
   RiArrowGoBackLine,
   RiCollapseDiagonal2Line,
-  RiExpandDiagonal2Line
+  RiExpandDiagonal2Line,
+  RiQuoteText,
+  RiTextSnippet,
+  RiRadioButtonLine,
+  RiCheckboxLine,
+  RiEqualizer2Line,
+  RiArticleLine,
+  RiBillLine
 };
 
 export enum IconSize {
