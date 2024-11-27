@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Drawer > matches snapshot 1`] = `
+<div>
+  <div
+    class="absolute top-0 h-full right-0"
+    style="width: 460px;"
+  >
+    <div
+      class="absolute inset-0 overflow-hidden"
+    >
+      <div
+        class="absolute h-full w-full top-0 right-0 bg-white transition-transform duration-300 ease-in-out translate-x-0"
+      >
+        <div
+          class="w-full h-full relative"
+        >
+          <div
+            class="h-full"
+          >
+            <div>
+              Drawer Content
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -88,10 +88,10 @@ import {
   RiZoomInLine,
   RiZoomOutLine,
   RiRefreshLine,
-  // RiCollapseHorizontalLine,
-  // RiExpandHorizontalLine,
-  // RiCollapseVerticalLine,
-  // RiExpandVerticalLine,
+  RiCollapseHorizontalLine,
+  RiExpandHorizontalLine,
+  RiCollapseVerticalLine,
+  RiExpandVerticalLine,
   RiSparklingLine,
   RiGlobeLine,
   RiGlobalLine,
@@ -110,7 +110,8 @@ import {
   RiArticleLine,
   RiBillLine,
   RiCalendar2Line,
-  RiMailLine
+  RiMailLine,
+  RiHistoryLine,
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -203,10 +204,10 @@ export const ICONS = {
   RiZoomInLine,
   RiZoomOutLine,
   RiRefreshLine,
-  // RiCollapseHorizontalLine,
-  // RiExpandHorizontalLine,
-  // RiCollapseVerticalLine,
-  // RiExpandVerticalLine,
+  RiCollapseHorizontalLine,
+  RiExpandHorizontalLine,
+  RiCollapseVerticalLine,
+  RiExpandVerticalLine,
   RiSparklingLine,
   RiGlobeLine,
   RiGlobalLine,
@@ -225,7 +226,8 @@ export const ICONS = {
   RiArticleLine,
   RiBillLine,
   RiCalendar2Line,
-  RiMailLine
+  RiMailLine,
+  RiHistoryLine
 };
 
 export enum IconSize {
