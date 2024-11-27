@@ -112,6 +112,7 @@ import {
   RiCalendar2Line,
   RiMailLine,
   RiHistoryLine,
+  RiResetLeftLine,
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -227,7 +228,8 @@ export const ICONS = {
   RiBillLine,
   RiCalendar2Line,
   RiMailLine,
-  RiHistoryLine
+  RiHistoryLine,
+  RiResetLeftLine,
 };
 
 export enum IconSize {
