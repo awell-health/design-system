@@ -1,6 +1,5 @@
 import { expect, it, describe } from 'vitest';
 import { render } from '@testing-library/react';
-
 import { Drawer } from './drawer';
 import React from 'react';
 
@@ -39,17 +38,29 @@ describe('Drawer', () => {
     expect(drawer).not.toHaveClass('right-0');
   });
 
-  it('applies correct transform class when open', () => {
+  it('has correct classes when open', () => {
     const { container } = subject({ isOpen: true });
-    const slidePanel = container.querySelector('[class*="translate"]');
-    expect(slidePanel).toHaveClass('translate-x-0');
-    expect(slidePanel).not.toHaveClass('translate-x-full');
+    const drawer = container.firstChild as HTMLElement;
+    expect(drawer).toHaveClass('translate-x-0');
+    expect(drawer).toHaveClass('shadow-lg');
+    expect(drawer).not.toHaveClass('translate-x-full');
+    expect(drawer).not.toHaveClass('shadow-none');
   });
 
-  it('applies correct transform class when closed', () => {
+  it('has correct classes when closed', () => {
     const { container } = subject({ isOpen: false });
-    const slidePanel = container.querySelector('[class*="translate"]');
-    expect(slidePanel).toHaveClass('translate-x-full');
-    expect(slidePanel).not.toHaveClass('translate-x-0');
+    const drawer = container.firstChild as HTMLElement;
+    expect(drawer).toHaveClass('translate-x-full');
+    expect(drawer).toHaveClass('shadow-none');
+    expect(drawer).not.toHaveClass('translate-x-0');
+    expect(drawer).not.toHaveClass('shadow-lg');
+  });
+
+  it('has transition classes', () => {
+    const { container } = subject();
+    const drawer = container.firstChild as HTMLElement;
+    expect(drawer).toHaveClass('transition-all');
+    expect(drawer).toHaveClass('duration-300');
+    expect(drawer).toHaveClass('ease-in-out');
   });
 });
