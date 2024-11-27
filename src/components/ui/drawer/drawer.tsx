@@ -9,13 +9,14 @@ interface DrawerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 
-export const Drawer: FC<DrawerProps> = ({ isOpen, children, drawerWidth = 460, side = 'right' }) => {
+export const Drawer: FC<DrawerProps> = ({ isOpen, children, drawerWidth = 460, side = 'right', className }) => {
 
     return (
       <div className={
         clsx(
           'absolute top-0 h-full',
-          side === 'left' ? 'left-0' : 'right-0'
+          side === 'left' ? 'left-0' : 'right-0',
+          className
         )
       }
       style={{ width: `${drawerWidth}px` }}
