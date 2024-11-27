@@ -1,7 +1,7 @@
 import { ReactNode, type FC } from 'react';
 import clsx from 'clsx';
 
-interface DrawerProps {
+interface DrawerProps extends React.HTMLAttributes<HTMLDivElement> {
     isOpen: boolean
     children: ReactNode
     drawerWidth?: number
