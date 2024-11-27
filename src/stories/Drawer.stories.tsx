@@ -13,7 +13,6 @@ export const ControlledDrawer = {
     children: <div>hello</div>,
     isOpen: false,
     side: 'right',
-    drawerWidth: 460
   },
   render: (args) => (
     <div className='grid grid-rows-[4rem_1fr] h-screen'>

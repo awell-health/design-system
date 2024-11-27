@@ -8,7 +8,7 @@ describe('Drawer', () => {
     const defaultProps = {
       isOpen: true,
       children: <div>Drawer Content</div>,
-      drawerWidth: 460,
+      size: 'md',
       side: 'right' as const
     };
     return render(<Drawer {...defaultProps} {...props} />);
@@ -16,12 +16,12 @@ describe('Drawer', () => {
 
   it('matches snapshot', () => {
     expect(subject().container).toMatchSnapshot();
-  });
+  }); 
 
-  it('renders with correct width', () => {
-    const { container } = subject({ drawerWidth: 500 });
+  it('has correct size classes', () => {
+    const { container } = subject({ size: 'sm' });
     const drawer = container.firstChild as HTMLElement;
-    expect(drawer).toHaveStyle({ width: '500px' });
+    expect(drawer).toHaveClass('w-[300px]');
   });
 
   it('positions on the right by default', () => {

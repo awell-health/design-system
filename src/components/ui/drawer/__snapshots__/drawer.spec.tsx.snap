@@ -3,8 +3,7 @@
 exports[`Drawer > matches snapshot 1`] = `
 <div>
   <div
-    class="absolute top-0 h-full bg-white transition-all duration-300 ease-in-out right-0 shadow-lg translate-x-0"
-    style="width: 460px;"
+    class="w-[460px] absolute top-0 h-full bg-white transition-all duration-300 ease-in-out right-0 shadow-lg translate-x-0"
   >
     <div>
       Drawer Content

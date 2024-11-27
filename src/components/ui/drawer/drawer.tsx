@@ -4,16 +4,21 @@ import clsx from 'clsx';
 interface DrawerProps extends React.HTMLAttributes<HTMLDivElement> {
     isOpen: boolean
     children: ReactNode
-    drawerWidth?: number
+    size: 'sm' | 'md' | 'lg'
     side?: 'left' | 'right'
 }
 
 
-export const Drawer: FC<DrawerProps> = ({ isOpen, children, drawerWidth = 460, side = 'right', className }) => {
+export const Drawer: FC<DrawerProps> = ({ isOpen, children, size = 'md', side = 'right', className }) => {
 
   return (
-    <div 
+    <div
       className={clsx(
+        {
+          'w-[300px]': size === 'sm',
+          'w-[460px]': size === 'md',
+          'w-[600px]': size === 'lg',
+        },
         'absolute top-0 h-full bg-white',
         'transition-all duration-300 ease-in-out',
         side === 'left' ? 'left-0' : 'right-0',
@@ -29,7 +34,6 @@ export const Drawer: FC<DrawerProps> = ({ isOpen, children, drawerWidth = 460, s
         },
         className
       )}
-      style={{ width: `${drawerWidth}px` }}
     >
       {children}
     </div>
