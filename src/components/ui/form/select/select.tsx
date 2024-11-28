@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
-import Select, { MultiValue, SingleValue } from 'react-select';
-import { SelectItem } from './types';
+import Select from 'react-select';
+import { SelectItem, SelectValue } from './types';
 import { cloneElement, ReactElement } from 'react';
 
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
   isMulti?: boolean;
   isSearchable?: boolean;
   isClearable?: boolean;
-  onChange: (option: SingleValue<SelectItem> | MultiValue<SelectItem>) => void;
+  onChange: (option: SelectValue) => void;
   icon?: JSX.Element | ReactElement;
   label?: string | JSX.Element | ReactElement;
   value?: SelectItem | undefined;
