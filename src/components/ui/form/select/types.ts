@@ -1,6 +1,4 @@
-import { MultiValue } from 'react-select';
-
-import { SingleValue } from 'react-select';
+import { MultiValue, SingleValue } from 'react-select';
 
 export type SelectItem = {
   value: string;

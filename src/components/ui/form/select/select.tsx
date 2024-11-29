@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import Select from 'react-select';
+import Select, { MultiValue, SingleValue } from 'react-select';
 import { SelectItem, SelectValue } from './types';
 import { cloneElement, ReactElement } from 'react';
 
@@ -8,26 +8,46 @@ export interface Props {
   isMulti?: boolean;
   isSearchable?: boolean;
   isClearable?: boolean;
-  onChange: (option: SelectValue) => void;
+  onChange?: (option: SelectValue) => void;
+  // use handleChange for to use SelecItem type
+  handleChange?: (value: SelectItem | SelectItem[]) => void;
   icon?: JSX.Element | ReactElement;
   label?: string | JSX.Element | ReactElement;
   value?: SelectItem | undefined;
   disabled?: boolean;
+  placeholder?: string;
 }
 
 function SelectComponent(props: Props) {
   const {
     options,
     onChange,
+    handleChange,
     isSearchable = false,
     isMulti = false,
     icon = null,
     label = null,
     value = undefined,
     isClearable = false,
-    disabled = false
+    disabled = false,
+    placeholder = 'Select...'
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
+
+  if (!onChange && !handleChange) {
+    console.log('onChange or handleChange is required');
+    return null;
+  }
+
+  const handleSelectChange = (newValue: SingleValue<SelectItem> | MultiValue<SelectItem>) => {
+    if (handleChange) {
+      handleChange(newValue as SelectItem | SelectItem[]);
+    }
+
+    if (onChange) {
+      onChange(newValue);
+    }
+  };
 
   return (
     <div className='flex flex-col gap-1.5'>
@@ -39,8 +59,9 @@ function SelectComponent(props: Props) {
           </span>
         )}
         <Select
+          placeholder={placeholder}
           options={options}
-          onChange={onChange}
+          onChange={handleSelectChange}
           isSearchable={isSearchable}
           isClearable={isClearable}
           isMulti={isMulti}
