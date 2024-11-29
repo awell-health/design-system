@@ -22,4 +22,10 @@ describe('Select', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should not render if onChange and handleChange are not provided', () => {
+    const { container } = render(<Select options={options} />);
+
+    expect(container).toBeEmptyDOMElement();
+  });
 });
