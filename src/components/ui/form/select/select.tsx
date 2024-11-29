@@ -13,7 +13,7 @@ export interface Props {
   handleChange?: (value: SelectItem | SelectItem[]) => void;
   icon?: JSX.Element | ReactElement;
   label?: string | JSX.Element | ReactElement;
-  value?: SelectItem | undefined;
+  value?: SelectItem | SelectItem[] | undefined;
   disabled?: boolean;
   placeholder?: string;
 }
