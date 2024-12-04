@@ -4553,10 +4553,6 @@ input[type="checkbox"].green:checked {
   --tglbg: #16a34a;
 }
 
-input[type="checkbox"].red:checked {
-  --tglbg: #dc2626;
-}
-
 .placeholder\:text-slate-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));

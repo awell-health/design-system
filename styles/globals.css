@@ -36,7 +36,3 @@ input[type="checkbox"]:checked {
 input[type="checkbox"].green:checked {
   --tglbg: theme('colors.green.600');
 }
-
-input[type="checkbox"].red:checked {
-  --tglbg: theme('colors.red.600');
-}

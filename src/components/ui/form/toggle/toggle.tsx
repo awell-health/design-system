@@ -33,7 +33,6 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
             'border-none bg-white hover:bg-white',
             // check styles from globals.css for colors
             variant === 'positive' && 'green',
-            variant === 'negative' && 'red',
             className
           )}
           checked={checked}
