@@ -8,7 +8,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   helpText?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   labelClassName?: string;
-  variant?: 'default' | 'positive' | 'negative';
+  variant?: 'default' | 'positive';
   toggleSize?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
