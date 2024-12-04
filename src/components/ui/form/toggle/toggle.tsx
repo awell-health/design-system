@@ -8,7 +8,8 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   helpText?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   labelClassName?: string;
-  variant?: 'default' | 'positive' | 'negative';
+  variant?: 'default' | 'positive';
+  toggleSize?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
 const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
@@ -21,6 +22,7 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
     onChange,
     labelClassName,
     variant,
+    toggleSize,
     ...rest
   } = props;
 
@@ -33,6 +35,10 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
             'border-none bg-white hover:bg-white',
             // check styles from globals.css for colors
             variant === 'positive' && 'green',
+            toggleSize === 'xs' && 'toggle-xs',
+            toggleSize === 'sm' && 'toggle-sm',
+            toggleSize === 'md' && 'toggle-md',
+            toggleSize === 'lg' && 'toggle-lg',
             className
           )}
           checked={checked}

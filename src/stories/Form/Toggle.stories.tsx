@@ -16,7 +16,8 @@ export const Example = {
     helpText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
     disabled: false,
     onChange: () => {},
-    variant: 'default'
+    variant: 'default',
+    toggleSize: 'md'
   },
   render: (args) => <Toggle {...args} />
 } satisfies Story;
