@@ -14,7 +14,9 @@ export const Example = {
     checked: false,
     label: 'Label',
     helpText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-    disabled: false
+    disabled: false,
+    onChange: () => {},
+    variant: 'default'
   },
   render: (args) => <Toggle {...args} />
 } satisfies Story;

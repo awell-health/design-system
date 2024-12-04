@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../../../lib/utils';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   checked?: boolean;
@@ -8,12 +8,21 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   helpText?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   labelClassName?: string;
+  variant?: 'default' | 'positive' | 'negative';
 }
 
 const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
-  // eslint-disable-next-line
-  const { className, checked, disabled, helpText, label, onChange, labelClassName, ...rest } =
-    props;
+  const {
+    className,
+    checked,
+    disabled,
+    helpText,
+    label,
+    onChange,
+    labelClassName,
+    variant,
+    ...rest
+  } = props;
 
   return (
     <div>
@@ -21,10 +30,9 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
         <input
           className={cn(
             'toggle focus:bg-none',
-            // @TODO: get tailwind colors from config
-            '[--tglbg:#F1F5F9] hover:[--tglbg:#E2E8F0] disabled:[--tglbg:#F1F5F9]',
-            checked && '[--tglbg:#2563EB] hover:[--tglbg:#2563EB]',
             'border-none bg-white hover:bg-white',
+            // check styles from globals.css for colors
+            variant === 'positive' && 'green',
             className
           )}
           checked={checked}

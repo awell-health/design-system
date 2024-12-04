@@ -18,3 +18,21 @@ input {
 input:focus {
   --tw-ring-shadow: 0 0 #000 !important;
 }
+
+
+/* DsisyUI toggle colors */
+input[type="checkbox"] {
+  --tglbg: theme('colors.slate.300');
+}
+
+input[type="checkbox"]:checked {
+  --tglbg: theme('colors.blue.700');
+}
+
+input[type="checkbox"]:checked {
+  --tglbg: theme('colors.blue.700');
+}
+
+input[type="checkbox"].green:checked {
+  --tglbg: theme('colors.green.600');
+}
