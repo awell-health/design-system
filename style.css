@@ -812,12 +812,6 @@ html {
     --tw-bg-opacity: 1;
     background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
   }
-
-  .table-zebra tr.hover:hover,
-  .table-zebra tr.hover:nth-child(even):hover {
-    --tw-bg-opacity: 1;
-    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
-  }
 }
 
 .btn {
@@ -4529,14 +4523,6 @@ input.tab:checked + .tab-content,
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.\[--tglbg\:\#2563EB\] {
-  --tglbg: #2563EB;
-}
-
-.\[--tglbg\:\#F1F5F9\] {
-  --tglbg: #F1F5F9;
-}
-
 html {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -4551,6 +4537,24 @@ input {
 
 input:focus {
   --tw-ring-shadow: 0 0 #000 !important;
+}
+
+/* DsisyUI toggle colors */
+
+input[type="checkbox"] {
+  --tglbg: #cbd5e1;
+}
+
+input[type="checkbox"]:checked {
+  --tglbg: #1d4ed8;
+}
+
+input[type="checkbox"].green:checked {
+  --tglbg: #16a34a;
+}
+
+input[type="checkbox"].red:checked {
+  --tglbg: #dc2626;
 }
 
 .placeholder\:text-slate-400::-moz-placeholder {
@@ -4691,14 +4695,6 @@ input:focus {
 .hover\:text-slate-700:hover {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
-}
-
-.hover\:\[--tglbg\:\#2563EB\]:hover {
-  --tglbg: #2563EB;
-}
-
-.hover\:\[--tglbg\:\#E2E8F0\]:hover {
-  --tglbg: #E2E8F0;
 }
 
 .focus\:border:focus {
@@ -4853,10 +4849,6 @@ input:focus {
 
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
-}
-
-.disabled\:\[--tglbg\:\#F1F5F9\]:disabled {
-  --tglbg: #F1F5F9;
 }
 
 .group:hover .group-hover\:fill-blue-700 {
