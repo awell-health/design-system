@@ -115,6 +115,9 @@ import {
   RiUserLine,
   RiZoomInLine,
   RiZoomOutLine,
+  RiEyeLine,
+  RiEyeFill,
+  RiPhoneFill
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -234,6 +237,9 @@ export const ICONS = {
   RiUserLine,
   RiZoomInLine,
   RiZoomOutLine,
+  RiEyeLine,
+  RiEyeFill,
+  RiPhoneFill
 };
 
 export enum IconSize {
