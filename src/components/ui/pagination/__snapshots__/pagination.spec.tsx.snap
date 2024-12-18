@@ -6,7 +6,7 @@ exports[`Pagination > match snapshot 1`] = `
     class="w-full px-6 py-4 bg-white justify-between items-start inline-flex"
   >
     <button
-      class="btn btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white btn-sm rounded-md px-3.5 py-2"
+      class="btn btn-sm rounded-md px-3.5 py-2 btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white"
       disabled=""
     >
       <svg
@@ -28,17 +28,17 @@ exports[`Pagination > match snapshot 1`] = `
       class="flex grow gap-2 justify-center"
     >
       <button
-        class="btn text-blue-700 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200 btn-sm rounded-md px-3.5 py-2"
+        class="btn btn-sm rounded-md px-3.5 py-2 text-blue-700 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200 outline-blue-500"
       >
         1
       </button>
       <button
-        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+        class="btn btn-sm rounded-md px-3.5 py-2 btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent outline-slate-300"
       >
         2
       </button>
       <button
-        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+        class="btn btn-sm rounded-md px-3.5 py-2 btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent outline-slate-300"
       >
         3
       </button>
@@ -48,23 +48,23 @@ exports[`Pagination > match snapshot 1`] = `
         ...
       </span>
       <button
-        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+        class="btn btn-sm rounded-md px-3.5 py-2 btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent outline-slate-300"
       >
         13
       </button>
       <button
-        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+        class="btn btn-sm rounded-md px-3.5 py-2 btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent outline-slate-300"
       >
         14
       </button>
       <button
-        class="btn btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent btn-sm rounded-md px-3.5 py-2"
+        class="btn btn-sm rounded-md px-3.5 py-2 btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent outline-slate-300"
       >
         15
       </button>
     </div>
     <button
-      class="btn btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white btn-sm rounded-md px-3.5 py-2"
+      class="btn btn-sm rounded-md px-3.5 py-2 btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white"
     >
       Next
        
