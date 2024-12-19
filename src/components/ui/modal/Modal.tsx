@@ -8,7 +8,7 @@ interface Props {
   closeOnEscape?: boolean;
   children: JSX.Element | ReactNode | string;
   className?: string;
-  fullScreen?: boolean;
+  marginTop?: string;
 }
 
 const Modal: FC<Props> = (props) => {
@@ -18,7 +18,7 @@ const Modal: FC<Props> = (props) => {
     clickOutside = false,
     closeOnEscape = false,
     className = '',
-    fullScreen = false
+    marginTop = 'mt-[100px]'
   } = props;
   const modalRef: RefObject<HTMLDivElement> = React.useRef<HTMLDivElement>(null);
 
@@ -39,23 +39,9 @@ const Modal: FC<Props> = (props) => {
     >
       <div className='fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]'></div>
       <div className='fixed inset-0 z-[9999] w-screen overflow-y-auto'>
-        <div
-          className={cn('flex justify-center p-4', {
-            'mt-[100px]': !fullScreen,
-            'w-full h-full': fullScreen
-          })}
-        >
+        <div className={cn('flex justify-center p-4', marginTop)}>
           <div className='relative transform overflow-hidden transition-all bg-white rounded-lg shadow border border-slate-200'>
-            <div
-              ref={modalRef}
-              className={cn(
-                'w-[1024px] h-[500px]',
-                {
-                  'h-[600px]': fullScreen
-                },
-                className
-              )}
-            >
+            <div ref={modalRef} className={cn('w-[1024px] h-[500px]', className)}>
               {children}
             </div>
           </div>
