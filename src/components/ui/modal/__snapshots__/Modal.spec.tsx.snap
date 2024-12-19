@@ -15,7 +15,7 @@ exports[`Modal > match snapshot 1`] = `
       class="fixed inset-0 z-[9999] w-screen overflow-y-auto"
     >
       <div
-        class="flex mt-[100px] justify-center p-4"
+        class="flex justify-center p-4 mt-[100px]"
       >
         <div
           class="relative transform overflow-hidden transition-all bg-white rounded-lg shadow border border-slate-200"
