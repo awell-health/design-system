@@ -4497,8 +4497,8 @@ input.tab:checked + .tab-content,
   outline-offset: 2px;
 }
 
-.outline-blue-300 {
-  outline-color: #93c5fd;
+.outline-blue-500 {
+  outline-color: #3b82f6;
 }
 
 .outline-blue-700 {
@@ -4759,10 +4759,6 @@ input[type="checkbox"].green:checked {
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus-visible\:outline-blue-300:focus-visible {
-  outline-color: #93c5fd;
 }
 
 .focus-visible\:ring-1:focus-visible {

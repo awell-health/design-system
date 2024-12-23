@@ -3,20 +3,20 @@ import * as React from 'react';
 import { Icon } from '../icon';
 import { Button } from '../button/button';
 
+interface AlertDialogButton {
+  label: string;
+  buttonVariant?: 'primary' | 'secondary' | 'error' | 'success' | 'warning';
+  buttonAction?: () => void;
+}
+
 interface Props {
   title?: string;
   icon?: JSX.Element;
   text?: string;
   children?: JSX.Element | string;
   onClose?: () => void;
-  button?: {
-    label: string;
-    buttonAction?: () => void;
-  };
-  secondaryButton?: {
-    label: string;
-    buttonAction?: () => void;
-  };
+  button?: AlertDialogButton;
+  secondaryButton?: AlertDialogButton;
 }
 
 const AlertDialog = (props: Props): React.JSX.Element => {
@@ -72,13 +72,19 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                 style={{ gap: '12px' }}
               >
                 {secondaryButton && (
-                  <Button variant='secondary' onClick={secondaryButton?.buttonAction}>
-                    {secondaryButton.label}
+                  <Button
+                    variant={secondaryButton?.buttonVariant ?? 'secondary'}
+                    onClick={secondaryButton?.buttonAction}
+                  >
+                    {secondaryButton?.label}
                   </Button>
                 )}
                 {button && (
-                  <Button variant='primary' onClick={button?.buttonAction}>
-                    {button?.label}
+                  <Button
+                    variant={button?.buttonVariant ?? 'primary'}
+                    onClick={button?.buttonAction}
+                  >
+                    {button.label}
                   </Button>
                 )}
               </div>
