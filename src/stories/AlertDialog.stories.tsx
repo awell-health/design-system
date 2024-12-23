@@ -27,7 +27,8 @@ export const Example = {
     },
     button: {
       label: 'Redirect',
-      buttonAction: () => alert('button click')
+      buttonAction: () => alert('button click'),
+      buttonVariant: 'error'
     },
     onClose: () => alert('closed'),
     icon: (
