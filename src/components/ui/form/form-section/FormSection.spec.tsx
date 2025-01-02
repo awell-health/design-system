@@ -34,4 +34,14 @@ describe('FormSection', () => {
     render(subject({ children: 'Test Content' }));
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
+
+  it('renders the required asterisk when isRequired is true', () => {
+    render(subject({ isRequired: true }));
+    expect(screen.getByText('*')).toBeInTheDocument();
+  });
+
+  it('does not render the required asterisk when isRequired is false', () => {
+    render(subject());
+    expect(screen.queryByText('*')).not.toBeInTheDocument();
+  });
 });
