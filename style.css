@@ -3452,6 +3452,14 @@ input.tab:checked + .tab-content,
   margin-top: 100px;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-0\.5 {
+  margin-left: 0.125rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
