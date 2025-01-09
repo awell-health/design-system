@@ -89,6 +89,7 @@ import {
   RiRadioButtonLine,
   RiRefreshLine,
   RiResetLeftLine,
+  RiSaveLine,
   RiSearchLine,
   RiSettings4Line,
   RiShareLine,
@@ -119,7 +120,7 @@ import {
   RiZoomOutLine,
   RiEyeLine,
   RiEyeFill,
-  RiPhoneFill
+  RiPhoneFill,
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -213,6 +214,7 @@ export const ICONS = {
   RiRadioButtonLine,
   RiRefreshLine,
   RiResetLeftLine,
+  RiSaveLine,
   RiSearchLine,
   RiSettings4Line,
   RiShareLine,
