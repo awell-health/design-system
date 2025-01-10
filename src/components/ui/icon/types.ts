@@ -107,6 +107,8 @@ import {
   RiText,
   RiTextSnippet,
   RiTimerLine,
+  RiTimeFill,
+  RiTimeLine,
   RiThumbDownFill,
   RiThumbDownLine,
   RiThumbUpFill,
@@ -120,7 +122,7 @@ import {
   RiZoomOutLine,
   RiEyeLine,
   RiEyeFill,
-  RiPhoneFill,
+  RiPhoneFill
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -232,6 +234,8 @@ export const ICONS = {
   RiText,
   RiTextSnippet,
   RiTimerLine,
+  RiTimeFill,
+  RiTimeLine,
   RiThumbDownFill,
   RiThumbDownLine,
   RiThumbUpFill,
