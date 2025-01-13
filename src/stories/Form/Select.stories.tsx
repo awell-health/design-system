@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '@/components/ui/form/select';
+import { Select, SelectValue } from '@/components/ui/form/select';
 import { Icon } from '../../components';
 
 const meta = {
@@ -23,8 +23,14 @@ export const Example = {
     options,
     disabled: false,
     isSearchable: false,
-    icon: <Icon icon='RiSearchLine' />
-    // value: { value: 'vanilla', label: 'Vanilla' }
+    icon: <Icon icon='RiSearchLine' />,
+    onChange: (option: SelectValue) => {
+      if (option !== null) {
+        console.log('Selected value:', option);
+      } else {
+        console.log('No value selected');
+      }
+    }
   },
   render: (args) => <Select {...args} />
 } satisfies Story;
