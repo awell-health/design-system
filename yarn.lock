@@ -68,7 +68,6 @@ __metadata:
     "@vitest/coverage-v8": "npm:^2.0.5"
     autoprefixer: "npm:^10.4.20"
     class-variance-authority: "npm:^0.7.0"
-    classnames: "npm:^2.5.1"
     clsx: "npm:^2.1.1"
     daisyui: "npm:^4.12.10"
     date-fns: "npm:^4.1.0"
@@ -2997,13 +2996,6 @@ __metadata:
   dependencies:
     clsx: "npm:^2.1.1"
   checksum: 10c0/0f438cea22131808b99272de0fa933c2532d5659773bfec0c583de7b3f038378996d3350683426b8e9c74a6286699382106d71fbec52f0dd5fbb191792cccb5b
-  languageName: node
-  linkType: hard
-
-"classnames@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "classnames@npm:2.5.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fclassnames%2F-%2Fclassnames-2.5.1.tgz"
-  checksum: 10c0/afff4f77e62cea2d79c39962980bf316bacb0d7c49e13a21adaadb9221e1c6b9d3cdb829d8bb1b23c406f4e740507f37e1dcf506f7e3b7113d17c5bab787aa69
   languageName: node
   linkType: hard
 
