@@ -239,16 +239,14 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                       </button>
                     </td>
                     <td
-                      aria-selected="true"
-                      class="p-2 bg-blue-500 border-blue-500 text-white bg-blue-500 rounded-l-[50%]"
+                      class="p-2"
                       data-day="2025-01-06"
-                      data-selected="true"
                       role="gridcell"
                     >
                       <button
-                        aria-label="Monday, January 6th, 2025, selected"
+                        aria-label="Monday, January 6th, 2025"
                         class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        tabindex="0"
+                        tabindex="-1"
                         type="button"
                       >
                         6
@@ -256,7 +254,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     </td>
                     <td
                       aria-selected="true"
-                      class="p-2 bg-blue-500 border-blue-500 text-white bg-blue-400"
+                      class="p-2 bg-blue-500 border-blue-500 text-white bg-blue-500 rounded-l-[50%]"
                       data-day="2025-01-07"
                       data-selected="true"
                       role="gridcell"
@@ -264,7 +262,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                       <button
                         aria-label="Tuesday, January 7th, 2025, selected"
                         class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        tabindex="-1"
+                        tabindex="0"
                         type="button"
                       >
                         7
@@ -356,14 +354,13 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     </td>
                     <td
                       aria-selected="true"
-                      class="p-2 rdp-today text-blue-500 bg-blue-500 border-blue-500 text-white bg-blue-500 rounded-r-[50%]"
+                      class="p-2 bg-blue-500 border-blue-500 text-white bg-blue-400"
                       data-day="2025-01-13"
                       data-selected="true"
-                      data-today="true"
                       role="gridcell"
                     >
                       <button
-                        aria-label="Today, Monday, January 13th, 2025, selected"
+                        aria-label="Monday, January 13th, 2025, selected"
                         class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
                         tabindex="-1"
                         type="button"
@@ -372,15 +369,16 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                       </button>
                     </td>
                     <td
-                      class="p-2 rdp-disabled"
+                      aria-selected="true"
+                      class="p-2 rdp-today text-blue-500 bg-blue-500 border-blue-500 text-white bg-blue-500 rounded-r-[50%]"
                       data-day="2025-01-14"
-                      data-disabled="true"
+                      data-selected="true"
+                      data-today="true"
                       role="gridcell"
                     >
                       <button
-                        aria-label="Tuesday, January 14th, 2025"
+                        aria-label="Today, Tuesday, January 14th, 2025, selected"
                         class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        disabled=""
                         tabindex="-1"
                         type="button"
                       >
@@ -1363,7 +1361,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
           class="px-3.5 py-2.5 h-[38px] min-h-[38px] rounded-lg gap-2 w-full text-sm font-normal shadow border border-slate-300 text-black placeholder:text-slate-400 focus:outline-0 focus:border focus:border-blue-500 disabled:bg-slate-50 disabled:text-slate-300 pl-8 cursor-pointer"
           readonly=""
           type="text"
-          value="6 Jan, 2025 - 13 Jan, 2025"
+          value="7 Jan, 2025 - 14 Jan, 2025"
         />
       </label>
     </div>
