@@ -13,8 +13,6 @@ import { Input } from '../form/input';
 import { Icon } from '../icon';
 import clsx from 'clsx';
 
-import 'react-day-picker/style.css';
-
 interface Props {
   onSelect: (from: string, to: string) => void;
   initialStartDateOffset?: number;
