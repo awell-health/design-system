@@ -3,7 +3,7 @@
 exports[`Tooltip > match snapshot 1`] = `
 <div>
   <span
-    data-tooltip-id="1736955009931-d1d8p3ztc"
+    data-tooltip-id="tooltip-id"
   >
     Tooltip child
   </span>

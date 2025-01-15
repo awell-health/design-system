@@ -5,7 +5,7 @@ import { Tooltip } from './tooltip';
 describe('Tooltip', () => {
   it('match snapshot', () => {
     const { container } = render(
-      <Tooltip datatip='Tooltip displayed text' data-testid='tooltip'>
+      <Tooltip datatip='Tooltip displayed text' data-testid='tooltip' id='tooltip-id'>
         <span>Tooltip child</span>
       </Tooltip>
     );

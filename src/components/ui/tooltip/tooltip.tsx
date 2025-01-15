@@ -21,15 +21,16 @@ export interface TooltipProps extends VariantProps<typeof tooltipVariants> {
   datatip: JSX.Element | string;
   placement?: 'top' | 'bottom' | 'left' | 'right';
   className?: string;
+  id?: string;
 }
 
-function Tooltip({ datatip, className, children, variant, placement }: TooltipProps) {
-  const id = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+function Tooltip({ datatip, className, children, variant, placement, id }: TooltipProps) {
+  const tooltipId = id || `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
   const childrenWithProps = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
       return React.cloneElement(child, {
-        'data-tooltip-id': id
+        'data-tooltip-id': tooltipId
       } as Partial<typeof child.props>);
     }
     return child;
@@ -39,7 +40,7 @@ function Tooltip({ datatip, className, children, variant, placement }: TooltipPr
     <>
       {childrenWithProps}
       <TooltipReact
-        id={id}
+        id={tooltipId}
         place={placement}
         className={cn(tooltipVariants({ variant }), className)}
       >
