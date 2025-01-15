@@ -3983,6 +3983,10 @@ input.tab:checked + .tab-content,
   height: 1.5rem;
 }
 
+.h-64{
+  height: 16rem;
+}
+
 .h-8{
   height: 2rem;
 }
@@ -4029,10 +4033,6 @@ input.tab:checked + .tab-content,
 
 .h-screen{
   height: 100vh;
-}
-
-.h-64{
-  height: 16rem;
 }
 
 .min-h-8{
