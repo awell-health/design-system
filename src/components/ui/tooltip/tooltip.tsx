@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
+import { Tooltip as TooltipReact } from 'react-tooltip';
 
 import { cn } from '@/lib/utils';
 
@@ -8,12 +9,6 @@ const tooltipVariants = cva('tooltip before:shadow before:px-3 before:py-2 befor
     variant: {
       default: '',
       light: 'before:bg-white before:text-slate-700 after:'
-    },
-    placement: {
-      top: 'tooltip-top',
-      bottom: 'tooltip-bottom',
-      left: 'tooltip-left',
-      right: 'tooltip-right'
     }
   },
   defaultVariants: {
@@ -21,22 +16,36 @@ const tooltipVariants = cva('tooltip before:shadow before:px-3 before:py-2 befor
   }
 });
 
-export interface TooltipProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof tooltipVariants> {
+export interface TooltipProps extends VariantProps<typeof tooltipVariants> {
   children: JSX.Element | string;
   datatip: JSX.Element | string;
+  placement?: 'top' | 'bottom' | 'left' | 'right';
+  className?: string;
 }
 
-function Tooltip({ datatip, className, children, variant, placement, ...props }: TooltipProps) {
+function Tooltip({ datatip, className, children, variant, placement }: TooltipProps) {
+  const id = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+
+  const childrenWithProps = React.Children.map(children, (child) => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, {
+        'data-tooltip-id': id
+      } as Partial<typeof child.props>);
+    }
+    return child;
+  });
+
   return (
-    <div
-      data-tip={datatip}
-      className={cn(tooltipVariants({ variant, placement }), className)}
-      {...props}
-    >
-      {children}
-    </div>
+    <>
+      {childrenWithProps}
+      <TooltipReact
+        id={id}
+        place={placement}
+        className={cn(tooltipVariants({ variant }), className)}
+      >
+        {datatip}
+      </TooltipReact>
+    </>
   );
 }
 
