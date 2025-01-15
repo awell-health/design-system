@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Tooltip>;
 
 export const Example: Story = {
   render: (args) => (
-    <div className='w-full h-64 flex items-center justify-center'>
+    <div className='w-64 h-64 flex items-center justify-center'>
       <Tooltip {...args}>
         <button className='btn'>Tooltip</button>
       </Tooltip>
@@ -21,6 +21,10 @@ export const Example: Story = {
   args: {
     variant: 'default',
     placement: 'top',
-    datatip: 'Tooltip message'
+    datatip:
+      'Tooltip.message.aisdjais.djiaosdjiaosjdioasjdioajsdoijasiojdioasjdioasjdoiasjdaiosdjasoidjasoidjasiodjasd',
+    id: 'test',
+    positionStrategy: 'fixed',
+    float: false
   }
 };
