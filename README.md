@@ -14,6 +14,8 @@ To run project locally there are two options
 `yarn storybook` - to run storybook app
 `yarn tailwind` - to watch and generate styles changes
 
+## Tests
+To update snapshots run `yarn test -u`
 
 ## Deployment
 Use yarn to set projects version:

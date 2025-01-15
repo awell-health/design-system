@@ -11,11 +11,20 @@ export default meta;
 
 type Story = StoryObj<typeof DateRangeSelect>;
 
-export const Example = {
+export const InitialDates = {
   args: {
     onSelect: (from: string, to: string) => console.log('Date range changed:', { from, to }),
-    defaultFromDate: addDays(new Date(), -7).toISOString(),
-    defaultToDate: new Date().toISOString()
+    defaultDateRange: {
+      from: addDays(new Date(), -7).toISOString(),
+      to: new Date().toISOString()
+    }
+  },
+  render: (args) => <DateRangeSelect {...args} />
+} satisfies Story;
+
+export const NoInitialDates = {
+  args: {
+    onSelect: (from: string, to: string) => console.log('Date range changed:', { from, to })
   },
   render: (args) => <DateRangeSelect {...args} />
 } satisfies Story;

@@ -15,21 +15,19 @@ import clsx from 'clsx';
 
 interface Props {
   onSelect: (from: string, to: string) => void;
-  initialStartDateOffset?: number;
-  defaultFromDate?: string;
-  defaultToDate?: string;
+  defaultDateRange?: { from: string; to: string };
 }
 
 const DateRangeSelect: FC<Props> = (props) => {
-  const { onSelect, defaultFromDate, defaultToDate, initialStartDateOffset = 7 } = props;
+  const { onSelect, defaultDateRange } = props;
 
-  const initialToDate = new Date();
-  const initialFromDate = new Date();
-  initialFromDate.setDate(initialFromDate.getDate() - initialStartDateOffset);
-
-  const [selected, setSelected] = useState<DateRange>({
-    from: typeof defaultFromDate !== 'undefined' ? parseISO(defaultFromDate) : initialFromDate,
-    to: typeof defaultToDate !== 'undefined' ? parseISO(defaultToDate) : initialToDate
+  const [selected, setSelected] = useState<DateRange | undefined>(() => {
+    if (defaultDateRange) {
+      return {
+        from: parseISO(defaultDateRange.from),
+        to: parseISO(defaultDateRange.to)
+      };
+    }
   });
 
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +43,7 @@ const DateRangeSelect: FC<Props> = (props) => {
     if (!isOpen && selected?.from && selected?.to) {
       onSelect(format(selected.from, 'yyyy-MM-dd'), format(selected.to, 'yyyy-MM-dd'));
     }
-  }, [selected, isOpen]);
+  }, [selected, isOpen, onSelect]);
 
   const intervalMatcher: DateInterval = {
     before: new Date(2024, 0, 1),
@@ -54,9 +52,10 @@ const DateRangeSelect: FC<Props> = (props) => {
 
   const inputDateFormat = 'd LLL, yyyy';
   const getInputValue = (): string => {
-    return selected?.from && selected?.to
-      ? `${format(selected.from, inputDateFormat)} - ${format(selected.to, inputDateFormat)}`
-      : '';
+    if (!selected?.from || !selected?.to) {
+      return 'Select Dates';
+    }
+    return `${format(selected.from, inputDateFormat)} - ${format(selected.to, inputDateFormat)}`;
   };
 
   const getDateFromPast = (days: number | null): Date => {
@@ -93,7 +92,7 @@ const DateRangeSelect: FC<Props> = (props) => {
   ];
 
   const handlePreselectedDate = (days: number | null) => {
-    setSelected({ from: getDateFromPast(days), to: initialToDate });
+    setSelected({ from: getDateFromPast(days), to: new Date() });
     setIsOpen(false);
   };
 
