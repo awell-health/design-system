@@ -22,9 +22,20 @@ export interface TooltipProps extends VariantProps<typeof tooltipVariants> {
   placement?: 'top' | 'bottom' | 'left' | 'right';
   className?: string;
   id?: string;
+  positionStrategy?: 'fixed' | 'absolute';
+  float?: boolean;
 }
 
-function Tooltip({ datatip, className, children, variant, placement, id }: TooltipProps) {
+function Tooltip({
+  datatip,
+  className,
+  children,
+  variant,
+  placement,
+  id,
+  positionStrategy,
+  float
+}: TooltipProps) {
   const tooltipId = id || `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
   const childrenWithProps = React.Children.map(children, (child) => {
@@ -43,8 +54,10 @@ function Tooltip({ datatip, className, children, variant, placement, id }: Toolt
         id={tooltipId}
         place={placement}
         className={cn(tooltipVariants({ variant }), className)}
+        positionStrategy={positionStrategy}
+        float={float}
       >
-        {datatip}
+        <div className={cn('max-w-xs break-words', className)}>{datatip}</div>
       </TooltipReact>
     </>
   );
