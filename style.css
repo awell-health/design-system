@@ -4035,6 +4035,10 @@ input.tab:checked + .tab-content,
   height: 100vh;
 }
 
+.h-\[800px\]{
+  height: 800px;
+}
+
 .min-h-8{
   min-height: 2rem;
 }
@@ -4145,6 +4149,10 @@ input.tab:checked + .tab-content,
 
 .w-screen{
   width: 100vw;
+}
+
+.w-\[800px\]{
+  width: 800px;
 }
 
 .min-w-8{
@@ -4789,6 +4797,10 @@ input.tab:checked + .tab-content,
 
 .text-left{
   text-align: left;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-3xl{
