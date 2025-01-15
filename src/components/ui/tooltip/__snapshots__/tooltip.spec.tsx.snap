@@ -2,14 +2,10 @@
 
 exports[`Tooltip > match snapshot 1`] = `
 <div>
-  <div
-    class="tooltip before:shadow before:px-3 before:py-2 before:rounded-lg"
-    data-testid="tooltip"
-    data-tip="Tooltip displayed text"
+  <span
+    data-tooltip-id="tooltip-id"
   >
-    <span>
-      Tooltip child
-    </span>
-  </div>
+    Tooltip child
+  </span>
 </div>
 `;

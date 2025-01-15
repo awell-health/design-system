@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.12.28",
+  "version": "0.12.29",
   "type": "module",
   "files": [
     "dist"
@@ -44,6 +44,7 @@
     "date-fns": "^4.1.0",
     "react-day-picker": "^9.5.0",
     "react-select": "^5.8.0",
+    "react-tooltip": "^5.28.0",
     "react-use": "^17.5.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
