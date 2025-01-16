@@ -16,6 +16,7 @@ export interface Props {
   value?: SelectItem | SelectItem[] | undefined;
   disabled?: boolean;
   placeholder?: string;
+  menuPosition?: 'fixed' | 'absolute';
 }
 
 function SelectComponent(props: Props) {
@@ -30,7 +31,8 @@ function SelectComponent(props: Props) {
     value = undefined,
     isClearable = false,
     disabled = false,
-    placeholder = 'Select...'
+    placeholder = 'Select...',
+    menuPosition = 'absolute'
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -67,6 +69,7 @@ function SelectComponent(props: Props) {
           isMulti={isMulti}
           value={value}
           isDisabled={disabled}
+          menuPosition={menuPosition}
           classNames={{
             control: (state) =>
               cn(

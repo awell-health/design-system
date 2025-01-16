@@ -24,7 +24,6 @@ export const Example: Story = {
     datatip:
       'Tooltip.message.aisdjais.djiaosdjiaosjdioasjdioajsdoijasiojdioasjdioasjdoiasjdaiosdjasoidjasoidjasiodjasd',
     id: 'test',
-    positionStrategy: 'fixed',
     float: false
   }
 };
