@@ -6,7 +6,7 @@ import { ActionType } from './types';
 interface ActionIconProps {
   actionType?: ActionType;
   icon_url?: string;
-  size?: 'sm' | 'lg';
+  size?: 'sm' | 'lg' | 'xl';
 }
 
 const ActionIcon = React.forwardRef<HTMLDivElement, ActionIconProps>(({ ...props }, ref) => {
@@ -27,8 +27,15 @@ const ActionIcon = React.forwardRef<HTMLDivElement, ActionIconProps>(({ ...props
   const icon = TYPES_ICONS_MAP[actionType as keyof typeof TYPES_ICONS_MAP] ?? 'RiQuestionFill';
 
   const color = icon === 'RiQuestionFill' ? 'fill-slate-400' : 'fill-slate-800';
-  const iconSize = size === 'sm' ? 'w-4 h-4' : 'w-6 h-6';
-  const containersize = size === 'sm' ? 'w-6 h-6' : 'w-9 h-9';
+
+  const SIZES = {
+    sm: { icon: 'w-4 h-4', container: 'w-6 h-6' },
+    lg: { icon: 'w-6 h-6', container: 'w-9 h-9' },
+    xl: { icon: 'w-8 h-8', container: 'w-12 h-12' }
+  } as const;
+
+  const iconSize = SIZES[size].icon;
+  const containersize = SIZES[size].container;
 
   if (actionType === ActionType.Plugin && icon_url) {
     return <img className={`${containersize} rounded-md border border-slate-200`} src={icon_url} />;
