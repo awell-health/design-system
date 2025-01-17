@@ -383,31 +383,29 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                       </button>
                     </td>
                     <td
-                      class="p-2 rdp-today text-blue-500"
+                      class="p-2"
                       data-day="2025-01-16"
-                      data-today="true"
                       role="gridcell"
                     >
                       <button
-                        aria-label="Today, Thursday, January 16th, 2025"
+                        aria-label="Thursday, January 16th, 2025"
                         class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        tabindex="0"
+                        tabindex="-1"
                         type="button"
                       >
                         16
                       </button>
                     </td>
                     <td
-                      class="p-2 rdp-disabled"
+                      class="p-2 rdp-today text-blue-500"
                       data-day="2025-01-17"
-                      data-disabled="true"
+                      data-today="true"
                       role="gridcell"
                     >
                       <button
-                        aria-label="Friday, January 17th, 2025"
+                        aria-label="Today, Friday, January 17th, 2025"
                         class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        disabled=""
-                        tabindex="-1"
+                        tabindex="0"
                         type="button"
                       >
                         17
