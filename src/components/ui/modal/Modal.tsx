@@ -40,7 +40,7 @@ const Modal: FC<Props> = (props) => {
       <div className='fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]'></div>
       <div className='fixed inset-0 z-[9999] w-screen overflow-y-auto'>
         <div className={cn('flex justify-center p-4', marginTop)}>
-          <div className='relative transform overflow-hidden transition-all bg-white rounded-lg shadow border border-slate-200'>
+          <div className='relative transform transition-all bg-white rounded-lg shadow border border-slate-200'>
             <div ref={modalRef} className={cn('w-[1024px] h-[500px]', className)}>
               {children}
             </div>
