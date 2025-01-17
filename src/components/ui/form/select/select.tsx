@@ -17,6 +17,7 @@ export interface Props {
   disabled?: boolean;
   placeholder?: string;
   menuPosition?: 'fixed' | 'absolute';
+  hasError?: boolean;
 }
 
 function SelectComponent(props: Props) {
@@ -32,7 +33,8 @@ function SelectComponent(props: Props) {
     isClearable = false,
     disabled = false,
     placeholder = 'Select...',
-    menuPosition = 'absolute'
+    menuPosition = 'absolute',
+    hasError = false
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -74,7 +76,8 @@ function SelectComponent(props: Props) {
             control: (state) =>
               cn(
                 '!rounded-lg !shadow border !border-slate-300 text-slate-500 text-sm font-normal',
-                state.isFocused && 'border-blue-500 text-black'
+                state.isFocused && '!border-blue-500 !text-black',
+                hasError && '!border-red-500 !text-red-500'
               ),
             menu: () =>
               '!rounded-lg !shadow border-1 !border-slate-200 text-slate-700 text-sm font-normal',

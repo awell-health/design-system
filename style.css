@@ -4476,6 +4476,16 @@ input.tab:checked + .tab-content,
   border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
 }
 
+.\!border-blue-500{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1)) !important;
+}
+
+.\!border-red-500{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1)) !important;
+}
+
 .\!bg-slate-100{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1)) !important;
@@ -4991,6 +5001,16 @@ input.tab:checked + .tab-content,
 .text-yellow-800{
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
+}
+
+.\!text-black{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1)) !important;
+}
+
+.\!text-red-500{
+  --tw-text-opacity: 1 !important;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1)) !important;
 }
 
 .opacity-0{
