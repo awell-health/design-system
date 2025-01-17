@@ -24,6 +24,7 @@ export const Example = {
     disabled: false,
     isSearchable: false,
     icon: <Icon icon='RiSearchLine' />,
+    hasError: false,
     onChange: (option: SelectValue) => {
       if (option !== null) {
         console.log('Selected value:', option);
