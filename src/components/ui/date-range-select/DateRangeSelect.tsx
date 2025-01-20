@@ -120,14 +120,15 @@ const DateRangeSelect: FC<Props> = (props) => {
             numberOfMonths={2}
             pagedNavigation
             required
+            data-testid='date-range-picker'
             classNames={{
               ...defaultClassNames,
               root: `${defaultClassNames.root}`, // Add a shadow to the root element
               chevron: `fill-blue-500`,
-              day_button: `w-6 h-6 hover:text-blue-500 hover:font-semibold`,
+              day_button: `w-6 h-6 hover:font-semibold`,
               day: `p-2`,
               today: `${defaultClassNames.today} text-blue-500`,
-              selected: `bg-blue-500 border-blue-500 text-white`,
+              selected: `bg-blue-500 border-blue-500 text-white hover:text-blue-800`,
               range_end: `bg-blue-500 rounded-r-[50%]`,
               range_middle: `bg-blue-400`,
               range_start: `bg-blue-500 rounded-l-[50%]`

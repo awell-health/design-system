@@ -16,6 +16,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
           data-mode="range"
           data-multiple-months="true"
           data-required="true"
+          data-testid="date-range-picker"
         >
           <div
             class="rdp-months"
@@ -171,7 +172,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, January 1st, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -185,7 +186,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, January 2nd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -199,7 +200,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, January 3rd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -213,7 +214,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Saturday, January 4th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -231,7 +232,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Sunday, January 5th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -245,7 +246,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Monday, January 6th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -259,7 +260,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, January 7th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -273,7 +274,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, January 8th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -287,7 +288,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, January 9th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -301,7 +302,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, January 10th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -315,7 +316,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Saturday, January 11th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -333,7 +334,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Sunday, January 12th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -347,7 +348,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Monday, January 13th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -361,7 +362,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, January 14th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -375,7 +376,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, January 15th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -389,7 +390,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, January 16th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -397,30 +398,27 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                       </button>
                     </td>
                     <td
-                      class="p-2 rdp-today text-blue-500"
+                      class="p-2"
                       data-day="2025-01-17"
-                      data-today="true"
                       role="gridcell"
                     >
                       <button
-                        aria-label="Today, Friday, January 17th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        tabindex="0"
+                        aria-label="Friday, January 17th, 2025"
+                        class="w-6 h-6 hover:font-semibold"
+                        tabindex="-1"
                         type="button"
                       >
                         17
                       </button>
                     </td>
                     <td
-                      class="p-2 rdp-disabled"
+                      class="p-2"
                       data-day="2025-01-18"
-                      data-disabled="true"
                       role="gridcell"
                     >
                       <button
                         aria-label="Saturday, January 18th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        disabled=""
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -432,15 +430,13 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     class="rdp-week"
                   >
                     <td
-                      class="p-2 rdp-disabled"
+                      class="p-2"
                       data-day="2025-01-19"
-                      data-disabled="true"
                       role="gridcell"
                     >
                       <button
                         aria-label="Sunday, January 19th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        disabled=""
+                        class="w-6 h-6 hover:font-semibold"
                         tabindex="-1"
                         type="button"
                       >
@@ -448,16 +444,15 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                       </button>
                     </td>
                     <td
-                      class="p-2 rdp-disabled"
+                      class="p-2 rdp-today text-blue-500"
                       data-day="2025-01-20"
-                      data-disabled="true"
+                      data-today="true"
                       role="gridcell"
                     >
                       <button
-                        aria-label="Monday, January 20th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
-                        disabled=""
-                        tabindex="-1"
+                        aria-label="Today, Monday, January 20th, 2025"
+                        class="w-6 h-6 hover:font-semibold"
+                        tabindex="0"
                         type="button"
                       >
                         20
@@ -471,7 +466,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, January 21st, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -487,7 +482,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, January 22nd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -503,7 +498,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, January 23rd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -519,7 +514,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, January 24th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -535,7 +530,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Saturday, January 25th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -555,7 +550,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Sunday, January 26th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -571,7 +566,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Monday, January 27th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -587,7 +582,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, January 28th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -603,7 +598,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, January 29th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -619,7 +614,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, January 30th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -635,7 +630,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, January 31st, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -801,7 +796,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Saturday, February 1st, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -821,7 +816,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Sunday, February 2nd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -837,7 +832,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Monday, February 3rd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -853,7 +848,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, February 4th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -869,7 +864,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, February 5th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -885,7 +880,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, February 6th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -901,7 +896,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, February 7th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -917,7 +912,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Saturday, February 8th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -937,7 +932,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Sunday, February 9th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -953,7 +948,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Monday, February 10th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -969,7 +964,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, February 11th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -985,7 +980,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, February 12th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1001,7 +996,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, February 13th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1017,7 +1012,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, February 14th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1033,7 +1028,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Saturday, February 15th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1053,7 +1048,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Sunday, February 16th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1069,7 +1064,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Monday, February 17th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1085,7 +1080,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, February 18th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1101,7 +1096,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, February 19th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1117,7 +1112,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, February 20th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1133,7 +1128,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, February 21st, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1149,7 +1144,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Saturday, February 22nd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1169,7 +1164,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Sunday, February 23rd, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1185,7 +1180,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Monday, February 24th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1201,7 +1196,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Tuesday, February 25th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1217,7 +1212,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Wednesday, February 26th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1233,7 +1228,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Thursday, February 27th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1249,7 +1244,7 @@ exports[`DateRangeSelect > match snapshot 1`] = `
                     >
                       <button
                         aria-label="Friday, February 28th, 2025"
-                        class="w-6 h-6 hover:text-blue-500 hover:font-semibold"
+                        class="w-6 h-6 hover:font-semibold"
                         disabled=""
                         tabindex="-1"
                         type="button"
