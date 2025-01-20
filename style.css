@@ -4371,6 +4371,16 @@ input.tab:checked + .tab-content,
   border-style: none;
 }
 
+.\!border-blue-500{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1)) !important;
+}
+
+.\!border-red-500{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1)) !important;
+}
+
 .\!border-slate-200{
   --tw-border-opacity: 1 !important;
   border-color: rgb(226 232 240 / var(--tw-border-opacity, 1)) !important;
@@ -4474,16 +4484,6 @@ input.tab:checked + .tab-content,
 .border-yellow-300{
   --tw-border-opacity: 1;
   border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
-}
-
-.\!border-blue-500{
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1)) !important;
-}
-
-.\!border-red-500{
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1)) !important;
 }
 
 .\!bg-slate-100{
@@ -4863,6 +4863,16 @@ input.tab:checked + .tab-content,
   line-height: 1.25;
 }
 
+.\!text-black{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1)) !important;
+}
+
+.\!text-red-500{
+  --tw-text-opacity: 1 !important;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1)) !important;
+}
+
 .\!text-slate-700{
   --tw-text-opacity: 1 !important;
   color: rgb(51 65 85 / var(--tw-text-opacity, 1)) !important;
@@ -5001,16 +5011,6 @@ input.tab:checked + .tab-content,
 .text-yellow-800{
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
-}
-
-.\!text-black{
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1)) !important;
-}
-
-.\!text-red-500{
-  --tw-text-opacity: 1 !important;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1)) !important;
 }
 
 .opacity-0{
@@ -5309,6 +5309,11 @@ input[type="checkbox"].green:checked {
 .hover\:text-slate-700:hover{
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-blue-800:hover{
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
 }
 
 .focus\:border:focus{
