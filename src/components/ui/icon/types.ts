@@ -261,6 +261,7 @@ export const ICONS = {
 };
 
 export enum IconSize {
+  xxs = 12,
   xs = 16,
   s = 20,
   m = 24,

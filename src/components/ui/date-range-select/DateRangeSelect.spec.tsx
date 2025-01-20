@@ -2,7 +2,6 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 import { expect, it, describe } from 'vitest';
 import { DateRangeSelect } from './DateRangeSelect';
-import { addDays } from 'date-fns';
 
 describe('DateRangeSelect', () => {
   it('match snapshot', () => {
@@ -18,7 +17,6 @@ describe('DateRangeSelect', () => {
   });
 
   it('should render with values from props', () => {
-    console.log(addDays(new Date(), -7).toISOString());
     const { getByDisplayValue } = render(
       <DateRangeSelect
         onSelect={() => {}}
