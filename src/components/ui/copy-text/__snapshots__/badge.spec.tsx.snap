@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`Badge > match snapshot 1`] = `
-<div>
-  <div
-    class="badge rounded-2xl bg-slate-100 text-slate-800 border-slate-100 badge-sm p-2"
-  />
-</div>
-`;
