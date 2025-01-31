@@ -44,4 +44,14 @@ describe('FormSection', () => {
     render(subject());
     expect(screen.queryByText('*')).not.toBeInTheDocument();
   });
+
+  it('renders the separator when showSeparator is true', () => {
+    render(subject({ showSeparator: true }));
+    expect(screen.getByRole('separator')).toBeInTheDocument();
+  });
+
+  it('does not render the separator when showSeparator is false', () => {
+    render(subject({ showSeparator: false }));
+    expect(screen.queryByRole('separator')).not.toBeInTheDocument();
+  });
 });
