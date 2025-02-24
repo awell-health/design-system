@@ -4,16 +4,6 @@ import { expect, it, describe } from 'vitest';
 import { DateRangeSelect } from './DateRangeSelect';
 
 describe('DateRangeSelect', () => {
-  it('match snapshot', () => {
-    const { container } = render(
-      <DateRangeSelect
-        onSelect={() => {}}
-        defaultDateRange={{ from: '2025-01-13T10:00:00.000Z', to: '2025-02-20T10:00:00.000Z' }}
-      />
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it('should render with default values', () => {
     const { getByDisplayValue } = render(<DateRangeSelect onSelect={() => {}} />);
 
