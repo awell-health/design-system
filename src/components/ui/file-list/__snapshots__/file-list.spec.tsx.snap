@@ -1,0 +1,175 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FileList Component > should mathch snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-2"
+  >
+    <div
+      class="flex flex-row items-center gap-4 px-4 py-2 border border-gray-200 rounded-md file-list-item"
+    >
+      <div>
+        <svg
+          class="remixicon inline"
+          fill="default"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 2.00318V2H19.9978C20.5513 2 21 2.45531 21 2.9918V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9 2.00318ZM5.82918 8H9V4.83086L5.82918 8ZM11 4V9C11 9.55228 10.5523 10 10 10H5V20H19V4H11Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="flex flex-1 flex-col"
+      >
+        <div>
+          file1.txt
+        </div>
+        <div
+          class="w-full pr-4"
+        >
+          <div
+            class="text-sm text-gray-500"
+          >
+            0.00
+            MB
+          </div>
+        </div>
+      </div>
+      <div
+        class="ml-auto"
+      >
+        <button
+          class="btn btn-square w-8 h-8 min-w-8 min-h-8 rounded-md btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white"
+        >
+          <svg
+            class="remixicon fill-red-600"
+            fill="default"
+            height="16"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex flex-row items-center gap-4 px-4 py-2 border border-gray-200 rounded-md file-list-item"
+    >
+      <div>
+        <svg
+          class="remixicon inline"
+          fill="default"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 2.00318V2H19.9978C20.5513 2 21 2.45531 21 2.9918V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9 2.00318ZM5.82918 8H9V4.83086L5.82918 8ZM11 4V9C11 9.55228 10.5523 10 10 10H5V20H19V4H11Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="flex flex-1 flex-col"
+      >
+        <div>
+          file2.txt
+        </div>
+        <div
+          class="w-full pr-4"
+        >
+          <div
+            class="text-sm text-gray-500"
+          >
+            0.00
+            MB
+          </div>
+        </div>
+      </div>
+      <div
+        class="ml-auto"
+      >
+        <button
+          class="btn btn-square w-8 h-8 min-w-8 min-h-8 rounded-md btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white"
+        >
+          <svg
+            class="remixicon fill-red-600"
+            fill="default"
+            height="16"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex flex-row items-center gap-4 px-4 py-2 border border-gray-200 rounded-md file-list-item"
+    >
+      <div>
+        <svg
+          class="remixicon inline"
+          fill="default"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 2.00318V2H19.9978C20.5513 2 21 2.45531 21 2.9918V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9 2.00318ZM5.82918 8H9V4.83086L5.82918 8ZM11 4V9C11 9.55228 10.5523 10 10 10H5V20H19V4H11Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="flex flex-1 flex-col"
+      >
+        <div>
+          file3.txt
+        </div>
+        <div
+          class="w-full pr-4"
+        >
+          <div
+            class="text-sm text-gray-500"
+          >
+            0.00
+            MB
+          </div>
+        </div>
+      </div>
+      <div
+        class="ml-auto"
+      >
+        <button
+          class="btn btn-square w-8 h-8 min-w-8 min-h-8 rounded-md btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white"
+        >
+          <svg
+            class="remixicon fill-red-600"
+            fill="default"
+            height="16"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
