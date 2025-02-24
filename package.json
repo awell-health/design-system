@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.12.39",
+  "version": "0.12.40",
   "type": "module",
   "files": [
     "dist"
@@ -67,7 +67,6 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
-    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^20.14.15",
     "@types/prop-types": "^15.7.12",
     "@types/react": "^18.3.3",
