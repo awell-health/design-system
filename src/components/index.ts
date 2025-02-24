@@ -10,6 +10,8 @@ export * from './ui/date-range-select';
 export * from './ui/divider';
 export * from './ui/drawer';
 export * from './ui/dropdown';
+export * from './ui/file-list';
+export * from './ui/file-upload';
 export * from './ui/form/checkbox';
 export * from './ui/form/form-section';
 export * from './ui/form/input';
