@@ -14,7 +14,7 @@ exports[`FileList Component > should match snapshot 1`] = `
       class="flex flex-col items-center justify-center gap-4 border border-dashed border-gray-300 rounded-md p-4 relative w-full"
     >
       <div>
-        Drag & Drop your files here or
+        Drop files here or
       </div>
       <button
         class="btn btn-sm rounded-md px-3.5 py-2 text-blue-700 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200 outline-blue-500"
@@ -24,11 +24,13 @@ exports[`FileList Component > should match snapshot 1`] = `
       <div
         class="text-sm text-gray-500 text-center"
       >
-        Maximum file size 
+        Maximum file size
+         
         2
         MB 
         <br />
-        Supported file types: 
+        Supported file types:
+         
         .jpg, .jpeg, .png, .pdf, .doc, .docx, .txt
       </div>
     </div>
