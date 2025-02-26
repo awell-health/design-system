@@ -1,15 +1,22 @@
-import { ChangeEvent, FC, useRef, useState } from 'react';
+import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
 import { Button } from '../button/button';
 import { cn } from '../../../lib/utils';
-import { AcceptedFileTypes } from './types';
 
 interface Props {
   label?: string;
   onChange: (files: FileList) => void;
   error?: string;
   isMultiple?: boolean;
-  accept?: AcceptedFileTypes[];
+  accept?: string[];
   maxSizeMb?: number;
+  onError?: (error: string) => void;
+  translations?: {
+    dropFilesHere: string;
+    chooseFiles: string;
+    someFilesExceedMaxSize: string;
+    supportedFileTypes: string;
+    maxFileSize: string;
+  };
 }
 
 const FileUpload: FC<Props> = ({
@@ -17,11 +24,25 @@ const FileUpload: FC<Props> = ({
   onChange,
   isMultiple = false,
   accept = ['.jpg', '.jpeg', '.png', '.pdf', '.doc', '.docx', '.txt'],
-  maxSizeMb = 2 // Default max size to 2MB
+  maxSizeMb = 2, // Default max size to 2MB
+  onError = undefined,
+  translations = {
+    dropFilesHere: 'Drop files here or',
+    chooseFiles: 'Choose Files',
+    someFilesExceedMaxSize: 'Some files exceed the maximum size of',
+    supportedFileTypes: 'Supported file types:',
+    maxFileSize: 'Maximum file size'
+  }
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (error) {
+      onError?.(error);
+    }
+  }, [error, onError]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -29,7 +50,6 @@ const FileUpload: FC<Props> = ({
     if (files) {
       // validate files size
       const validFiles = Array.from(files).filter((file) => {
-        console.log('file', file, file.size);
         return file.size <= maxSizeMb * 1024 * 1024;
       });
 
@@ -62,7 +82,7 @@ const FileUpload: FC<Props> = ({
     if (files) {
       const validFiles = Array.from(files).filter((file) => file.size <= maxSizeMb * 1024 * 1024);
       if (validFiles.length !== files.length) {
-        alert(`Some files exceed the maximum size of ${maxSizeMb}MB.`);
+        setError(`Some files exceed the maximum size of ${maxSizeMb}MB.`);
       }
       if (validFiles.length > 0) {
         const event = new Event('change', { bubbles: true });
@@ -97,18 +117,18 @@ const FileUpload: FC<Props> = ({
         onDrop={handleDrop}
         onDragLeave={handleDragLeave}
       >
-        <div>Drag & Drop your files here or</div>
+        <div>{translations.dropFilesHere}</div>
         <Button variant='secondaryBlue' size='sm' onClick={() => inputRef.current?.click()}>
-          Choose Files
+          {translations.chooseFiles}
         </Button>
         <div className='text-sm text-gray-500 text-center'>
-          Maximum file size {maxSizeMb}MB <br />
-          Supported file types: {accept.join(', ')}
+          {translations.maxFileSize} {maxSizeMb}MB <br />
+          {translations.supportedFileTypes} {accept.join(', ')}
         </div>
         {isDragging && (
           <div className='absolute inset-0 bg-white/90 rounded-md'>
             <div className='flex items-center justify-center h-full'>
-              <p className='text-gray-500 text-sm'>Drop files here</p>
+              <p className='text-gray-500 text-sm'>{translations.dropFilesHere}</p>
             </div>
           </div>
         )}
