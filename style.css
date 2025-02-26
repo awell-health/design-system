@@ -3897,10 +3897,6 @@ input.tab:checked + .tab-content,
   bottom: var(--tooltip-tail-offset);
 }
 
-.pointer-events-none{
-  pointer-events: none;
-}
-
 .fixed{
   position: fixed;
 }
@@ -3986,6 +3982,10 @@ input.tab:checked + .tab-content,
   margin-left: 0.75rem;
 }
 
+.ml-auto{
+  margin-left: auto;
+}
+
 .mr-1{
   margin-right: 0.25rem;
 }
@@ -4000,10 +4000,6 @@ input.tab:checked + .tab-content,
 
 .mt-\[100px\]{
   margin-top: 100px;
-}
-
-.ml-auto{
-  margin-left: auto;
 }
 
 .box-border{
@@ -4262,16 +4258,8 @@ input.tab:checked + .tab-content,
   flex: 1 1 0%;
 }
 
-.flex-auto{
-  flex: 1 1 auto;
-}
-
 .shrink{
   flex-shrink: 1;
-}
-
-.flex-grow{
-  flex-grow: 1;
 }
 
 .grow{
@@ -4511,6 +4499,16 @@ input.tab:checked + .tab-content,
   border-color: rgb(207 250 254 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
 .border-green-100{
   --tw-border-opacity: 1;
   border-color: rgb(220 252 231 / var(--tw-border-opacity, 1));
@@ -4579,16 +4577,6 @@ input.tab:checked + .tab-content,
 .border-yellow-300{
   --tw-border-opacity: 1;
   border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-300{
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-200{
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
 }
 
 .\!bg-slate-100{
@@ -4725,6 +4713,10 @@ input.tab:checked + .tab-content,
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-white\/90{
+  background-color: rgb(255 255 255 / 0.9);
+}
+
 .bg-yellow-100{
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity, 1));
@@ -4733,22 +4725,6 @@ input.tab:checked + .tab-content,
 .bg-yellow-50{
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
-}
-
-.bg-black\/50{
-  background-color: rgb(0 0 0 / 0.5);
-}
-
-.bg-white\/50{
-  background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-white\/75{
-  background-color: rgb(255 255 255 / 0.75);
-}
-
-.bg-white\/90{
-  background-color: rgb(255 255 255 / 0.9);
 }
 
 .bg-opacity-30{
@@ -4847,6 +4823,11 @@ input.tab:checked + .tab-content,
   padding-right: 0.875rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -4887,17 +4868,16 @@ input.tab:checked + .tab-content,
   padding-bottom: 1rem;
 }
 
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .\!pb-0{
   padding-bottom: 0px !important;
 }
 
 .\!pt-0{
   padding-top: 0px !important;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 
 .pb-4{
@@ -4924,6 +4904,10 @@ input.tab:checked + .tab-content,
   padding-right: 0.75rem;
 }
 
+.pr-4{
+  padding-right: 1rem;
+}
+
 .pr-8{
   padding-right: 2rem;
 }
@@ -4938,14 +4922,6 @@ input.tab:checked + .tab-content,
 
 .pt-\[32px\]{
   padding-top: 32px;
-}
-
-.pr-4{
-  padding-right: 1rem;
-}
-
-.pb-2{
-  padding-bottom: 0.5rem;
 }
 
 .text-left{
@@ -5053,6 +5029,11 @@ input.tab:checked + .tab-content,
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-800{
@@ -5168,11 +5149,6 @@ input.tab:checked + .tab-content,
 .text-yellow-800{
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-700{
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0{
