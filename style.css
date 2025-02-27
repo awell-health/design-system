@@ -3162,6 +3162,31 @@ input.tab:checked + .tab-content,
     calc(0% + 16px) calc(1px + 50%);
 }
 
+.skeleton{
+  border-radius: var(--rounded-box, 1rem);
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
+  will-change: background-position;
+  animation: skeleton 1.8s ease-in-out infinite;
+  background-image: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 40%,
+    var(--fallback-b1,oklch(var(--b1)/1)) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+  background-position-x: -50%;
+}
+
+@media (prefers-reduced-motion){
+  .skeleton{
+    animation-duration: 15s;
+  }
+}
+
 @keyframes skeleton{
   from{
     background-position: 150%;
@@ -4052,6 +4077,10 @@ input.tab:checked + .tab-content,
 
 .h-12{
   height: 3rem;
+}
+
+.h-2{
+  height: 0.5rem;
 }
 
 .h-4{
