@@ -13,7 +13,7 @@ type Story = StoryObj<typeof Icon>;
 export const IconGallery = {
   render: () => (
     <div className='p-4'>
-      <div className='grid gap-4'>
+      <div className='grid grid-cols-6 gap-4'>
         {(Object.keys(ICONS) as IconType[]).map((iconName) => (
           <div key={iconName} className='flex flex-col items-center p-2'>
             <Icon icon={iconName} size={24} />

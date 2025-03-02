@@ -4333,6 +4333,14 @@ input.tab:checked + .tab-content,
           appearance: none;
 }
 
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-6{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 .grid-rows-\[4rem_1fr\]{
   grid-template-rows: 4rem 1fr;
 }
