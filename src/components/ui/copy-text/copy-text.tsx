@@ -6,16 +6,12 @@ import { cn } from '../../../lib/utils';
 interface Props {
   text: string;
   children: React.ReactNode | JSX.Element;
-  copiedText?: string;
-  position?: 'right' | 'bottom' | 'overlay';
   className?: string;
 }
 
 export const CopyText: FC<Props> = ({
   text,
   children,
-  copiedText,
-  position = 'right',
   className
 }) => {
   const [copied, setCopied] = useState(false);
@@ -35,33 +31,22 @@ export const CopyText: FC<Props> = ({
   return (
     <span
       className={cn(
-        'group/copy-text relative cursor-pointer',
-        position === 'right' && 'flex items-center gap-1'
+        'group/copy-text relative cursor-pointer font-mono flex items-center gap-1',
       )}
       onClick={() => setCopied(true)}
     >
       {children}
       <span
         className={cn(
-          'text-xs items-center gap-1 hidden group-hover/copy-text:flex',
-          position === 'right' && 'hover:flex gap-1',
-          position === 'bottom' && 'absolute',
-          position === 'overlay' &&
-            'absolute top-0 left-0 h-full bg-gray-200 opacity-95 rounded-md w-full px-2 py-0.5',
+          'flex text-xs items-center gap-1 group-hover/copy-text:flex',
           className
         )}
       >
         {!copied && (
-          <>
             <Icon icon='RiFileCopyFill' className=' fill-slate-500' size={IconSize.xxs} />
-            <span className='text-sm text-slate-600'>Click to copy</span>
-          </>
         )}
         {copied && (
-          <>
             <Icon icon='RiCheckFill' className=' fill-green-600' size={IconSize.xxs} />
-            <span className='text-sm text-green-600'>{copiedText ?? 'Copied to clipboard'}</span>
-          </>
         )}
       </span>
     </span>

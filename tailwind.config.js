@@ -9,7 +9,8 @@ module.exports = {
   safelist: [],
   theme: {
     fontFamily: {
-      inter: ['Inter', 'sans-serif']
+      inter: ['Inter', 'sans-serif'],
+      mono: ['Inconsolata', 'monospace']
     }
   },
   plugins: [require('daisyui'), require('tailwindcss-animate')],
