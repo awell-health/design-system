@@ -23,6 +23,7 @@ export * from './ui/menu';
 export * from './ui/modal';
 export * from './ui/pagination';
 export * from './ui/radial-progress';
+export * from './ui/skeleton-loader';
 export * from './ui/spinner';
 export * from './ui/tab';
 export * from './ui/table';
