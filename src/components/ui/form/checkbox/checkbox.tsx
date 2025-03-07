@@ -100,7 +100,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
       </label>
       {helpText && (
         <div className='flex gap-2'>
-          <div className={checkboxVariants({ inputSize })} />
+          <div className={cn(checkboxVariants({ inputSize }), 'flex-shrink-0')} />
           <span className='text-slate-500 text-sm font-normal'>{helpText}</span>
         </div>
       )}
