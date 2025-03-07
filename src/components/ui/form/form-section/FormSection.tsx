@@ -19,14 +19,14 @@ export const FormSection: FC<Props> = ({
 }) => {
   return (
     <div className={cn('py-4 flex flex-col gap-2', className)}>
-      <div className='flex flex-col gap-1'>
-        <h5 className='text-lg font-medium leading-5 text-neutral-dark-800'>
+      <div className='flex flex-col'>
+        <h5 className='text-lg font-medium leading-5 text-gray-600'>
           {title}
           {isRequired && <span className='text-red-500 ml-0.5'>*</span>}
         </h5>
-        {hint !== null && <div className='text-gray-500'>{hint}</div>}
+        {hint !== null && <div className='text-gray-400'>{hint}</div>}
       </div>
-      <div className='mt-2'>{children}</div>
+      {children}
       {showSeparator && <hr className='my-4' />}
     </div>
   );
