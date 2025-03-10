@@ -11,21 +11,22 @@ interface DataPointIconProps {
 
 const DataPointIcon = React.forwardRef<HTMLDivElement, DataPointIconProps>(({ ...props }, ref) => {
   const TYPES_ICONS_MAP: Record<DataPointValueType, IconType> = {
-    [DataPointValueType.Attachment]: 'RiAttachment2',
-    [DataPointValueType.AttachmentsArray]: 'RiAttachment2',
-    [DataPointValueType.Boolean]: 'RiCoinLine',
-    [DataPointValueType.Date]: 'RiCalendarLine',
-    [DataPointValueType.Json]: 'RiBracesLine',
-    [DataPointValueType.Number]: 'RiHashtag',
-    [DataPointValueType.NumbersArray]: 'RiListOrdered2',
-    [DataPointValueType.String]: 'RiText',
-    [DataPointValueType.StringsArray]: 'RiListCheck',
-    [DataPointValueType.Telephone]: 'RiPhoneLine',
+    attachment: 'RiAttachment2',
+    attachments_array: 'RiAttachment2',
+    boolean: 'RiCoinLine',
+    date: 'RiCalendarLine',
+    json: 'RiBracesLine',
+    number: 'RiHashtag',
+    numbers_array: 'RiListOrdered2',
+    string: 'RiText',
+    strings_array: 'RiListCheck',
+    telephone: 'RiPhoneLine'
   };
 
   const { icon_url, dataPointValueType, size = 'sm' } = props;
 
-  const icon = TYPES_ICONS_MAP[dataPointValueType as keyof typeof TYPES_ICONS_MAP] ?? 'RiQuestionFill';
+  const icon =
+    TYPES_ICONS_MAP[dataPointValueType as keyof typeof TYPES_ICONS_MAP] ?? 'RiQuestionFill';
 
   const color = icon === 'RiQuestionFill' ? 'fill-slate-400' : 'fill-slate-800';
 
@@ -38,7 +39,7 @@ const DataPointIcon = React.forwardRef<HTMLDivElement, DataPointIconProps>(({ ..
   const iconSize = SIZES[size].icon;
   const containersize = SIZES[size].container;
 
-  if (dataPointValueType === DataPointValueType.Attachment && icon_url) {
+  if (dataPointValueType === 'attachment' && icon_url) {
     return <img className={`${containersize} rounded-md border border-slate-200`} src={icon_url} />;
   }
 
