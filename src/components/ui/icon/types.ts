@@ -35,7 +35,6 @@ import {
   RiCloseFill,
   RiCloseLargeLine,
   RiCloseLine,
-  RiCodeFill,
   RiCoinLine,
   RiCollapseDiagonal2Line,
   RiCollapseHorizontalLine,
@@ -137,7 +136,10 @@ import {
   RiZoomOutLine,
   RiLinksLine,
   RiWebhookLine,
-  RiSwap2Line
+  RiSwap2Line,
+  RiLink,
+  RiHand,
+  RiDatabase2Fill
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -177,7 +179,6 @@ export const ICONS = {
   RiCloseFill,
   RiCloseLargeLine,
   RiCloseLine,
-  RiCodeFill,
   RiCoinLine,
   RiCollapseDiagonal2Line,
   RiCollapseHorizontalLine,
@@ -279,7 +280,10 @@ export const ICONS = {
   RiZoomOutLine,
   RiLinksLine,
   RiWebhookLine,
-  RiSwap2Line
+  RiSwap2Line,
+  RiLink,
+  RiHand,
+  RiDatabase2Fill
 };
 
 export enum IconSize {
