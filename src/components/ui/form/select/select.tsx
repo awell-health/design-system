@@ -1,10 +1,10 @@
 import { cn } from '@/lib/utils';
 import Select, { MultiValue, SingleValue } from 'react-select';
-import { SelectItem, SelectValue } from './types';
+import { GroupedOption, SelectItem, SelectValue } from './types';
 import { cloneElement, ReactElement } from 'react';
 
 export interface Props {
-  options: SelectItem[];
+  options: SelectItem[] | GroupedOption[];
   isMulti?: boolean;
   isSearchable?: boolean;
   isClearable?: boolean;
@@ -92,7 +92,9 @@ function SelectComponent(props: Props) {
             multiValueLabel: () => 'bg-slate-200',
             multiValueRemove: () => 'bg-slate-200 hover:bg-red-300',
             placeholder: () => iconPadding,
-            input: () => iconPadding
+            input: () => iconPadding,
+            groupHeading: () =>
+              '!text-slate-900 !font-semibold pl-2.5 border-b border-slate-200 pb-2 !text-transform-none !text-[14px] !normal-case'
           }}
         />
       </div>

@@ -35,3 +35,42 @@ export const Example = {
   },
   render: (args) => <Select {...args} />
 } satisfies Story;
+
+const optionsWithGroups = [
+  {
+    label: 'Fruits',
+    options: [
+      { value: 'apple', label: 'Apple' },
+      { value: 'banana', label: 'Banana' },
+      { value: 'cherry', label: 'Cherry' }
+    ]
+  },
+  {
+    label: 'Vegetables',
+    options: [
+      { value: 'carrot', label: 'Carrot' },
+      { value: 'lettuce', label: 'Lettuce' },
+      { value: 'potato', label: 'Potato' }
+    ]
+  }
+];
+
+export const ExampleWithGroups = {
+  args: {
+    label: 'Select Label',
+    isMulti: false,
+    options: optionsWithGroups,
+    disabled: false,
+    isSearchable: false,
+    icon: <Icon icon='RiSearchLine' />,
+    hasError: false,
+    onChange: (option: SelectValue) => {
+      if (option !== null) {
+        console.log('Selected value:', option);
+      } else {
+        console.log('No value selected');
+      }
+    }
+  },
+  render: (args) => <Select {...args} />
+} satisfies Story;

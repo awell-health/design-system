@@ -5,4 +5,10 @@ export type SelectItem = {
   label: string;
 };
 
+export type GroupedOption = {
+  value: string;
+  label: string;
+  options: SelectItem[];
+};
+
 export type SelectValue = SingleValue<SelectItem> | MultiValue<SelectItem>;
