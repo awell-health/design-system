@@ -12,6 +12,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   type?: string;
   labelClassName?: string;
+  minVal?: number;
+  maxVal?: number;
 }
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -25,6 +27,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       onChange,
       type = 'text',
       labelClassName,
+      minVal,
+      maxVal,
       ...props
     },
     ref
@@ -57,6 +61,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {prefixIcon && renderIcon(prefixIcon, 'left')}
           <input
             type={type}
+            min={type === 'number' ? minVal : undefined}
+            max={type === 'number' ? maxVal : undefined}
             className={cn(
               type !== 'file' && 'px-3.5 py-2.5',
               'h-[38px] min-h-[38px] rounded-lg gap-2 w-full border-box',
