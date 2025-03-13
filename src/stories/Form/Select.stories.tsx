@@ -10,6 +10,22 @@ export default meta;
 
 type Story = StoryObj<typeof Select>;
 
+const defaultProps = {
+  label: 'Select Label',
+  isMulti: false,
+  disabled: false,
+  isSearchable: false,
+  icon: <Icon icon='RiSearchLine' />,
+  hasError: false,
+  onChange: (option: SelectValue) => {
+    if (option !== null) {
+      console.log('Selected value:', option);
+    } else {
+      console.log('No value selected');
+    }
+  }
+};
+
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -17,22 +33,7 @@ const options = [
 ];
 
 export const Example = {
-  args: {
-    label: 'Select Label',
-    isMulti: false,
-    options,
-    disabled: false,
-    isSearchable: false,
-    icon: <Icon icon='RiSearchLine' />,
-    hasError: false,
-    onChange: (option: SelectValue) => {
-      if (option !== null) {
-        console.log('Selected value:', option);
-      } else {
-        console.log('No value selected');
-      }
-    }
-  },
+  args: { ...defaultProps, options },
   render: (args) => <Select {...args} />
 } satisfies Story;
 
@@ -56,21 +57,17 @@ const optionsWithGroups = [
 ];
 
 export const ExampleWithGroups = {
+  args: { ...defaultProps, options: optionsWithGroups },
+  render: (args) => <Select {...args} />
+} satisfies Story;
+
+export const ExampleWithCustomOption = {
   args: {
-    label: 'Select Label',
-    isMulti: false,
-    options: optionsWithGroups,
-    disabled: false,
-    isSearchable: false,
-    icon: <Icon icon='RiSearchLine' />,
-    hasError: false,
-    onChange: (option: SelectValue) => {
-      if (option !== null) {
-        console.log('Selected value:', option);
-      } else {
-        console.log('No value selected');
-      }
-    }
+    ...defaultProps,
+    options,
+    CustomOptionComponent: (label: string) => (
+      <div className='text-red-500'>Custom Option: {label}</div>
+    )
   },
   render: (args) => <Select {...args} />
 } satisfies Story;

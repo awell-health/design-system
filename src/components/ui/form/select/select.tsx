@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import Select, { MultiValue, SingleValue } from 'react-select';
+import Select, { MultiValue, SingleValue, components } from 'react-select';
 import { GroupedOption, SelectItem, SelectValue } from './types';
 import { cloneElement, ReactElement } from 'react';
 
@@ -18,6 +18,7 @@ export interface Props {
   placeholder?: string;
   menuPosition?: 'fixed' | 'absolute';
   hasError?: boolean;
+  CustomOptionComponent?: (label: string, data: SelectItem) => ReactElement;
 }
 
 function SelectComponent(props: Props) {
@@ -34,7 +35,8 @@ function SelectComponent(props: Props) {
     disabled = false,
     placeholder = 'Select...',
     menuPosition = 'absolute',
-    hasError = false
+    hasError = false,
+    CustomOptionComponent = undefined
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -72,6 +74,13 @@ function SelectComponent(props: Props) {
           value={value}
           isDisabled={disabled}
           menuPosition={menuPosition}
+          components={{
+            Option: ({ children, ...rest }) => (
+              <components.Option {...rest}>
+                {CustomOptionComponent ? CustomOptionComponent(rest.label, rest.data) : children}
+              </components.Option>
+            )
+          }}
           classNames={{
             control: (state) =>
               cn(

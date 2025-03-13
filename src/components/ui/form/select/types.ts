@@ -1,4 +1,4 @@
-import { MultiValue, SingleValue } from 'react-select';
+import { OptionProps, MultiValue, SingleValue } from 'react-select';
 
 export type SelectItem = {
   value: string;
@@ -11,3 +11,4 @@ export type GroupedOption = {
 };
 
 export type SelectValue = SingleValue<SelectItem> | MultiValue<SelectItem>;
+export type { OptionProps };
