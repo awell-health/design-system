@@ -26,8 +26,10 @@ interface Props extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeo
 }
 
 const Alert = React.forwardRef<HTMLDivElement, Props>(
-  // eslint-disable-next-line
-  ({ className, variant, title, children, showIcon = false, titleClassName, ...props }, ref) => {
+  (
+    { className, variant, title, children, showIcon = false, titleClassName = '', ...props },
+    ref
+  ) => {
     const icon = variant === 'error' || variant === 'warning' ? 'RiAlertLine' : 'RiInformationLine';
     const iconClassNames = cn({
       'fill-slate-500': variant === 'default',
