@@ -22,11 +22,12 @@ interface Props extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeo
   title: string;
   showIcon?: boolean;
   children?: React.ReactNode;
+  titleClassName?: string;
 }
 
 const Alert = React.forwardRef<HTMLDivElement, Props>(
   // eslint-disable-next-line
-  ({ className, variant, title, children, showIcon = false, ...props }, ref) => {
+  ({ className, variant, title, children, showIcon = false, titleClassName, ...props }, ref) => {
     const icon = variant === 'error' || variant === 'warning' ? 'RiAlertLine' : 'RiInformationLine';
     const iconClassNames = cn({
       'fill-slate-500': variant === 'default',
@@ -41,7 +42,7 @@ const Alert = React.forwardRef<HTMLDivElement, Props>(
           {showIcon && <Icon icon={icon} size={16} className={iconClassNames} />}
         </div>
         <div className='flex flex-col gap-1'>
-          <h3 className='font-medium'>{title}</h3>
+          <h3 className={cn('font-medium', titleClassName)}>{title}</h3>
           {children && <div className='font-normal'>{children}</div>}
         </div>
       </div>
