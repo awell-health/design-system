@@ -6,7 +6,6 @@ export type SelectItem = {
 };
 
 export type GroupedOption = {
-  value: string;
   label: string;
   options: SelectItem[];
 };
