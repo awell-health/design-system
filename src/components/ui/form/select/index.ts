@@ -1,4 +1,4 @@
 import { Select } from './select';
-import type { SelectValue, SelectItem } from './types';
+import type { SelectValue, SelectItem, GroupedOption } from './types';
 
-export { Select, type SelectItem, type SelectValue };
+export { Select, type SelectItem, type SelectValue, type GroupedOption };

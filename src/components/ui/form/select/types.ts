@@ -5,4 +5,9 @@ export type SelectItem = {
   label: string;
 };
 
+export type GroupedOption = {
+  label: string;
+  options: SelectItem[];
+};
+
 export type SelectValue = SingleValue<SelectItem> | MultiValue<SelectItem>;
