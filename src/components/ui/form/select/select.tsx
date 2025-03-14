@@ -18,7 +18,9 @@ export interface Props {
   placeholder?: string;
   menuPosition?: 'fixed' | 'absolute';
   hasError?: boolean;
-  CustomOptionComponent?: (label: string, data: SelectItem) => ReactElement;
+  CustomOptionComponent?: (data: SelectItem) => ReactElement;
+  SingleValueComponent?: (data: SelectItem) => ReactElement;
+  ValueContainerComponent?: () => ReactElement;
 }
 
 function SelectComponent(props: Props) {
@@ -36,7 +38,8 @@ function SelectComponent(props: Props) {
     placeholder = 'Select...',
     menuPosition = 'absolute',
     hasError = false,
-    CustomOptionComponent = undefined
+    CustomOptionComponent = undefined,
+    SingleValueComponent = undefined
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -77,8 +80,13 @@ function SelectComponent(props: Props) {
           components={{
             Option: ({ children, ...rest }) => (
               <components.Option {...rest}>
-                {CustomOptionComponent ? CustomOptionComponent(rest.label, rest.data) : children}
+                {CustomOptionComponent ? CustomOptionComponent(rest.data) : children}
               </components.Option>
+            ),
+            SingleValue: ({ children, ...rest }) => (
+              <components.SingleValue {...rest}>
+                {SingleValueComponent ? SingleValueComponent(rest.data) : children}
+              </components.SingleValue>
             )
           }}
           classNames={{
