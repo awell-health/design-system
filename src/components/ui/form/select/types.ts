@@ -1,15 +1,15 @@
 import { OptionProps, MultiValue, SingleValue } from 'react-select';
 
-export type SelectItem = {
+export type SelectItem<T = unknown> = {
   value: string;
   label: string;
-  data?: Record<string, unknown>;
+  metadata?: T;
 };
 
-export type GroupedOption = {
+export type GroupedOption<T = unknown> = {
   label: string;
-  options: SelectItem[];
+  options: SelectItem<T>[];
 };
 
-export type SelectValue = SingleValue<SelectItem> | MultiValue<SelectItem>;
+export type SelectValue<T = unknown> = SingleValue<SelectItem<T>> | MultiValue<SelectItem<T>>;
 export type { OptionProps };
