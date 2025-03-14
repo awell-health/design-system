@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select, SelectValue } from '@/components/ui/form/select';
+import { Select, SelectItem, SelectValue } from '@/components/ui/form/select';
 import { Icon } from '../../components';
 
 const meta = {
@@ -61,12 +61,17 @@ export const ExampleWithGroups = {
   render: (args) => <Select {...args} />
 } satisfies Story;
 
-export const ExampleWithCustomOption = {
+export const ExampleWithCustomOptionAndValue = {
   args: {
     ...defaultProps,
     options,
-    CustomOptionComponent: (label: string) => (
-      <div className='text-red-500'>Custom Option: {label}</div>
+    CustomOptionComponent: (data: SelectItem) => (
+      <div className='text-red-500'>Custom Option: {data.label}</div>
+    ),
+    SingleValueComponent: (data: SelectItem) => (
+      <div className='text-blue-500'>
+        Selected Single Value: {data.label} - {data.value}
+      </div>
     )
   },
   render: (args) => <Select {...args} />

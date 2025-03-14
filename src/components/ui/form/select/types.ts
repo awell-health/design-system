@@ -3,6 +3,7 @@ import { OptionProps, MultiValue, SingleValue } from 'react-select';
 export type SelectItem = {
   value: string;
   label: string;
+  data?: Record<string, unknown>;
 };
 
 export type GroupedOption = {
