@@ -140,7 +140,8 @@ import {
   RiLink,
   RiHand,
   RiDatabase2Fill,
-  RiCodeFill
+  RiCodeFill,
+  RiProhibitedLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -285,7 +286,8 @@ export const ICONS = {
   RiLink,
   RiHand,
   RiDatabase2Fill,
-  RiCodeFill
+  RiCodeFill,
+  RiProhibitedLine
 };
 
 export enum IconSize {
