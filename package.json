@@ -46,6 +46,7 @@
     "react-select": "^5.8.0",
     "react-tooltip": "^5.28.0",
     "react-use": "^17.5.1",
+    "rulepilot": "^1.4.7",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },

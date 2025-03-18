@@ -88,6 +88,7 @@ __metadata:
     react-select: "npm:^5.8.0"
     react-tooltip: "npm:^5.28.0"
     react-use: "npm:^17.5.1"
+    rulepilot: "npm:^1.4.7"
     storybook: "npm:^8.2.9"
     tailwind-merge: "npm:^2.5.2"
     tailwindcss: "npm:^3.4.17"
@@ -6853,6 +6854,13 @@ __metadata:
   dependencies:
     "@babel/runtime": "npm:^7.1.2"
   checksum: 10c0/4b81ef50e50c97455d61c9bb576e2892651c79bac5d0c52b4123ebb9d6a2c5144590a79c9db0a3212a81b4eb83bf317e03637220f20b387a37b96cbac324d3d2
+  languageName: node
+  linkType: hard
+
+"rulepilot@npm:^1.4.7":
+  version: 1.4.7
+  resolution: "rulepilot@npm:1.4.7::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Frulepilot%2F-%2Frulepilot-1.4.7.tgz"
+  checksum: 10c0/a3b04cd1ab7af74c55c81dabc38ac1638ae3dd65bf54ab193f88ad881ace0febec25ea635c41598fbe5dba0cbd6b84e01ea8efb3cf145b6ba9ee2ccceaefc08e
   languageName: node
   linkType: hard
 
