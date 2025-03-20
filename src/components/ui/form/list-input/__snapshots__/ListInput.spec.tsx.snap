@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Textarea > match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-1"
+  >
+    <div
+      class="text-sm font-medium text-slate-700"
+    >
+      List Input
+       
+      <span
+        class="text-red-500"
+      >
+        *
+      </span>
+    </div>
+    <div
+      class="relative flex gap-2 items-center shadow border border-slate-300 px-1 py-1 min-h-[38px] rounded-lg"
+    >
+      <div
+        class="flex gap-2 flex-wrap"
+      >
+        <div
+          class="bg-slate-100 rounded-lg flex gap-1 px-1 text-sm items-center"
+        >
+          <span
+            class="py-0.5 px-1.5"
+          >
+            test
+          </span>
+          <svg
+            class="remixicon cursor-pointer rounded-full hover:bg-slate-300"
+            fill="default"
+            height="16"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <input
+        class="text-sm font-normal border-none shadow-none focus:outline-none focus:ring-0 focus:ring-offset-0 placeholder:text-xs"
+        placeholder="Type to add an item"
+        value=""
+      />
+      <div
+        class="ml-auto"
+      >
+        <svg
+          class="remixicon cursor-pointer rounded-full hover:bg-slate-300"
+          fill="default"
+          height="16"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="text-xs text-slate-500"
+    >
+      Hit enter or click + to add a new item
+    </div>
+  </div>
+</div>
+`;

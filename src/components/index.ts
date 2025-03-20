@@ -16,6 +16,7 @@ export * from './ui/file-upload';
 export * from './ui/form/checkbox';
 export * from './ui/form/form-section';
 export * from './ui/form/input';
+export * from './ui/form/list-input';
 export * from './ui/form/select';
 export * from './ui/form/textarea';
 export * from './ui/form/toggle';
