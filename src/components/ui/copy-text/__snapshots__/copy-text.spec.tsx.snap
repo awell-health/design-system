@@ -3,7 +3,7 @@
 exports[`CopyText > match snapshot 1`] = `
 <div>
   <span
-    class="group/copy-text relative cursor-pointer flex items-center gap-1"
+    class="group/copy-text relative cursor-pointer group-hover/copy-text:text-slate-800 flex items-center gap-1"
   >
     Hover to copy
     <span
@@ -34,7 +34,7 @@ exports[`CopyText > match snapshot 1`] = `
 exports[`CopyText > renders correctly with position bottom 1`] = `
 <div>
   <span
-    class="group/copy-text relative cursor-pointer"
+    class="group/copy-text relative cursor-pointer group-hover/copy-text:text-slate-800"
   >
     Hover to copy
     <span
@@ -65,7 +65,7 @@ exports[`CopyText > renders correctly with position bottom 1`] = `
 exports[`CopyText > renders correctly with position overlay 1`] = `
 <div>
   <span
-    class="group/copy-text relative cursor-pointer"
+    class="group/copy-text relative cursor-pointer group-hover/copy-text:text-slate-800"
   >
     Hover to copy
     <span
