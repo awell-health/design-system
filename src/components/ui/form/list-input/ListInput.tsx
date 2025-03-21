@@ -32,7 +32,7 @@ const ListInput: FC<Props> = ({
     if (onChange) {
       onChange(items);
     }
-  }, [items, onChange]);
+  }, [items]);
 
   const addItem = () => {
     if (inputValue) {
