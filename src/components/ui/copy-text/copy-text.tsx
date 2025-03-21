@@ -9,7 +9,7 @@ interface Props {
   copiedText?: string;
   position?: 'right' | 'bottom' | 'overlay' | 'inline';
   className?: string;
-  iconSize: IconSize
+  iconSize?: IconSize;
 }
 
 export const CopyText: FC<Props> = ({
