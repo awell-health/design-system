@@ -12,7 +12,7 @@ type Story = StoryObj<typeof CopyText>;
 export const Example = {
   args: {
     text: 'Copied text from clipboard',
-    children: <span className='text-gray-800'>Hover to copy with click!</span>,
+    children: <span className='text-gray-600 hover:text-gray-800'>Hover to copy with click!</span>,
     position: 'right'
   },
   render: (args) => <CopyText {...args} />

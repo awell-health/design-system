@@ -13,7 +13,7 @@ const DataPointIcon = React.forwardRef<HTMLDivElement, DataPointIconProps>(({ ..
   const TYPES_ICONS_MAP: Record<DataPointValueType, IconType> = {
     attachment: 'RiAttachment2',
     attachments_array: 'RiAttachment2',
-    boolean: 'RiCoinLine',
+    boolean: 'RiCheckboxCircleLine',
     date: 'RiCalendarLine',
     json: 'RiBracesLine',
     number: 'RiHashtag',
