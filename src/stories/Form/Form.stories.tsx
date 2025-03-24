@@ -13,7 +13,7 @@ export const Example = {
   render: () => (
     <form>
       <FormContent>
-        <FormSection title='Section Form title' hint='This is a text which is a hint' showSeparator>
+        <FormSection title='Section Form title' hint='This is a text which is a hint'>
           <Input
             label='Input Label'
             placeholder='Input Placeholder'
