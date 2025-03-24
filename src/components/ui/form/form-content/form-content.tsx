@@ -5,7 +5,7 @@ interface Props extends React.InputHTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
-const FormContent = (props: Props) => {
+export const FormContent = (props: Props) => {
   const { children, className } = props;
   return (
     <div className={cn('flex flex-col border border-gray-200 rounded-lg p-4 ', className)}>
@@ -13,5 +13,3 @@ const FormContent = (props: Props) => {
     </div>
   );
 };
-
-export default FormContent;

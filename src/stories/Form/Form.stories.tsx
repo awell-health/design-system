@@ -1,8 +1,6 @@
 import { Input } from '@/components/ui/form/input';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, FormSection, Select } from '../../components';
-import { FormButtons } from '../../components/ui/form/form-buttons/FormButtons';
-import FormContent from '../../components/ui/form/form-content/FormContent';
+import { Button, FormSection, Select, Textarea, FormButtons, FormContent } from '../../components';
 
 const meta = {} satisfies Meta;
 
@@ -15,20 +13,31 @@ export const Example = {
   render: () => (
     <form>
       <FormContent>
-        <FormSection
-          title='Section Title for single input'
-          hint='Use Form section to group form fields or to separate form fields into different sections'
-          isRequired
-        >
-          <Input placeholder='Input Placeholder' />
-        </FormSection>
-        <FormSection title='Section Title for multiple inputs'>
-          <Input label='Input Label' placeholder='Input Placeholder' required />
+        <FormSection title='Section Form title' hint='This is a text which is a hint'>
+          <Input
+            label='Input Label'
+            placeholder='Input Placeholder'
+            required
+            sublabel='Input Sublabel'
+          />
+          <Input
+            label='Input Label'
+            placeholder='Input Placeholder'
+            required
+            sublabel='Input Sublabel'
+          />
           <Select
             label='Select Label'
+            sublabel='Select Sublabel'
             placeholder='Select Placeholder'
             options={[]}
             handleChange={() => {}}
+          />
+          <Textarea
+            label='Textarea Label'
+            placeholder='Textarea Placeholder'
+            required
+            sublabel='Textarea Sublabel'
           />
         </FormSection>
       </FormContent>

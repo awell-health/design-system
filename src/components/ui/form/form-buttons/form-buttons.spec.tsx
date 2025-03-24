@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 import React from 'react';
-import { FormButtons } from './FormButtons';
+import { FormButtons } from './form-buttons';
 import { expect, it, describe, vi } from 'vitest';
 
 describe('FormButtons', () => {

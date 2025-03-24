@@ -4151,11 +4151,6 @@ input.tab:checked + .tab-content,
   margin: 0.25rem;
 }
 
-.my-4{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -5340,6 +5335,11 @@ input.tab:checked + .tab-content,
 .text-slate-300{
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-400{
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
 }
 
 .text-slate-500{

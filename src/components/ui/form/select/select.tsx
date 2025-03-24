@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import Select, { MultiValue, SingleValue, components } from 'react-select';
 import { GroupedOption, SelectItem, SelectValue } from './types';
 import { cloneElement, ReactElement } from 'react';
+import { Label } from '../label/label';
 
 export interface Props {
   options: SelectItem[] | GroupedOption[];
@@ -13,6 +14,7 @@ export interface Props {
   handleChange?: (value: SelectItem | SelectItem[]) => void;
   icon?: JSX.Element | ReactElement;
   label?: string | JSX.Element | ReactElement;
+  sublabel?: string;
   value?: SelectItem | SelectItem[] | undefined;
   disabled?: boolean;
   placeholder?: string;
@@ -21,6 +23,8 @@ export interface Props {
   CustomOptionComponent?: (data: SelectItem) => ReactElement;
   SingleValueComponent?: (data: SelectItem) => ReactElement;
   ValueContainerComponent?: () => ReactElement;
+  labelClassName?: string;
+  required?: boolean;
 }
 
 function SelectComponent(props: Props) {
@@ -39,7 +43,10 @@ function SelectComponent(props: Props) {
     menuPosition = 'absolute',
     hasError = false,
     CustomOptionComponent = undefined,
-    SingleValueComponent = undefined
+    SingleValueComponent = undefined,
+    labelClassName = '',
+    sublabel,
+    required = false
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -59,8 +66,10 @@ function SelectComponent(props: Props) {
   };
 
   return (
-    <div className='flex flex-col gap-1.5'>
-      {label && <div className='text-slate-600 text-sm font-medium'>{label}</div>}
+    <div className='flex flex-col'>
+      {label && (
+        <Label label={label} sublabel={sublabel} className={labelClassName} required={required} />
+      )}
       <div className='relative'>
         {!isMulti && icon && (
           <span className='absolute z-10 left-2 top-2.5'>

@@ -1,18 +1,24 @@
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
+import { Label } from '../label/label';
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string | JSX.Element | React.ReactElement;
   helpText?: string;
   hasError?: boolean;
+  required?: boolean;
+  sublabel?: string;
 }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className = '', label, helpText, hasError = false, ...props }, ref) => {
+  (
+    { className = '', label, helpText, hasError = false, required = false, sublabel, ...props },
+    ref
+  ) => {
     return (
       <div className='flex flex-col gap-1.5'>
-        {label && <span className='text-slate-600 text-sm font-medium'>{label}</span>}
+        {label && <Label label={label} sublabel={sublabel} required={required} />}
         <textarea
           className={cn(
             'flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm',

@@ -1,9 +1,11 @@
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
+import { Label } from '../label/label';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
+  sublabel?: string;
   helpText?: string;
   suffixIcon?: JSX.Element;
   prefixIcon?: JSX.Element;
@@ -31,6 +33,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       minVal,
       maxVal,
       required,
+      sublabel,
       ...props
     },
     ref
@@ -55,12 +58,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className=''>
         {label && (
-          <div className={cn('label', labelClassName)}>
-            <span className=' label-text text-slate-600 text-sm font-medium'>
-              {label}
-              {required && <span className='text-red-600 ml-0.5'>*</span>}
-            </span>
-          </div>
+          <Label label={label} sublabel={sublabel} className={labelClassName} required={required} />
         )}
         <label className='form-control w-full flex relative'>
           {prefixIcon && renderIcon(prefixIcon, 'left')}

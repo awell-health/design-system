@@ -27,7 +27,7 @@ export const FormSection: FC<Props> = ({
         {hint !== null && <div className='text-gray-400'>{hint}</div>}
       </div>
       {children}
-      {showSeparator && <hr className='my-4' />}
+      {showSeparator && <hr className='mt-4' />}
     </div>
   );
 };
