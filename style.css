@@ -2526,6 +2526,12 @@ input.tab:checked + .tab-content,
   border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
 }
 
+.card.\!bordered{
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity))) !important;
+}
+
 .card.compact .card-body{
   padding: 1rem;
   font-size: 0.875rem;
@@ -4192,6 +4198,10 @@ input.tab:checked + .tab-content,
   margin-top: 100px;
 }
 
+.mb-4{
+  margin-bottom: 1rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -5397,6 +5407,11 @@ input.tab:checked + .tab-content,
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
 }
 
+.text-slate-400{
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+}
+
 .opacity-0{
   opacity: 0;
 }
@@ -5938,6 +5953,32 @@ input[type="checkbox"].green:checked {
   .sm\:p-0{
     padding: 0px;
   }
+}
+
+.\[\&\>\*\]\:border-b>*{
+  border-bottom-width: 1px;
+}
+
+.\[\&\>\*\]\:border-b-8>*{
+  border-bottom-width: 8px;
+}
+
+.\[\&\>\*\]\:border-b-2>*{
+  border-bottom-width: 2px;
+}
+
+.\[\&\>\*\]\:border-gray-200>*{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.\[\&\>\*\]\:border-b-slate-200>*{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(226 232 240 / var(--tw-border-opacity, 1));
+}
+
+.\[\&\>\*\]\:pb-4>*{
+  padding-bottom: 1rem;
 }
 
 .\[\&_\.tab-active\]\:border-b .tab-active{

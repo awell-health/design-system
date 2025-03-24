@@ -20,6 +20,8 @@ export * from './ui/form/list-input';
 export * from './ui/form/select';
 export * from './ui/form/textarea';
 export * from './ui/form/toggle';
+export * from './ui/form/form-content';
+export * from './ui/form/form-buttons';
 export * from './ui/icon';
 export * from './ui/menu';
 export * from './ui/modal';
