@@ -3,7 +3,7 @@
 exports[`Select > match multi snapshot 1`] = `
 <div>
   <div
-    class="flex flex-col gap-1.5"
+    class="flex flex-col"
   >
     <div
       class="relative"
@@ -83,7 +83,7 @@ exports[`Select > match multi snapshot 1`] = `
 exports[`Select > match snapshot 1`] = `
 <div>
   <div
-    class="flex flex-col gap-1.5"
+    class="flex flex-col"
   >
     <div
       class="relative"
