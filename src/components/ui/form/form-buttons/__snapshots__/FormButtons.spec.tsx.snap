@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FormButtons > match snapshot 1`] = `
+<div>
+  <div
+    class="flex justify-between mt-4"
+  >
+    <div
+      class="flex gap-4"
+    />
+  </div>
+</div>
+`;

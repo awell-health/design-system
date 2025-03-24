@@ -14,6 +14,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   labelClassName?: string;
   minVal?: number;
   maxVal?: number;
+  required?: boolean;
 }
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -29,6 +30,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       labelClassName,
       minVal,
       maxVal,
+      required,
       ...props
     },
     ref
@@ -54,7 +56,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <div className=''>
         {label && (
           <div className={cn('label', labelClassName)}>
-            <span className=' label-text text-slate-600 text-sm font-medium'>{label}</span>
+            <span className=' label-text text-slate-600 text-sm font-medium'>
+              {label}
+              {required && <span className='text-red-600 ml-0.5'>*</span>}
+            </span>
           </div>
         )}
         <label className='form-control w-full flex relative'>
@@ -78,6 +83,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             )}
             onChange={onChange}
             ref={ref}
+            required={required}
             {...props}
           />
           {suffixIcon && renderIcon(suffixIcon, 'right')}

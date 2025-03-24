@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
 
-const buttonVariants = cva('btn', {
+export const buttonVariants = cva('btn', {
   variants: {
     size: {
       sm: 'btn-sm rounded-md px-3.5 py-2',
@@ -33,6 +33,8 @@ const buttonVariants = cva('btn', {
     size: 'sm'
   }
 });
+
+export type ButtonVariant = VariantProps<typeof buttonVariants>['variant'];
 
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
