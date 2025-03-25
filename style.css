@@ -4083,6 +4083,10 @@ input.tab:checked + .tab-content,
   bottom: var(--tooltip-tail-offset);
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 .fixed{
   position: fixed;
 }

@@ -68,16 +68,27 @@ const FileUpload: FC<Props> = ({
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
+    e.stopPropagation();
     setIsDragging(true);
   };
 
   const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    setIsDragging(false);
+    e.stopPropagation();
+
+    // Only set isDragging to false if we're leaving the main container
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX;
+    const y = e.clientY;
+
+    if (x <= rect.left || x >= rect.right || y <= rect.top || y >= rect.bottom) {
+      setIsDragging(false);
+    }
   };
 
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
+    e.stopPropagation();
     const files = e.dataTransfer.files;
     if (files) {
       const validFiles = Array.from(files).filter((file) => file.size <= maxSizeMb * 1024 * 1024);
@@ -101,21 +112,21 @@ const FileUpload: FC<Props> = ({
       <input
         type='file'
         onChange={handleChange}
-        className='hidden'
+        className='invisible'
         ref={inputRef}
         multiple={isMultiple}
         accept={accept.join(',')}
       />
       <div
         className={cn(
-          'flex flex-col items-center justify-center gap-4 border border-dashed border-gray-300 rounded-md p-4 relative w-full',
+          'flex flex-col items-center justify-center gap-4 border border-dashed border-gray-200 rounded-md p-4 relative w-full',
           {
             'border-blue-500': isDragging
           }
         )}
         onDragOver={handleDragOver}
-        onDrop={handleDrop}
         onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
       >
         <div>{translations.dropFilesHere}</div>
         <Button variant='secondaryBlue' size='sm' onClick={() => inputRef.current?.click()}>
@@ -125,13 +136,18 @@ const FileUpload: FC<Props> = ({
           {translations.maxFileSize} {maxSizeMb}MB <br />
           {translations.supportedFileTypes} {accept.join(', ')}
         </div>
-        {isDragging && (
-          <div className='absolute inset-0 bg-white/90 rounded-md'>
-            <div className='flex items-center justify-center h-full'>
-              <p className='text-gray-500 text-sm'>{translations.dropFilesHere}</p>
-            </div>
+        <div
+          className={cn(
+            'absolute inset-0 bg-white/90 rounded-md transition-opacity duration-300 z-10',
+            {
+              'opacity-0': !isDragging
+            }
+          )}
+        >
+          <div className='flex items-center justify-center h-full'>
+            <p className='text-gray-500 text-sm block'>{translations.dropFilesHere}</p>
           </div>
-        )}
+        </div>
       </div>
       {error && <p className='text-red-500 text-sm'>{error}</p>}
     </div>
