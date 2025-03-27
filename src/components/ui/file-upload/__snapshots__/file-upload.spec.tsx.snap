@@ -34,7 +34,7 @@ exports[`FileList Component > should match snapshot 1`] = `
         .jpg, .jpeg, .png, .pdf, .doc, .docx, .txt
       </div>
       <div
-        class="absolute inset-0 bg-white/90 rounded-md transition-opacity duration-300 z-10 opacity-0"
+        class="absolute inset-0 bg-white/90 rounded-md transition-opacity duration-300 z-10 hidden"
       >
         <div
           class="flex items-center justify-center h-full"
