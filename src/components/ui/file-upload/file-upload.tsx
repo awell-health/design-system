@@ -140,7 +140,7 @@ const FileUpload: FC<Props> = ({
           className={cn(
             'absolute inset-0 bg-white/90 rounded-md transition-opacity duration-300 z-10',
             {
-              'opacity-0': !isDragging
+              hidden: !isDragging
             }
           )}
         >
