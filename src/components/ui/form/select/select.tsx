@@ -25,6 +25,7 @@ export interface Props {
   ValueContainerComponent?: () => ReactElement;
   labelClassName?: string;
   required?: boolean;
+  isOptionDisabled?: (option: SelectItem) => boolean;
 }
 
 function SelectComponent(props: Props) {
@@ -46,7 +47,8 @@ function SelectComponent(props: Props) {
     SingleValueComponent = undefined,
     labelClassName = '',
     sublabel,
-    required = false
+    required = false,
+    isOptionDisabled = undefined
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -86,6 +88,7 @@ function SelectComponent(props: Props) {
           value={value}
           isDisabled={disabled}
           menuPosition={menuPosition}
+          isOptionDisabled={isOptionDisabled}
           components={{
             Option: ({ children, ...rest }) => (
               <components.Option {...rest}>
