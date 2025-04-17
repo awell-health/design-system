@@ -27,6 +27,7 @@ import {
   RiCalendar2Line,
   RiCalendarLine,
   RiCheckboxCircleLine,
+  RiCheckboxCircleFill,
   RiCheckboxFill,
   RiCheckboxLine,
   RiCheckboxMultipleFill,
@@ -144,7 +145,9 @@ import {
   RiHand,
   RiDatabase2Fill,
   RiCodeFill,
-  RiProhibitedLine
+  RiProhibitedLine,
+  RiExportFill,
+  RiImportFill
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -176,6 +179,7 @@ export const ICONS = {
   RiCalendar2Line,
   RiCalendarLine,
   RiCheckboxCircleLine,
+  RiCheckboxCircleFill,
   RiCheckboxFill,
   RiCheckboxLine,
   RiCheckboxMultipleFill,
@@ -293,7 +297,9 @@ export const ICONS = {
   RiHand,
   RiDatabase2Fill,
   RiCodeFill,
-  RiProhibitedLine
+  RiProhibitedLine,
+  RiExportFill,
+  RiImportFill
 };
 
 export enum IconSize {
