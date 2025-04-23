@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Label > match snapshot 1`] = `
+<div>
+  <div
+    class="label flex flex-col gap-1 items-start"
+  >
+    <span
+      class=" label-text text-slate-600 text-sm font-medium"
+    >
+      Label
+    </span>
+    <span
+      class="label-text text-slate-400 text-xs font-normal"
+    >
+      Sublabel
+    </span>
+  </div>
+</div>
+`;
