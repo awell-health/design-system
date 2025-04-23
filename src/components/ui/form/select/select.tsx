@@ -26,6 +26,7 @@ export interface Props {
   labelClassName?: string;
   required?: boolean;
   isOptionDisabled?: (option: SelectItem) => boolean;
+  helpText?: string;
 }
 
 function SelectComponent(props: Props) {
@@ -48,7 +49,8 @@ function SelectComponent(props: Props) {
     labelClassName = '',
     sublabel,
     required = false,
-    isOptionDisabled = undefined
+    isOptionDisabled = undefined,
+    helpText = undefined
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -127,6 +129,18 @@ function SelectComponent(props: Props) {
           }}
         />
       </div>
+      {helpText && (
+        <div className='label'>
+          <span
+            className={cn(
+              'label-text-alt text-slate-500 text-xs font-normal',
+              hasError && 'text-red-600'
+            )}
+          >
+            {helpText}
+          </span>
+        </div>
+      )}
     </div>
   );
 }
