@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.12.76",
+  "version": "0.12.77",
   "type": "module",
   "files": [
     "dist"
@@ -39,14 +39,23 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.6.0",
-    "class-variance-authority": "^0.7.0",
+    "@udecode/cn": "^47.3.1",
+    "@udecode/plate": "^48.0.1",
+    "@udecode/plate-basic-marks": "^48.0.0",
+    "@udecode/plate-caption": "^48.0.0",
+    "@udecode/plate-heading": "^48.0.0",
+    "@udecode/plate-link": "^48.0.0",
+    "@udecode/plate-list": "^48.0.0",
+    "@udecode/plate-media": "^48.0.0",
+    "@udecode/plate-resizable": "^48.0.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "react-day-picker": "^9.5.0",
     "react-select": "^5.8.0",
     "react-tooltip": "^5.28.0",
     "react-use": "^17.5.1",
-    "tailwind-merge": "^2.5.2",
+    "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "peerDependencies": {
@@ -67,6 +76,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^20.14.15",
     "@types/prop-types": "^15.7.12",
     "@types/react": "^18.3.3",
