@@ -14,6 +14,11 @@
       "require": "./dist/index.umd.cjs",
       "types": "./dist/index.d.ts"
     },
+    "./extended": {
+      "import": "./dist/extended.es.js",
+      "require": "./dist/extended.umd.cjs",
+      "types": "./dist/extended.d.ts"
+    },
     "./style.css": "./dist/style.css"
   },
   "packageManager": "yarn@4.1.1",
@@ -21,7 +26,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o storybook-static",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
-    "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
+    "build": "tsc && vite build && vite build -c vite.config.extended.js && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
     "dev": "yarn tailwind & yarn storybook",
     "test": "vitest --watch=false",
     "test-watch": "vitest --watch=true",
@@ -76,7 +81,6 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
-    "@types/lodash": "^4.17.16",
     "@types/node": "^20.14.15",
     "@types/prop-types": "^15.7.12",
     "@types/react": "^18.3.3",
@@ -98,6 +102,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup-plugin-visualizer": "^5.14.0",
     "storybook": "^8.2.9",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.5.4",

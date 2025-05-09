@@ -26,9 +26,10 @@ import {
   MediaEmbedPlugin
 } from '@udecode/plate-media/react';
 import { HeadingPlugin } from '@udecode/plate-heading/react';
+import { BasePlugin } from '@udecode/plate';
 
 // Add text formatting and list plugins
-export const plugins = [
+export const plugins: BasePlugin[] = [
   // Basic marks
   BaseBoldPlugin,
   BaseItalicPlugin,
@@ -42,7 +43,7 @@ export const plugins = [
   HeadingPlugin,
   
   // Lists
-  BaseListPlugin,
+  BaseListPlugin as BasePlugin,
   BaseBulletedListPlugin,
   BaseNumberedListPlugin,
   BaseListItemPlugin,
@@ -52,7 +53,7 @@ export const plugins = [
   BaseLinkPlugin,
   
   // Media
-  ImagePlugin,
+  ImagePlugin as BasePlugin,
   VideoPlugin,
   AudioPlugin,
   FilePlugin,

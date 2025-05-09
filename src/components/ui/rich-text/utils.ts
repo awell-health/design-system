@@ -1,5 +1,4 @@
 import { Node } from 'slate';
-import { isNil, isEmpty } from 'lodash';
 
 export const initialValue = [
   {
@@ -29,7 +28,7 @@ export const parseStringSlateContent = (content: string): Array<Node> => {
     if (isTextEmpty(content)) {
       return initialValue;
     }
-    if (!isNil(content)) {
+    if (content !== null && content !== undefined) {
       const parsed = JSON.parse(content);
       return parsed;
     }
@@ -41,7 +40,7 @@ export const parseStringSlateContent = (content: string): Array<Node> => {
 };
 
 export const isTextEmpty = (content: string): boolean => {
-  if (isNil(content) || isEmpty(content)) {
+  if (content === null || content === undefined || content === '') {
     return true;
   }
   try {
