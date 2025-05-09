@@ -28,6 +28,9 @@ export * from './ui/menu';
 export * from './ui/modal';
 export * from './ui/pagination';
 export * from './ui/radial-progress';
+// Rich text is exported separately to reduce bundle size
+// import { RichText } from '@awell-health/design-system/rich-text'
+// export * from './ui/rich-text';
 export * from './ui/skeleton-loader';
 export * from './ui/spinner';
 export * from './ui/tab';
