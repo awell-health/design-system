@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.12.76",
+  "version": "0.12.78",
   "type": "module",
   "files": [
     "dist"
@@ -8,11 +8,23 @@
   "main": "dist/index.umd.cjs",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "extended": [
+        "dist/extended.d.ts"
+      ]
+    }
+  },
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.cjs",
       "types": "./dist/index.d.ts"
+    },
+    "./extended": {
+      "import": "./dist/extended.es.js",
+      "require": "./dist/extended.umd.cjs",
+      "types": "./dist/extended.d.ts"
     },
     "./style.css": "./dist/style.css"
   },
@@ -39,14 +51,23 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.6.0",
-    "class-variance-authority": "^0.7.0",
+    "@udecode/cn": "^47.3.1",
+    "@udecode/plate": "^48.0.3",
+    "@udecode/plate-basic-marks": "^48.0.0",
+    "@udecode/plate-heading": "^48.0.0",
+    "@udecode/plate-link": "^48.0.0",
+    "@udecode/plate-list": "^48.0.0",
+    "@udecode/plate-media": "^48.0.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "react-day-picker": "^9.5.0",
     "react-select": "^5.8.0",
     "react-tooltip": "^5.28.0",
     "react-use": "^17.5.1",
-    "tailwind-merge": "^2.5.2",
+    "slate": "^0.114.0",
+    "slate-history": "^0.113.1",
+    "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "peerDependencies": {
@@ -88,6 +109,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup-plugin-visualizer": "^5.14.0",
     "storybook": "^8.2.9",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.5.4",
