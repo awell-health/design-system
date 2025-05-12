@@ -2,5 +2,5 @@
 export * from './index';
 
 // Add the RichText component
-export { RichText } from './components/ui/rich-text/rich-text';
-export type { RichTextProps } from './components/ui/rich-text/rich-text'; 
+export { RichText, RichTextEditor } from './components/ui/rich-text';
+export type { RichTextProps, RichTextEditorProps } from './components/ui/rich-text';

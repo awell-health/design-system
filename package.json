@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.12.77-beta.2",
+  "version": "0.12.78",
   "type": "module",
   "files": [
     "dist"
@@ -53,6 +53,8 @@
     "@remixicon/react": "^4.6.0",
     "@udecode/cn": "^47.3.1",
     "@udecode/plate": "^48.0.1",
+    "@udecode/plate-alignment": "^48.0.0",
+    "@udecode/plate-basic-elements": "^48.0.0",
     "@udecode/plate-basic-marks": "^48.0.0",
     "@udecode/plate-caption": "^48.0.0",
     "@udecode/plate-heading": "^48.0.0",

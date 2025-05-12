@@ -251,10 +251,6 @@ const mediaContent = JSON.stringify([
     children: [{ text: 'Media Elements' }]
   },
   {
-    type: 'p',
-    children: [{ text: 'The RichText component can display various media elements:' }]
-  },
-  {
     type: ImagePlugin.key,
     url: 'https://framerusercontent.com/images/YMywktF3AnINPDBPGK4Gc5xTbgM.jpg?scale-down-to=1024',
     children: [{ text: '' }]
@@ -440,14 +436,6 @@ export const Comprehensive: Story = {
 export const NoLabel: Story = {
   args: {
     content: basicContent
-  }
-};
-
-export const Editable: Story = {
-  args: {
-    label: 'Editable Rich Text',
-    content: basicContent,
-    editable: true
   }
 };
 

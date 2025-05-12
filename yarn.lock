@@ -66,6 +66,8 @@ __metadata:
     "@types/react-dom": "npm:^18.3.0"
     "@udecode/cn": "npm:^47.3.1"
     "@udecode/plate": "npm:^48.0.1"
+    "@udecode/plate-alignment": "npm:^48.0.0"
+    "@udecode/plate-basic-elements": "npm:^48.0.0"
     "@udecode/plate-basic-marks": "npm:^48.0.0"
     "@udecode/plate-caption": "npm:^48.0.0"
     "@udecode/plate-heading": "npm:^48.0.0"
@@ -2252,6 +2254,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@udecode/plate-alignment@npm:^48.0.0":
+  version: 48.0.0
+  resolution: "@udecode/plate-alignment@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-alignment%2F-%2Fplate-alignment-48.0.0.tgz"
+  peerDependencies:
+    "@udecode/plate": ">=48.0.0"
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 10c0/ec4abc3b6f41c7a78ee5126b09100f35f144428f2afa10170f54f75c4a6a53537c70a878711d3f60060fa97e9c7708ad42e16dd4b8b1f462330a8b0b5ad230e9
+  languageName: node
+  linkType: hard
+
+"@udecode/plate-basic-elements@npm:^48.0.0":
+  version: 48.0.0
+  resolution: "@udecode/plate-basic-elements@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-basic-elements%2F-%2Fplate-basic-elements-48.0.0.tgz"
+  dependencies:
+    "@udecode/plate-block-quote": "npm:48.0.0"
+    "@udecode/plate-code-block": "npm:48.0.0"
+    "@udecode/plate-heading": "npm:48.0.0"
+  peerDependencies:
+    "@udecode/plate": ">=48.0.0"
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 10c0/f39ee92c4e1ea841e90f92f221c21ea3bf4cd60e25ace89b5edd55a279759805d8f030689ac6c2246495fc435a87229c3cae4592b7ee24b68eda460148555139
+  languageName: node
+  linkType: hard
+
 "@udecode/plate-basic-marks@npm:^48.0.0":
   version: 48.0.0
   resolution: "@udecode/plate-basic-marks@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-basic-marks%2F-%2Fplate-basic-marks-48.0.0.tgz"
@@ -2260,6 +2288,17 @@ __metadata:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
   checksum: 10c0/ecb88320ef4b67248c3b4913c43108b174ac565273aaa47b2a5100c9731fe05ab5e248fc3267b66ce60e4474d6222bd66fcf567629b86f550cabcc9187c0a800
+  languageName: node
+  linkType: hard
+
+"@udecode/plate-block-quote@npm:48.0.0":
+  version: 48.0.0
+  resolution: "@udecode/plate-block-quote@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-block-quote%2F-%2Fplate-block-quote-48.0.0.tgz"
+  peerDependencies:
+    "@udecode/plate": ">=48.0.0"
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 10c0/a3d2b922ddbffd3ea194e3bdeff7e4018bed38b0e820d07aefcaa404ee250b9a040e0d4a279f133d3e80db0e2707fdd897882840031afee429265e221d6d195b
   languageName: node
   linkType: hard
 
@@ -2273,6 +2312,17 @@ __metadata:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
   checksum: 10c0/9ecc8decbd6c495ca2168cb55ac68c19cd49005d6d80fe2e45acd1b4a53ac65bc4775f34c6c76f8f15aa1d95f08f030cce44409986d2f12b9c462e6779e7cdf0
+  languageName: node
+  linkType: hard
+
+"@udecode/plate-code-block@npm:48.0.0":
+  version: 48.0.0
+  resolution: "@udecode/plate-code-block@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-code-block%2F-%2Fplate-code-block-48.0.0.tgz"
+  peerDependencies:
+    "@udecode/plate": ">=48.0.0"
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 10c0/d35210963fb4e52bd550aea7e3d878b488335ba6f14d721a910548cf8ac17622f0d5123d025938b99af58738703d4715f04a14d230566207fa4a3c29e6023f66
   languageName: node
   linkType: hard
 
@@ -2319,7 +2369,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@udecode/plate-heading@npm:^48.0.0":
+"@udecode/plate-heading@npm:48.0.0, @udecode/plate-heading@npm:^48.0.0":
   version: 48.0.0
   resolution: "@udecode/plate-heading@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-heading%2F-%2Fplate-heading-48.0.0.tgz"
   peerDependencies:
