@@ -4343,6 +4343,10 @@ input.tab:checked + .tab-content,
   margin-top: 100px;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -4377,6 +4381,10 @@ input.tab:checked + .tab-content,
 
 .grid{
   display: grid;
+}
+
+.list-item{
+  display: list-item;
 }
 
 .hidden{
@@ -4489,8 +4497,8 @@ input.tab:checked + .tab-content,
   height: 100vh;
 }
 
-.h-\[400px\]{
-  height: 400px;
+.h-16{
+  height: 4rem;
 }
 
 .min-h-8{
@@ -4511,6 +4519,10 @@ input.tab:checked + .tab-content,
 
 .min-h-full{
   min-height: 100%;
+}
+
+.min-h-6{
+  min-height: 1.5rem;
 }
 
 .w-1\.5{
@@ -4601,6 +4613,10 @@ input.tab:checked + .tab-content,
   width: 46rem;
 }
 
+.w-\[500px\]{
+  width: 500px;
+}
+
 .w-\[600px\]{
   width: 600px;
 }
@@ -4617,14 +4633,6 @@ input.tab:checked + .tab-content,
   width: 100vw;
 }
 
-.w-\[450px\]{
-  width: 450px;
-}
-
-.w-\[500px\]{
-  width: 500px;
-}
-
 .min-w-10{
   min-width: 2.5rem;
 }
@@ -4639,6 +4647,10 @@ input.tab:checked + .tab-content,
 
 .min-w-\[46px\]{
   min-width: 46px;
+}
+
+.min-w-6{
+  min-width: 1.5rem;
 }
 
 .max-w-\[300px\]{
@@ -4801,6 +4813,10 @@ input.tab:checked + .tab-content,
   gap: 1.25rem;
 }
 
+.gap-0\.5{
+  gap: 0.125rem;
+}
+
 .self-start{
   align-self: flex-start;
 }
@@ -4871,6 +4887,10 @@ input.tab:checked + .tab-content,
 
 .rounded-xl{
   border-radius: 0.75rem;
+}
+
+.rounded-btn{
+  border-radius: var(--rounded-btn, 0.5rem);
 }
 
 .rounded-l-\[50\%\]{
@@ -5223,6 +5243,16 @@ input.tab:checked + .tab-content,
   background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
 }
 
+.bg-blue-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-30{
   --tw-bg-opacity: 0.3;
 }
@@ -5273,6 +5303,10 @@ input.tab:checked + .tab-content,
 
 .fill-yellow-500{
   fill: #eab308;
+}
+
+.fill-slate-700{
+  fill: #334155;
 }
 
 .p-0{
@@ -5760,6 +5794,11 @@ input.tab:checked + .tab-content,
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
 }
 
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -6077,6 +6116,11 @@ input[type="checkbox"].green:checked {
 .hover\:bg-blue-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-gray-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-gray-200:hover{

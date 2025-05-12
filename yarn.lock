@@ -65,16 +65,12 @@ __metadata:
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@udecode/cn": "npm:^47.3.1"
-    "@udecode/plate": "npm:^48.0.1"
-    "@udecode/plate-alignment": "npm:^48.0.0"
-    "@udecode/plate-basic-elements": "npm:^48.0.0"
+    "@udecode/plate": "npm:^48.0.3"
     "@udecode/plate-basic-marks": "npm:^48.0.0"
-    "@udecode/plate-caption": "npm:^48.0.0"
     "@udecode/plate-heading": "npm:^48.0.0"
     "@udecode/plate-link": "npm:^48.0.0"
     "@udecode/plate-list": "npm:^48.0.0"
     "@udecode/plate-media": "npm:^48.0.0"
-    "@udecode/plate-resizable": "npm:^48.0.0"
     "@vitejs/plugin-react": "npm:^4.3.1"
     "@vitest/coverage-v8": "npm:^2.0.5"
     autoprefixer: "npm:^10.4.20"
@@ -100,6 +96,8 @@ __metadata:
     react-tooltip: "npm:^5.28.0"
     react-use: "npm:^17.5.1"
     rollup-plugin-visualizer: "npm:^5.14.0"
+    slate: "npm:^0.114.0"
+    slate-history: "npm:^0.113.1"
     storybook: "npm:^8.2.9"
     tailwind-merge: "npm:^3.3.0"
     tailwindcss: "npm:^3.4.17"
@@ -282,13 +280,6 @@ __metadata:
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
   checksum: 10c0/12c01357e0345f89f4f7e8c0e81921f2a3e3e101f06e8eaa18a382b517376520cd2fa8c237726eb094dab25532855df28a7baaf1c26342b52782f6936b07c287
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.20.13":
-  version: 7.27.1
-  resolution: "@babel/runtime@npm:7.27.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40babel%2Fruntime%2F-%2Fruntime-7.27.1.tgz"
-  checksum: 10c0/530a7332f86ac5a7442250456823a930906911d895c0b743bf1852efc88a20a016ed4cd26d442d0ca40ae6d5448111e02a08dd638a4f1064b47d080e2875dc05
   languageName: node
   linkType: hard
 
@@ -2254,32 +2245,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@udecode/plate-alignment@npm:^48.0.0":
-  version: 48.0.0
-  resolution: "@udecode/plate-alignment@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-alignment%2F-%2Fplate-alignment-48.0.0.tgz"
-  peerDependencies:
-    "@udecode/plate": ">=48.0.0"
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  checksum: 10c0/ec4abc3b6f41c7a78ee5126b09100f35f144428f2afa10170f54f75c4a6a53537c70a878711d3f60060fa97e9c7708ad42e16dd4b8b1f462330a8b0b5ad230e9
-  languageName: node
-  linkType: hard
-
-"@udecode/plate-basic-elements@npm:^48.0.0":
-  version: 48.0.0
-  resolution: "@udecode/plate-basic-elements@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-basic-elements%2F-%2Fplate-basic-elements-48.0.0.tgz"
-  dependencies:
-    "@udecode/plate-block-quote": "npm:48.0.0"
-    "@udecode/plate-code-block": "npm:48.0.0"
-    "@udecode/plate-heading": "npm:48.0.0"
-  peerDependencies:
-    "@udecode/plate": ">=48.0.0"
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  checksum: 10c0/f39ee92c4e1ea841e90f92f221c21ea3bf4cd60e25ace89b5edd55a279759805d8f030689ac6c2246495fc435a87229c3cae4592b7ee24b68eda460148555139
-  languageName: node
-  linkType: hard
-
 "@udecode/plate-basic-marks@npm:^48.0.0":
   version: 48.0.0
   resolution: "@udecode/plate-basic-marks@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-basic-marks%2F-%2Fplate-basic-marks-48.0.0.tgz"
@@ -2291,44 +2256,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@udecode/plate-block-quote@npm:48.0.0":
-  version: 48.0.0
-  resolution: "@udecode/plate-block-quote@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-block-quote%2F-%2Fplate-block-quote-48.0.0.tgz"
-  peerDependencies:
-    "@udecode/plate": ">=48.0.0"
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  checksum: 10c0/a3d2b922ddbffd3ea194e3bdeff7e4018bed38b0e820d07aefcaa404ee250b9a040e0d4a279f133d3e80db0e2707fdd897882840031afee429265e221d6d195b
-  languageName: node
-  linkType: hard
-
-"@udecode/plate-caption@npm:^48.0.0":
-  version: 48.0.0
-  resolution: "@udecode/plate-caption@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-caption%2F-%2Fplate-caption-48.0.0.tgz"
-  dependencies:
-    react-textarea-autosize: "npm:^8.5.9"
-  peerDependencies:
-    "@udecode/plate": ">=48.0.0"
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  checksum: 10c0/9ecc8decbd6c495ca2168cb55ac68c19cd49005d6d80fe2e45acd1b4a53ac65bc4775f34c6c76f8f15aa1d95f08f030cce44409986d2f12b9c462e6779e7cdf0
-  languageName: node
-  linkType: hard
-
-"@udecode/plate-code-block@npm:48.0.0":
-  version: 48.0.0
-  resolution: "@udecode/plate-code-block@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-code-block%2F-%2Fplate-code-block-48.0.0.tgz"
-  peerDependencies:
-    "@udecode/plate": ">=48.0.0"
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  checksum: 10c0/d35210963fb4e52bd550aea7e3d878b488335ba6f14d721a910548cf8ac17622f0d5123d025938b99af58738703d4715f04a14d230566207fa4a3c29e6023f66
-  languageName: node
-  linkType: hard
-
-"@udecode/plate-core@npm:48.0.1":
-  version: 48.0.1
-  resolution: "@udecode/plate-core@npm:48.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-core%2F-%2Fplate-core-48.0.1.tgz"
+"@udecode/plate-core@npm:48.0.3":
+  version: 48.0.3
+  resolution: "@udecode/plate-core@npm:48.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-core%2F-%2Fplate-core-48.0.3.tgz"
   dependencies:
     "@udecode/react-hotkeys": "npm:37.0.0"
     "@udecode/react-utils": "npm:47.3.1"
@@ -2351,7 +2281,7 @@ __metadata:
   peerDependencies:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-  checksum: 10c0/c7ea78f929c4a59ea10cbfe1b3db181bef503c87d9bcbef5f950ce67df1648910a4efcdefd7f5e63064e501154a1aaae4d139ced73f76b1c4dc4c6ca24c0805d
+  checksum: 10c0/feaad0ab32ebe8fc1915fd0f8e2e2d0a7dd0161ff11054f565290e41c7d0c7357d000c07ad6dae633f0b208645a96f7cd717881e8aee1898905004ce8940f7fc
   languageName: node
   linkType: hard
 
@@ -2369,7 +2299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@udecode/plate-heading@npm:48.0.0, @udecode/plate-heading@npm:^48.0.0":
+"@udecode/plate-heading@npm:^48.0.0":
   version: 48.0.0
   resolution: "@udecode/plate-heading@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-heading%2F-%2Fplate-heading-48.0.0.tgz"
   peerDependencies:
@@ -2445,22 +2375,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@udecode/plate-resizable@npm:^48.0.0":
-  version: 48.0.0
-  resolution: "@udecode/plate-resizable@npm:48.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-resizable%2F-%2Fplate-resizable-48.0.0.tgz"
-  peerDependencies:
-    "@udecode/plate": ">=48.0.0"
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  checksum: 10c0/bf8b9b82f8c67d5f558fdf750ab89f8113f6dc88cc0414c9aa6e5fee4f7c09334ecacfca1c004f22f9f69462a0faca054e4d282534cccb19bb02c35cebea3bad
-  languageName: node
-  linkType: hard
-
-"@udecode/plate-utils@npm:48.0.1":
-  version: 48.0.1
-  resolution: "@udecode/plate-utils@npm:48.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-utils%2F-%2Fplate-utils-48.0.1.tgz"
+"@udecode/plate-utils@npm:48.0.3":
+  version: 48.0.3
+  resolution: "@udecode/plate-utils@npm:48.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate-utils%2F-%2Fplate-utils-48.0.3.tgz"
   dependencies:
-    "@udecode/plate-core": "npm:48.0.1"
+    "@udecode/plate-core": "npm:48.0.3"
     "@udecode/react-utils": "npm:47.3.1"
     "@udecode/slate": "npm:48.0.1"
     "@udecode/utils": "npm:47.2.7"
@@ -2469,16 +2388,16 @@ __metadata:
   peerDependencies:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-  checksum: 10c0/a5a234ca647ef1b22fc1e845122af6ec4831f0569b9f6bf4b387ba0070d16cd80d3a67c4eb67eb6c97a1d797e73f9ba7743ffa64c024e85a190da978545c4155
+  checksum: 10c0/792ad7d4896ba13585731004afc3e095e06d23ab17ba20e9e327be4742069673f93b62750ccc67c90dd46b0b7335a08dae91b561dcda34b69c707553cf2078bc
   languageName: node
   linkType: hard
 
-"@udecode/plate@npm:^48.0.1":
-  version: 48.0.1
-  resolution: "@udecode/plate@npm:48.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate%2F-%2Fplate-48.0.1.tgz"
+"@udecode/plate@npm:^48.0.3":
+  version: 48.0.3
+  resolution: "@udecode/plate@npm:48.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40udecode%2Fplate%2F-%2Fplate-48.0.3.tgz"
   dependencies:
-    "@udecode/plate-core": "npm:48.0.1"
-    "@udecode/plate-utils": "npm:48.0.1"
+    "@udecode/plate-core": "npm:48.0.3"
+    "@udecode/plate-utils": "npm:48.0.3"
     "@udecode/react-hotkeys": "npm:37.0.0"
     "@udecode/react-utils": "npm:47.3.1"
     "@udecode/slate": "npm:48.0.1"
@@ -2486,7 +2405,7 @@ __metadata:
   peerDependencies:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-  checksum: 10c0/2821923b228e153ac244799d5126f53a4d56660693d0434c481fb9f95f7b803a0f37e17cae44c4282293ff229eceab8985fd1a013659518abcfdbd91f5c92072
+  checksum: 10c0/d8a15850e612779feb7952b1d30152d6ed42b1bbf2847e7c7b4b174cd88c2a393b3419a5a812b756f17ec5c5dc852550deedddf5e59e538a48e5067e9242b5fa
   languageName: node
   linkType: hard
 
@@ -7029,19 +6948,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-textarea-autosize@npm:^8.5.9":
-  version: 8.5.9
-  resolution: "react-textarea-autosize@npm:8.5.9::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-textarea-autosize%2F-%2Freact-textarea-autosize-8.5.9.tgz"
-  dependencies:
-    "@babel/runtime": "npm:^7.20.13"
-    use-composed-ref: "npm:^1.3.0"
-    use-latest: "npm:^1.2.1"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/3a924db59259a6e3b834dcddc12a8661b43dcdaa1b43c41c732e0548bb2761e9a53dbc6db4e0d9e237728b4869e42c25e5417408b0391aec290c90874733a09f
-  languageName: node
-  linkType: hard
-
 "react-tooltip@npm:^5.28.0":
   version: 5.28.0
   resolution: "react-tooltip@npm:5.28.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-tooltip%2F-%2Freact-tooltip-5.28.0.tgz"
@@ -7710,6 +7616,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"slate-history@npm:^0.113.1":
+  version: 0.113.1
+  resolution: "slate-history@npm:0.113.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fslate-history%2F-%2Fslate-history-0.113.1.tgz"
+  dependencies:
+    is-plain-object: "npm:^5.0.0"
+  peerDependencies:
+    slate: ">=0.65.3"
+  checksum: 10c0/cb3de172d391db7bfa023a1844f778b39a323c1e4b3b32e2d6ca73a0edec2ae9afd147b766d555e2f8d742716d2ed140550b1ee38e3654eebecac24fc98cc05f
+  languageName: node
+  linkType: hard
+
 "slate-hyperscript@npm:0.100.0":
   version: 0.100.0
   resolution: "slate-hyperscript@npm:0.100.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fslate-hyperscript%2F-%2Fslate-hyperscript-0.100.0.tgz"
@@ -7741,7 +7658,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slate@npm:0.114.0":
+"slate@npm:0.114.0, slate@npm:^0.114.0":
   version: 0.114.0
   resolution: "slate@npm:0.114.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fslate%2F-%2Fslate-0.114.0.tgz"
   dependencies:
@@ -8635,18 +8552,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-composed-ref@npm:^1.3.0":
-  version: 1.4.0
-  resolution: "use-composed-ref@npm:1.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fuse-composed-ref%2F-%2Fuse-composed-ref-1.4.0.tgz"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  checksum: 10c0/c77e0cba9579b7746d52feaf3ce77d8c345f266c9c1ef46584ae68f54646537c87b2ad97f5219a4b1db52f97ec2905e88e5b146add1f28f7e457bd52ca1b93cf
-  languageName: node
-  linkType: hard
-
 "use-context-selector@npm:1.4.4":
   version: 1.4.4
   resolution: "use-context-selector@npm:1.4.4::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fuse-context-selector%2F-%2Fuse-context-selector-1.4.4.tgz"
@@ -8675,7 +8580,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-isomorphic-layout-effect@npm:^1.1.1, use-isomorphic-layout-effect@npm:^1.2.0":
+"use-isomorphic-layout-effect@npm:^1.2.0":
   version: 1.2.0
   resolution: "use-isomorphic-layout-effect@npm:1.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fuse-isomorphic-layout-effect%2F-%2Fuse-isomorphic-layout-effect-1.2.0.tgz"
   peerDependencies:
@@ -8684,20 +8589,6 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10c0/2e4bdee68d65893b37e716ebdcc111550775189c80e662eda87d6f5b54dc431d3383a18914ea01a893ee5478902a878012713eaebcacbb6611ab88c463accb83
-  languageName: node
-  linkType: hard
-
-"use-latest@npm:^1.2.1":
-  version: 1.3.0
-  resolution: "use-latest@npm:1.3.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fuse-latest%2F-%2Fuse-latest-1.3.0.tgz"
-  dependencies:
-    use-isomorphic-layout-effect: "npm:^1.1.1"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  checksum: 10c0/067c648814ad0c1f1e89d2d0e496254b05c4bed6a34e23045b4413824222aab08fd803c59a42852acc16830c17567d03f8c90af0a62be2f4e4b931454d079798
   languageName: node
   linkType: hard
 

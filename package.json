@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.12.78",
+  "version": "0.12.78-beta.3",
   "type": "module",
   "files": [
     "dist"
@@ -33,7 +33,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o storybook-static",
     "tailwind": "tailwindcss -i ./styles/globals.css -o ./style.css --watch",
-    "build": "tsc && vite build && vite build -c vite.config.extended.js && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
+    "build": "tsc && vite build && tailwindcss -i ./styles/globals.css -o ./dist/style.css --minify",
     "dev": "yarn tailwind & yarn storybook",
     "test": "vitest --watch=false",
     "test-watch": "vitest --watch=true",
@@ -52,16 +52,12 @@
   "dependencies": {
     "@remixicon/react": "^4.6.0",
     "@udecode/cn": "^47.3.1",
-    "@udecode/plate": "^48.0.1",
-    "@udecode/plate-alignment": "^48.0.0",
-    "@udecode/plate-basic-elements": "^48.0.0",
+    "@udecode/plate": "^48.0.3",
     "@udecode/plate-basic-marks": "^48.0.0",
-    "@udecode/plate-caption": "^48.0.0",
     "@udecode/plate-heading": "^48.0.0",
     "@udecode/plate-link": "^48.0.0",
     "@udecode/plate-list": "^48.0.0",
     "@udecode/plate-media": "^48.0.0",
-    "@udecode/plate-resizable": "^48.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
@@ -69,6 +65,8 @@
     "react-select": "^5.8.0",
     "react-tooltip": "^5.28.0",
     "react-use": "^17.5.1",
+    "slate": "^0.114.0",
+    "slate-history": "^0.113.1",
     "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7"
   },

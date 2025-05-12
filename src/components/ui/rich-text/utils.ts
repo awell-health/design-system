@@ -26,16 +26,16 @@ export const initialValue = [
 export const parseStringSlateContent = (content: string): Array<Node> => {
   try {
     if (isTextEmpty(content)) {
-      return initialValue;
+      return initialValue as Array<Node>;
     }
     if (content !== null && content !== undefined) {
       const parsed = JSON.parse(content);
       return parsed;
     }
-    return initialValue;
+    return initialValue as Array<Node>;
   } catch (error) {
     console.warn('Error parsing editor content', { error });
-    return initialValue;
+    return initialValue as Array<Node>;
   }
 };
 
@@ -45,8 +45,8 @@ export const isTextEmpty = (content: string): boolean => {
   }
   try {
     const nodes = (JSON.parse(content) ?? []) as Array<Node>;
-    return !nodes.some(n => Node.string(n) !== '');
+    return !nodes.some((n) => Node.string(n) !== '');
   } catch {
     return true;
   }
-}; 
+};
