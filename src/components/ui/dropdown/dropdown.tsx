@@ -6,10 +6,12 @@ const dropdownVariants = cva('dropdown', {
   variants: {
     placement: {
       default: '',
-      top: 'dropdown-top',
+      top: 'dropdown-top dropdown-start',
       left: 'dropdown-left',
       right: 'dropdown-right',
-      bottom: 'dropdown-bottom'
+      bottom: 'dropdown-bottom dropdown-start',
+      'bottom-end': 'dropdown-bottom dropdown-end',
+      'top-end': 'dropdown-top dropdown-end'
     }
   },
   defaultVariants: {
