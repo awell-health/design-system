@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { cn } from '../../../lib/utils';
 import { withProps } from '@udecode/cn';
 import { Plate, PlateContent, PlateElement, PlateLeaf, usePlateEditor } from '@udecode/plate/react';
@@ -143,11 +143,6 @@ export const components = {
 export const RichText: FC<RichTextProps> = ({ content, label, className }) => {
   // Parse the content
   const parsedContent = parseStringSlateContent(content) as Value;
-
-  // Debug output to understand the structure
-  useEffect(() => {
-    console.log('Parsed content:', parsedContent);
-  }, [parsedContent]);
 
   // Use the Plate editor hook with components
   const editor = usePlateEditor({
