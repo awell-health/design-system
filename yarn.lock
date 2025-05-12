@@ -99,7 +99,7 @@ __metadata:
     react-use: "npm:^17.5.1"
     rollup-plugin-visualizer: "npm:^5.14.0"
     storybook: "npm:^8.2.9"
-    tailwind-merge: "npm:^3.2.0"
+    tailwind-merge: "npm:^3.3.0"
     tailwindcss: "npm:^3.4.17"
     tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:^5.5.4"
@@ -8114,10 +8114,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-merge@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "tailwind-merge@npm:3.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftailwind-merge%2F-%2Ftailwind-merge-3.2.0.tgz"
-  checksum: 10c0/294f6c2db0df74405bff126107107426c3126a70a1717d78e8d6811db65546c9bb3d61282bdb8d9fbded23f6bc8ec3e8e61031a4f53265f90b7f3dba558f88f4
+"tailwind-merge@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "tailwind-merge@npm:3.3.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftailwind-merge%2F-%2Ftailwind-merge-3.3.0.tgz"
+  checksum: 10c0/a50cd141100486f98541dfab3705712af5860556689b7496dc6b0284374f02d12d5471f0f40035f6bb8b1c749c422060a1f3e5f8900057d8a7786b111c8472e6
   languageName: node
   linkType: hard
 
