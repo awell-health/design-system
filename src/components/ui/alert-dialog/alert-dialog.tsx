@@ -7,6 +7,7 @@ interface AlertDialogButton {
   label: string;
   buttonVariant?: 'primary' | 'secondary' | 'error' | 'success' | 'warning';
   buttonAction?: () => void;
+  disabled?: boolean;
 }
 
 interface Props {
@@ -75,6 +76,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                   <Button
                     variant={secondaryButton?.buttonVariant ?? 'secondary'}
                     onClick={secondaryButton?.buttonAction}
+                    disabled={secondaryButton?.disabled}
                   >
                     {secondaryButton?.label}
                   </Button>
@@ -83,6 +85,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                   <Button
                     variant={button?.buttonVariant ?? 'primary'}
                     onClick={button?.buttonAction}
+                    disabled={button?.disabled}
                   >
                     {button.label}
                   </Button>
