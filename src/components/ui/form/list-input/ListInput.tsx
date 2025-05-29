@@ -12,6 +12,7 @@ interface Props {
   error?: string;
   required?: boolean;
   label?: string;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
 const ListInput: FC<Props> = ({
@@ -93,6 +94,7 @@ const ListInput: FC<Props> = ({
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
               addItem();
+              e.preventDefault();
             }
           }}
         />
