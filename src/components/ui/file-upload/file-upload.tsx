@@ -129,7 +129,14 @@ const FileUpload: FC<Props> = ({
         onDrop={handleDrop}
       >
         <div>{translations.dropFilesHere}</div>
-        <Button variant='secondaryBlue' size='sm' onClick={() => inputRef.current?.click()}>
+        <Button
+          variant='secondaryBlue'
+          size='sm'
+          onClick={(e) => {
+            e.preventDefault();
+            inputRef.current?.click();
+          }}
+        >
           {translations.chooseFiles}
         </Button>
         <div className='text-sm text-gray-500 text-center'>
