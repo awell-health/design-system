@@ -171,7 +171,10 @@ import {
   RiShapesFill,
   RiPencilFill,
   RiWindowLine,
-  RiShieldUserLine
+  RiShieldUserLine,
+  RiCopilotFill,
+  RiRobot3Line,
+  RiFlaskLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -347,7 +350,10 @@ export const ICONS = {
   RiShapesFill,
   RiPencilFill,
   RiWindowLine,
-  RiShieldUserLine
+  RiShieldUserLine,
+  RiCopilotFill,
+  RiRobot3Line,
+  RiFlaskLine
 };
 
 export enum IconSize {
