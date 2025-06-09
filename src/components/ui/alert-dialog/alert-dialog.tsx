@@ -74,6 +74,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
               >
                 {secondaryButton && (
                   <Button
+                    type='button'
                     variant={secondaryButton?.buttonVariant ?? 'secondary'}
                     onClick={secondaryButton?.buttonAction}
                     disabled={secondaryButton?.disabled}
@@ -83,6 +84,7 @@ const AlertDialog = (props: Props): React.JSX.Element => {
                 )}
                 {button && (
                   <Button
+                    type='button'
                     variant={button?.buttonVariant ?? 'primary'}
                     onClick={button?.buttonAction}
                     disabled={button?.disabled}
