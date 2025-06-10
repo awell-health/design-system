@@ -174,7 +174,10 @@ import {
   RiShieldUserLine,
   RiCopilotFill,
   RiRobot3Line,
-  RiFlaskLine
+  RiFlaskLine,
+  RiSkipForwardLine,
+  RiResetRightLine,
+  RiServerLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -300,11 +303,14 @@ export const ICONS = {
   RiRadioButtonLine,
   RiRefreshLine,
   RiResetLeftLine,
+  RiResetRightLine,
   RiRocket2Line,
   RiSaveLine,
   RiSearchLine,
+  RiServerLine,
   RiSettings4Line,
   RiShareLine,
+  RiSkipForwardLine,
   RiSparklingFill,
   RiSparklingLine,
   RiSquareFill,
