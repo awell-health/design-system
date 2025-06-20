@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
-import { Icon } from '../../icon';
+import { Icon, IconSize } from '../../icon';
 
 const checkboxVariants = cva('', {
   variants: {
@@ -53,15 +53,34 @@ const Checkbox: React.FC<CheckboxProps> = ({
         {type === 'checkbox' && (
           <>
             {checked && (
-              <Icon icon='RiCheckFill' className='fill-white z-10 absolute left-0' size={16} />
+              <Icon
+                icon='RiCheckFill'
+                className={cn(
+                  'fill-white z-10 absolute',
+                  inputSize === 'md' ? 'left-[2px] top-[2px]' : 'left-0 top-0'
+                )}
+                size={IconSize.xs}
+              />
             )}
             {indeterminate && !checked && (
-              <Icon icon='RiSubtractFill' className='fill-white z-10 absolute left-0' size={16} />
+              <Icon
+                icon='RiSubtractFill'
+                className={cn(
+                  'fill-white z-10 absolute',
+                  inputSize === 'md' ? 'left-[2px] top-[2px]' : 'left-0 top-0'
+                )}
+                size={IconSize.xs}
+              />
             )}
           </>
         )}
         {type === 'radio' && checked && (
-          <div className='w-1.5 h-1.5 bg-blue-700 rounded-full absolute left-[5px] z-10' />
+          <div
+            className={cn(
+              'bg-blue-700 rounded-full absolute z-10',
+              inputSize === 'md' ? 'w-2 h-2 left-[6px] top-[6px]' : 'w-1.5 h-1.5 left-[5px]'
+            )}
+          />
         )}
         <input
           type={type}

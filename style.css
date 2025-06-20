@@ -4249,6 +4249,26 @@ input.tab:checked + .tab-content,
   top: 0.625rem;
 }
 
+.left-\[2px\]{
+  left: 2px;
+}
+
+.left-\[6px\]{
+  left: 6px;
+}
+
+.top-\[2px\]{
+  top: 2px;
+}
+
+.top-\[4px\]{
+  top: 4px;
+}
+
+.top-\[6px\]{
+  top: 6px;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -4558,6 +4578,10 @@ input.tab:checked + .tab-content,
 
 .w-screen{
   width: 100vw;
+}
+
+.w-2{
+  width: 0.5rem;
 }
 
 .min-w-8{
