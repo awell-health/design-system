@@ -39,3 +39,53 @@ input[type="checkbox"]:checked {
 input[type="checkbox"].green:checked {
   --tglbg: theme('colors.green.600');
 }
+
+/* Custom ring animations */
+@keyframes appear-in-out {
+  0% {
+    box-shadow: 0 0 0 2px rgb(29 78 216 / 0); /* blue-700 with 0 opacity */
+  }
+  5% {
+    box-shadow: 0 0 0 2px rgb(29 78 216 / 0.9); /* blue-700 with opacity */
+  }
+  70% {
+    box-shadow: 0 0 0 2px rgb(29 78 216 / 0.9); /* blue-700 with opacity */
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgb(29 78 216 / 0); /* blue-700 with 0 opacity */
+  }
+}
+
+@keyframes disappear-in-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    background-color: rgb(239 68 68 / 0);
+    box-shadow: 0 0 0 2px rgb(239 68 68 / 0); /* red-500 with 0 opacity */
+  }
+  5% {
+    box-shadow: 0 0 0 2px rgb(239 68 68 / 0.6); /* red-500 ring appears */
+    background-color: rgb(239 68 68 / 0.05);
+    opacity: 0.6
+  }
+  70% {
+    opacity: 0.6;
+    transform: scale(1);
+    background-color: rgb(239 68 68 / 0.05);
+    box-shadow: 0 0 0 2px rgb(239 68 68 / 0.6); /* red-500 ring stays */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+    background-color: rgb(239 68 68 / 0);
+    box-shadow: 0 0 0 2px rgb(239 68 68 / 0); /* red-500 ring fades */
+  }
+}
+
+.animate-appear {
+  animation: appear-in-out 1.2s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+
+.animate-disappear {
+  animation: disappear-in-out 0.6s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
