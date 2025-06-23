@@ -43,16 +43,16 @@ input[type="checkbox"].green:checked {
 /* Custom ring animations */
 @keyframes appear-in-out {
   0% {
-    box-shadow: 0 0 0 2px rgb(29 78 216 / 0); /* blue-700 with 0 opacity */
+    box-shadow: 0 0 0 1px rgb(29 78 216 / 0); /* blue-700 with 0 opacity */
   }
   5% {
-    box-shadow: 0 0 0 2px rgb(29 78 216 / 0.9); /* blue-700 with opacity */
+    box-shadow: 0 0 0 1px rgb(29 78 216 / 0.9); /* blue-700 with opacity */
   }
   70% {
-    box-shadow: 0 0 0 2px rgb(29 78 216 / 0.9); /* blue-700 with opacity */
+    box-shadow: 0 0 0 1px rgb(29 78 216 / 0.9); /* blue-700 with opacity */
   }
   100% {
-    box-shadow: 0 0 0 2px rgb(29 78 216 / 0); /* blue-700 with 0 opacity */
+    box-shadow: 0 0 0 1px rgb(29 78 216 / 0); /* blue-700 with 0 opacity */
   }
 }
 
@@ -61,10 +61,10 @@ input[type="checkbox"].green:checked {
     opacity: 1;
     transform: scale(1);
     background-color: rgb(239 68 68 / 0);
-    box-shadow: 0 0 0 2px rgb(239 68 68 / 0); /* red-500 with 0 opacity */
+    box-shadow: 0 0 0 1px rgb(239 68 68 / 0); /* red-500 with 0 opacity */
   }
   5% {
-    box-shadow: 0 0 0 2px rgb(239 68 68 / 0.6); /* red-500 ring appears */
+    box-shadow: 0 0 0 1px rgb(239 68 68 / 0.6); /* red-500 ring appears */
     background-color: rgb(239 68 68 / 0.05);
     opacity: 0.6
   }
@@ -72,13 +72,13 @@ input[type="checkbox"].green:checked {
     opacity: 0.6;
     transform: scale(1);
     background-color: rgb(239 68 68 / 0.05);
-    box-shadow: 0 0 0 2px rgb(239 68 68 / 0.6); /* red-500 ring stays */
+    box-shadow: 0 0 0 1px rgb(239 68 68 / 0.6); /* red-500 ring stays */
   }
   100% {
     opacity: 0;
     transform: scale(0.95);
     background-color: rgb(239 68 68 / 0);
-    box-shadow: 0 0 0 2px rgb(239 68 68 / 0); /* red-500 ring fades */
+    box-shadow: 0 0 0 1px rgb(239 68 68 / 0); /* red-500 ring fades */
   }
 }
 
