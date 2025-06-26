@@ -177,7 +177,11 @@ import {
   RiFlaskLine,
   RiSkipForwardLine,
   RiResetRightLine,
-  RiServerLine
+  RiServerLine,
+  RiFolderCloudLine,
+  RiProfileLine,
+  RiBriefcase4Line,
+  RiCpuLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -210,6 +214,7 @@ export const ICONS = {
   RiBold,
   RiBookmarkLine,
   RiBracesLine,
+  RiBriefcase4Line,
   RiCalculatorFill,
   RiCalendar2Line,
   RiCalendarLine,
@@ -230,6 +235,7 @@ export const ICONS = {
   RiCollapseVerticalLine,
   RiContractRightLine,
   RiContractLeftLine,
+  RiCpuLine,
   RiCursorFill,
   RiDatabase2Line,
   RiDeleteBin6Fill,
@@ -256,6 +262,7 @@ export const ICONS = {
   RiFlashlightFill,
   RiFlashlightLine,
   RiFlowChart,
+  RiFolderCloudLine,
   RiGitMergeLine,
   RiGlobalLine,
   RiGlobeLine,
@@ -293,6 +300,7 @@ export const ICONS = {
   RiPhoneLine,
   RiPlayFill,
   RiPriceTag3Fill,
+  RiProfileLine,
   RiPulseFill,
   RiPuzzleFill,
   RiPuzzle2Fill,
