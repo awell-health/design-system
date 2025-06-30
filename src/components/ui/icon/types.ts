@@ -181,7 +181,8 @@ import {
   RiFolderCloudLine,
   RiProfileLine,
   RiBriefcase4Line,
-  RiCpuLine
+  RiCpuLine,
+  RiFilter3Line
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -259,6 +260,7 @@ export const ICONS = {
   RiEyeOffLine,
   RiFileCopyFill,
   RiFileLine,
+  RiFilter3Line,
   RiFlashlightFill,
   RiFlashlightLine,
   RiFlowChart,
