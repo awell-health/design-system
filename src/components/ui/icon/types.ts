@@ -182,7 +182,12 @@ import {
   RiProfileLine,
   RiBriefcase4Line,
   RiCpuLine,
-  RiFilter3Line
+  RiFilter3Line,
+  RiPassValidLine,
+  RiPassExpiredLine,
+  RiFocus3Line,
+  RiArrowRightBoxLine,
+  RiStairsLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -203,6 +208,7 @@ export const ICONS = {
   RiArrowLeftRightFill,
   RiArrowLeftRightLine,
   RiArrowLeftSLine,
+  RiArrowRightBoxLine,
   RiArrowRightLine,
   RiArrowRightSLine,
   RiArrowRightUpLine,
@@ -264,6 +270,7 @@ export const ICONS = {
   RiFlashlightFill,
   RiFlashlightLine,
   RiFlowChart,
+  RiFocus3Line,
   RiFolderCloudLine,
   RiGitMergeLine,
   RiGlobalLine,
@@ -298,6 +305,8 @@ export const ICONS = {
   RiMessage3Fill,
   RiMore2Line,
   RiNodeTree,
+  RiPassExpiredLine,
+  RiPassValidLine,
   RiPhoneFill,
   RiPhoneLine,
   RiPlayFill,
@@ -325,6 +334,7 @@ export const ICONS = {
   RiSparklingLine,
   RiSquareFill,
   RiSquareLine,
+  RiStairsLine,
   RiStethoscopeLine,
   RiStickyNote2Fill,
   RiStrikethrough,
