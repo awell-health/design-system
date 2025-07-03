@@ -108,6 +108,7 @@ function SelectComponent(props: Props) {
               cn(
                 '!rounded-lg !shadow border !border-slate-300 text-slate-500 text-sm font-normal',
                 state.isFocused && '!border-blue-500 !text-black',
+                state.isDisabled && '!bg-slate-50 !text-slate-400 !cursor-not-allowed',
                 hasError && '!border-red-500 !text-red-500'
               ),
             menu: () =>

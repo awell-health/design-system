@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.12.92",
+  "version": "0.12.93",
   "type": "module",
   "files": [
     "dist"
