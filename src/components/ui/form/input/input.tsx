@@ -72,7 +72,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               'text-sm font-normal',
               'shadow border border-slate-300 text-black placeholder:text-slate-400',
               'focus:outline-0 focus:border focus:border-blue-500',
-              'disabled:bg-slate-50 disabled:text-slate-300',
+              'disabled:bg-slate-50 disabled:text-slate-400',
               prefixIcon && 'pl-8',
               suffixIcon && 'pr-8',
               hasError && 'border-red-500 focus:border-red-500',
