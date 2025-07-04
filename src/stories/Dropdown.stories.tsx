@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof Dropdown>;
 
 const items: DropdownItem[] = [
-  { label: 'Test 1', onClick: fn },
+  { label: 'Test 1', onClick: fn, disabled: true },
   {
     label: (
       <>
