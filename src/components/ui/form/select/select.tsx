@@ -19,6 +19,7 @@ export interface Props {
   disabled?: boolean;
   placeholder?: string;
   menuPosition?: 'fixed' | 'absolute';
+  menuShouldBlockScroll?: boolean;
   hasError?: boolean;
   CustomOptionComponent?: (data: SelectItem) => ReactElement;
   SingleValueComponent?: (data: SelectItem) => ReactElement;
@@ -43,6 +44,7 @@ function SelectComponent(props: Props) {
     disabled = false,
     placeholder = 'Select...',
     menuPosition = 'absolute',
+    menuShouldBlockScroll = true,
     hasError = false,
     CustomOptionComponent = undefined,
     SingleValueComponent = undefined,
@@ -90,6 +92,7 @@ function SelectComponent(props: Props) {
           value={value}
           isDisabled={disabled}
           menuPosition={menuPosition}
+          menuShouldBlockScroll={menuShouldBlockScroll}
           isOptionDisabled={isOptionDisabled}
           components={{
             Option: ({ children, ...rest }) => (
