@@ -5,7 +5,7 @@ import { Icon } from '../icon';
 import { Button } from '../button/button';
 
 interface AlertDialogButton {
-  label: string;
+  label: string | JSX.Element;
   buttonVariant?: 'primary' | 'secondary' | 'error' | 'success' | 'warning';
   buttonAction?: () => void;
   disabled?: boolean;

@@ -26,7 +26,12 @@ export const Example = {
       buttonAction: () => alert('secondary click')
     },
     button: {
-      label: 'Redirect',
+      label: (
+        <div className='flex items-center gap-2'>
+          <Icon icon='RiArrowRightLine' size={12} />
+          Redirect
+        </div>
+      ),
       buttonAction: () => alert('button click'),
       buttonVariant: 'error'
     },
