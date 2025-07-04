@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { cn } from '@/lib/utils';
 
 import { Icon } from '../icon';
 import { Button } from '../button/button';
@@ -18,14 +19,15 @@ interface Props {
   onClose?: () => void;
   button?: AlertDialogButton;
   secondaryButton?: AlertDialogButton;
+  className?: string;
 }
 
 const AlertDialog = (props: Props): React.JSX.Element => {
-  const { title, icon, text, button, children = null, onClose, secondaryButton } = props;
+  const { title, icon, text, button, children = null, onClose, secondaryButton, className } = props;
 
   return (
     <div
-      className='relative z-[9999]'
+      className={cn('relative z-[9999]', className)}
       aria-labelledby='modal-title'
       role='dialog'
       aria-modal='true'
