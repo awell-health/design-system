@@ -187,7 +187,10 @@ import {
   RiPassExpiredLine,
   RiFocus3Line,
   RiArrowRightBoxLine,
-  RiStairsLine
+  RiStairsLine,
+  RiQrCodeLine,
+  RiTimelineView,
+  RiLayoutVerticalLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -379,7 +382,10 @@ export const ICONS = {
   RiShieldUserLine,
   RiCopilotFill,
   RiRobot3Line,
-  RiFlaskLine
+  RiFlaskLine,
+  RiQrCodeLine,
+  RiTimelineView,
+  RiLayoutVerticalLine
 };
 
 export enum IconSize {
