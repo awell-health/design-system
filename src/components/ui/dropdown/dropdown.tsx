@@ -31,9 +31,16 @@ export interface DropdownProps
 function Dropdown(props: DropdownProps) {
   const { items, buttonLabel, buttonClassNames, itemClassNames, placement, className } = props;
 
-  const renderItem = ({ label, onClick }: DropdownItem, i: number): JSX.Element => (
+  const renderItem = ({ label, onClick, disabled }: DropdownItem, i: number): JSX.Element => (
     <li key={i} className={cn(itemClassNames)}>
-      <a onClick={onClick}>{label}</a>
+      <a
+        onClick={disabled ? undefined : onClick}
+        className={cn(
+          disabled && 'opacity-50 cursor-not-allowed pointer-events-none text-slate-500'
+        )}
+      >
+        {label}
+      </a>
     </li>
   );
 
@@ -44,7 +51,7 @@ function Dropdown(props: DropdownProps) {
       </div>
       <ul
         tabIndex={0}
-        className='dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52'
+        className='dropdown-content z-[9999] menu p-2 shadow bg-base-100 rounded-box w-52'
       >
         {items.map(renderItem)}
       </ul>
