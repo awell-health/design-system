@@ -7,8 +7,7 @@ const meta = {
   parameters: {
     docs: {
       description: {
-        component:
-          'Enhanced Tab component with support for both click handlers and link navigation. Supports right-click context menu, Ctrl+click, and middle-click for "open in new tab" functionality.'
+        component: 'Enhanced Tab component with support for both click handlers and link navigation. Supports right-click context menu, Ctrl+click, and middle-click for "open in new tab" functionality.'
       }
     }
   },
@@ -122,7 +121,7 @@ export const HybridNavigation = {
     docs: {
       description: {
         story:
-          'Hybrid navigation with both href and onClick. Normal click triggers onClick (client-side navigation), while right-click, Ctrl+click, and middle-click use href (new tab).'
+          'Hybrid navigation with both href and onClick. Normal click triggers onClick (client-side navigation), while right-click, Ctrl+click, and middle-click use href (new tab). Use this pattern for router integration by calling your router in onClick.'
       }
     }
   }
@@ -237,39 +236,6 @@ export const BorderedVariant = {
     docs: {
       description: {
         story: 'Bordered variant with link-based navigation support.'
-      }
-    }
-  }
-} satisfies Story;
-
-// Custom LinkComponent simulation (for documentation)
-const CustomLink = ({ href, children, ...props }: any) => (
-  <a href={href} {...props} style={{ textDecoration: 'underline' }}>
-    {children}
-  </a>
-);
-
-const customLinkItems: TabItem[] = [
-  { id: 'custom1', label: 'Custom Link 1', href: '/custom1' },
-  { id: 'custom2', label: 'Custom Link 2', href: '/custom2' },
-  { id: 'custom3', label: 'Custom Link 3', href: '/custom3' }
-];
-
-export const CustomLinkComponent = {
-  args: {
-    items: customLinkItems,
-    size: 'md',
-    variant: 'default',
-    selected: 'custom1',
-    fullWidth: true,
-    linkComponent: CustomLink
-  },
-  render: (args) => <Tab {...args} />,
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Using a custom LinkComponent (e.g., React Router Link, Next.js Link) for client-side routing integration.'
       }
     }
   }

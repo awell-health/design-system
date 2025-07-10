@@ -32,8 +32,7 @@ interface TabProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<ty
   items: TabItem[];
   fullWidth?: boolean;
   selected?: string;
-  // New props for link support
-  linkComponent?: React.ComponentType<any>;
+  // New prop for client-side navigation control
   preserveClientSideNavigation?: boolean;
 }
 
@@ -44,7 +43,6 @@ function Tab({
   variant, 
   size, 
   fullWidth = true, 
-  linkComponent: LinkComponent,
   preserveClientSideNavigation = false,
   ...props 
 }: TabProps) {
@@ -105,11 +103,6 @@ function Tab({
         onContextMenu: undefined, // Allow right-click context menu
         children: label
       };
-
-      // Use custom LinkComponent if provided (e.g., Next.js Link, React Router Link)
-      if (LinkComponent) {
-        return <LinkComponent key={id} {...linkProps} />;
-      }
 
       // Use native anchor tag
       return <a key={id} {...linkProps} />;
