@@ -115,18 +115,19 @@ function Tab({
       return <a key={id} {...linkProps} />;
     }
 
-    // Render as button for onClick-only tabs (better semantics)
+    // Render as anchor for onClick-only tabs (maintaining backward compatibility)
+    // Note: This maintains the original HTML structure even though semantically
+    // a button would be more appropriate for click-only interactions
     return (
-      <button
+      <a
         key={id}
-        type="button"
         role="tab"
         className={commonClasses}
         onClick={handleClick}
-        disabled={disabled}
+        style={disabled ? { pointerEvents: 'none' } : undefined}
       >
         {label}
-      </button>
+      </a>
     );
   };
 
