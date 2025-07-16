@@ -190,7 +190,8 @@ import {
   RiStairsLine,
   RiQrCodeLine,
   RiTimelineView,
-  RiLayoutVerticalLine
+  RiLayoutVerticalLine,
+  RiFlipHorizontalLine
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -385,7 +386,8 @@ export const ICONS = {
   RiFlaskLine,
   RiQrCodeLine,
   RiTimelineView,
-  RiLayoutVerticalLine
+  RiLayoutVerticalLine,
+  RiFlipHorizontalLine
 };
 
 export enum IconSize {
