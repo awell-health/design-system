@@ -1,0 +1,493 @@
+---
+name: Design System Development
+description: Guidelines for developing components within @awell-health/design-system
+tags: [react, typescript, design-system, development]
+when:
+  - creating new components
+  - refactoring existing components
+  - writing tests
+  - updating documentation
+globs: ["src/**/*.{tsx,jsx,ts,js}"]
+alwaysApply: true
+---
+
+# Design System Development Guidelines
+
+## Component Structure
+- Place components in `src/components/ui/`
+- Each component should have: `component.tsx`, `index.ts`, `component.spec.tsx`
+- Export from `src/components/index.ts`
+
+## Component Patterns
+```typescript
+// ✅ Good - Design system component structure with cva()
+import { cn } from '@/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
+
+// Define button variants using cva
+export const buttonVariants = cva('btn', {
+  variants: {
+    size: {
+      sm: 'btn-sm rounded-md px-3.5 py-2',
+      lg: 'btn-lg rounded-lg px-[18px] py-2.5 h-[46px]'
+    },
+    shape: {
+      squareLg: 'btn-square w-[46px] h-[46px] min-h-[46px] min-w-[46px] rounded-lg',
+      squareSm: 'btn-square w-8 h-8 min-w-8 min-h-8 rounded-md'
+    },
+    variant: {
+      primary:
+        'btn-primary hover:bg-blue-800 hover:border-blue-800 active:bg-blue-800 active:border-blue-800 disabled:bg-slate-200 disabled:border-slate-200 disabled:text-white',
+      secondaryBlue:
+        'text-blue-700 bg-blue-50 border-blue-200 hover:bg-blue-100 hover:border-blue-300 active:bg-blue-100 active:border-blue-300 disabled:bg-blue-50 disabled:border-blue-200 disabled:text-blue-200 outline-blue-500',
+      secondary:
+        'btn-secondary bg-white border-slate-300 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:border-slate-200 disabled:bg-white',
+      link: 'text-blue-700 text-sm bg-transparent border-none shadow-none hover:bg-transparent active:bg-transparent disabled:text-blue-200 disabled:bg-transparent outline-blue-700',
+      ghost:
+        'btn-ghost text-slate-600 hover:bg-slate-100 active:bg-slate-100 disabled:text-slate-200 disabled:bg-transparent outline-slate-300',
+      error: 'btn-error',
+      success: 'btn-success',
+      warning: 'btn-warning'
+    }
+  },
+  defaultVariants: {
+    variant: 'primary',
+    size: 'sm'
+  }
+});
+
+// Extract variant props type from cva
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  variant,
+  size,
+  shape,
+  children,
+  className,
+  disabled = false,
+  ...props
+}) => {
+  return (
+    <button 
+      className={cn(
+        buttonVariants({ variant, size, shape }),
+        className
+      )}
+      disabled={disabled}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+```
+
+## cn() Utility Usage
+```typescript
+// ✅ Good - Using cn() for conditional classes
+import { cn } from '@/lib/utils';
+
+function StatusBadge({ status, className }) {
+  return (
+    <span className={cn(
+      // Base badge styles
+      'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium',
+      
+      // Conditional status styles
+      status === 'active' && 'bg-green-100 text-green-800',
+      status === 'inactive' && 'bg-gray-100 text-gray-800',
+      status === 'pending' && 'bg-yellow-100 text-yellow-800',
+      status === 'error' && 'bg-red-100 text-red-800',
+      
+      // External className for customization
+      className
+    )}>
+      {status}
+    </span>
+  );
+}
+```
+
+## Testing Requirements
+- Every component must have tests
+- Test all variants and props
+- Use `@testing-library/react`
+- Include accessibility tests
+
+### Spec File Example
+```typescript
+// button.spec.tsx
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Button, buttonVariants } from './button';
+
+describe('Button', () => {
+  it('renders with default props', () => {
+    render(<Button>Click me</Button>);
+    const button = screen.getByRole('button', { name: /click me/i });
+    
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveClass('btn', 'btn-primary', 'btn-sm');
+    expect(button).not.toBeDisabled();
+  });
+
+  it('renders with different variants', () => {
+    const { rerender } = render(<Button variant="primary">Primary</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-primary');
+
+    rerender(<Button variant="secondary">Secondary</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-secondary');
+
+    rerender(<Button variant="secondaryBlue">Secondary Blue</Button>);
+    expect(screen.getByRole('button')).toHaveClass('text-blue-700', 'bg-blue-50');
+
+    rerender(<Button variant="link">Link</Button>);
+    expect(screen.getByRole('button')).toHaveClass('text-blue-700', 'bg-transparent');
+
+    rerender(<Button variant="ghost">Ghost</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-ghost', 'text-slate-600');
+  });
+
+  it('renders with different sizes', () => {
+    const { rerender } = render(<Button size="sm">Small</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-sm', 'px-3.5', 'py-2');
+
+    rerender(<Button size="lg">Large</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-lg', 'px-[18px]', 'py-2.5', 'h-[46px]');
+  });
+
+  it('renders with different shapes', () => {
+    const { rerender } = render(<Button shape="squareSm">Square Small</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-square', 'w-8', 'h-8', 'min-w-8', 'min-h-8');
+
+    rerender(<Button shape="squareLg">Square Large</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-square', 'w-[46px]', 'h-[46px]', 'min-h-[46px]', 'min-w-[46px]');
+  });
+
+  it('handles disabled state', () => {
+    render(<Button disabled>Disabled</Button>);
+    const button = screen.getByRole('button');
+    
+    expect(button).toBeDisabled();
+    expect(button).toHaveClass('disabled:bg-slate-200', 'disabled:border-slate-200');
+  });
+
+  it('calls onClick when clicked', () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Click me</Button>);
+    
+    fireEvent.click(screen.getByRole('button'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('applies custom className', () => {
+    render(<Button className="custom-class">Custom</Button>);
+    expect(screen.getByRole('button')).toHaveClass('custom-class');
+  });
+
+  it('forwards ref correctly', () => {
+    const ref = jest.fn();
+    render(<Button ref={ref}>Ref test</Button>);
+    expect(ref).toHaveBeenCalled();
+  });
+
+  it('has proper accessibility attributes', () => {
+    render(<Button aria-label="Submit form">Submit</Button>);
+    const button = screen.getByRole('button', { name: /submit form/i });
+    expect(button).toBeInTheDocument();
+  });
+
+  it('combines multiple variants correctly', () => {
+    render(<Button variant="primary" size="lg" shape="squareLg">Square Primary Large</Button>);
+    const button = screen.getByRole('button');
+    
+    expect(button).toHaveClass('btn-primary', 'btn-lg', 'btn-square');
+    expect(button).toHaveClass('w-[46px]', 'h-[46px]', 'px-[18px]', 'py-2.5');
+  });
+
+  it('buttonVariants function works correctly', () => {
+    const classes = buttonVariants({ variant: 'primary', size: 'lg' });
+    expect(classes).toContain('btn-primary');
+    expect(classes).toContain('btn-lg');
+    expect(classes).toContain('px-[18px]');
+  });
+});
+```
+
+## Documentation
+- Add Storybook stories for each component
+- Document all props and variants
+- Include usage examples
+- Show accessibility features
+
+### Storybook File Example
+```typescript
+// Button.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from './button';
+
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
+  parameters: {
+    layout: 'centered',
+    docs: {
+      description: {
+        component: 'A versatile button component with multiple variants and sizes.',
+      },
+    },
+  },
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary', 'secondaryBlue', 'link', 'ghost', 'error', 'success', 'warning'],
+      description: 'The visual style variant of the button',
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['sm', 'lg'],
+      description: 'The size of the button',
+    },
+    shape: {
+      control: { type: 'select' },
+      options: ['squareSm', 'squareLg'],
+      description: 'The shape of the button (overrides size for square buttons)',
+    },
+    disabled: {
+      control: { type: 'boolean' },
+      description: 'Whether the button is disabled',
+    },
+    onClick: {
+      action: 'clicked',
+      description: 'Function called when button is clicked',
+    },
+  },
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+// Default story
+export const Default: Story = {
+  args: {
+    children: 'Button',
+  },
+};
+
+// Primary variant
+export const Primary: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Primary Button',
+  },
+};
+
+// Secondary variant
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    children: 'Secondary Button',
+  },
+};
+
+// Secondary Blue variant
+export const SecondaryBlue: Story = {
+  args: {
+    variant: 'secondaryBlue',
+    children: 'Secondary Blue Button',
+  },
+};
+
+// Link variant
+export const Link: Story = {
+  args: {
+    variant: 'link',
+    children: 'Link Button',
+  },
+};
+
+// Ghost variant
+export const Ghost: Story = {
+  args: {
+    variant: 'ghost',
+    children: 'Ghost Button',
+  },
+};
+
+// Error variant
+export const Error: Story = {
+  args: {
+    variant: 'error',
+    children: 'Error Button',
+  },
+};
+
+// Success variant
+export const Success: Story = {
+  args: {
+    variant: 'success',
+    children: 'Success Button',
+  },
+};
+
+// Warning variant
+export const Warning: Story = {
+  args: {
+    variant: 'warning',
+    children: 'Warning Button',
+  },
+};
+
+// Size variants
+export const Small: Story = {
+  args: {
+    size: 'sm',
+    children: 'Small Button',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'lg',
+    children: 'Large Button',
+  },
+};
+
+// Shape variants
+export const SquareSmall: Story = {
+  args: {
+    shape: 'squareSm',
+    children: <Icon name="plus" />,
+  },
+};
+
+export const SquareLarge: Story = {
+  args: {
+    shape: 'squareLg',
+    children: <Icon name="settings" />,
+  },
+};
+
+// Disabled state
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: 'Disabled Button',
+  },
+};
+
+// With icon
+export const WithIcon: Story = {
+  args: {
+    children: (
+      <>
+        <Icon name="plus" className="mr-2 h-4 w-4" />
+        Add Item
+      </>
+    ),
+  },
+};
+
+// Loading state
+export const Loading: Story = {
+  args: {
+    disabled: true,
+    children: (
+      <>
+        <Spinner className="mr-2 h-4 w-4" />
+        Loading...
+      </>
+    ),
+  },
+};
+
+// All variants showcase
+export const AllVariants: Story = {
+  render: () => (
+    <div className="flex flex-wrap gap-4">
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="secondaryBlue">Secondary Blue</Button>
+      <Button variant="link">Link</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="error">Error</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="warning">Warning</Button>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story: 'All button variants displayed together for comparison.',
+      },
+    },
+  },
+};
+
+// All sizes showcase
+export const AllSizes: Story = {
+  render: () => (
+    <div className="flex items-center gap-4">
+      <Button size="sm">Small</Button>
+      <Button size="lg">Large</Button>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story: 'All button sizes displayed together for comparison.',
+      },
+    },
+  },
+};
+
+// All shapes showcase
+export const AllShapes: Story = {
+  render: () => (
+    <div className="flex items-center gap-4">
+      <Button shape="squareSm">
+        <Icon name="plus" />
+      </Button>
+      <Button shape="squareLg">
+        <Icon name="settings" />
+      </Button>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story: 'All button shapes displayed together for comparison.',
+      },
+    },
+  },
+};
+```
+
+## Styling
+- Use Tailwind CSS with design tokens
+- Support dark mode
+- Ensure responsive design
+- Follow accessibility guidelines
+
+## Export Patterns
+```typescript
+// src/components/ui/button/index.ts
+export { Button } from './button';
+export type { ButtonProps } from './button';
+
+// src/components/index.ts
+export * from './ui/button';
+```
+
+## Best Practices
+1. **Consistent API** - Follow established patterns
+2. **Accessibility first** - Include ARIA attributes
+3. **TypeScript** - Full type safety
+4. **Performance** - Optimize bundle size
+5. **Backward compatibility** - Don't break existing APIs
