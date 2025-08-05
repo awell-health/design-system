@@ -324,22 +324,6 @@ function ResponsiveLayout({ children }) {
 }
 ```
 
-### Dark Mode Support
-```typescript
-// ✅ Good - Dark mode compatible components
-function ThemeAwareCard({ title, children }) {
-  return (
-    <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-      <h3 className="text-gray-900 dark:text-white font-semibold mb-2">
-        {title}
-      </h3>
-      <p className="text-gray-600 dark:text-gray-300">
-        {children}
-      </p>
-    </Card>
-  );
-}
-```
 
 ## Performance
 - Use tree shaking: import specific components
