@@ -8,7 +8,7 @@ when:
   - writing tests
   - updating documentation
 globs: ["src/**/*.{tsx,jsx,ts,js}"]
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Design System Development Guidelines

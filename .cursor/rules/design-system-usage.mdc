@@ -8,7 +8,7 @@ when:
   - writing JSX/TSX
   - importing components
 globs: ["**/*.{tsx,jsx,ts,js}"]
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Design System Usage Guidelines
