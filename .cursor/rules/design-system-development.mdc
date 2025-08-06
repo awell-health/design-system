@@ -36,12 +36,8 @@ import { cva, type VariantProps } from 'class-variance-authority';
 export const buttonVariants = cva('btn', {
   variants: {
     size: {
-      sm: 'btn-sm rounded-md px-3.5 py-2',
-      lg: 'btn-lg rounded-lg px-[18px] py-2.5 h-[46px]'
-    },
-    shape: {
-      squareLg: 'btn-square w-[46px] h-[46px] min-h-[46px] min-w-[46px] rounded-lg',
-      squareSm: 'btn-square w-8 h-8 min-w-8 min-h-8 rounded-md'
+      sm: 'btn-sm rounded-md',
+      lg: 'btn-lg rounded-lg'
     },
     variant: {
       primary: 'btn-primary',
@@ -154,13 +150,6 @@ describe('Button', () => {
     expect(screen.getByRole('button')).toHaveClass('btn-lg');
   });
 
-  it('handles disabled state', () => {
-    render(<Button disabled>Disabled</Button>);
-    const button = screen.getByRole('button');
-    
-    expect(button).toBeDisabled();
-  });
-
   it('calls onClick when clicked', () => {
     const handleClick = jest.fn();
     render(<Button onClick={handleClick}>Click me</Button>);
@@ -186,29 +175,11 @@ import { Button } from './button';
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
-  parameters: { layout: 'centered' },
-  argTypes: {
-    variant: {
-      control: { type: 'select' },
-      options: ['primary', 'secondary', 'secondaryBlue', 'link', 'ghost', 'error', 'success', 'warning'],
-    },
-    size: { control: { type: 'select' }, options: ['sm', 'lg'] },
-    shape: { control: { type: 'select' }, options: ['squareSm', 'squareLg'] },
-    disabled: { control: { type: 'boolean' } },
-  },
   tags: ['autodocs'],
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-// Basic stories
-export const Default: Story = { args: { children: 'Button' } };
-export const Primary: Story = { args: { variant: 'primary', children: 'Primary' } };
-export const Secondary: Story = { args: { variant: 'secondary', children: 'Secondary' } };
-export const Small: Story = { args: { size: 'sm', children: 'Small' } };
-export const Large: Story = { args: { size: 'lg', children: 'Large' } };
-export const Disabled: Story = { args: { disabled: true, children: 'Disabled' } };
 
 // Showcase stories
 export const AllVariants: Story = {
@@ -223,12 +194,6 @@ export const AllVariants: Story = {
   ),
 };
 ```
-
-## Styling
-- Use Tailwind CSS with design tokens
-- Support dark mode
-- Ensure responsive design
-- Follow accessibility guidelines
 
 ## Export Patterns
 ```typescript
