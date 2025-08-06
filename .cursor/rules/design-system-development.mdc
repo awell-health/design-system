@@ -1,0 +1,206 @@
+---
+name: Design System Development
+description: Guidelines for developing components within @awell-health/design-system
+tags: [react, typescript, design-system, development]
+when:
+  - creating new components
+  - refactoring existing components
+  - writing tests
+  - updating documentation
+globs: ["src/**/*.{tsx,jsx,ts,js}"]
+alwaysApply: false
+---
+
+# Design System Development Guidelines
+
+## Component Structure
+- Place components in `src/components/ui/`
+- Each component should have: `component.tsx`, `index.ts`, `component.spec.tsx`
+- Export from `src/components/index.ts`
+
+## Best Practices
+1. **Consistent API** - Follow established patterns
+2. **Accessibility first** - Include ARIA attributes
+3. **TypeScript** - Full type safety
+4. **Performance** - Optimize bundle size
+5. **Backward compatibility** - Don't break existing APIs
+
+
+## Component Patterns
+```typescript
+// ✅ Good - Design system component structure with cva()
+import { cn } from '@/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
+
+// Define button variants using cva
+export const buttonVariants = cva('btn', {
+  variants: {
+    size: {
+      sm: 'btn-sm rounded-md',
+      lg: 'btn-lg rounded-lg'
+    },
+    variant: {
+      primary: 'btn-primary',
+      success: 'btn-success',
+      warning: 'btn-warning'
+    }
+  },
+  defaultVariants: {
+    variant: 'primary',
+    size: 'sm'
+  }
+});
+
+// Extract variant props type from cva
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  variant,
+  size,
+  shape,
+  children,
+  className,
+  disabled = false,
+  ...props
+}) => {
+  return (
+    <button 
+      className={cn(
+        buttonVariants({ variant, size, shape }),
+        className
+      )}
+      disabled={disabled}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+```
+
+## cn() Utility Usage
+```typescript
+// ✅ Good - Using cn() for conditional classes
+import { cn } from '@/lib/utils';
+
+function StatusBadge({ status, className }) {
+  return (
+    <span className={cn(
+      // Base badge styles
+      'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium',
+      
+      // Conditional status styles
+      status === 'active' && 'bg-green-100 text-green-800',
+      status === 'inactive' && 'bg-gray-100 text-gray-800',
+      status === 'pending' && 'bg-yellow-100 text-yellow-800',
+      status === 'error' && 'bg-red-100 text-red-800',
+      
+      // External className for customization
+      className
+    )}>
+      {status}
+    </span>
+  );
+}
+```
+
+## Testing Requirements
+- Every component must have tests
+- Test all variants and props
+- Use `@testing-library/react`
+- Include accessibility tests
+
+### Spec File Example
+```typescript
+// button.spec.tsx
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Button, buttonVariants } from './button';
+
+describe('Button', () => {
+  it('renders with default props', () => {
+    render(<Button>Click me</Button>);
+    const button = screen.getByRole('button', { name: /click me/i });
+    
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveClass('btn', 'btn-primary', 'btn-sm');
+    expect(button).not.toBeDisabled();
+  });
+
+  it('renders with different variants', () => {
+    const { rerender } = render(<Button variant="primary">Primary</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-primary');
+
+    rerender(<Button variant="secondary">Secondary</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-secondary');
+
+    rerender(<Button variant="secondaryBlue">Secondary Blue</Button>);
+    expect(screen.getByRole('button')).toHaveClass('text-blue-700', 'bg-blue-50');
+  });
+
+  it('renders with different sizes', () => {
+    const { rerender } = render(<Button size="sm">Small</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-sm');
+
+    rerender(<Button size="lg">Large</Button>);
+    expect(screen.getByRole('button')).toHaveClass('btn-lg');
+  });
+
+  it('calls onClick when clicked', () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Click me</Button>);
+    
+    fireEvent.click(screen.getByRole('button'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
+```
+
+## Documentation
+- Add Storybook stories for each component
+- Document all props and variants
+- Include usage examples
+- Show accessibility features
+
+### Storybook File Example
+```typescript
+// Button.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from './button';
+
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+// Showcase stories
+export const AllVariants: Story = {
+  render: () => (
+    <div className="flex flex-wrap gap-4">
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="secondaryBlue">Secondary Blue</Button>
+      <Button variant="link">Link</Button>
+      <Button variant="ghost">Ghost</Button>
+    </div>
+  ),
+};
+```
+
+## Export Patterns
+```typescript
+// src/components/ui/button/index.ts
+export { Button } from './button';
+export type { ButtonProps } from './button';
+
+// src/components/index.ts
+export * from './ui/button';
+```

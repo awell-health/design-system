@@ -1,0 +1,237 @@
+---
+name: Design System Usage
+description: Guidelines for using @awell-health/design-system components in applications
+tags: [react, typescript, components, design-system, usage]
+when: 
+  - creating new components
+  - refactoring existing code
+  - writing JSX/TSX
+  - importing components
+globs: ["**/*.{tsx,jsx,ts,js}"]
+alwaysApply: false
+---
+
+# Design System Usage Guidelines
+
+## Always Prefer Design System Components
+
+### Priority Order
+1. **Form Components**: `Input`, `Textarea`, `Select`, `Checkbox`, `Toggle`, `FormSection`, `FormContent`, `FormButtons`, `Label`, `ListInput`, `DateRangeSelect`
+2. **Layout**: `Card`, `Divider`, `Modal`, `Drawer`, `Alert`, `AlertDialog`
+3. **Interactive**: `Button`, `Dropdown`, `Menu`, `Tab`, `Pagination`
+4. **Data Display**: `Table`, `Badge`, `Avatar`, `FileList`, `FileUpload`, `CopyText`, `SkeletonLoader`, `Spinner`, `RadialProgress`
+5. **Icons**: `Icon`, `ActionIcon`, `DataPointIcon`, `Tooltip`
+6. **Rich Text**: `RichText` (import separately: `@awell-health/design-system/rich-text`)
+
+## Import Patterns
+```typescript
+// ✅ Good
+import { Button, Card, Modal, Input, Select } from '@awell-health/design-system';
+import { RichText } from '@awell-health/design-system/rich-text';
+```
+
+## Anti-Patterns to Avoid
+- ❌ Don't create custom buttons when `Button` exists
+- ❌ Don't build custom forms when form components exist
+- ❌ Don't use raw HTML when design system components are available
+- ❌ Don't override design system styles without justification
+- ❌ Don't create custom modals/dialogs
+
+
+## Usage Examples
+### Form Implementation
+```typescript
+// ✅ Good - Complete form using design system components
+import { 
+  FormContent, 
+  FormSection, 
+  FormButtons, 
+  Label, 
+  Input, 
+  Button 
+} from '@awell-health/design-system';
+
+function UserProfileForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
+  const [errors, setErrors] = useState({});
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form validation and submission logic
+  };
+
+  return (
+    <FormContent onSubmit={handleSubmit}>
+      <FormSection title="Personal Information">
+        <Label htmlFor="name" required>
+          Full Name
+        </Label>
+        <Input 
+          id="name"
+          type="text"
+          value={formData.name}
+          onChange={(e) => setFormData({...formData, name: e.target.value})}
+          error={errors.name}
+          placeholder="Enter your full name"
+        />
+        
+        <Label htmlFor="email" required>
+          Email Address
+        </Label>
+        <Input 
+          id="email"
+          type="email"
+          value={formData.email}
+          onChange={(e) => setFormData({...formData, email: e.target.value})}
+          error={errors.email}
+          placeholder="Enter your email address"
+        />
+        
+        <Label htmlFor="phone">
+          Phone Number
+        </Label>
+        <Input 
+          id="phone"
+          type="tel"
+          value={formData.phone}
+          onChange={(e) => setFormData({...formData, phone: e.target.value})}
+          error={errors.phone}
+          placeholder="Enter your phone number"
+        />
+      </FormSection>
+      
+      <FormButtons
+        cancel={
+          <Button variant="secondary" type="button" onClick={onCancel}>
+            Cancel
+          </Button>
+        }
+        save={
+          <Button variant="primary" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Saving...' : 'Save Changes'}
+          </Button>
+        }
+      />
+    </FormContent>
+  );
+}
+```
+
+### AlertDialog Implementation
+```typescript
+// ✅ Good - Complete confirmation dialog with proper structure
+import { AlertDialog, Icon } from '@awell-health/design-system';
+
+function DeleteConfirmationModal({ isOpen, onClose, onConfirm, itemName }) {
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const handleConfirm = async () => {
+    setIsDeleting(true);
+    try {
+      await onConfirm();
+      onClose();
+    } catch (error) {
+      console.error('Delete failed:', error);
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <AlertDialog
+      title="Confirm Deletion"
+      text={`This action cannot be undone. Are you sure you want to delete "${itemName}"? This will permanently remove the item and all associated data from the system.`}
+      onClose={onClose}
+      icon={
+        <div className="w-11 h-11 rounded-full bg-red-100 flex items-center justify-center">
+          <div className="w-9 h-9 rounded-full bg-red-200 flex items-center justify-center">
+            <Icon icon="RiAlertFill" size={24} className="fill-red-600" />
+          </div>
+        </div>
+      }
+      secondaryButton={{
+        label: "Cancel",
+        buttonVariant: "secondary",
+        buttonAction: onClose,
+        disabled: isDeleting
+      }}
+      button={{
+        label: isDeleting ? "Deleting..." : "Delete",
+        buttonVariant: "error",
+        buttonAction: handleConfirm,
+        disabled: isDeleting
+      }}
+    />
+  );
+}
+```
+
+### Data Table Implementation
+```typescript
+// ✅ Good - Simple table with design system components
+import { Table, TableHeader, TableHead, TableBody, TableRow, TableCell, Badge, ActionIcon, Button } from '@awell-health/design-system';
+
+function UsersTable({ users, onEdit, onDelete }) {
+  return (
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Name</TableHead>
+          <TableHead>Status</TableHead>
+        </TableRow>
+      </TableHeader>
+      
+      <TableBody>
+        {users.map((user) => (
+          <TableRow key={user.id}>
+            <TableCell>
+              <span className="font-medium text-gray-900">
+                {user.name}
+              </span>
+            </TableCell>
+            
+            <TableCell>
+              <div className="flex items-center justify-between">
+                <Badge 
+                  variant={user.status === 'active' ? 'success' : 'secondary'}
+                  className="capitalize"
+                >
+                  {user.status}
+                </Badge>
+              </div>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  );
+}
+```
+## Styling Guidelines
+
+### Extending Components with className
+```typescript
+// ✅ Good - Conditional styling with design tokens
+function StatusBadge({ status, className }) {
+  return (
+    <Badge className={cn(
+      status === 'active' && 'bg-success-100 text-success-800 border-success-200',
+      status === 'inactive' && 'bg-gray-100 text-gray-600 border-gray-200',
+      className
+    )}>
+      {status}
+    </Badge>
+  );
+}
+
+
+## Performance
+- Use tree shaking: import specific components
+- Lazy load `RichText` when needed
+- Design system components are optimized for performance
