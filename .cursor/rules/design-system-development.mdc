@@ -18,6 +18,14 @@ alwaysApply: false
 - Each component should have: `component.tsx`, `index.ts`, `component.spec.tsx`
 - Export from `src/components/index.ts`
 
+## Best Practices
+1. **Consistent API** - Follow established patterns
+2. **Accessibility first** - Include ARIA attributes
+3. **TypeScript** - Full type safety
+4. **Performance** - Optimize bundle size
+5. **Backward compatibility** - Don't break existing APIs
+
+
 ## Component Patterns
 ```typescript
 // ✅ Good - Design system component structure with cva()
@@ -231,10 +239,3 @@ export type { ButtonProps } from './button';
 // src/components/index.ts
 export * from './ui/button';
 ```
-
-## Best Practices
-1. **Consistent API** - Follow established patterns
-2. **Accessibility first** - Include ARIA attributes
-3. **TypeScript** - Full type safety
-4. **Performance** - Optimize bundle size
-5. **Backward compatibility** - Don't break existing APIs

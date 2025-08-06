@@ -2,7 +2,7 @@
 name: Design System Usage
 description: Guidelines for using @awell-health/design-system components in applications
 tags: [react, typescript, components, design-system, usage]
-when:
+when: 
   - creating new components
   - refactoring existing code
   - writing JSX/TSX
@@ -28,13 +28,17 @@ alwaysApply: false
 // ✅ Good
 import { Button, Card, Modal, Input, Select } from '@awell-health/design-system';
 import { RichText } from '@awell-health/design-system/rich-text';
-
-// ❌ Avoid
-import * as DesignSystem from '@awell-health/design-system';
 ```
 
-## Usage Examples
+## Anti-Patterns to Avoid
+- ❌ Don't create custom buttons when `Button` exists
+- ❌ Don't build custom forms when form components exist
+- ❌ Don't use raw HTML when design system components are available
+- ❌ Don't override design system styles without justification
+- ❌ Don't create custom modals/dialogs
 
+
+## Usage Examples
 ### Form Implementation
 ```typescript
 // ✅ Good - Complete form using design system components
@@ -100,23 +104,27 @@ function UserProfileForm() {
         />
       </FormSection>
       
-      <FormButtons>
-        <Button variant="secondary" type="button" onClick={onCancel}>
-          Cancel
-        </Button>
-        <Button variant="primary" type="submit" disabled={isSubmitting}>
-          {isSubmitting ? 'Saving...' : 'Save Changes'}
-        </Button>
-      </FormButtons>
+      <FormButtons
+        cancel={
+          <Button variant="secondary" type="button" onClick={onCancel}>
+            Cancel
+          </Button>
+        }
+        save={
+          <Button variant="primary" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Saving...' : 'Save Changes'}
+          </Button>
+        }
+      />
     </FormContent>
   );
 }
 ```
 
-### Modal Implementation
+### AlertDialog Implementation
 ```typescript
-// ✅ Good - Complete modal with proper structure
-import { Modal, Button, Alert } from '@awell-health/design-system';
+// ✅ Good - Complete confirmation dialog with proper structure
+import { AlertDialog, Icon } from '@awell-health/design-system';
 
 function DeleteConfirmationModal({ isOpen, onClose, onConfirm, itemName }) {
   const [isDeleting, setIsDeleting] = useState(false);
@@ -133,196 +141,94 @@ function DeleteConfirmationModal({ isOpen, onClose, onConfirm, itemName }) {
     }
   };
 
+  if (!isOpen) return null;
+
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      <Modal.Header>
-        <h2 className="text-xl font-semibold text-gray-900">
-          Confirm Deletion
-        </h2>
-      </Modal.Header>
-      
-      <Modal.Body>
-        <div className="space-y-4">
-          <Alert variant="warning">
-            <p className="text-sm text-warning-800">
-              This action cannot be undone. Are you sure you want to delete "{itemName}"?
-            </p>
-          </Alert>
-          
-          <p className="text-gray-600">
-            This will permanently remove the item and all associated data from the system.
-          </p>
+    <AlertDialog
+      title="Confirm Deletion"
+      text={`This action cannot be undone. Are you sure you want to delete "${itemName}"? This will permanently remove the item and all associated data from the system.`}
+      onClose={onClose}
+      icon={
+        <div className="w-11 h-11 rounded-full bg-red-100 flex items-center justify-center">
+          <div className="w-9 h-9 rounded-full bg-red-200 flex items-center justify-center">
+            <Icon icon="RiAlertFill" size={24} className="fill-red-600" />
+          </div>
         </div>
-      </Modal.Body>
-      
-      <Modal.Footer>
-        <div className="flex justify-end space-x-3">
-          <Button 
-            variant="secondary" 
-            onClick={onClose}
-            disabled={isDeleting}
-          >
-            Cancel
-          </Button>
-          <Button 
-            variant="danger" 
-            onClick={handleConfirm}
-            disabled={isDeleting}
-          >
-            {isDeleting ? 'Deleting...' : 'Delete'}
-          </Button>
-        </div>
-      </Modal.Footer>
-    </Modal>
+      }
+      secondaryButton={{
+        label: "Cancel",
+        buttonVariant: "secondary",
+        buttonAction: onClose,
+        disabled: isDeleting
+      }}
+      button={{
+        label: isDeleting ? "Deleting..." : "Delete",
+        buttonVariant: "error",
+        buttonAction: handleConfirm,
+        disabled: isDeleting
+      }}
+    />
   );
 }
 ```
 
 ### Data Table Implementation
 ```typescript
-// ✅ Good - Complete table with design system components
-import { Table, Badge, ActionIcon, Button } from '@awell-health/design-system';
+// ✅ Good - Simple table with design system components
+import { Table, TableHeader, TableHead, TableBody, TableRow, TableCell, Badge, ActionIcon, Button } from '@awell-health/design-system';
 
 function UsersTable({ users, onEdit, onDelete }) {
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold text-gray-900">Users</h2>
-        <Button variant="primary" size="sm">
-          Add New User
-        </Button>
-      </div>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Name</TableHead>
+          <TableHead>Status</TableHead>
+        </TableRow>
+      </TableHeader>
       
-      <Table>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Name</Table.HeaderCell>
-            <Table.HeaderCell>Email</Table.HeaderCell>
-            <Table.HeaderCell>Status</Table.HeaderCell>
-            <Table.HeaderCell>Role</Table.HeaderCell>
-            <Table.HeaderCell>Actions</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        
-        <Table.Body>
-          {users.map((user) => (
-            <Table.Row key={user.id}>
-              <Table.Cell>
-                <div className="flex items-center space-x-3">
-                  <Avatar 
-                    src={user.avatar} 
-                    alt={user.name}
-                    size="sm"
-                  />
-                  <span className="font-medium text-gray-900">
-                    {user.name}
-                  </span>
-                </div>
-              </Table.Cell>
-              
-              <Table.Cell className="text-gray-600">
-                {user.email}
-              </Table.Cell>
-              
-              <Table.Cell>
+      <TableBody>
+        {users.map((user) => (
+          <TableRow key={user.id}>
+            <TableCell>
+              <span className="font-medium text-gray-900">
+                {user.name}
+              </span>
+            </TableCell>
+            
+            <TableCell>
+              <div className="flex items-center justify-between">
                 <Badge 
                   variant={user.status === 'active' ? 'success' : 'secondary'}
                   className="capitalize"
                 >
                   {user.status}
                 </Badge>
-              </Table.Cell>
-              
-              <Table.Cell className="text-gray-600 capitalize">
-                {user.role}
-              </Table.Cell>
-              
-              <Table.Cell>
-                <div className="flex items-center space-x-2">
-                  <ActionIcon 
-                    icon="edit" 
-                    onClick={() => onEdit(user)}
-                    size="sm"
-                    variant="ghost"
-                  />
-                  <ActionIcon 
-                    icon="delete" 
-                    onClick={() => onDelete(user)}
-                    size="sm"
-                    variant="ghost"
-                    className="text-red-600 hover:text-red-700"
-                  />
-                </div>
-              </Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
-    </div>
+              </div>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   );
 }
 ```
-
-## Anti-Patterns to Avoid
-- ❌ Don't create custom buttons when `Button` exists
-- ❌ Don't build custom forms when form components exist
-- ❌ Don't use raw HTML when design system components are available
-- ❌ Don't override design system styles without justification
-- ❌ Don't create custom modals/dialogs
-
 ## Styling Guidelines
 
 ### Extending Components with className
 ```typescript
-// ✅ Good - Extend design system components with custom styling
-import { Card, Badge, Button } from '@awell-health/design-system';
-
-function SpecialCard({ title, children, variant = 'default' }) {
-  return (
-    <Card className={cn(
-      'p-6',
-      variant === 'highlighted' && 'border-l-4 border-l-primary-500 bg-primary-50',
-      variant === 'warning' && 'border-l-4 border-l-warning-500 bg-warning-50',
-      variant === 'success' && 'border-l-4 border-l-success-500 bg-success-50'
-    )}>
-      <h3 className={cn(
-        'text-lg font-semibold mb-3',
-        variant === 'highlighted' && 'text-primary-800',
-        variant === 'warning' && 'text-warning-800',
-        variant === 'success' && 'text-success-800'
-      )}>
-        {title}
-      </h3>
-      {children}
-    </Card>
-  );
-}
-
 // ✅ Good - Conditional styling with design tokens
 function StatusBadge({ status, className }) {
   return (
     <Badge className={cn(
-      'px-3 py-1 rounded-full font-medium',
       status === 'active' && 'bg-success-100 text-success-800 border-success-200',
       status === 'inactive' && 'bg-gray-100 text-gray-600 border-gray-200',
-      status === 'pending' && 'bg-warning-100 text-warning-800 border-warning-200',
-      status === 'error' && 'bg-danger-100 text-danger-800 border-danger-200',
       className
     )}>
       {status}
     </Badge>
   );
 }
-
-// ✅ Good - Responsive design with design system components
-function ResponsiveLayout({ children }) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-      {children}
-    </div>
-  );
-}
-```
 
 
 ## Performance
