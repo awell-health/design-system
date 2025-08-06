@@ -12,6 +12,7 @@ export interface Props {
   onChange?: (option: SelectValue) => void;
   // use handleChange for to use SelecItem type
   handleChange?: (value: SelectItem | SelectItem[]) => void;
+  handleInputChange?: (inputValue: string) => void;
   icon?: JSX.Element | ReactElement;
   label?: string | JSX.Element | ReactElement;
   sublabel?: string;
@@ -35,6 +36,7 @@ function SelectComponent(props: Props) {
     options,
     onChange,
     handleChange,
+    handleInputChange = undefined,
     isSearchable = false,
     isMulti = false,
     icon = null,
@@ -71,6 +73,12 @@ function SelectComponent(props: Props) {
     }
   };
 
+  const onInputChange = (inputValue: string) => {
+    if (handleInputChange) {
+      handleInputChange(inputValue);
+    }
+  };
+
   return (
     <div className='flex flex-col'>
       {label && (
@@ -86,6 +94,7 @@ function SelectComponent(props: Props) {
           placeholder={placeholder}
           options={options}
           onChange={handleSelectChange}
+          onInputChange={onInputChange}
           isSearchable={isSearchable}
           isClearable={isClearable}
           isMulti={isMulti}
