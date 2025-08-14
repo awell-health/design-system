@@ -1251,12 +1251,6 @@ html{
     --tw-bg-opacity: 1;
     background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
   }
-
-  .table-zebra tr.hover:hover,
-  .table-zebra tr.hover:nth-child(even):hover{
-    --tw-bg-opacity: 1;
-    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
-  }
 }
 
 .btn{
@@ -4384,10 +4378,6 @@ input.tab:checked + .tab-content,
   margin-top: 100px;
 }
 
-.mb-4{
-  margin-bottom: 1rem;
-}
-
 .box-border{
   box-sizing: border-box;
 }
@@ -4636,8 +4626,8 @@ input.tab:checked + .tab-content,
   width: 100vw;
 }
 
-.w-48{
-  width: 12rem;
+.min-w-0{
+  min-width: 0px;
 }
 
 .min-w-8{
@@ -4646,10 +4636,6 @@ input.tab:checked + .tab-content,
 
 .min-w-\[46px\]{
   min-width: 46px;
-}
-
-.min-w-0{
-  min-width: 0px;
 }
 
 .max-w-2xl{
@@ -4676,14 +4662,6 @@ input.tab:checked + .tab-content,
   max-width: 20rem;
 }
 
-.max-w-lg{
-  max-width: 32rem;
-}
-
-.max-w-32{
-  max-width: 8rem;
-}
-
 .flex-1{
   flex: 1 1 0%;
 }
@@ -4698,6 +4676,10 @@ input.tab:checked + .tab-content,
 
 .grow{
   flex-grow: 1;
+}
+
+.table-fixed{
+  table-layout: fixed;
 }
 
 .caption-bottom{
@@ -4738,10 +4720,6 @@ input.tab:checked + .tab-content,
 
 .cursor-pointer{
   cursor: pointer;
-}
-
-.resize{
-  resize: both;
 }
 
 .list-decimal{
@@ -4880,6 +4858,10 @@ input.tab:checked + .tab-content,
 
 .break-words{
   overflow-wrap: break-word;
+}
+
+.break-all{
+  word-break: break-all;
 }
 
 .\!rounded{
@@ -5076,11 +5058,6 @@ input.tab:checked + .tab-content,
   border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
 }
 
-.border-green-200{
-  --tw-border-opacity: 1;
-  border-color: rgb(187 247 208 / var(--tw-border-opacity, 1));
-}
-
 .\!bg-slate-100{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1)) !important;
@@ -5237,11 +5214,6 @@ input.tab:checked + .tab-content,
 .bg-yellow-50{
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
-}
-
-.bg-green-50{
-  --tw-bg-opacity: 1;
-  background-color: rgb(240 253 244 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-30{
@@ -5473,6 +5445,10 @@ input.tab:checked + .tab-content,
 
 .text-center{
   text-align: center;
+}
+
+.align-top{
+  vertical-align: top;
 }
 
 .align-sub{
@@ -5900,8 +5876,8 @@ input.tab:checked + .tab-content,
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.running{
-  animation-play-state: running;
+.\[overflow-wrap\:anywhere\]{
+  overflow-wrap: anywhere;
 }
 
 html {

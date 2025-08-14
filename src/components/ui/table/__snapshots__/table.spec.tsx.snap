@@ -3,10 +3,10 @@
 exports[`Table > match snapshot 1`] = `
 <div>
   <div
-    class="relative w-full rounded-lg border border-slate-200 flex-col"
+    class="relative w-full rounded-lg border border-slate-200 flex-col overflow-hidden"
   >
     <table
-      class="w-full caption-bottom text-sm"
+      class="w-full caption-bottom text-sm table-fixed"
     >
       <thead
         class="[&_tr]:border-b [&_tr:first-child>th:first-child]:rounded-tl-lg [&_tr:first-child>th:last-child]:rounded-tr-lg"
@@ -15,10 +15,10 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <th
-            class="px-6 py-3 bg-gray-50 text-slate-500 text-sm font-medium leading-[18px] text-left group hover:text-slate-700"
+            class="px-6 py-3 bg-gray-50 text-slate-500 text-sm font-medium leading-[18px] text-left group whitespace-normal break-words align-top hover:text-slate-700"
           >
             <span
-              class="flex gap-1"
+              class="flex gap-1 break-all w-full"
             >
               Carflow name
                
@@ -37,10 +37,10 @@ exports[`Table > match snapshot 1`] = `
             </span>
           </th>
           <th
-            class="px-6 py-3 bg-gray-50 text-slate-500 text-sm font-medium leading-[18px] text-left group hover:text-slate-700 cursor-pointer"
+            class="px-6 py-3 bg-gray-50 text-slate-500 text-sm font-medium leading-[18px] text-left group whitespace-normal break-words align-top hover:text-slate-700 cursor-pointer"
           >
             <span
-              class="flex gap-1"
+              class="flex gap-1 break-all w-full"
             >
               Version
                
@@ -55,20 +55,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               0
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -83,20 +83,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               1
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -111,20 +111,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               2
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -139,20 +139,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               3
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -167,20 +167,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               4
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -195,20 +195,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               5
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -223,20 +223,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               6
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -251,20 +251,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               7
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -279,20 +279,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               8
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
@@ -307,20 +307,20 @@ exports[`Table > match snapshot 1`] = `
           class="border-b border-slate-100 hover:bg-slate-50 [&_td:last-child]:text-right"
         >
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Care Flow Name-
               9
             </span>
           </td>
           <td
-            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left"
+            class="px-6 py-4 justify-start items-center flex-inline text-slate-800 text-sm font-medium leading-tight text-left whitespace-normal break-words align-top"
           >
             <span
-              class="flex gap-1 flex-col items-start"
+              class="flex gap-1 flex-col items-start break-all w-full"
             >
               Example Cell
               <span
