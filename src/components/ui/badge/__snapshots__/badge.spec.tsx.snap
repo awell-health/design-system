@@ -6,7 +6,7 @@ exports[`Badge > match snapshot 1`] = `
     class="badge rounded-2xl inline-flex items-center justify-center overflow-hidden max-w-full min-w-0 bg-slate-100 text-slate-800 border-slate-100 badge-sm p-2 text-xs"
   >
     <span
-      class="truncate px-1"
+      class="px-1"
     />
   </div>
 </div>
