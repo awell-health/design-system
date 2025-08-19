@@ -38,8 +38,8 @@ export interface BadgeProps
 
 function Badge({ className, variant, size, children, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant, size }), 'truncate', className)} {...props}>
-      <span className='flex gap-1 px-1'>{children}</span>
+    <div className={cn(badgeVariants({ variant, size }), className)} {...props}>
+      <span className='flex gap-1 truncate px-1'>{children}</span>
     </div>
   );
 }
