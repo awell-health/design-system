@@ -30,14 +30,13 @@ const TableHead = React.forwardRef<HTMLTableCellElement, TableHeadProps>(
       ref={ref}
       className={cn(
         'px-6 py-3 bg-gray-50 text-slate-500 text-sm font-medium leading-[18px] text-left group',
-        'whitespace-normal break-words align-top',
         'hover:text-slate-700',
         sortable && 'cursor-pointer',
         className
       )}
       {...props}
     >
-      <span className='flex gap-1 break-all w-full'>
+      <span className='flex gap-1'>
         {children}{' '}
         {info && (
           <Icon

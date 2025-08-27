@@ -12,12 +12,11 @@ const TableCell = React.forwardRef<HTMLTableCellElement, TableCellProps>(
       className={cn(
         'px-6 py-4 justify-start items-center flex-inline',
         'text-slate-800 text-sm font-medium leading-tight text-left',
-        'whitespace-normal break-words align-top',
         className
       )}
       {...props}
     >
-      <span className='flex gap-1 flex-col items-start break-all w-full'>
+      <span className='flex gap-1 flex-col items-start'>
         {children}
         {supportingText && <span className='text-slate-500 font-normal'>{supportingText}</span>}
       </span>
