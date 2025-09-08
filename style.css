@@ -5876,10 +5876,6 @@ input.tab:checked + .tab-content,
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.\[overflow-wrap\:anywhere\]{
-  overflow-wrap: anywhere;
-}
-
 html {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
