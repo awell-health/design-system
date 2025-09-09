@@ -3,7 +3,7 @@
 exports[`Table > match snapshot 1`] = `
 <div>
   <div
-    class="relative w-full rounded-lg border border-slate-200 flex-col overflow-hidden"
+    class="relative w-full rounded-lg border border-slate-200 flex-col overflow-visible"
   >
     <table
       class="w-full caption-bottom text-sm table-fixed"
