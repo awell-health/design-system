@@ -34,6 +34,17 @@ const items: DropdownItem[] = [
       </>
     ),
     onClick
+  },
+  { label: 'Edit', onClick },
+  { label: 'Delete', onClick },
+  {
+    label: (
+      <>
+        <Icon icon='RiDownloadLine' />
+        Download
+      </>
+    ),
+    onClick
   }
 ];
 
