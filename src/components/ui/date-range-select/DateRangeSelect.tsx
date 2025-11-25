@@ -59,6 +59,10 @@ const DateRangeSelect: FC<Props> = (props) => {
   };
 
   const getDateFromPast = (days: number | null): Date => {
+    if (days === null) {
+      return new Date(new Date().getFullYear(), 0, 1);
+    }
+
     if (typeof days !== 'number') {
       return new Date();
     }
