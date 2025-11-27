@@ -57,7 +57,9 @@ function Tooltip({
         positionStrategy={positionStrategy}
         float={float}
       >
-        <div className={cn('max-w-xs break-words', className)}>{datatip}</div>
+        <div className={cn('max-w-xs whitespace-normal break-normal hyphens-auto', className)}>
+          {datatip}
+        </div>
       </TooltipReact>
     </>
   );
