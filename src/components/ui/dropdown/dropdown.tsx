@@ -26,10 +26,19 @@ export interface DropdownProps
   items: Array<DropdownItem>;
   buttonClassNames?: string;
   itemClassNames?: string;
+  listClassNames?: string;
 }
 
 function Dropdown(props: DropdownProps) {
-  const { items, buttonLabel, buttonClassNames, itemClassNames, placement, className } = props;
+  const {
+    items,
+    buttonLabel,
+    buttonClassNames,
+    itemClassNames,
+    listClassNames,
+    placement,
+    className
+  } = props;
 
   const renderItem = ({ label, onClick, disabled }: DropdownItem, i: number): JSX.Element => (
     <li key={i} className={cn(itemClassNames)}>
@@ -51,7 +60,10 @@ function Dropdown(props: DropdownProps) {
       </div>
       <ul
         tabIndex={0}
-        className='dropdown-content z-[9999] menu p-2 shadow bg-base-100 rounded-box w-52'
+        className={cn(
+          'dropdown-content z-[9999] menu p-2 shadow bg-base-100 rounded-box w-52',
+          listClassNames
+        )}
       >
         {items.map(renderItem)}
       </ul>
