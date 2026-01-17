@@ -29,7 +29,7 @@ import { type DateTimeRange, type DateTimeRangeSelectorProps, DEFAULT_PRESETS } 
 
 const formatDateTime = (date: Date | undefined, locale: Locale = enUS): string => {
   if (!date || !isValid(date)) return 'Select date';
-  return format(date, 'PPP p', { locale });
+  return format(date, 'PP p', { locale });
 };
 
 const getDateAdjustedForTimezone = (dateInput: Date | string | undefined): Date | undefined => {
@@ -281,7 +281,7 @@ const DateTimeRangeSelector: React.FC<DateTimeRangeSelectorProps> = ({
         prefixIcon={<Icon icon='RiCalendarLine' />}
         readOnly
         className={cn(
-          'cursor-pointer min-w-[320px] sm:min-w-[420px]',
+          'cursor-pointer min-w-[360px] sm:min-w-[420px]',
           disabled && 'cursor-not-allowed opacity-50',
           className
         )}

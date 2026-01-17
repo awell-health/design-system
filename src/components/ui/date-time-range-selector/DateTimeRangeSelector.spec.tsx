@@ -31,7 +31,7 @@ describe('DateTimeRangeSelector', () => {
     );
 
     const input = screen.getByTestId('date-time-range-selector-trigger');
-    expect(input.getAttribute('value')).toContain('January');
+    expect(input.getAttribute('value')).toContain('Jan');
   });
 
   it('should open popover when clicking the input', () => {

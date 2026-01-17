@@ -4818,6 +4818,10 @@ input.tab:checked + .tab-content,
   min-width: 46px;
 }
 
+.min-w-\[360px\]{
+  min-width: 360px;
+}
+
 .max-w-2xl{
   max-width: 42rem;
 }
@@ -6652,6 +6656,10 @@ input[type="checkbox"].green:checked {
 
   .sm\:w-full{
     width: 100%;
+  }
+
+  .sm\:min-w-\[450px\]{
+    min-width: 450px;
   }
 
   .sm\:min-w-\[420px\]{
