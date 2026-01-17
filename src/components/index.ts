@@ -8,6 +8,7 @@ export * from './ui/card';
 export * from './ui/copy-text';
 export * from './ui/data-point-icon';
 export * from './ui/date-range-select';
+export * from './ui/date-time-range-selector';
 export * from './ui/divider';
 export * from './ui/drawer';
 export * from './ui/dropdown';
