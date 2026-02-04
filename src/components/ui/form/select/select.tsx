@@ -31,6 +31,7 @@ export interface Props {
   isOptionDisabled?: (option: SelectItem) => boolean;
   helpText?: string;
   isCopyable?: boolean;
+  onCopy?: (value: string) => void;
 }
 
 function SelectComponent(props: Props) {
@@ -57,7 +58,8 @@ function SelectComponent(props: Props) {
     required = false,
     isOptionDisabled = undefined,
     helpText = undefined,
-    isCopyable = false
+    isCopyable = false,
+    onCopy
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
   const [copied, setCopied] = useState(false);
@@ -128,8 +130,8 @@ function SelectComponent(props: Props) {
                             e.preventDefault();
                             e.stopPropagation();
                             const selectedValue = rest.data;
-                            if (selectedValue) {
-                              navigator.clipboard.writeText(selectedValue.label);
+                            if (selectedValue && onCopy) {
+                              onCopy(selectedValue.label);
                               setCopied(true);
                               setTimeout(() => setCopied(false), 2000);
                             }
