@@ -113,30 +113,32 @@ function SelectComponent(props: Props) {
               </components.Option>
             ),
             SingleValue: ({ children, ...rest }) => (
-              <components.SingleValue {...rest}>
+              <>
                 {isCopyable ? (
-                  <div className='flex items-center justify-between cursor-pointer'>
-                    {SingleValueComponent ? SingleValueComponent(rest.data) : children}
-                    <RiFileCopyFill
-                      size={14}
-                      className='fill-slate-400 cursor-pointer'
-                      onMouseDown={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        const selectedValue = rest.data;
-                        if (selectedValue) {
-                          navigator.clipboard.writeText(selectedValue.label);
-                        }
-                      }}
-                      data-title='Copy to clipboard'
-                    />
-                  </div>
-                ) : SingleValueComponent ? (
-                  SingleValueComponent(rest.data)
+                  <components.SingleValue {...rest}>
+                    <div className='flex items-center justify-between cursor-pointer'>
+                      {SingleValueComponent ? SingleValueComponent(rest.data) : children}
+                      <RiFileCopyFill
+                        size={14}
+                        className='fill-slate-400 cursor-pointer'
+                        onMouseDown={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          const selectedValue = rest.data;
+                          if (selectedValue) {
+                            navigator.clipboard.writeText(selectedValue.label);
+                          }
+                        }}
+                        data-title='Copy to clipboard'
+                      />
+                    </div>
+                  </components.SingleValue>
                 ) : (
-                  children
+                  <components.SingleValue {...rest}>
+                    {SingleValueComponent ? SingleValueComponent(rest.data) : children}
+                  </components.SingleValue>
                 )}
-              </components.SingleValue>
+              </>
             ),
             ClearIndicator: (clearIndicatorProps) => {
               return <components.ClearIndicator {...clearIndicatorProps} />;
