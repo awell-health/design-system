@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils';
 import Select, { MultiValue, SingleValue, components } from 'react-select';
 import { GroupedOption, SelectItem, SelectValue } from './types';
-import { cloneElement, ReactElement } from 'react';
+import { cloneElement, ReactElement, useState } from 'react';
 import { Label } from '../label/label';
-import { RiFileCopyFill } from '@remixicon/react';
+import { RiFileCopyFill, RiCheckFill } from '@remixicon/react';
 
 export interface Props {
   options: SelectItem[] | GroupedOption[];
@@ -60,6 +60,7 @@ function SelectComponent(props: Props) {
     isCopyable = false
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
+  const [copied, setCopied] = useState(false);
 
   if (!onChange && !handleChange) {
     console.log('onChange or handleChange is required');
@@ -118,19 +119,25 @@ function SelectComponent(props: Props) {
                   <components.SingleValue {...rest}>
                     <div className='flex items-center justify-between cursor-pointer'>
                       {SingleValueComponent ? SingleValueComponent(rest.data) : children}
-                      <RiFileCopyFill
-                        size={14}
-                        className='fill-slate-400 cursor-pointer'
-                        onMouseDown={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          const selectedValue = rest.data;
-                          if (selectedValue) {
-                            navigator.clipboard.writeText(selectedValue.label);
-                          }
-                        }}
-                        data-title='Copy to clipboard'
-                      />
+                      {copied ? (
+                        <RiCheckFill size={14} className='fill-green-500' />
+                      ) : (
+                        <span
+                          title='Copy to clipboard'
+                          onMouseDown={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const selectedValue = rest.data;
+                            if (selectedValue) {
+                              navigator.clipboard.writeText(selectedValue.label);
+                              setCopied(true);
+                              setTimeout(() => setCopied(false), 2000);
+                            }
+                          }}
+                        >
+                          <RiFileCopyFill size={14} className='fill-slate-400 cursor-pointer' />
+                        </span>
+                      )}
                     </div>
                   </components.SingleValue>
                 ) : (

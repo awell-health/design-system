@@ -5545,6 +5545,10 @@ input.tab:checked + .tab-content,
   fill: #eab308;
 }
 
+.fill-green-500{
+  fill: #22c55e;
+}
+
 .p-0{
   padding: 0px;
 }
