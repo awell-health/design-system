@@ -23,6 +23,10 @@ const defaultProps = {
     } else {
       console.log('No value selected');
     }
+  },
+  onCopy: (value: string) => {
+    navigator.clipboard.writeText(value);
+    console.log('Copied to clipboard:', value);
   }
 };
 
@@ -73,6 +77,19 @@ export const ExampleWithCustomOptionAndValue = {
         Selected Single Value: {data.label} - {data.value}
       </div>
     )
+  },
+  render: (args) => <Select {...args} />
+} satisfies Story;
+
+export const ExampleWithCopyable = {
+  args: {
+    ...defaultProps,
+    options,
+    isCopyable: true,
+    onCopy: (value: string) => {
+      navigator.clipboard.writeText(value);
+      console.log('Copied to clipboard:', value);
+    }
   },
   render: (args) => <Select {...args} />
 } satisfies Story;
