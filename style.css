@@ -5495,10 +5495,6 @@ input.tab:checked + .tab-content,
   fill: #6b7280;
 }
 
-.fill-green-500{
-  fill: #22c55e;
-}
-
 .fill-green-600{
   fill: #16a34a;
 }
@@ -5537,6 +5533,10 @@ input.tab:checked + .tab-content,
 
 .fill-yellow-500{
   fill: #eab308;
+}
+
+.fill-green-500{
+  fill: #22c55e;
 }
 
 .p-0{
