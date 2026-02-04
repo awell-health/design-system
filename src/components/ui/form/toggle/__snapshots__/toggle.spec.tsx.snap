@@ -3,21 +3,23 @@
 exports[`Toggle > match disabled snapshot 1`] = `
 <div>
   <div>
-    <label
-      class="flex gap-2 cursor-pointer items-top"
+    <div
+      class="flex gap-2 items-top"
     >
       <input
-        class="toggle focus:bg-none border-none bg-white hover:bg-white"
+        aria-labelledby=":r1:"
+        class="toggle focus:bg-none cursor-pointer border-none bg-white hover:bg-white"
         data-testid="toggle"
         disabled=""
         type="checkbox"
       />
       <span
         class="label-text text-slate-700 text-sm font-medium flex flex-col gap-2"
+        id=":r1:"
       >
         Toggle Label
       </span>
-    </label>
+    </div>
   </div>
 </div>
 `;
@@ -25,20 +27,22 @@ exports[`Toggle > match disabled snapshot 1`] = `
 exports[`Toggle > match snapshot 1`] = `
 <div>
   <div>
-    <label
-      class="flex gap-2 cursor-pointer items-top"
+    <div
+      class="flex gap-2 items-top"
     >
       <input
-        class="toggle focus:bg-none border-none bg-white hover:bg-white"
+        aria-labelledby=":r0:"
+        class="toggle focus:bg-none cursor-pointer border-none bg-white hover:bg-white"
         data-testid="toggle"
         type="checkbox"
       />
       <span
         class="label-text text-slate-700 text-sm font-medium flex flex-col gap-2"
+        id=":r0:"
       >
         Toggle Label
       </span>
-    </label>
+    </div>
   </div>
 </div>
 `;

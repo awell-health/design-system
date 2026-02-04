@@ -26,12 +26,14 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
     ...rest
   } = props;
 
+  const labelId = React.useId();
+
   return (
     <div>
-      <label className='flex gap-2 cursor-pointer items-top'>
+      <div className='flex gap-2 items-top'>
         <input
           className={cn(
-            'toggle focus:bg-none',
+            'toggle focus:bg-none cursor-pointer',
             'border-none bg-white hover:bg-white',
             // check styles from globals.css for colors
             variant === 'positive' && 'green',
@@ -47,8 +49,10 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
           disabled={disabled}
           type='checkbox'
           onChange={onChange}
+          aria-labelledby={labelId}
         />
         <span
+          id={labelId}
           className={cn(
             'label-text text-slate-700 text-sm font-medium flex flex-col gap-2',
             labelClassName
@@ -57,7 +61,7 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
           {label}
           {helpText && <span className='text-slate-500'>{helpText}</span>}
         </span>
-      </label>
+      </div>
     </div>
   );
 });

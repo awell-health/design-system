@@ -3,6 +3,7 @@ import Select, { MultiValue, SingleValue, components } from 'react-select';
 import { GroupedOption, SelectItem, SelectValue } from './types';
 import { cloneElement, ReactElement } from 'react';
 import { Label } from '../label/label';
+import { RiFileCopyFill } from '@remixicon/react';
 
 export interface Props {
   options: SelectItem[] | GroupedOption[];
@@ -29,6 +30,7 @@ export interface Props {
   required?: boolean;
   isOptionDisabled?: (option: SelectItem) => boolean;
   helpText?: string;
+  isCopyable?: boolean;
 }
 
 function SelectComponent(props: Props) {
@@ -54,7 +56,8 @@ function SelectComponent(props: Props) {
     sublabel,
     required = false,
     isOptionDisabled = undefined,
-    helpText = undefined
+    helpText = undefined,
+    isCopyable = false
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -111,8 +114,35 @@ function SelectComponent(props: Props) {
             ),
             SingleValue: ({ children, ...rest }) => (
               <components.SingleValue {...rest}>
-                {SingleValueComponent ? SingleValueComponent(rest.data) : children}
+                {isCopyable ? (
+                  <div className='flex items-center justify-between cursor-pointer'>
+                    {SingleValueComponent ? SingleValueComponent(rest.data) : children}
+                    <RiFileCopyFill
+                      size={14}
+                      className='fill-slate-400 cursor-pointer'
+                      onMouseDown={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const selectedValue = rest.data;
+                        if (selectedValue) {
+                          navigator.clipboard.writeText(selectedValue.label);
+                        }
+                      }}
+                      data-title='Copy to clipboard'
+                    />
+                  </div>
+                ) : SingleValueComponent ? (
+                  SingleValueComponent(rest.data)
+                ) : (
+                  children
+                )}
               </components.SingleValue>
+            ),
+            ClearIndicator: (clearIndicatorProps) => {
+              return <components.ClearIndicator {...clearIndicatorProps} />;
+            },
+            DropdownIndicator: (dropdownIndicatorProps) => (
+              <components.DropdownIndicator {...dropdownIndicatorProps} />
             )
           }}
           classNames={{

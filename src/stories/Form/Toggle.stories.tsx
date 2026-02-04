@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useArgs } from '@storybook/preview-api';
 import { Toggle } from '../../components/ui/form/toggle/toggle';
 
 const meta = {
@@ -19,5 +20,8 @@ export const Example = {
     variant: 'default',
     toggleSize: 'md'
   },
-  render: (args) => <Toggle {...args} />
+  render: (args) => {
+    const [, updateArgs] = useArgs();
+    return <Toggle {...args} onChange={(e) => updateArgs({ checked: e.target.checked })} />;
+  }
 } satisfies Story;

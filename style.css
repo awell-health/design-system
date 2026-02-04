@@ -4810,16 +4810,12 @@ input.tab:checked + .tab-content,
   min-width: 160px;
 }
 
-.min-w-\[320px\]{
-  min-width: 320px;
+.min-w-\[360px\]{
+  min-width: 360px;
 }
 
 .min-w-\[46px\]{
   min-width: 46px;
-}
-
-.min-w-\[360px\]{
-  min-width: 360px;
 }
 
 .max-w-2xl{
@@ -4929,6 +4925,16 @@ input.tab:checked + .tab-content,
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.cursor-text{
+  cursor: text;
+}
+
+.select-text{
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
 .list-decimal{
@@ -6656,10 +6662,6 @@ input[type="checkbox"].green:checked {
 
   .sm\:w-full{
     width: 100%;
-  }
-
-  .sm\:min-w-\[450px\]{
-    min-width: 450px;
   }
 
   .sm\:min-w-\[420px\]{
