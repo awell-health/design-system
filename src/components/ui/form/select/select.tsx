@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import Select, { MultiValue, SingleValue, components } from 'react-select';
 import { GroupedOption, SelectItem, SelectValue } from './types';

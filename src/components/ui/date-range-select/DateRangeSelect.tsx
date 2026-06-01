@@ -1,3 +1,5 @@
+'use client';
+
 import { type FC, useEffect, useRef, useState } from 'react';
 import { useClickAway } from 'react-use';
 import {

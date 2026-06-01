@@ -1,3 +1,5 @@
+'use client';
+
 import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
 import { Button } from '../button/button';
 import { cn } from '../../../lib/utils';

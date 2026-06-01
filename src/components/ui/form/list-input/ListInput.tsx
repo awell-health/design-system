@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { Icon } from '../../icon';
 import { cn } from '../../../../lib/utils';

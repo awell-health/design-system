@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import { useRef, useState, useCallback, useEffect } from 'react';
 import { useClickAway } from 'react-use';

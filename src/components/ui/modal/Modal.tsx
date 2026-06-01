@@ -1,3 +1,5 @@
+'use client';
+
 import React, { ReactNode, type FC, type RefObject } from 'react';
 import { useClickAway, useKey } from 'react-use';
 import { cn } from '../../../lib/utils';
