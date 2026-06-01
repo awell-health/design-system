@@ -193,7 +193,10 @@ import {
   RiTimelineView,
   RiLayoutVerticalLine,
   RiFlipHorizontalLine,
-  RiMindMap
+  RiMindMap,
+  RiInfinityFill,
+  RiInfinityLine,
+  RiAppsFill
 } from '@remixicon/react';
 
 export const ICONS = {
@@ -391,7 +394,10 @@ export const ICONS = {
   RiTimelineView,
   RiLayoutVerticalLine,
   RiFlipHorizontalLine,
-  RiMindMap
+  RiMindMap,
+  RiInfinityFill,
+  RiInfinityLine,
+  RiAppsFill
 };
 
 export enum IconSize {

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { expect, it, describe, vi } from 'vitest';
 import { Checkbox, CheckboxProps } from './checkbox';
@@ -10,7 +11,11 @@ describe('Checkbox', () => {
       onChange: () => false
     };
 
-    return render(<Checkbox {...defaultProps} {...props} data-testid='checkbox' />);
+    return render(
+      <React.Fragment>
+        <Checkbox {...defaultProps} {...props} data-testid='checkbox' />
+      </React.Fragment>
+    );
   };
 
   it('match checkbox snapshot', () => {
@@ -20,6 +25,11 @@ describe('Checkbox', () => {
 
   it('match checked checkbox snapshot', () => {
     const { container } = subject({ checked: true });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('match large checked checkbox snapshot', () => {
+    const { container } = subject({ checked: true, inputSize: 'lg' });
     expect(container).toMatchSnapshot();
   });
 

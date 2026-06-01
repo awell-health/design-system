@@ -7,6 +7,7 @@ import { Icon, IconSize } from '../../icon';
 const checkboxVariants = cva('', {
   variants: {
     inputSize: {
+      lg: 'w-6 h-6',
       md: 'w-5 h-5',
       sm: 'w-4 h-4'
     }
@@ -46,66 +47,65 @@ const Checkbox: React.FC<CheckboxProps> = ({
   }, [indeterminate]);
 
   const boxShadowClass: string = 'shadow-[0px_0px_0px_2px_rgb(219,234,254)]';
+  const iconSize = inputSize === 'lg' ? IconSize.s : IconSize.xs;
+  const radioDotSizeClass =
+    inputSize === 'lg' ? 'w-2.5 h-2.5' : inputSize === 'md' ? 'w-2 h-2' : 'w-1.5 h-1.5';
 
   return (
     <div className='flex flex-col'>
-      <label className='flex items-center gap-2 cursor-pointer relative'>
-        {type === 'checkbox' && (
-          <>
-            {checked && (
-              <Icon
-                icon='RiCheckFill'
-                className={cn(
-                  'fill-white z-10 absolute',
-                  inputSize === 'md' ? 'left-[2px] top-[2px]' : 'left-0 top-0'
-                )}
-                size={IconSize.xs}
-              />
-            )}
-            {indeterminate && !checked && (
-              <Icon
-                icon='RiSubtractFill'
-                className={cn(
-                  'fill-white z-10 absolute',
-                  inputSize === 'md' ? 'left-[2px] top-[2px]' : 'left-0 top-0'
-                )}
-                size={IconSize.xs}
-              />
-            )}
-          </>
-        )}
-        {type === 'radio' && checked && (
-          <div
-            className={cn(
-              'bg-blue-700 rounded-full absolute z-10',
-              inputSize === 'md' ? 'w-2 h-2 left-[6px] top-[6px]' : 'w-1.5 h-1.5 left-[5px]'
-            )}
-          />
-        )}
-        <input
-          type={type}
-          className={cn(
-            'appearance-none cursor-pointer',
-            checkboxVariants({ inputSize }),
-            'relative bg-white border border-slate-300 rounded outline-none',
-            'flex items-center justify-center',
-            !checked && 'hover:bg-blue-50 hover:border-blue-800',
-            checked && 'hover:border-blue-800',
-            `active:border-blue-300 active:${boxShadowClass}`,
-            `focus:border-blue-300 focus:${boxShadowClass}`,
-            'disabled:!bg-slate-100 disabled:!border-slate-200',
-            'checked:border-blue-700',
-            type === 'checkbox' &&
-              'checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700',
-            type === 'radio' && 'rounded-full hover:bg-blue-50 checked:bg-blue-50',
-            className
+      <label className='flex items-center gap-2 cursor-pointer'>
+        <span className={cn(checkboxVariants({ inputSize }), 'relative flex-shrink-0')}>
+          {type === 'checkbox' && (
+            <>
+              {checked && (
+                <Icon
+                  icon='RiCheckFill'
+                  className='fill-white z-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none'
+                  size={iconSize}
+                />
+              )}
+              {indeterminate && !checked && (
+                <Icon
+                  icon='RiSubtractFill'
+                  className='fill-white z-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none'
+                  size={iconSize}
+                />
+              )}
+            </>
           )}
-          onChange={onChange}
-          ref={inputRef}
-          disabled={disabled}
-          checked={checked}
-          {...props}
-        />
+          {type === 'radio' && checked && (
+            <div
+              className={cn(
+                'bg-blue-700 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none',
+                radioDotSizeClass
+              )}
+            />
+          )}
+          <input
+            type={type}
+            className={cn(
+              'appearance-none cursor-pointer',
+              checkboxVariants({ inputSize }),
+              'relative bg-white border border-slate-300 rounded outline-none',
+              'flex items-center justify-center',
+              !checked && 'hover:bg-blue-50 hover:border-blue-800',
+              checked && 'hover:border-blue-800',
+              `active:border-blue-300 active:${boxShadowClass}`,
+              `focus:border-blue-300 focus:${boxShadowClass}`,
+              'disabled:!bg-slate-100 disabled:!border-slate-200',
+              'checked:border-blue-700',
+              type === 'checkbox' &&
+                'checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700',
+              type === 'radio' && 'rounded-full hover:bg-blue-50 checked:bg-blue-50',
+              className
+            )}
+            onChange={onChange}
+            ref={inputRef}
+            disabled={disabled}
+            checked={checked}
+            {...props}
+          />
+        </span>
         {label && (
           <span
             className={cn(
