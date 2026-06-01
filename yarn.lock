@@ -93,6 +93,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-day-picker: "npm:^9.5.0"
     react-dom: "npm:^18.3.1"
+    react-international-phone: "npm:^4.8.0"
     react-select: "npm:^5.8.0"
     react-tooltip: "npm:^5.28.0"
     react-use: "npm:^17.5.1"
@@ -9814,6 +9815,15 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18 || ^19
   checksum: 10c0/f82238249d44111b377116bdfb6063045e3e81fef4c73d7f487160554fa4b43ff0970dec1f4d031e57bc2dfbdd974bdfba5608bc8c5785998a7b8a39a566428f
+  languageName: node
+  linkType: hard
+
+"react-international-phone@npm:^4.8.0":
+  version: 4.8.0
+  resolution: "react-international-phone@npm:4.8.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-international-phone%2F-%2Freact-international-phone-4.8.0.tgz"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/b382835c3233211e65a691ff192ca0bf15067624dc8684b6a28b9a0c85abd4713994b0b982258ac32823a28f01d2065f220e0229e08329f8204480a1cb696139
   languageName: node
   linkType: hard
 

@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/design-system",
-  "version": "0.15.5",
+  "version": "0.15.6",
   "type": "module",
   "files": [
     "dist"
@@ -63,6 +63,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "react-day-picker": "^9.5.0",
+    "react-international-phone": "^4.8.0",
     "react-select": "^5.8.0",
     "react-tooltip": "^5.28.0",
     "react-use": "^17.5.1",

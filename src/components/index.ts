@@ -20,6 +20,7 @@ export * from './ui/form/form-section';
 export * from './ui/form/input';
 export * from './ui/form/label';
 export * from './ui/form/list-input';
+export * from './ui/form/phone-input';
 export * from './ui/form/select';
 export * from './ui/form/textarea';
 export * from './ui/form/toggle';
