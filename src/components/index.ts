@@ -10,6 +10,7 @@ export * from './ui/data-point-icon';
 export * from './ui/date-range-select';
 export * from './ui/date-time-range-selector';
 export * from './ui/divider';
+export * from './ui/dialog';
 export * from './ui/drawer';
 export * from './ui/dropdown';
 export * from './ui/file-list';
@@ -32,6 +33,7 @@ export * from './ui/radial-progress';
 // Rich text is exported separately to reduce bundle size
 // import { RichText } from '@awell-health/design-system/rich-text'
 // export * from './ui/rich-text';
+export * from './ui/sheet';
 export * from './ui/skeleton-loader';
 export * from './ui/spinner';
 export * from './ui/tab';
