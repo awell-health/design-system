@@ -1,3 +1,5 @@
+'use client';
+
 import { FC } from 'react';
 import { Button } from '../button/button';
 import { Icon } from '../icon';

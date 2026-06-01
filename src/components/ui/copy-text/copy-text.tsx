@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, useEffect, useState } from 'react';
 import { Icon, IconSize } from '../icon';
 import React from 'react';

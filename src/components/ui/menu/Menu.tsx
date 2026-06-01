@@ -1,3 +1,5 @@
+'use client';
+
 import { cloneElement } from 'react';
 import { cn } from '../../../lib/utils';
 import { MenuItem } from './types';
