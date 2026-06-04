@@ -18,7 +18,9 @@ function Menu({ className, items, iconOnly = false, ...props }: Props) {
       active = false,
       className = '',
       onClick = undefined,
-      isExpanded = false
+      isExpanded = false,
+      href = undefined,
+      target = undefined
     } = item;
 
     const itemClassNames = cn(
@@ -50,7 +52,13 @@ function Menu({ className, items, iconOnly = false, ...props }: Props) {
     return (
       <li key={i}>
         {(!children || iconOnly) && (
-          <a className={itemClassNames} onClick={onClick}>
+          <a
+            className={itemClassNames}
+            href={href}
+            target={target}
+            rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+            onClick={onClick}
+          >
             {label}
           </a>
         )}
