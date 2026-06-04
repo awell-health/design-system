@@ -49,6 +49,36 @@ describe('Menu', () => {
     expect(getByText('badge')).toBeVisible();
   });
 
+  it('renders a leaf item as a real link when href is set', () => {
+    const { getByText } = subject({
+      items: [{ label: 'Linked', href: '/somewhere' }]
+    });
+
+    const anchor = getByText('Linked').closest('a');
+    expect(anchor).toHaveAttribute('href', '/somewhere');
+    expect(anchor).not.toHaveAttribute('target');
+    expect(anchor).not.toHaveAttribute('rel');
+  });
+
+  it('adds target and rel for external/new-tab links', () => {
+    const { getByText } = subject({
+      items: [{ label: 'New tab', href: 'https://example.com', target: '_blank' }]
+    });
+
+    const anchor = getByText('New tab').closest('a');
+    expect(anchor).toHaveAttribute('href', 'https://example.com');
+    expect(anchor).toHaveAttribute('target', '_blank');
+    expect(anchor).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('does not set href on the anchor when omitted', () => {
+    const { getByText } = subject({
+      items: [{ label: 'Plain' }]
+    });
+
+    expect(getByText('Plain').closest('a')).not.toHaveAttribute('href');
+  });
+
   it('opens children menu', () => {
     const { getByText } = subject();
 
