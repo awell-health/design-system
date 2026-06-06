@@ -17,6 +17,7 @@ const DataPointIcon = React.forwardRef<HTMLDivElement, DataPointIconProps>(({ ..
     attachments_array: 'RiAttachment2',
     boolean: 'RiCheckboxCircleLine',
     date: 'RiCalendarLine',
+    datetime: 'RiTimeLine',
     json: 'RiBracesLine',
     number: 'RiHashtag',
     numbers_array: 'RiListOrdered2',

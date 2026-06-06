@@ -16,4 +16,10 @@ describe('DataPointIcon', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('should render a clock icon for datetime', () => {
+    const { container } = render(<DataPointIcon dataPointValueType='datetime' />);
+
+    expect(container).toMatchSnapshot();
+  });
 });
