@@ -3,6 +3,7 @@ export type DataPointValueType =
   | 'attachments_array'
   | 'boolean'
   | 'date'
+  | 'datetime'
   | 'json'
   | 'number'
   | 'numbers_array'
