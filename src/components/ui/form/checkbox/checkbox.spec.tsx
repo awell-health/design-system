@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom/vitest';
 import * as React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { expect, it, describe, vi } from 'vitest';
@@ -46,11 +47,22 @@ describe('Checkbox', () => {
   it('uses darker disabled colors', () => {
     const { getByTestId, getByText } = subject({ disabled: true });
 
-    expect(getByTestId('checkbox')).toHaveClass(
-      'disabled:!bg-slate-300',
-      'disabled:!border-slate-400'
-    );
+    expect(getByTestId('checkbox')).toHaveClass('!bg-slate-300', '!border-slate-400');
     expect(getByText('Label')).toHaveClass('text-slate-400');
+  });
+
+  it('keeps checked disabled checkboxes blue', () => {
+    const { container, getByTestId } = subject({ checked: true, disabled: true });
+    const icon = container.querySelector('svg');
+
+    expect(getByTestId('checkbox')).toHaveClass('!bg-blue-50', '!border-blue-700');
+    expect(icon).toHaveClass('fill-blue-700');
+  });
+
+  it('keeps checked disabled radios blue', () => {
+    const { getByTestId } = subject({ checked: true, disabled: true, type: 'radio' });
+
+    expect(getByTestId('checkbox')).toHaveClass('!bg-blue-50', '!border-blue-700');
   });
 
   it('uses lighter help text when disabled', () => {
