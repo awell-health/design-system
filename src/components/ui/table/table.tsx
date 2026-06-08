@@ -4,18 +4,49 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
-const Table = React.forwardRef<
-  HTMLTableElement,
-  React.HTMLAttributes<HTMLTableElement> & { className?: string }
->(({ className, ...props }, ref) => (
-  <div className='relative w-full rounded-lg border border-slate-200 flex-col overflow-visible'>
-    <table
-      ref={ref}
-      className={cn('w-full caption-bottom text-sm table-fixed', className)}
-      {...props}
-    />
-  </div>
-));
+export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
+  bodyMaxHeight?: React.CSSProperties['maxHeight'];
+  className?: string;
+}
+
+const Table = React.forwardRef<HTMLTableElement, TableProps>(
+  ({ bodyMaxHeight, className, style, ...props }, ref) => {
+    const hasScrollableBody = bodyMaxHeight !== undefined && bodyMaxHeight !== null;
+    const tableStyle = hasScrollableBody
+      ? ({
+          ...style,
+          '--table-body-max-height':
+            typeof bodyMaxHeight === 'number' ? `${bodyMaxHeight}px` : bodyMaxHeight
+        } as React.CSSProperties)
+      : style;
+
+    return (
+      <div
+        className={cn(
+          'relative w-full rounded-lg border border-slate-200 flex-col overflow-visible',
+          hasScrollableBody && 'overflow-hidden'
+        )}
+      >
+        <table
+          ref={ref}
+          style={tableStyle}
+          className={cn(
+            'w-full caption-bottom text-sm table-fixed',
+            hasScrollableBody && [
+              '[&_thead]:block',
+              '[&_thead_tr]:table [&_thead_tr]:w-full [&_thead_tr]:table-fixed',
+              '[&_tbody]:block [&_tbody]:max-h-[var(--table-body-max-height)] [&_tbody]:overflow-y-auto',
+              '[&_tbody]:[scrollbar-gutter:stable]',
+              '[&_tbody_tr]:table [&_tbody_tr]:w-full [&_tbody_tr]:table-fixed'
+            ],
+            className
+          )}
+          {...props}
+        />
+      </div>
+    );
+  }
+);
 
 const TableBody = React.forwardRef<
   HTMLTableSectionElement,

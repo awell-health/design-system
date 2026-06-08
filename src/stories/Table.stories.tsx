@@ -88,6 +88,46 @@ export const Example = {
   )
 } satisfies Story;
 
+export const ScrollableBody = {
+  args: {},
+  render: () => (
+    <Table bodyMaxHeight={320}>
+      <TableHeader>
+        <TableRow>
+          <TableHead info={<span>Info</span>}>Carflow name</TableHead>
+          <TableHead info={<span>Info</span>} sortable={true} order='desc'>
+            Created
+          </TableHead>
+          <TableHead sortable={true}>Version</TableHead>
+          <TableHead>&nbsp;</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {[...Array(20).keys()].map((i) => (
+          <TableRow key={i}>
+            <TableCell>Care Flow Name-{i}</TableCell>
+            <TableCell supportingText='by virginia@turtlecare.com'>25/06/2024 04:32 PM</TableCell>
+            <TableCell>
+              <Badge variant={'success'}>Label</Badge>
+            </TableCell>
+            <TableCell>
+              <Dropdown
+                buttonLabel={<Icon icon='RiMore2Line' size={16} />}
+                items={items}
+                buttonClassNames='bg-white border-none shadow-none btn-xs btn-square'
+                placement='left'
+              />
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+      <TableCaption className='py-0'>
+        <Pagination totalCount={totalCount} onPageChange={(n) => console.log(n)} />
+      </TableCaption>
+    </Table>
+  )
+} satisfies Story;
+
 export const LongTextWrapping = {
   args: {},
   render: () => (
