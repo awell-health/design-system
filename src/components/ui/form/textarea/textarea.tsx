@@ -10,12 +10,22 @@ export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextArea
   helpText?: string;
   hasError?: boolean;
   required?: boolean;
+  disabled?: boolean;
   sublabel?: string;
 }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   (
-    { className = '', label, helpText, hasError = false, required = false, sublabel, ...props },
+    {
+      className = '',
+      label,
+      helpText,
+      hasError = false,
+      required = false,
+      disabled = false,
+      sublabel,
+      ...props
+    },
     ref
   ) => {
     return (
@@ -25,10 +35,11 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           className={cn(
             'flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm',
             'placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
-            'disabled:cursor-not-allowed disabled:opacity-50',
+            'disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500',
             hasError && 'border-red-300',
             className
           )}
+          disabled={disabled}
           ref={ref}
           {...props}
         />

@@ -19,6 +19,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   minVal?: number;
   maxVal?: number;
   required?: boolean;
+  disabled?: boolean;
+  placeholder?: string;
 }
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -36,6 +38,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       maxVal,
       required,
       sublabel,
+      disabled = false,
+      placeholder,
       ...props
     },
     ref
@@ -74,7 +78,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               'text-sm font-normal',
               'shadow border border-slate-300 text-black placeholder:text-slate-400',
               'focus:outline-0 focus:border focus:border-blue-500',
-              'disabled:bg-slate-50 disabled:text-slate-400',
+              'disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500',
               prefixIcon && 'pl-8',
               suffixIcon && 'pr-8',
               hasError && 'border-red-500 focus:border-red-500',
@@ -84,6 +88,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             onChange={onChange}
             ref={ref}
             required={required}
+            disabled={disabled}
+            placeholder={disabled ? undefined : placeholder}
             {...props}
           />
           {suffixIcon && renderIcon(suffixIcon, 'right')}

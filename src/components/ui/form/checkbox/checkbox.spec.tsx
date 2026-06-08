@@ -43,6 +43,22 @@ describe('Checkbox', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('uses darker disabled colors', () => {
+    const { getByTestId, getByText } = subject({ disabled: true });
+
+    expect(getByTestId('checkbox')).toHaveClass(
+      'disabled:!bg-slate-300',
+      'disabled:!border-slate-400'
+    );
+    expect(getByText('Label')).toHaveClass('text-slate-400');
+  });
+
+  it('uses lighter help text when disabled', () => {
+    const { getByText } = subject({ disabled: true, helpText: 'Disabled help text' });
+
+    expect(getByText('Disabled help text')).toHaveClass('text-slate-400');
+  });
+
   it('match indeterminate snapshot', () => {
     const { container } = subject({ indeterminate: true });
     expect(container).toMatchSnapshot();

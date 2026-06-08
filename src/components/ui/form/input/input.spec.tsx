@@ -25,4 +25,14 @@ describe('Input', () => {
 
     expect(getByDisplayValue(value)).toHaveClass('border-red-500');
   });
+
+  it('uses darker disabled colors', () => {
+    const value = 'Disabled value';
+    const { getByDisplayValue } = subject({ disabled: true, value });
+
+    expect(getByDisplayValue(value)).toHaveClass(
+      'disabled:bg-slate-100',
+      'disabled:text-slate-500'
+    );
+  });
 });
