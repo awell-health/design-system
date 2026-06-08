@@ -52,6 +52,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
   const iconSize = inputSize === 'lg' ? IconSize.s : IconSize.xs;
   const radioDotSizeClass =
     inputSize === 'lg' ? 'w-2.5 h-2.5' : inputSize === 'md' ? 'w-2 h-2' : 'w-1.5 h-1.5';
+  const isSelected = checked || indeterminate;
 
   return (
     <div className='flex flex-col'>
@@ -62,7 +63,10 @@ const Checkbox: React.FC<CheckboxProps> = ({
               {checked && (
                 <Icon
                   icon='RiCheckFill'
-                  className='fill-white z-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none'
+                  className={cn(
+                    'fill-white z-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none',
+                    disabled && 'fill-blue-700'
+                  )}
                   size={iconSize}
                 />
               )}
@@ -94,11 +98,15 @@ const Checkbox: React.FC<CheckboxProps> = ({
               checked && 'hover:border-blue-800',
               `active:border-blue-300 active:${boxShadowClass}`,
               `focus:border-blue-300 focus:${boxShadowClass}`,
-              'disabled:!bg-slate-300 disabled:!border-slate-400 disabled:cursor-not-allowed',
+              disabled && 'cursor-not-allowed',
+              disabled && !isSelected && '!bg-slate-300 !border-slate-400',
+              disabled && isSelected && '!border-blue-700',
               'checked:border-blue-700',
               type === 'checkbox' &&
                 'checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700',
+              type === 'checkbox' && disabled && isSelected && '!bg-blue-50',
               type === 'radio' && 'rounded-full hover:bg-blue-50 checked:bg-blue-50',
+              type === 'radio' && disabled && isSelected && '!bg-blue-50',
               className
             )}
             onChange={onChange}
