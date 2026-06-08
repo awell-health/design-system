@@ -150,7 +150,7 @@ const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
           <input
             type='tel'
             value={inputValue}
-            placeholder={placeholder}
+            placeholder={disabled ? undefined : placeholder}
             disabled={disabled}
             className={cn(
               'px-3.5 py-2.5',
@@ -158,7 +158,7 @@ const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
               'text-sm font-normal',
               'shadow border border-slate-300 text-black placeholder:text-slate-400',
               'focus:outline-0 focus:border focus:border-blue-500',
-              'disabled:bg-slate-50 disabled:text-slate-400',
+              'disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500',
               showFlags && 'pl-16',
               hasError && 'border-red-500 focus:border-red-500',
               className

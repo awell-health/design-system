@@ -4432,16 +4432,16 @@ input.tab:checked + .tab-content,
   z-index: 10;
 }
 
+.z-20{
+  z-index: 20;
+}
+
 .z-50{
   z-index: 50;
 }
 
 .z-\[9999\]{
   z-index: 9999;
-}
-
-.z-20{
-  z-index: 20;
 }
 
 .m-0{
@@ -5401,11 +5401,6 @@ input.tab:checked + .tab-content,
   background-color: rgb(226 232 240 / var(--tw-bg-opacity, 1)) !important;
 }
 
-.\!bg-slate-50{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1)) !important;
-}
-
 .bg-base-100{
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity, 1)));
@@ -5918,9 +5913,14 @@ input.tab:checked + .tab-content,
   color: rgb(239 68 68 / var(--tw-text-opacity, 1)) !important;
 }
 
-.\!text-slate-400{
+.\!text-slate-500{
   --tw-text-opacity: 1 !important;
-  color: rgb(148 163 184 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(100 116 139 / var(--tw-text-opacity, 1)) !important;
+}
+
+.\!text-slate-600{
+  --tw-text-opacity: 1 !important;
+  color: rgb(71 85 105 / var(--tw-text-opacity, 1)) !important;
 }
 
 .\!text-slate-700{
@@ -6031,11 +6031,6 @@ input.tab:checked + .tab-content,
 .text-red-800{
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity, 1));
-}
-
-.text-slate-300{
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
 }
 
 .text-slate-400{
@@ -6356,6 +6351,160 @@ input[type="checkbox"].green:checked {
   animation: disappear-in-out 0.6s cubic-bezier(0.42, 0, 0.58, 1) forwards;
 }
 
+@media (hover:hover){
+  .\[\&_tbody_tr\]\:table tbody tr tr.hover:hover,.\[\&_tbody_tr\]\:table tbody tr tr.hover:nth-child(even):hover{
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  }
+}
+
+.\[\&_tbody_tr\]\:table tbody tr{
+  position: relative;
+  width: 100%;
+  border-radius: var(--rounded-box, 1rem);
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.\[\&_tbody_tr\]\:table tbody tr :where(.table-pin-rows thead tr){
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.\[\&_tbody_tr\]\:table tbody tr :where(.table-pin-rows tfoot tr){
+  position: sticky;
+  bottom: 0px;
+  z-index: 1;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.\[\&_tbody_tr\]\:table tbody tr :where(.table-pin-cols tr th){
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.\[\&_tbody_tr\]\:table tbody tr:where([dir="rtl"], [dir="rtl"] *){
+  text-align: right;
+}
+
+.\[\&_tbody_tr\]\:table tbody tr :where(th, td){
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  vertical-align: middle;
+}
+
+.\[\&_tbody_tr\]\:table tbody tr tr.active,.\[\&_tbody_tr\]\:table tbody tr tr.active:nth-child(even){
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
+.\[\&_tbody_tr\]\:table tbody tr :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child){
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-bottom-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+
+.\[\&_tbody_tr\]\:table tbody tr :where(thead, tfoot){
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  color: var(--fallback-bc,oklch(var(--bc)/0.6));
+}
+
+.\[\&_tbody_tr\]\:table tbody tr :where(tfoot){
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-top-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+
+@media (hover:hover){
+  .\[\&_thead_tr\]\:table thead tr tr.hover:hover,.\[\&_thead_tr\]\:table thead tr tr.hover:nth-child(even):hover{
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  }
+}
+
+.\[\&_thead_tr\]\:table thead tr{
+  position: relative;
+  width: 100%;
+  border-radius: var(--rounded-box, 1rem);
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.\[\&_thead_tr\]\:table thead tr :where(.table-pin-rows thead tr){
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.\[\&_thead_tr\]\:table thead tr :where(.table-pin-rows tfoot tr){
+  position: sticky;
+  bottom: 0px;
+  z-index: 1;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.\[\&_thead_tr\]\:table thead tr :where(.table-pin-cols tr th){
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+
+.\[\&_thead_tr\]\:table thead tr:where([dir="rtl"], [dir="rtl"] *){
+  text-align: right;
+}
+
+.\[\&_thead_tr\]\:table thead tr :where(th, td){
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  vertical-align: middle;
+}
+
+.\[\&_thead_tr\]\:table thead tr tr.active,.\[\&_thead_tr\]\:table thead tr tr.active:nth-child(even){
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
+.\[\&_thead_tr\]\:table thead tr :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child){
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-bottom-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+
+.\[\&_thead_tr\]\:table thead tr :where(thead, tfoot){
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  color: var(--fallback-bc,oklch(var(--bc)/0.6));
+}
+
+.\[\&_thead_tr\]\:table thead tr :where(tfoot){
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-top-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+
 .placeholder\:text-xs::-moz-placeholder{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -6459,6 +6608,11 @@ input[type="checkbox"].green:checked {
 .hover\:border-blue-800:hover{
   --tw-border-opacity: 1;
   border-color: rgb(30 64 175 / var(--tw-border-opacity, 1));
+}
+
+.hover\:\!bg-slate-200:hover{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity, 1)) !important;
 }
 
 .hover\:bg-blue-100:hover{
@@ -6665,9 +6819,9 @@ input[type="checkbox"].green:checked {
   cursor: not-allowed;
 }
 
-.disabled\:\!border-slate-200:disabled{
+.disabled\:\!border-slate-400:disabled{
   --tw-border-opacity: 1 !important;
-  border-color: rgb(226 232 240 / var(--tw-border-opacity, 1)) !important;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity, 1)) !important;
 }
 
 .disabled\:border-blue-200:disabled{
@@ -6680,9 +6834,9 @@ input[type="checkbox"].green:checked {
   border-color: rgb(226 232 240 / var(--tw-border-opacity, 1));
 }
 
-.disabled\:\!bg-slate-100:disabled{
+.disabled\:\!bg-slate-300:disabled{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity, 1)) !important;
 }
 
 .disabled\:bg-blue-50:disabled{
@@ -6690,14 +6844,14 @@ input[type="checkbox"].green:checked {
   background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1));
 }
 
+.disabled\:bg-slate-100:disabled{
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+}
+
 .disabled\:bg-slate-200:disabled{
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity, 1));
-}
-
-.disabled\:bg-slate-50:disabled{
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
 }
 
 .disabled\:bg-transparent:disabled{
@@ -6719,18 +6873,19 @@ input[type="checkbox"].green:checked {
   color: rgb(226 232 240 / var(--tw-text-opacity, 1));
 }
 
-.disabled\:text-slate-400:disabled{
+.disabled\:text-slate-500:disabled{
   --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+  color: rgb(100 116 139 / var(--tw-text-opacity, 1));
+}
+
+.disabled\:text-slate-700:disabled{
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity, 1));
 }
 
 .disabled\:text-white:disabled{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.disabled\:opacity-50:disabled{
-  opacity: 0.5;
 }
 
 .group\/copy-text:hover .group-hover\/copy-text\:flex{
@@ -6847,8 +7002,52 @@ input[type="checkbox"].green:checked {
   border-radius: 0.375rem;
 }
 
+.\[\&_tbody\]\:block tbody{
+  display: block;
+}
+
+.\[\&_tbody\]\:max-h-\[var\(--table-body-max-height\)\] tbody{
+  max-height: var(--table-body-max-height);
+}
+
+.\[\&_tbody\]\:overflow-y-auto tbody{
+  overflow-y: auto;
+}
+
+.\[\&_tbody\]\:\[scrollbar-gutter\:stable\] tbody{
+  scrollbar-gutter: stable;
+}
+
+.\[\&_tbody_tr\]\:table tbody tr{
+  display: table;
+}
+
+.\[\&_tbody_tr\]\:w-full tbody tr{
+  width: 100%;
+}
+
+.\[\&_tbody_tr\]\:table-fixed tbody tr{
+  table-layout: fixed;
+}
+
 .\[\&_td\:last-child\]\:text-right td:last-child{
   text-align: right;
+}
+
+.\[\&_thead\]\:block thead{
+  display: block;
+}
+
+.\[\&_thead_tr\]\:table thead tr{
+  display: table;
+}
+
+.\[\&_thead_tr\]\:w-full thead tr{
+  width: 100%;
+}
+
+.\[\&_thead_tr\]\:table-fixed thead tr{
+  table-layout: fixed;
 }
 
 .\[\&_tr\:first-child\>th\:first-child\]\:rounded-tl-lg tr:first-child>th:first-child{

@@ -122,7 +122,7 @@ export function CountrySelector({
           'h-[38px] min-h-[38px] w-14 rounded-l-lg border-r border-slate-300',
           'flex items-center justify-center gap-1 bg-transparent',
           'focus:outline-0 focus:ring-2 focus:ring-blue-500 focus:ring-inset',
-          'disabled:cursor-not-allowed disabled:opacity-50'
+          'disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500'
         )}
         onClick={() => setIsOpen((open) => !open)}
       >

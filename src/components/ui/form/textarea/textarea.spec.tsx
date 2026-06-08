@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { render } from '@testing-library/react';
 import { expect, it, describe } from 'vitest';
 import { Textarea } from './textarea';
@@ -22,5 +23,12 @@ describe('Textarea', () => {
 
     expect(getByTestId('textarea')).toHaveClass('border-red-300');
     expect(getByText('Helper text')).toHaveClass('text-red-500');
+  });
+
+  it('uses darker disabled colors', () => {
+    const { getByTestId } = subject({ disabled: true });
+
+    expect(getByTestId('textarea')).toBeDisabled();
+    expect(getByTestId('textarea')).toHaveClass('disabled:bg-slate-100', 'disabled:text-slate-500');
   });
 });

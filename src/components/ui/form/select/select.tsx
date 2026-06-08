@@ -93,7 +93,7 @@ function SelectComponent(props: Props) {
           </span>
         )}
         <Select
-          placeholder={placeholder}
+          placeholder={disabled ? undefined : placeholder}
           options={options}
           onChange={handleSelectChange}
           onInputChange={onInputChange}
@@ -128,7 +128,7 @@ function SelectComponent(props: Props) {
               cn(
                 '!rounded-lg !shadow border !border-slate-300 text-slate-500 text-sm font-normal',
                 state.isFocused && '!border-blue-500 !text-black',
-                state.isDisabled && '!bg-slate-50 !text-slate-400 !cursor-not-allowed',
+                state.isDisabled && '!bg-slate-100 !text-slate-500 !cursor-not-allowed',
                 hasError && '!border-red-500 !text-red-500'
               ),
             menu: () =>
@@ -139,12 +139,17 @@ function SelectComponent(props: Props) {
                 state.isFocused && '!bg-slate-100',
                 state.isSelected && '!text-slate-700 !bg-slate-200'
               ),
-            singleValue: () => iconPadding,
-            multiValue: () => '!rounded',
-            multiValueLabel: () => 'bg-slate-200',
-            multiValueRemove: () => 'bg-slate-200 hover:bg-red-300',
-            placeholder: () => iconPadding,
-            input: () => iconPadding,
+            singleValue: (state) => cn(iconPadding, state.isDisabled && '!text-slate-500'),
+            multiValue: (state) => cn('!rounded', state.isDisabled && '!bg-slate-200'),
+            multiValueLabel: (state) =>
+              cn('bg-slate-200 text-slate-700', state.isDisabled && '!text-slate-500'),
+            multiValueRemove: (state) =>
+              cn(
+                'bg-slate-200 hover:bg-red-300',
+                state.isDisabled && '!text-slate-600 hover:!bg-slate-200'
+              ),
+            placeholder: (state) => cn(iconPadding, state.isDisabled && '!text-slate-500'),
+            input: (state) => cn(iconPadding, state.isDisabled && '!text-slate-500'),
             groupHeading: () =>
               '!text-slate-900 !font-semibold pl-2.5 border-b border-slate-200 pb-2 !text-transform-none !text-[14px] !normal-case'
           }}

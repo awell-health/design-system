@@ -94,7 +94,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
               checked && 'hover:border-blue-800',
               `active:border-blue-300 active:${boxShadowClass}`,
               `focus:border-blue-300 focus:${boxShadowClass}`,
-              'disabled:!bg-slate-100 disabled:!border-slate-200',
+              'disabled:!bg-slate-300 disabled:!border-slate-400 disabled:cursor-not-allowed',
               'checked:border-blue-700',
               type === 'checkbox' &&
                 'checked:bg-blue-700 indeterminate:bg-blue-700 indeterminate:border-blue-700',
@@ -112,7 +112,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
           <span
             className={cn(
               'text-slate-700 text-sm font-medium leading-tight',
-              disabled && 'text-slate-300'
+              disabled && 'text-slate-400'
             )}
           >
             {label}
@@ -122,7 +122,9 @@ const Checkbox: React.FC<CheckboxProps> = ({
       {helpText && (
         <div className='flex gap-2'>
           <div className={cn(checkboxVariants({ inputSize }), 'flex-shrink-0')} />
-          <span className='text-slate-500 text-sm font-normal'>{helpText}</span>
+          <span className={cn('text-slate-500 text-sm font-normal', disabled && 'text-slate-400')}>
+            {helpText}
+          </span>
         </div>
       )}
     </div>

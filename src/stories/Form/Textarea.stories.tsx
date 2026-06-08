@@ -18,3 +18,14 @@ export const Example = {
   },
   render: (args) => <Textarea {...args} />
 } satisfies Story;
+
+export const Disabled = {
+  args: {
+    helpText: 'Helper text',
+    label: 'Disabled Textarea Label',
+    placeholder: 'Type your text here',
+    value: 'Disabled textarea value',
+    disabled: true
+  },
+  render: (args) => <Textarea {...args} />
+} satisfies Story;

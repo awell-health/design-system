@@ -78,4 +78,13 @@ describe('PhoneInput', () => {
 
     expect(input.value).toBe('');
   });
+
+  it('uses darker disabled colors', () => {
+    const { container } = subject({ disabled: true, value: '+14155552671', showFlags: true });
+    const input = container.querySelector('input[type="tel"]');
+    const countrySelector = screen.getByRole('button', { name: 'Select country' });
+
+    expect(input).toHaveClass('disabled:bg-slate-100', 'disabled:text-slate-500');
+    expect(countrySelector).toHaveClass('disabled:bg-slate-100', 'disabled:text-slate-500');
+  });
 });
