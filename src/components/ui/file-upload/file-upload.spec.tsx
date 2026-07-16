@@ -28,4 +28,16 @@ describe('FileList Component', () => {
       throw new Error('Input not found');
     }
   });
+
+  it('sets the capture attribute on the input when provided', () => {
+    const { container } = subject({ capture: 'environment' });
+    const input = container.querySelector('input[type="file"]');
+    expect(input?.getAttribute('capture')).toBe('environment');
+  });
+
+  it('does not set the capture attribute by default', () => {
+    const { container } = subject();
+    const input = container.querySelector('input[type="file"]');
+    expect(input?.hasAttribute('capture')).toBe(false);
+  });
 });
