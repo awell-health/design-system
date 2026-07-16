@@ -10,6 +10,10 @@ interface Props {
   error?: string;
   isMultiple?: boolean;
   accept?: string[];
+  // Sets the HTML `capture` attribute on the file input. `'environment'` prompts mobile browsers
+  // to open the rear camera, `'user'` the front camera. Ignored on desktop. See
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/capture
+  capture?: boolean | 'user' | 'environment';
   maxSizeMb?: number;
   onError?: (error: string) => void;
   translations?: {
@@ -26,6 +30,7 @@ const FileUpload: FC<Props> = ({
   onChange,
   isMultiple = false,
   accept = ['.jpg', '.jpeg', '.png', '.pdf', '.doc', '.docx', '.txt'],
+  capture,
   maxSizeMb = 2, // Default max size to 2MB
   onError = undefined,
   translations = {
@@ -118,6 +123,7 @@ const FileUpload: FC<Props> = ({
         ref={inputRef}
         multiple={isMultiple}
         accept={accept.join(',')}
+        capture={capture}
       />
       <div
         className={cn(
