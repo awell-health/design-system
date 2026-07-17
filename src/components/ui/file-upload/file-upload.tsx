@@ -113,14 +113,14 @@ const FileUpload: FC<Props> = ({
     setIsDragging(false);
   };
 
-  // The displayed "supported file types" list should only show real file types. Drop any
-  // `;…` MIME parameters (e.g. a legacy `;capture=camera` hint) and any `android/…` directive
-  // tokens (e.g. `android/allowCamera`, a marker the Android wrapper reads) — those stay on the
-  // input's `accept` attribute but are not file types.
+  // `android/allowCamera` is a bogus (non-real) MIME type intentionally added to `accept`. On
+  // Android 14/15 the file input's camera option disappears unless `accept` contains a type the
+  // OS doesn't recognise as image/video/audio; adding this dummy type restores the "Camera" +
+  // file-picker options. It isn't a real file type, so hide it from the displayed list (it stays
+  // on the input's `accept`). See:
+  // https://blog.addpipe.com/html-file-input-accept-video-camera-option-is-missing-android-14-15/
   const displayedFileTypes = accept
-    .flatMap((entry) => entry.split(','))
-    .map((type) => type.replace(/;.*$/, '').trim())
-    .filter((type) => type.length > 0 && !type.toLowerCase().startsWith('android/'))
+    .filter((type) => !type.toLowerCase().startsWith('android/'))
     .join(', ');
 
   return (
