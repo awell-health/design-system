@@ -41,22 +41,16 @@ describe('FileList Component', () => {
     expect(input?.hasAttribute('capture')).toBe(false);
   });
 
-  it('keeps a ";capture=…" hint on the input accept but hides it from the supported-types label', () => {
+  it('keeps an "android/…" directive on the input accept but hides it from the label', () => {
     const { container, getByText } = subject({
-      accept: ['image/gif', 'image/jpg;capture=camera'],
+      accept: ['image/gif', 'image/jpg', 'android/allowCamera'],
     });
     const input = container.querySelector('input[type="file"]');
-    // The hint stays on the actual input attribute
-    expect(input?.getAttribute('accept')).toBe('image/gif,image/jpg;capture=camera');
+    // The directive stays on the actual input attribute
+    expect(input?.getAttribute('accept')).toBe('image/gif,image/jpg,android/allowCamera');
     // …but is not shown in the helper text
-    expect(getByText(/Supported file types:/).textContent).toContain('image/gif, image/jpg');
-    expect(getByText(/Supported file types:/).textContent).not.toContain('capture=camera');
-  });
-
-  it('strips any ";…" MIME parameter from the supported-types label', () => {
-    const { getByText } = subject({ accept: ['image/png;foo=bar', 'application/pdf'] });
     const label = getByText(/Supported file types:/).textContent;
-    expect(label).toContain('image/png, application/pdf');
-    expect(label).not.toContain('foo=bar');
+    expect(label).toContain('image/gif, image/jpg');
+    expect(label).not.toContain('android/allowCamera');
   });
 });

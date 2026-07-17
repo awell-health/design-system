@@ -113,6 +113,16 @@ const FileUpload: FC<Props> = ({
     setIsDragging(false);
   };
 
+  // `android/allowCamera` is a bogus (non-real) MIME type intentionally added to `accept`. On
+  // Android 14/15 the file input's camera option disappears unless `accept` contains a type the
+  // OS doesn't recognise as image/video/audio; adding this dummy type restores the "Camera" +
+  // file-picker options. It isn't a real file type, so hide it from the displayed list (it stays
+  // on the input's `accept`). See:
+  // https://blog.addpipe.com/html-file-input-accept-video-camera-option-is-missing-android-14-15/
+  const displayedFileTypes = accept
+    .filter((type) => !type.toLowerCase().startsWith('android/'))
+    .join(', ');
+
   return (
     <div className='flex flex-col gap-2'>
       {label && <label className='text-sm font-medium text-gray-700'>{label}</label>}
@@ -149,10 +159,7 @@ const FileUpload: FC<Props> = ({
         </Button>
         <div className='text-sm text-gray-500 text-center'>
           {translations.maxFileSize} {maxSizeMb}MB <br />
-          {/* Strip any `;…` MIME parameters (e.g. a `;capture=camera` camera hint) from the
-              displayed list; they are not file types and stay on the input's `accept` only. */}
-          {translations.supportedFileTypes}{' '}
-          {accept.join(', ').replace(/;[^,]*/g, '')}
+          {translations.supportedFileTypes} {displayedFileTypes}
         </div>
         <div
           className={cn(
