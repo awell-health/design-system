@@ -41,14 +41,20 @@ describe('FileList Component', () => {
     expect(input?.hasAttribute('capture')).toBe(false);
   });
 
-  it('keeps an "android/…" directive on the input accept but hides it from the label', () => {
+  it('defaults the supported-types label to accept when displayAccept is omitted', () => {
+    const { getByText } = subject({ accept: ['image/gif', 'image/jpg'] });
+    expect(getByText(/Supported file types:/).textContent).toContain('image/gif, image/jpg');
+  });
+
+  it('uses displayAccept for the label while the input keeps the full accept', () => {
     const { container, getByText } = subject({
       accept: ['image/gif', 'image/jpg', 'android/allowCamera'],
+      displayAccept: ['image/gif', 'image/jpg'],
     });
     const input = container.querySelector('input[type="file"]');
-    // The directive stays on the actual input attribute
+    // The full accept (incl. any marker) stays on the actual input attribute
     expect(input?.getAttribute('accept')).toBe('image/gif,image/jpg,android/allowCamera');
-    // …but is not shown in the helper text
+    // …but only displayAccept is shown in the helper text
     const label = getByText(/Supported file types:/).textContent;
     expect(label).toContain('image/gif, image/jpg');
     expect(label).not.toContain('android/allowCamera');
