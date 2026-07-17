@@ -9,7 +9,13 @@ interface Props {
   onChange: (files: FileList) => void;
   error?: string;
   isMultiple?: boolean;
+  // Values for the file input's `accept` attribute. Also used for the "Supported file types"
+  // label unless `displayAccept` is provided.
   accept?: string[];
+  // Optional override for the "Supported file types" label only (the input's `accept` still uses
+  // `accept`). Use this to hide non-file-type accept entries (e.g. platform markers) from the UI,
+  // or to show friendlier labels than raw MIME types. Falls back to `accept` when omitted.
+  displayAccept?: string[];
   // Sets the HTML `capture` attribute on the file input. `'environment'` prompts mobile browsers
   // to open the rear camera, `'user'` the front camera. Ignored on desktop. See
   // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/capture
@@ -30,6 +36,7 @@ const FileUpload: FC<Props> = ({
   onChange,
   isMultiple = false,
   accept = ['.jpg', '.jpeg', '.png', '.pdf', '.doc', '.docx', '.txt'],
+  displayAccept,
   capture,
   maxSizeMb = 2, // Default max size to 2MB
   onError = undefined,
@@ -113,16 +120,6 @@ const FileUpload: FC<Props> = ({
     setIsDragging(false);
   };
 
-  // `android/allowCamera` is a bogus (non-real) MIME type intentionally added to `accept`. On
-  // Android 14/15 the file input's camera option disappears unless `accept` contains a type the
-  // OS doesn't recognise as image/video/audio; adding this dummy type restores the "Camera" +
-  // file-picker options. It isn't a real file type, so hide it from the displayed list (it stays
-  // on the input's `accept`). See:
-  // https://blog.addpipe.com/html-file-input-accept-video-camera-option-is-missing-android-14-15/
-  const displayedFileTypes = accept
-    .filter((type) => !type.toLowerCase().startsWith('android/'))
-    .join(', ');
-
   return (
     <div className='flex flex-col gap-2'>
       {label && <label className='text-sm font-medium text-gray-700'>{label}</label>}
@@ -159,7 +156,7 @@ const FileUpload: FC<Props> = ({
         </Button>
         <div className='text-sm text-gray-500 text-center'>
           {translations.maxFileSize} {maxSizeMb}MB <br />
-          {translations.supportedFileTypes} {displayedFileTypes}
+          {translations.supportedFileTypes} {(displayAccept ?? accept).join(', ')}
         </div>
         <div
           className={cn(
