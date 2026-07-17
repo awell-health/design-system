@@ -149,10 +149,10 @@ const FileUpload: FC<Props> = ({
         </Button>
         <div className='text-sm text-gray-500 text-center'>
           {translations.maxFileSize} {maxSizeMb}MB <br />
-          {/* Strip any `;capture=…` capture hint from the displayed list; it is a camera
-              directive, not a file type, and stays on the input's `accept` attribute only. */}
+          {/* Strip any `;…` MIME parameters (e.g. a `;capture=camera` camera hint) from the
+              displayed list; they are not file types and stay on the input's `accept` only. */}
           {translations.supportedFileTypes}{' '}
-          {accept.join(', ').replace(/;capture=[^,]*/gi, '')}
+          {accept.join(', ').replace(/;[^,]*/g, '')}
         </div>
         <div
           className={cn(

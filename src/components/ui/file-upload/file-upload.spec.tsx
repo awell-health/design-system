@@ -52,4 +52,11 @@ describe('FileList Component', () => {
     expect(getByText(/Supported file types:/).textContent).toContain('image/gif, image/jpg');
     expect(getByText(/Supported file types:/).textContent).not.toContain('capture=camera');
   });
+
+  it('strips any ";…" MIME parameter from the supported-types label', () => {
+    const { getByText } = subject({ accept: ['image/png;foo=bar', 'application/pdf'] });
+    const label = getByText(/Supported file types:/).textContent;
+    expect(label).toContain('image/png, application/pdf');
+    expect(label).not.toContain('foo=bar');
+  });
 });
