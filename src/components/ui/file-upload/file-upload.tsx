@@ -113,6 +113,16 @@ const FileUpload: FC<Props> = ({
     setIsDragging(false);
   };
 
+  // The displayed "supported file types" list should only show real file types. Drop any
+  // `;…` MIME parameters (e.g. a legacy `;capture=camera` hint) and any `android/…` directive
+  // tokens (e.g. `android/allowCamera`, a marker the Android wrapper reads) — those stay on the
+  // input's `accept` attribute but are not file types.
+  const displayedFileTypes = accept
+    .flatMap((entry) => entry.split(','))
+    .map((type) => type.replace(/;.*$/, '').trim())
+    .filter((type) => type.length > 0 && !type.toLowerCase().startsWith('android/'))
+    .join(', ');
+
   return (
     <div className='flex flex-col gap-2'>
       {label && <label className='text-sm font-medium text-gray-700'>{label}</label>}
@@ -149,10 +159,7 @@ const FileUpload: FC<Props> = ({
         </Button>
         <div className='text-sm text-gray-500 text-center'>
           {translations.maxFileSize} {maxSizeMb}MB <br />
-          {/* Strip any `;…` MIME parameters (e.g. a `;capture=camera` camera hint) from the
-              displayed list; they are not file types and stay on the input's `accept` only. */}
-          {translations.supportedFileTypes}{' '}
-          {accept.join(', ').replace(/;[^,]*/g, '')}
+          {translations.supportedFileTypes} {displayedFileTypes}
         </div>
         <div
           className={cn(
