@@ -10,7 +10,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   helpText?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   labelClassName?: string;
-  variant?: 'default' | 'positive';
+  variant?: 'default' | 'positive' | 'secondary';
   toggleSize?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
@@ -39,6 +39,7 @@ const Toggle = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
             'border-none bg-white hover:bg-white',
             // check styles from globals.css for colors
             variant === 'positive' && 'green',
+            variant === 'secondary' && 'secondary-blue',
             toggleSize === 'xs' && 'toggle-xs',
             toggleSize === 'sm' && 'toggle-sm',
             toggleSize === 'md' && 'toggle-md',
