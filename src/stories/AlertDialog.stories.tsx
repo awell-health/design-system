@@ -3,6 +3,30 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AlertDialog } from '@/components/ui/alert-dialog/alert-dialog';
 import { Icon } from '..';
 
+const CARD_COLORS = [
+  'bg-red-400',
+  'bg-orange-400',
+  'bg-amber-400',
+  'bg-emerald-400',
+  'bg-teal-400',
+  'bg-sky-400',
+  'bg-indigo-400',
+  'bg-purple-400'
+];
+
+const DemoBackground = () => (
+  <div className='fixed inset-0 grid grid-cols-4 gap-4 p-8 bg-white'>
+    {Array.from({ length: 16 }).map((_, index) => (
+      <div
+        key={index}
+        className={`${CARD_COLORS[index % CARD_COLORS.length]} rounded-lg h-24 flex items-center justify-center text-white text-sm font-medium`}
+      >
+        Card {index + 1}
+      </div>
+    ))}
+  </div>
+);
+
 const meta = {
   component: AlertDialog,
   args: {
@@ -47,4 +71,49 @@ export const Example = {
     )
   },
   render: (args) => <AlertDialog {...args} />
+} satisfies Story;
+
+export const OverlayDefault = {
+  render: (args) => (
+    <>
+      <DemoBackground />
+      <AlertDialog {...args} />
+    </>
+  )
+} satisfies Story;
+
+export const OverlayFullBlur = {
+  args: {
+    overlayClassName: 'bg-transparent backdrop-blur-md'
+  },
+  render: (args) => (
+    <>
+      <DemoBackground />
+      <AlertDialog {...args} />
+    </>
+  )
+} satisfies Story;
+
+export const OverlayNone = {
+  args: {
+    overlayClassName: 'bg-transparent'
+  },
+  render: (args) => (
+    <>
+      <DemoBackground />
+      <AlertDialog {...args} />
+    </>
+  )
+} satisfies Story;
+
+export const OverlayTintAndBlur = {
+  args: {
+    overlayClassName: 'bg-slate-900/10 backdrop-blur-sm'
+  },
+  render: (args) => (
+    <>
+      <DemoBackground />
+      <AlertDialog {...args} />
+    </>
+  )
 } satisfies Story;

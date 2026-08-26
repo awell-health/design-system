@@ -9,7 +9,7 @@ exports[`Alert Dialog > match snapshot 1`] = `
     role="dialog"
   >
     <div
-      class="fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]"
+      class="fixed inset-0 bg-slate-700/30 transition-opacity z-[9999]"
     />
     <div
       class="fixed inset-0 z-[9999] w-screen overflow-y-auto"
