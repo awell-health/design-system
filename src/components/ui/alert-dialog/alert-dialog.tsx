@@ -22,10 +22,21 @@ interface Props {
   button?: AlertDialogButton;
   secondaryButton?: AlertDialogButton;
   className?: string;
+  overlayClassName?: string;
 }
 
 const AlertDialog = (props: Props): React.JSX.Element => {
-  const { title, icon, text, button, children = null, onClose, secondaryButton, className } = props;
+  const {
+    title,
+    icon,
+    text,
+    button,
+    children = null,
+    onClose,
+    secondaryButton,
+    className,
+    overlayClassName
+  } = props;
 
   return (
     <div
@@ -34,7 +45,12 @@ const AlertDialog = (props: Props): React.JSX.Element => {
       role='dialog'
       aria-modal='true'
     >
-      <div className='fixed inset-0 bg-slate-700 bg-opacity-30 transition-opacity z-[9999]'></div>
+      <div
+        className={cn(
+          'fixed inset-0 bg-slate-700/30 transition-opacity z-[9999]',
+          overlayClassName
+        )}
+      ></div>
       <div className='fixed inset-0 z-[9999] w-screen overflow-y-auto'>
         <div className='flex min-h-full items-center justify-center p-4 sm:items-center sm:p-0'>
           <div className='relative transform overflow-hidden transition-all sm:my-8 sm:w-full sm:max-w-lg p-6 bg-white rounded-lg shadow'>

@@ -40,6 +40,10 @@ input[type="checkbox"].green:checked {
   --tglbg: theme('colors.green.600');
 }
 
+input[type="checkbox"].secondary-blue:checked {
+  --tglbg: theme('colors.blue.300');
+}
+
 /* Custom ring animations */
 @keyframes appear-in-out {
   0% {
