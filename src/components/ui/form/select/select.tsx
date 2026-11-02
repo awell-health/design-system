@@ -31,6 +31,8 @@ export interface Props {
   required?: boolean;
   isOptionDisabled?: (option: SelectItem) => boolean;
   helpText?: string;
+  // names the input for assistive technology where the select shows no `label`
+  'aria-label'?: string;
 }
 
 function SelectComponent(props: Props) {
@@ -56,7 +58,8 @@ function SelectComponent(props: Props) {
     sublabel,
     required = false,
     isOptionDisabled = undefined,
-    helpText = undefined
+    helpText = undefined,
+    'aria-label': ariaLabel = undefined
   } = props;
   const iconPadding = cn(!isMulti && icon && 'pl-5');
 
@@ -105,6 +108,7 @@ function SelectComponent(props: Props) {
           menuPosition={menuPosition}
           menuShouldBlockScroll={menuShouldBlockScroll}
           isOptionDisabled={isOptionDisabled}
+          aria-label={ariaLabel}
           components={{
             Option: ({ children, ...rest }) => (
               <components.Option {...rest}>
