@@ -23,6 +23,14 @@ describe('Select', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('names its input with aria-label, for a select that shows no label', () => {
+    const { getByRole } = render(
+      <Select options={options} onChange={onChange} aria-label='Condition 1 operator' />
+    );
+
+    expect(getByRole('combobox', { name: 'Condition 1 operator' })).toBeInTheDocument();
+  });
+
   it('should not render if onChange and handleChange are not provided', () => {
     const { container } = render(<Select options={options} />);
 
